@@ -1,0 +1,1751 @@
+{
+  "data_da_verificacao": "2026-11-14",
+  "escopo": "Comunicação real de trabalho em inglês publicada pela Doist, pelo Todoist ou pelo Twist, incluindo os casos de clientes cuja origem a publicação identifica. O inventário inclui mensagens isoladas, trocas e excertos publicados.",
+  "cobertura": "Triagem dos 49 endereços do sitemap de artigos do Async Newsletter, dos artigos indicados no projeto e das páginas relacionadas registradas abaixo. A triagem usou texto editorial, legendas, texto alternativo e leitura do conteúdo das capturas candidatas. O denominador é o total de capturas elegíveis neste inventário público. A busca dirigida no Todoist, Doist e Central de Ajuda do Twist não cobre a totalidade desses acervos. Acesso limitado a material publicado sem login, incluindo capturas originalmente produzidas em espaços de equipe.",
+  "criterios": [
+    "Incluir cada captura que mostre texto original e reconhecível de comunicação real de trabalho e tenha contexto editorial ou evidência visível que identifique a equipe.",
+    "Capturas de listas podem entrar quando mostram trechos legíveis das mensagens em inglês. Uma captura pode conter vários trechos e o total mede arquivos, não mensagens.",
+    "Excluir imagens promocionais ou genéricas, hipóteses e modelos sem mensagem real, conversa social sem tarefa de trabalho, listas de interface sem mensagem legível, fotos, cronogramas, ilustrações e citações de entrevistas feitas para a publicação.",
+    "Um material republicado entra uma vez. A ocorrência equivalente preserva a segunda origem no inventário.",
+    "Não abrir links internos, links de convite, links de videoconferência ou anexos mostrados dentro das capturas."
+  ],
+  "sitemap": {
+    "url": "https://async.twist.com/sitemap-posts.xml",
+    "enderecos": 49
+  },
+  "publicacoes": [
+    {
+      "url": "https://async.twist.com/how-to-say-no-to-work-meetings/",
+      "consultado": "https://async.twist.com/how-to-say-no-to-work-meetings/",
+      "titulo": "How to say no to work meetings",
+      "data_publicacao": "2022-10-06",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/betting-against-slack/",
+      "consultado": "https://async.twist.com/betting-against-slack/",
+      "titulo": "betting against slack",
+      "data_publicacao": null,
+      "estado": "indisponível",
+      "nota": "O endereço listado pelo sitemap retornou HTTP 404. A republicação no Medium também não expôs o texto do artigo."
+    },
+    {
+      "url": "https://async.twist.com/theater-teamwork-twist/",
+      "consultado": "https://async.twist.com/theater-teamwork-twist/",
+      "titulo": "Theater, Teamwork, Twist",
+      "data_publicacao": "2018-03-29",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/",
+      "consultado": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/",
+      "titulo": "How Remote-how Builds a Strong Team Culture with Twist Threads & Lots of Emojis",
+      "data_publicacao": "2020-04-14",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "consultado": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "titulo": "How Learning Ally Manages a Volunteer Community Over 1,000 Strong & Counting",
+      "data_publicacao": "2021-01-12",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/",
+      "consultado": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/",
+      "titulo": "How the Remote Team at Microverse Connects Students to Remote Opportunities",
+      "data_publicacao": "2020-06-25",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/",
+      "consultado": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/",
+      "titulo": "How a Diversity Recruiting Start-Up Went All-Remote and ‘Never Looked Back’",
+      "data_publicacao": "2021-10-19",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "consultado": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "titulo": "How a Doctor-in-Training Bootstrapped One of the World’s Most Popular Med Ed Startups",
+      "data_publicacao": "2021-04-22",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/its-time-to-re-examine-the-office-serendipity-theory-of-innovation/",
+      "consultado": "https://async.twist.com/its-time-to-re-examine-the-office-serendipity-theory-of-innovation/",
+      "titulo": "It's Time to Re-Examine the Office-Serendipity Theory of Innovation",
+      "data_publicacao": "2021-01-26",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/makers-vs-managers-the-battle-over-remote-work/",
+      "consultado": "https://async.twist.com/makers-vs-managers-the-battle-over-remote-work/",
+      "titulo": "Makers vs Managers: The Battle Over Remote Work",
+      "data_publicacao": "2021-05-11",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/can-walking-meetings-lead-to-healthier-lives/",
+      "consultado": "https://async.twist.com/can-walking-meetings-lead-to-healthier-lives/",
+      "titulo": "Can Walking Meetings Lead to Healthier Lives?",
+      "data_publicacao": "2021-11-23",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/the-way-were-working-isnt-working-what-can-we-do-about-it/",
+      "consultado": "https://async.twist.com/the-way-were-working-isnt-working-what-can-we-do-about-it/",
+      "titulo": "The Way We're Working Isn't Working. What Can We Do About It?",
+      "data_publicacao": "2019-08-13",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/is-slower-team-communication-a-bad-thing/",
+      "consultado": "https://async.twist.com/is-slower-team-communication-a-bad-thing/",
+      "titulo": "Is Slower Team Communication a Bad Thing?",
+      "data_publicacao": "2022-01-18",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/what-does-the-future-of-people-operations-look-like/",
+      "consultado": "https://async.twist.com/what-does-the-future-of-people-operations-look-like/",
+      "titulo": "What Does the Future of People Operations Look Like?",
+      "data_publicacao": "2021-10-27",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-to-move-your-team-toward-async-first-communication/",
+      "consultado": "https://async.twist.com/how-to-move-your-team-toward-async-first-communication/",
+      "titulo": "How to Move Your Team Toward Async-First Communication",
+      "data_publicacao": "2021-03-02",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "consultado": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "titulo": "When to Take Real-time Meetings Async",
+      "data_publicacao": "2021-04-20",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "consultado": "https://async.twist.com/remote-team-culture/",
+      "titulo": "How to build human connections in an async workplace",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": "URL do sitemap redireciona para a edição do Todoist incluída no inventário."
+    },
+    {
+      "url": "https://async.twist.com/how-darren-murph-works-async/",
+      "consultado": "https://async.twist.com/how-darren-murph-works-async/",
+      "titulo": "How GitLab's Head of Remote works async",
+      "data_publicacao": "2022-09-28",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/accountability-remote-workers/",
+      "consultado": "https://async.twist.com/accountability-remote-workers/",
+      "titulo": "3 time-tested systems for creating accountability on a remote team",
+      "data_publicacao": "2022-09-21",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/remote-employee-surveillance/",
+      "consultado": "https://async.twist.com/remote-employee-surveillance/",
+      "titulo": "Our obsession with measuring worker productivity is killing it",
+      "data_publicacao": "2022-08-31",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/heroes-housekeeping-days",
+      "consultado": "https://async.twist.com/heroes-housekeeping-days/",
+      "titulo": "Heroes and Housekeeping Days",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/compassionate-approach-virtual-firing/",
+      "consultado": "https://async.twist.com/compassionate-approach-virtual-firing/",
+      "titulo": "A compassionate approach to  firing someone virtually",
+      "data_publicacao": "2022-07-27",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-async-combats-groupthink/",
+      "consultado": "https://async.twist.com/how-async-combats-groupthink/",
+      "titulo": "How async communication combats groupthink",
+      "data_publicacao": "2022-07-14",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/context-switching/",
+      "consultado": "https://async.twist.com/context-switching/",
+      "titulo": "The productivity tax you pay for context switching",
+      "data_publicacao": "2022-06-29",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/decision-making-flat-organization/",
+      "consultado": "https://async.twist.com/decision-making-flat-organization/",
+      "titulo": "No kings — How do you make good decisions quickly in a flat organization?",
+      "data_publicacao": "2022-06-15",
+      "estado": "examinada",
+      "nota": "O autor relata que o artigo começou em um tópico interno, mas não identifica trechos originais na publicação."
+    },
+    {
+      "url": "https://async.twist.com/flipped-meeting-model/",
+      "consultado": "https://async.twist.com/flipped-meeting-model/",
+      "titulo": "The flipped meeting model: a  framework for avoiding meeting burnout",
+      "data_publicacao": "2022-06-01",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/asynchronous-communication/",
+      "consultado": "https://async.twist.com/asynchronous-communication/",
+      "titulo": "What the heck is asynchronous communication anyway?",
+      "data_publicacao": "2022-05-17",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-companies-made-productivity-a-personal-problem/",
+      "consultado": "https://async.twist.com/how-companies-made-productivity-a-personal-problem/",
+      "titulo": "How companies made productivity a personal problem",
+      "data_publicacao": "2022-04-26",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/diversity-inclusion-async-work/",
+      "consultado": "https://async.twist.com/diversity-inclusion-async-work/",
+      "titulo": "Want a more inclusive workplace? Embrace an async-first approach",
+      "data_publicacao": "2023-02-08",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/writing-at-work/",
+      "consultado": "https://async.twist.com/writing-at-work/",
+      "titulo": "How to write for the way your coworkers actually read",
+      "data_publicacao": "2023-02-01",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/member-thread-how-to-make-your-workplace-more-async/",
+      "consultado": "https://async.twist.com/member-thread-how-to-make-your-workplace-more-async/",
+      "titulo": "🔒Thursday Thread: Have you tried to make your workplace more async?",
+      "data_publicacao": "2023-01-26",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/async-isnt-just-a-lack-of-meetings/",
+      "consultado": "https://async.twist.com/async-isnt-just-a-lack-of-meetings/",
+      "titulo": "You can't just cancel 76,500 hours of meetings",
+      "data_publicacao": "2023-01-18",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-sparktoros-vp-of-marketing-works-remote/",
+      "consultado": "https://async.twist.com/how-sparktoros-vp-of-marketing-works-remote/",
+      "titulo": "How SparkToro's VP of Marketing works async",
+      "data_publicacao": "2023-01-18",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/time-to-reflect/",
+      "consultado": "https://async.twist.com/time-to-reflect/",
+      "titulo": "🔒 Thursday Thread: Let's cut ourselves some slack",
+      "data_publicacao": "2022-12-15",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/how-almanacs-ceo-works-async/",
+      "consultado": "https://async.twist.com/how-almanacs-ceo-works-async/",
+      "titulo": "How Almanac's CEO works async",
+      "data_publicacao": "2022-12-14",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-to-make-decisions-asynchronously/",
+      "consultado": "https://async.twist.com/how-to-make-decisions-asynchronously/",
+      "titulo": "How to make great decisions async (and avoid endless meetings)",
+      "data_publicacao": "2022-12-08",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/how-khe-hy-works-async/",
+      "consultado": "https://async.twist.com/how-khe-hy-works-async/",
+      "titulo": "How RadReads' founder and CEO works async",
+      "data_publicacao": "2022-11-30",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/member-thread-what-is-async-to-you/",
+      "consultado": "https://async.twist.com/member-thread-what-is-async-to-you/",
+      "titulo": "🔒 Member thread: Introduce yourself! What is async to you?",
+      "data_publicacao": "2022-04-26",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/best-work-life-advice/",
+      "consultado": "https://async.twist.com/best-work-life-advice/",
+      "titulo": "🔒 Member thread: What's one piece of advice that's changed the way you work/live?",
+      "data_publicacao": "2022-05-24",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/how-do-you-say-no-to-meetings/",
+      "consultado": "https://async.twist.com/how-do-you-say-no-to-meetings/",
+      "titulo": "🔒 Member thread: How do you say no to meetings without burning bridges?",
+      "data_publicacao": "2022-08-03",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/how-to-set-boundaries-at-work/",
+      "consultado": "https://async.twist.com/how-to-set-boundaries-at-work/",
+      "titulo": "🔒 Member thread: How do you set boundaries at work?",
+      "data_publicacao": "2022-06-22",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/best-and-worst-ooo-autoresponders/",
+      "consultado": "https://async.twist.com/best-and-worst-ooo-autoresponders/",
+      "titulo": "🔒 Member thread: The best (and worst) OOO autoresponders you've ever seen",
+      "data_publicacao": "2022-07-20",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/work-changes/",
+      "consultado": "https://async.twist.com/work-changes/",
+      "titulo": "🔒 Member thread: Your stories of change & adaption",
+      "data_publicacao": "2022-08-24",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/reading-recommendations/",
+      "consultado": "https://async.twist.com/reading-recommendations/",
+      "titulo": "🔒 Member thread: The books that will change the way you work",
+      "data_publicacao": "2022-09-07",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/member-thread-what-questions-do-you-have/",
+      "consultado": "https://async.twist.com/member-thread-what-questions-do-you-have/",
+      "titulo": "🔒 Member thread: What questions do *you* have?",
+      "data_publicacao": "2022-10-12",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/member-thread-your-async-stories/",
+      "consultado": "https://async.twist.com/member-thread-your-async-stories/",
+      "titulo": "🔒 Thursday Thread: What has async enabled in your life?",
+      "data_publicacao": "2022-11-17",
+      "estado": "prévia pública examinada",
+      "nota": "Discussão indicada como exclusiva para membros. A verificação abrangeu o material servido publicamente."
+    },
+    {
+      "url": "https://async.twist.com/why-time-management-wont-solve-your-time-problems/",
+      "consultado": "https://async.twist.com/why-time-management-wont-solve-your-time-problems/",
+      "titulo": "Why time management won't solve your time problems",
+      "data_publicacao": "2022-11-09",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/20-30-50-rule-remote-team-retreats",
+      "consultado": "https://async.twist.com/20-30-50-rule-remote-team-retreats/",
+      "titulo": "The 20/30/50 rule for remote team retreats",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://async.twist.com/async-privilege/",
+      "consultado": "https://async.twist.com/async-privilege/",
+      "titulo": "Fellow CEOs: We need to talk about async privilege",
+      "data_publicacao": "2022-10-19",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "consultado": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "titulo": "The Pyramid of Remote Team Communication Tools",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/how-we-manage-projects-on-a-fully-remote-team",
+      "consultado": "https://www.todoist.com/inspiration/how-we-manage-projects-on-a-fully-remote-team",
+      "titulo": "This Is How We Manage Projects on a Fully Remote Team",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/how-doist-works-remote",
+      "consultado": "https://www.todoist.com/inspiration/how-doist-works-remote",
+      "titulo": "How Todoist Makes Remote Work Happen",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/design-development-workflow",
+      "consultado": "https://www.todoist.com/inspiration/design-development-workflow",
+      "titulo": "A Simple Design & Development Workflow for Building Better Apps",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/remote-team-culture",
+      "consultado": "https://www.todoist.com/inspiration/remote-team-culture",
+      "titulo": "inspiration/remote team culture",
+      "data_publicacao": null,
+      "estado": "indisponível",
+      "nota": "HTTP 404. A versão acessível sobre o tema está no URL humanizing-async-work."
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/remote-first-workplaces",
+      "consultado": "https://www.todoist.com/inspiration/remote-first-workplaces",
+      "titulo": "Why the Future of Work is Remote",
+      "data_publicacao": "2017-07-01",
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/focused-teamwork",
+      "consultado": "https://www.todoist.com/inspiration/focused-teamwork",
+      "titulo": "Why It’s So Hard to Focus at Work (Hint: It’s not you, it’s your workplace)",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/replace-meetings-twist",
+      "consultado": "https://www.todoist.com/inspiration/replace-meetings-twist",
+      "titulo": "When to Take Real-time Meetings Async",
+      "data_publicacao": null,
+      "estado": "duplicata",
+      "nota": "Página de título e chamada, sem o corpo. O artigo integral da newsletter está inventariado."
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide",
+      "consultado": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide",
+      "titulo": "The Remote Working Parent’s Survival Guide",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://blog.doist.com/ambition-balance/",
+      "consultado": "https://blog.doist.com/ambition-balance/",
+      "titulo": "inspiration",
+      "data_publicacao": null,
+      "estado": "redirecionada",
+      "nota": "O endereço antigo do comunicado leva ao índice do Todoist. A publicação da própria Doist no Medium está registrada."
+    },
+    {
+      "url": "https://blog.doist.com/writing-at-work/",
+      "consultado": "https://blog.doist.com/writing-at-work/",
+      "titulo": "inspiration",
+      "data_publicacao": null,
+      "estado": "redirecionada",
+      "nota": "O endereço antigo de redação leva ao índice do Todoist. O artigo da newsletter foi examinado."
+    },
+    {
+      "url": "https://twist.com/help/articles/how-twist-makes-teamwork-calmer-and-more-focused-dVSXzJIZ",
+      "consultado": "https://twist.com/help/articles/how-twist-makes-teamwork-calmer-and-more-focused-dVSXzJIZ",
+      "titulo": "How Twist makes teamwork calmer and more focused",
+      "data_publicacao": null,
+      "estado": "sem conteúdo acessível",
+      "nota": "Nesta consulta, a Central de Ajuda serviu título e navegação, sem o corpo do artigo."
+    },
+    {
+      "url": "https://twist.com/help/articles/whats-new-JPJ4HduH",
+      "consultado": "https://twist.com/help/articles/whats-new-JPJ4HduH",
+      "titulo": "What's New",
+      "data_publicacao": null,
+      "estado": "sem conteúdo acessível",
+      "nota": "Nesta consulta, a Central de Ajuda serviu título e navegação, sem o corpo do artigo."
+    },
+    {
+      "url": "https://medium.com/ten-timezones/ambition-balance-f4fbee50242f",
+      "consultado": "https://medium.com/ten-timezones/ambition-balance-f4fbee50242f",
+      "titulo": "ten timezones/ambition balance f4fbee50242f",
+      "data_publicacao": null,
+      "estado": "examinada via índice de busca",
+      "nota": "A publicação oficial da Doist no Medium identifica o texto como republicação do memorando interno. O HTTP direto retornou 403. O item da newsletter preserva a captura original e aponta para a íntegra republicada."
+    },
+    {
+      "url": "https://medium.com/ten-timezones/how-we-manage-projects-on-a-fully-remote-team-7cabed2b03d9",
+      "consultado": "https://medium.com/ten-timezones/how-we-manage-projects-on-a-fully-remote-team-7cabed2b03d9",
+      "titulo": "ten timezones/how we manage projects on a fully remote team 7cabed2b03d9",
+      "data_publicacao": null,
+      "estado": "examinada via índice de busca",
+      "nota": "A edição original da Doist no Medium tem figuras de gestão de projeto ausentes na republicação do Todoist. O índice expôs legendas sem as URLs das imagens. O HTTP direto retornou 403. A captura do status semanal citada nas legendas ficou indisponível à inspeção."
+    },
+    {
+      "url": "https://paper.dropbox.com/doc/Squad-Spec-Example-Todoist-Streaks-2.0-ligxMaxXtvILnfA0UNPA0",
+      "consultado": "https://paper.dropbox.com/doc/Squad-Spec-Example-Todoist-Streaks-2.0-ligxMaxXtvILnfA0UNPA0",
+      "titulo": "Dropbox Paper",
+      "data_publicacao": null,
+      "estado": "sem conteúdo acessível",
+      "nota": "O documento do projeto Todoist Streaks 2.0 exibiu a página do Dropbox Paper sem o conteúdo do documento."
+    },
+    {
+      "url": "https://twist.com/remote-work-guides/remote-project-management",
+      "consultado": "https://twist.com/remote-work-guides/remote-project-management",
+      "titulo": "Remote Projects 101: The Remote Guide to Project Management",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/todoist-project-management",
+      "consultado": "https://www.todoist.com/inspiration/todoist-project-management",
+      "titulo": "A Quick(ish) Guide to Completing Any Project in Todoist",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/how-to-disagree-with-your-coworkers",
+      "consultado": "https://www.todoist.com/inspiration/how-to-disagree-with-your-coworkers",
+      "titulo": "inspiration/how to disagree with your coworkers",
+      "data_publicacao": null,
+      "estado": "redirecionada",
+      "nota": "O primeiro endereço retornou 404. A versão oficial examinada está em /inspiration/how-to-disagree-with-coworkers."
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/handle-negative-feedback",
+      "consultado": "https://www.todoist.com/inspiration/stop-fearing-critical-feedback",
+      "titulo": "Stop Fearing Critical Feedback — Fear Not Getting It Instead",
+      "data_publicacao": null,
+      "estado": "examinada",
+      "nota": null
+    },
+    {
+      "url": "https://medium.com/ten-timezones/why-were-betting-against-real-time-team-messaging-521804a3da09",
+      "titulo": "Why we’re betting against real-time team messaging",
+      "estado": "sem conteúdo acessível",
+      "nota": "Página repete apenas a interface do Medium e não expõe o artigo."
+    },
+    {
+      "url": "https://www.todoist.com/inspiration/how-to-disagree-with-coworkers",
+      "titulo": "How to Disagree With Your Coworkers Productively",
+      "estado": "examinada via índice de busca",
+      "nota": "Prosa editorial, ilustrações, esquemas e citações. O conteúdo de uma conversa interna elegível não foi identificado."
+    }
+  ],
+  "itens": [
+    {
+      "id": "pedido-atualizacao-newsletter",
+      "titulo": "Pedido de atualização da newsletter",
+      "publicacao": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "url_secao": "https://async.twist.com/when-to-take-real-time-meetings-async/#moving-work-forward",
+      "secao": "Moving work forward",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_02_resize-1.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "Christoph pede confirmação do envio, oferece ajuda e combina quando dará retorno."
+    },
+    {
+      "id": "feedback-rascunho-google-docs",
+      "titulo": "Feedback no rascunho do próprio artigo",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#google-docs",
+      "secao": "Google Docs",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/1b65773968da334a4bcf34c948e2752c4b678927/0720fec9da6d59440655a8a6badba02b/Providing_feedback_on_a_draft_of_this_blog_post_in_Google_Docs",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A legenda identifica o rascunho. Os comentários trazem sugestão editorial, pedido de releitura e aprovação."
+    },
+    {
+      "id": "prazo-imagem-todoist",
+      "titulo": "Negociação do prazo da imagem do artigo",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#todoist",
+      "secao": "Todoist",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/0ccfffeb3af5cf9ce76f132fc6aba57996bf5749/b3c1ef2df4ebbfdc393a67dc07d000eb/Discussing_the_featured_image_for_this_blog_post_in_Todoist_comments",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A legenda identifica a imagem do próprio artigo. Os comentários negociam o prazo e confirmam quarta-feira."
+    },
+    {
+      "id": "memorando-ambicao-equilibrio",
+      "titulo": "Comunicado da direção sobre ambição e equilíbrio",
+      "publicacao": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "url_secao": "https://async.twist.com/when-to-take-real-time-meetings-async/#announcements",
+      "secao": "Announcements",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_05-1.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo identifica a captura como memorando de Amir para a empresa. A íntegra republicada está vinculada no inventário.",
+      "republicacao_integral": "https://medium.com/ten-timezones/ambition-balance-f4fbee50242f"
+    },
+    {
+      "id": "atualizacao-semanal-samuel",
+      "titulo": "Atualização semanal do Samuel",
+      "publicacao": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "url_secao": "https://async.twist.com/when-to-take-real-time-meetings-async/#status-updates",
+      "secao": "Status updates",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_01-1--1-.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo identifica Samuel e a atualização da equipe. A captura exibe compromissos e tarefas de desenvolvimento de negócios."
+    },
+    {
+      "id": "brainstorm-sincronizacao",
+      "titulo": "Discussão sobre acelerar a sincronização inicial",
+      "publicacao": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "url_secao": "https://async.twist.com/when-to-take-real-time-meetings-async/#brainstorms",
+      "secao": "Brainstorms",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_06-1.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo identifica Hugo e o trabalho do Todoist. A captura traz contexto, meta e perguntas para o grupo."
+    },
+    {
+      "id": "kickoff-guias-todoist",
+      "titulo": "Abertura do projeto de guias do Todoist",
+      "publicacao": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "url_secao": "https://async.twist.com/when-to-take-real-time-meetings-async/#kickoffs-and-planning-meetings",
+      "secao": "Kickoffs and planning meetings",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_07-1.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A autora apresenta a própria mensagem. A captura registra objetivo, período, papéis e referências."
+    },
+    {
+      "id": "revisao-design-topicos-fixados",
+      "titulo": "Pedido de revisão do design de tópicos fixados",
+      "publicacao": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "url_secao": "https://async.twist.com/when-to-take-real-time-meetings-async/#reviews-feedback-requests-and-approvals",
+      "secao": "Reviews, feedback requests, and approvals",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_04.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A legenda identifica Ben, da equipe de design. A captura traz o pedido, opções de orientação e links de contexto."
+    },
+    {
+      "id": "convite-coworking-doist",
+      "titulo": "Convite para sessão de trabalho em conjunto",
+      "publicacao": "https://async.twist.com/when-to-take-real-time-meetings-async/",
+      "url_secao": "https://async.twist.com/when-to-take-real-time-meetings-async/#building-bonds",
+      "secao": "Building bonds",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_03_resize-1.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A publicação descreve a sessão recorrente da Doist. A captura exibe o convite e a hora de um encontro."
+    },
+    {
+      "id": "remote-how-resumo-encontro-comunidade",
+      "titulo": "Resumo de encontro da comunidade Remote-how",
+      "publicacao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/",
+      "url_secao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/#keeping-everything-in-one-place",
+      "secao": "Keeping everything in one place",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/03-Twist-community-activity-Zapier_@2x-remote-how.png",
+      "equipe": "Remote-how",
+      "estado": "elegível",
+      "evidencia": "O caso identifica um tópico trazido pela integração. A captura mostra o texto assinado por Magda, perguntas abordadas e um convite para complementar o encontro."
+    },
+    {
+      "id": "remote-how-atualizacoes-canal-geral",
+      "titulo": "Atualizações e reconhecimento em canal da Remote-how",
+      "publicacao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/",
+      "url_secao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/#day-to-day-updates-and-progress",
+      "secao": "Day-to-day updates and progress",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/02-Twist-general-remote-how.png",
+      "equipe": "Remote-how",
+      "estado": "elegível",
+      "evidencia": "O caso identifica o canal da equipe. A lista mostra trechos legíveis sobre progresso, newsletter, parceria e clientes."
+    },
+    {
+      "id": "remote-how-kickoff-academia",
+      "titulo": "Abertura do projeto Academy Verticals",
+      "publicacao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/",
+      "url_secao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/#remote-how%E2%80%99s-tips-for-great-remote-team-communication",
+      "secao": "Remote-how’s tips for great remote team communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/04-Twist-kickoff-message-remote-how.png",
+      "equipe": "Remote-how",
+      "estado": "elegível",
+      "evidencia": "O caso identifica a mensagem de início da Remote-how. Marek propõe um plano de oficinas e pede indicações."
+    },
+    {
+      "id": "remote-how-decisao-academia",
+      "titulo": "Decisão sobre mudanças no site da academia",
+      "publicacao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/",
+      "url_secao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/#remote-how%E2%80%99s-tips-for-great-remote-team-communication",
+      "secao": "Remote-how’s tips for great remote team communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/05-Twist-closing-task-moving-actionable-item-to-Asana-remote-how.png",
+      "equipe": "Remote-how",
+      "estado": "elegível",
+      "evidencia": "A captura mostra a proposta final de Magda, o link de continuidade de Marek e o encerramento do tópico."
+    },
+    {
+      "id": "learning-ally-inicio-nd524",
+      "titulo": "Orientação para voluntários de audiolivro ND524",
+      "publicacao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "url_secao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/#project-managing-audiobook-creation",
+      "secao": "Project managing audiobook creation",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_learning-ally-profile_5.png",
+      "equipe": "Learning Ally",
+      "estado": "elegível",
+      "evidencia": "O caso identifica o processo de produção. Há uma mensagem real de boas-vindas com instruções de trabalho e atualizações do projeto na lateral."
+    },
+    {
+      "id": "learning-ally-inicio-nc807",
+      "titulo": "Orientação para voluntários de audiolivro NC807",
+      "publicacao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "url_secao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/#project-managing-audiobook-creation",
+      "secao": "Project managing audiobook creation",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_learning-ally-profile_6_resize.png",
+      "equipe": "Learning Ally",
+      "estado": "elegível",
+      "evidencia": "O caso identifica outro projeto. A equipe de literatura publicou instruções de cronograma, preparação e dúvidas."
+    },
+    {
+      "id": "learning-ally-recepcao-voluntarios",
+      "titulo": "Recepção e integração de voluntários",
+      "publicacao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "url_secao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/#fostering-a-volunteer-community",
+      "secao": "Fostering a volunteer community",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_learning-ally-profile_7.png",
+      "equipe": "Learning Ally",
+      "estado": "elegível",
+      "evidencia": "A captura reúne apresentações de novos voluntários e respostas da equipe na organização."
+    },
+    {
+      "id": "learning-ally-tecnica-narracao",
+      "titulo": "Discussão de técnicas de narração",
+      "publicacao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "url_secao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/#sharing-best-practices",
+      "secao": "Sharing best practices",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_learning-ally-profile_10.png",
+      "equipe": "Learning Ally",
+      "estado": "elegível",
+      "evidencia": "O caso identifica a equipe e a troca de recursos. A captura inclui o convite inicial, respostas e um material para debate."
+    },
+    {
+      "id": "learning-ally-canal-individual",
+      "titulo": "Mensagens em canal de acompanhamento individual",
+      "publicacao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "url_secao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/#how-learning-ally-uses-twist-with-its-staff",
+      "secao": "How Learning Ally uses Twist with its staff",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_learning-ally-profile_11_resize.png",
+      "equipe": "Learning Ally",
+      "estado": "elegível",
+      "evidencia": "A publicação identifica os canais que a responsável usa com cada pessoa. A captura mostra tópicos e trechos curtos sobre práticas e agenda."
+    },
+    {
+      "id": "microverse-curriculo",
+      "titulo": "Trechos de colaboração na equipe de currículo",
+      "publicacao": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/",
+      "url_secao": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/#easily-documented-conversations-help-maintain-transparency",
+      "secao": "Easily documented conversations help maintain transparency",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_user-story-microverse_1_736px.png",
+      "equipe": "Microverse",
+      "estado": "elegível",
+      "evidencia": "A publicação identifica o canal Curriculum. A captura reúne excertos de discussões de colaboração, revisão de código e mudanças no curso."
+    },
+    {
+      "id": "headstart-status-produto",
+      "titulo": "Atualização do sprint de produto na Headstart",
+      "publicacao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/",
+      "url_secao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/#creating-norms-for-async-first-communication",
+      "secao": "Creating norms for async-first communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/twist_user-story_headstart_image-4.png",
+      "equipe": "Headstart",
+      "estado": "elegível",
+      "evidencia": "A publicação identifica o ritual da equipe. A captura contém o status e uma troca sobre vídeo, urgência e ajustes."
+    },
+    {
+      "id": "geeky-medics-planejamento-video",
+      "titulo": "Coordenação de vídeo sobre anatomia",
+      "publicacao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "url_secao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/#producing-content",
+      "secao": "Producing content",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/geeky-medics-use-twist_graphic-5.png",
+      "equipe": "Geeky Medics",
+      "estado": "elegível",
+      "evidencia": "O estudo de caso identifica o canal de planejamento. A captura inclui referências, material revisado e instrução sobre a imagem do vídeo."
+    },
+    {
+      "id": "geeky-medics-publicacao-podcast",
+      "titulo": "Coordenação de publicação de um episódio",
+      "publicacao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "url_secao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/#producing-content",
+      "secao": "Producing content",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/geeky-medics-use-twist_graphic-6.png",
+      "equipe": "Geeky Medics",
+      "estado": "elegível",
+      "evidencia": "O estudo de caso identifica o canal de podcast. A captura inclui anúncio, detalhes do episódio e troca sobre a publicação."
+    },
+    {
+      "id": "geeky-medics-github",
+      "titulo": "Trechos de trabalho e atividade do GitHub",
+      "publicacao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "url_secao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/#running-operations",
+      "secao": "Running operations",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/geeky-medics-use-twist_graphic-8.png",
+      "equipe": "Geeky Medics",
+      "estado": "elegível",
+      "evidencia": "A captura mostra principalmente notificações da integração e também um trecho legível de mensagem humana sobre editar um comentário."
+    },
+    {
+      "id": "geeky-medics-perguntas-dev",
+      "titulo": "Pedido de resposta dos desenvolvedores",
+      "publicacao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "url_secao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/#geeky-medics%E2%80%99-tips-for-using-twist",
+      "secao": "Geeky Medics’ tips for using Twist",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/geeky-medics-use-twist_graphic-11_resize.png",
+      "equipe": "Geeky Medics",
+      "estado": "elegível",
+      "evidencia": "O estudo identifica o comentário como exemplo do fluxo real de acompanhamento. O recorte mostra o pedido de Ana e marcação de conclusão."
+    },
+    {
+      "id": "convite-talk-multiplataforma",
+      "titulo": "Convite para apresentação técnica multiplataforma",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#todoist-talks",
+      "secao": "Todoist Talks",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/1WzT6AprgRyTRKsA6LNje5/71012f0b79768f630f65840758fcd13a/company-culture-graphic-4_resize.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A legenda e o conteúdo identificam o anúncio real. A mensagem comunica tema, horário e instruções de participação."
+    },
+    {
+      "id": "atualizacao-semanal-diretoria",
+      "titulo": "Atualização semanal da diretoria",
+      "publicacao": "https://async.twist.com/accountability-remote-workers/",
+      "url_secao": "https://async.twist.com/accountability-remote-workers/#weekly-snippets",
+      "secao": "Weekly snippets",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/02/snippets.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A captura mostra a atualização preenchida com prioridades e compromissos. O mesmo conteúdo reaparece em outro artigo."
+    },
+    {
+      "id": "retrospectiva-task-view",
+      "titulo": "Retrospectiva do projeto Task View 3.0",
+      "publicacao": "https://async.twist.com/accountability-remote-workers/",
+      "url_secao": "https://async.twist.com/accountability-remote-workers/#small-autonomous-squads-with-clear-objectives",
+      "secao": "Small, autonomous squads with clear objectives",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/02/do-retros.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A captura mostra a mensagem de Hugo com contexto, objetivos, resultado e lançamento."
+    },
+    {
+      "id": "reflexao-decisao-apos-reuniao",
+      "titulo": "Reflexão sobre reconsiderar uma decisão",
+      "publicacao": "https://async.twist.com/how-async-combats-groupthink/",
+      "url_secao": "https://async.twist.com/how-async-combats-groupthink/#it%E2%80%99s-simply-harder-to-have-hard-conversations-in-real-time",
+      "secao": "It’s simply harder to have hard conversations in real-time",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/07/how-async-combats-groupthink_screenshot_3.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo relaciona o comentário de Gonçalo ao relato sobre decisões amadurecidas após reunião."
+    },
+    {
+      "id": "discussao-trabalho-parcial",
+      "titulo": "Proposta de discussão sobre trabalho parcial",
+      "publicacao": "https://async.twist.com/how-async-combats-groupthink/",
+      "url_secao": "https://async.twist.com/how-async-combats-groupthink/#it%E2%80%99s-simply-harder-to-have-hard-conversations-in-real-time",
+      "secao": "It’s simply harder to have hard conversations in real-time",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/07/Screen-Shot-2022-07-14-at-11.52.13-AM.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A publicação identifica um tópico real da direção. A captura traz o caso inicial e o pedido de alinhamento sobre como tratar propostas semelhantes."
+    },
+    {
+      "id": "brainstorm-conteudo-encontro",
+      "titulo": "Pedido de ideias para conteúdo do encontro",
+      "publicacao": "https://async.twist.com/how-async-combats-groupthink/",
+      "url_secao": "https://async.twist.com/how-async-combats-groupthink/#async-challenge-of-the-week",
+      "secao": "Async challenge of the week",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/07/how-async-combats-groupthink_screenshot_1.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A captura identifica Jackie, o canal de marketing e o objetivo de reunir ideias de conteúdo para um encontro da equipe."
+    },
+    {
+      "id": "status-site-prazo",
+      "titulo": "Atualização do site e discussão do prazo",
+      "publicacao": "https://async.twist.com/flipped-meeting-model/",
+      "url_secao": "https://async.twist.com/flipped-meeting-model/#before-a-meeting",
+      "secao": "Before a meeting",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/06/Twist-website-status-thread.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A publicação identifica a captura como um tópico real. A mensagem traz avaliação do prazo e o que falta finalizar."
+    },
+    {
+      "id": "comunicado-prioridades-2022",
+      "titulo": "Comunicado sobre as prioridades do semestre",
+      "publicacao": "https://async.twist.com/flipped-meeting-model/",
+      "url_secao": "https://async.twist.com/flipped-meeting-model/#company-all-hands-%E2%86%92-company-wide-threads",
+      "secao": "Company all-hands → company-wide threads",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/06/Company-wide-strategic-plan.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A publicação identifica o tópico geral. Amir orienta a leitura das prioridades e das ações do primeiro semestre de 2022."
+    },
+    {
+      "id": "perguntas-para-diretoria",
+      "titulo": "Chamada para perguntas em uma sessão com o CEO",
+      "publicacao": "https://async.twist.com/flipped-meeting-model/",
+      "url_secao": "https://async.twist.com/flipped-meeting-model/#town-halls-%E2%86%92-async-qas",
+      "secao": "Town halls → async Q&As",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/06/Async-AMA.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A publicação descreve o experimento real e o tópico publicado. A captura mostra as instruções da sessão e o prazo."
+    },
+    {
+      "id": "atualizacao-mensal-marketing",
+      "titulo": "Atualização mensal da equipe de marketing",
+      "publicacao": "https://async.twist.com/asynchronous-communication/",
+      "url_secao": "https://async.twist.com/asynchronous-communication/#documentation-and-greater-transparency-become-automatic",
+      "secao": "Documentation and greater transparency become automatic.",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/async-communication_graphic-1.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo identifica Brenna, o cargo e a atualização. A captura inclui retrospectiva, projetos e referências para acompanhamento."
+    },
+    {
+      "id": "limites-trabalho-assincrono",
+      "titulo": "Discussão dos limites da comunicação assíncrona",
+      "publicacao": "https://async.twist.com/asynchronous-communication/",
+      "url_secao": "https://async.twist.com/asynchronous-communication/#but-you-still-need-synchronous-communication-too",
+      "secao": "But! You still need synchronous communication too",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/async-communication_graphic-2_resize.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo descreve o tópico real. A captura mostra uma resposta sobre consenso, texto e situações que pedem conversa síncrona."
+    },
+    {
+      "id": "assuntos-diretoria",
+      "titulo": "Discussões no canal da liderança",
+      "publicacao": "https://async.twist.com/asynchronous-communication/",
+      "url_secao": "https://async.twist.com/asynchronous-communication/#things-you-can-do-as-a-team-leader",
+      "secao": "Things you can do as a team leader:",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/async-communication_graphic-5_resize.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O contexto identifica o canal Doist Heads. A captura tem trechos legíveis sobre planejamento, decisões e participação em iniciativas."
+    },
+    {
+      "id": "feedback-relatorio-suporte",
+      "titulo": "Pedido de feedback sobre relatório de suporte",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#research-and-iterate",
+      "secao": "Research and iterate",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-11.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A publicação identifica Omar e o relatório semanal. A captura expõe o propósito e pede formas de melhorar o relatório."
+    },
+    {
+      "id": "capturas-app-store",
+      "titulo": "Coordenação de novas imagens para a App Store",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#threads",
+      "secao": "Threads",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/f7187974e53de6360dfbf33a1882c93588ee1709/78abdfaa072f327f69fe8d9cccd5f313/Kicking_off_a_conversation_in_Twist_by_starting_a_new_thread",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "Embora a prosa use uma abertura hipotética, a imagem mostra outro assunto: uma troca real da equipe iOS sobre exigências da Apple, com solicitação e entrega de imagens."
+    },
+    {
+      "id": "especificacao-mencoes",
+      "titulo": "Especificação do recurso de menções compartilhada com a equipe",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#paper",
+      "secao": "Paper",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/169c5bbc6bbdfca78e2019cecee14ebd06cf7882/3cc6ced7283d7581ba2baa724026f255/Our_spec_in_Dropbox_Paper_for_the_Twist_Mentions_feature",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A legenda identifica a especificação de um recurso real. A captura mostra instruções de comportamento e uma discussão de implementação no contexto do documento."
+    },
+    {
+      "id": "aviso-ferias-disponibilidade",
+      "titulo": "Aviso de férias e disponibilidade",
+      "publicacao": "https://www.todoist.com/inspiration/how-doist-works-remote",
+      "url_secao": "https://www.todoist.com/inspiration/how-doist-works-remote#a-sustainable-employee-centric-vision",
+      "secao": "A sustainable, employee-centric vision",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/ef0854075182adbff990e576bb35e72338da63f1/a6dde0f94f6801e524fada9008bae5b3/vacation_thread",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo identifica o tópico da equipe. A mensagem registra quando a pessoa estará fora e como contatá-la caso alguém precise de ajuda."
+    },
+    {
+      "id": "discussao-principios-design",
+      "titulo": "Discussão sobre princípios de identidade visual",
+      "publicacao": "https://www.todoist.com/inspiration/how-doist-works-remote",
+      "url_secao": "https://www.todoist.com/inspiration/how-doist-works-remote#learning-from-slack",
+      "secao": "Learning from Slack",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/d5e17ae99c16e6a3a2f9a4428c8ce04a7b5f0d0a/ad6600005fad5cf5ab1ef97326f9d39f/Twist_interface-thread",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A captura mostra a proposta coletiva de princípios, uma referência enviada por Amir e a reação de Wallace."
+    },
+    {
+      "id": "trechos-squad-notificacoes",
+      "titulo": "Trechos de coordenação sobre notificações",
+      "publicacao": "https://www.todoist.com/inspiration/how-doist-works-remote",
+      "url_secao": "https://www.todoist.com/inspiration/how-doist-works-remote#the-do-system",
+      "secao": "The DO system",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/87823e37b2b57ce888fd167d7dae0fb39ef5f825/fef1e74b8973a2a9926e4aaaebf4533b/Twist_interface-channels",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A captura identifica a equipe e exibe trechos sobre soluções técnicas, prioridade e combinação de data de reunião."
+    },
+    {
+      "id": "feedback-ajustes-interface",
+      "titulo": "Feedback de revisão da interface do Twist",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#connect-to-twist",
+      "secao": "Connect to Twist",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/6040969e79223d14ccdfd2c0c06ffa67a9f15ec5/b6a6728182b531ddffc28ec42bfa4e72/See_Todoist_updates_in_Twist_with_the_integration",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo identifica o fluxo usado pela equipe. A captura contém comentários reais com mudanças pedidas em ícones, espaçamento e botões."
+    },
+    {
+      "id": "status-correcao-interface",
+      "titulo": "Atualização da versão que inclui uma correção",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#report-implementation-tasks-as-complete",
+      "secao": "Report Implementation Tasks as Complete",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/cbd778d8dac134199cc3dc8741ae65cde585c1ed/4a34a137cc6a3fa1f7987620beb28571/Use_Todoist_task_comments_to_communicate_status",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O artigo descreve o fluxo de revisão da equipe. A captura mostra o comentário de Henning com o número da versão da correção na tarefa."
+    },
+    {
+      "id": "combinar-reuniao-fuso",
+      "titulo": "Coordenação de reunião da equipe de crescimento",
+      "publicacao": "https://www.todoist.com/inspiration/remote-first-workplaces",
+      "url_secao": "https://www.todoist.com/inspiration/remote-first-workplaces#supporting-work-life-balance-and-closing-the-gender-gap",
+      "secao": "Supporting work-life balance and closing the gender gap",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/2T9VQMkKkmylXjleJNAY5Y/e8bad8fa4bd687ec1cdc2b70061cdf80/group-messages.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "A captura mostra a confirmação de um horário, as condições para estar presente e o pedido de envio do convite. Reaparece no artigo sobre pais que trabalham remotamente."
+    },
+    {
+      "id": "orientacao-pedidos-integracao",
+      "titulo": "Orientação no projeto de pedidos de integração",
+      "publicacao": "https://twist.com/remote-work-guides/remote-project-management",
+      "url_secao": "https://twist.com/remote-work-guides/remote-project-management",
+      "secao": "Collecting feedback and ideas",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/dryZz7lKzelE0scyCQCZR/d061e799688b7b1d47868b4707583fdc/Integrations.png",
+      "equipe": "Doist",
+      "estado": "elegível",
+      "evidencia": "O guia mostra o projeto de solicitações de integração no Todoist. A captura inclui instruções aos colaboradores para registrar e acompanhar pedidos."
+    },
+    {
+      "id": "referencia-02-03",
+      "titulo": "Curtain Close on Ineffective Communication",
+      "publicacao": "https://async.twist.com/theater-teamwork-twist/",
+      "url_secao": "https://async.twist.com/theater-teamwork-twist/#curtain-close-on-ineffective-communication",
+      "secao": "Curtain Close on Ineffective Communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/KGM-theatrical-twist-3.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "A legenda explicita uso ilustrativo."
+    },
+    {
+      "id": "referencia-02-04",
+      "titulo": "Curtain Close on Ineffective Communication",
+      "publicacao": "https://async.twist.com/theater-teamwork-twist/",
+      "url_secao": "https://async.twist.com/theater-teamwork-twist/#curtain-close-on-ineffective-communication",
+      "secao": "Curtain Close on Ineffective Communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/KGM-theatrical-twist-4.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "A legenda explicita uso ilustrativo."
+    },
+    {
+      "id": "referencia-03-01",
+      "titulo": "Using Twist for diverse communications needs",
+      "publicacao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/",
+      "url_secao": "https://async.twist.com/how-remote-how-builds-a-strong-team-culture-with-twist-threads-lots-of-emojis/#using-twist-for-diverse-communications-needs",
+      "secao": "Using Twist for diverse communications needs",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/01-Twist-channels-remote-how.png",
+      "equipe": "Remote-how",
+      "estado": "sem mensagem",
+      "evidencia": "Mostra a lista lateral de canais."
+    },
+    {
+      "id": "referencia-04-05",
+      "titulo": "Project managing audiobook creation",
+      "publicacao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "url_secao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/#project-managing-audiobook-creation",
+      "secao": "Project managing audiobook creation",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_learning-ally-profile_4_resize.png",
+      "equipe": "Learning Ally",
+      "estado": "sem mensagem",
+      "evidencia": "Cartão administrativo de audiolivro. O texto principal é a sinopse do livro."
+    },
+    {
+      "id": "referencia-04-10",
+      "titulo": "Fostering a volunteer community",
+      "publicacao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/",
+      "url_secao": "https://async.twist.com/how-learning-ally-manages-a-volunteer-community-over-1-000-strong-counting/#fostering-a-volunteer-community",
+      "secao": "Fostering a volunteer community",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_learning-ally-profile_9.png",
+      "equipe": "Learning Ally",
+      "estado": "social",
+      "evidencia": "Concurso de fantasias."
+    },
+    {
+      "id": "referencia-05-03",
+      "titulo": "Ease of search and asynchronous design promote autonomy",
+      "publicacao": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/",
+      "url_secao": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/#ease-of-search-and-asynchronous-design-promote-autonomy",
+      "secao": "Ease of search and asynchronous design promote autonomy",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_user-story-microverse_5_736px.png",
+      "equipe": "Microverse",
+      "estado": "ilustrativo",
+      "evidencia": "Gráfico de comparação entre ferramentas."
+    },
+    {
+      "id": "referencia-05-04",
+      "titulo": "Easily documented conversations help maintain transparency",
+      "publicacao": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/",
+      "url_secao": "https://async.twist.com/how-the-remote-team-at-microverse-connects-students-to-remote-opportunities/#easily-documented-conversations-help-maintain-transparency",
+      "secao": "Easily documented conversations help maintain transparency",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_user-story-microverse_2_280px.png",
+      "equipe": "Microverse",
+      "estado": "sem mensagem",
+      "evidencia": "Lista de canais da organização."
+    },
+    {
+      "id": "referencia-06-03",
+      "titulo": "From the noise of Discord to the focus of Twist",
+      "publicacao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/",
+      "url_secao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/#from-the-noise-of-discord-to-the-focus-of-twist",
+      "secao": "From the noise of Discord to the focus of Twist",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/twist_user-story_headstart_image-3.png",
+      "equipe": "Headstart",
+      "estado": "social",
+      "evidencia": "Canal Chit Chat e trechos de conversa informal."
+    },
+    {
+      "id": "referencia-06-05",
+      "titulo": "Creating norms for async-first communication",
+      "publicacao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/",
+      "url_secao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/#creating-norms-for-async-first-communication",
+      "secao": "Creating norms for async-first communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/twist_user-story_headstart_image-5_resize.png",
+      "equipe": "Headstart",
+      "estado": "social",
+      "evidencia": "Troca de recomendações musicais."
+    },
+    {
+      "id": "referencia-06-06",
+      "titulo": "Gareth’s advice for going async-first",
+      "publicacao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/",
+      "url_secao": "https://async.twist.com/how-a-diversity-recruiting-start-up-went-all-remote-and-never-looked-back/#gareth%E2%80%99s-advice-for-going-async-first",
+      "secao": "Gareth’s advice for going async-first",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/twist_user-story_headstart_image-6_resize.png",
+      "equipe": "Headstart",
+      "estado": "social",
+      "evidencia": "Cumprimentos e conversa informal sobre o fim de semana."
+    },
+    {
+      "id": "referencia-07-07",
+      "titulo": "Producing content",
+      "publicacao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "url_secao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/#producing-content",
+      "secao": "Producing content",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/geeky-medics-use-twist_graphic-7.png",
+      "equipe": "Geeky Medics",
+      "estado": "sem mensagem",
+      "evidencia": "A captura mostra notificações automáticas de perguntas e comentários, sem o conteúdo dos comentários."
+    },
+    {
+      "id": "referencia-07-10",
+      "titulo": "Geeky Medics’ tips for using Twist",
+      "publicacao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/",
+      "url_secao": "https://async.twist.com/how-a-doctor-in-training-bootstrapped-one-of-the-worlds-most-popular-med-ed-startups/#geeky-medics%E2%80%99-tips-for-using-twist",
+      "secao": "Geeky Medics’ tips for using Twist",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/geeky-medics-use-twist_graphic-10.png",
+      "equipe": "Geeky Medics",
+      "estado": "sem mensagem",
+      "evidencia": "Notificações automatizadas de pagamento."
+    },
+    {
+      "id": "referencia-09-08",
+      "titulo": "Encourages async communication",
+      "publicacao": "https://async.twist.com/makers-vs-managers-the-battle-over-remote-work/",
+      "url_secao": "https://async.twist.com/makers-vs-managers-the-battle-over-remote-work/#encourages-async-communication",
+      "secao": "Encourages async communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_06.png",
+      "equipe": "Doist",
+      "estado": "duplicata",
+      "evidencia": "Outra apresentação da conversa sobre sincronização inicial da Doist, registrada em brainstorm-sincronizacao."
+    },
+    {
+      "id": "referencia-14-03",
+      "titulo": "Have fewer meetings",
+      "publicacao": "https://async.twist.com/how-to-move-your-team-toward-async-first-communication/",
+      "url_secao": "https://async.twist.com/how-to-move-your-team-toward-async-first-communication/#have-fewer-meetings",
+      "secao": "Have fewer meetings",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_meetings-to-twist_01-1.png",
+      "equipe": "Doist",
+      "estado": "duplicata",
+      "evidencia": "A mesma atualização de Samuel registrada em atualizacao-semanal-samuel."
+    },
+    {
+      "id": "referencia-14-04",
+      "titulo": "Establish work-life boundaries for your team",
+      "publicacao": "https://async.twist.com/how-to-move-your-team-toward-async-first-communication/",
+      "url_secao": "https://async.twist.com/how-to-move-your-team-toward-async-first-communication/#establish-work-life-boundaries-for-your-team",
+      "secao": "Establish work-life boundaries for your team",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/05/blog_sync-to-async_7_resize_new.png",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Indicador de ausência e botões de interface."
+    },
+    {
+      "id": "referencia-16-04",
+      "titulo": "Todoist Presents",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#todoist-presents",
+      "secao": "Todoist Presents",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/1UCNXAyHPGUdyorMkadbuU/e5d77e3e1a9e223bcc88236403bb3c18/company-culture-graphic-5.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Anúncio de atividade recreativa interna."
+    },
+    {
+      "id": "referencia-16-05",
+      "titulo": "Casual hangouts",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#casual-hangouts",
+      "secao": "Casual hangouts",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/4hoP4stmGPX7pDjx1mA9QC/fe7bba5c5b9261bd7231995c7bdd451d/company-culture-graphic-6.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Recapitulação de atividade social interna."
+    },
+    {
+      "id": "referencia-16-07",
+      "titulo": "Automated check-ins",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#automated-check-ins",
+      "secao": "Automated check-ins",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/5zxxCvxRXHyfbf5IImAIKR/6eb73e6417e3f54cd91c83d484983313/company-culture-graphic-8-1.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Comentários sobre o fim de semana."
+    },
+    {
+      "id": "referencia-16-08",
+      "titulo": "Ask Todoist threads",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#ask-todoist-threads",
+      "secao": "Ask Todoist threads",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/765Jtmz5HXtsEy32mjc7Z9/fbdcf777ebb545a8b8ee1e70e49ad6c6/company-culture-graphic-9.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Chat informal sobre animais de estimação."
+    },
+    {
+      "id": "referencia-16-09",
+      "titulo": "10 interesting facts threads",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#10-interesting-facts-threads",
+      "secao": "10 interesting facts threads",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/537TIqsR7ILQEHj2dAC5El/550d1a9b12ae8f1fd6e49494ff5ed2f1/company-culture-graphic-10.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Postagem de curiosidades pessoais."
+    },
+    {
+      "id": "referencia-16-10",
+      "titulo": "Async games",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#async-games",
+      "secao": "Async games",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/21cPyUSKxLDHP0IdN4c7fo/60c79628a104a0b5bbbb95a9e5e683db/company-culture-graphic-11_resize.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Jogo recreativo interno."
+    },
+    {
+      "id": "referencia-16-11",
+      "titulo": "Async games",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#async-games",
+      "secao": "Async games",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/3wRExwCqSzmbYZQm5N2Y5R/ca52c902a81118a22360209bdf0c51d3/company-culture-graphic-11a_telephone.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Jogo recreativo interno."
+    },
+    {
+      "id": "referencia-16-12",
+      "titulo": "Space to chitchat separate from work",
+      "publicacao": "https://www.todoist.com/inspiration/humanizing-async-work",
+      "url_secao": "https://www.todoist.com/inspiration/humanizing-async-work#space-to-chitchat-separate-from-work",
+      "secao": "Space to chitchat separate from work",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/795MnjPO3ayO7x85eHSU2a/79cc337b3eb17a2832f967d4c152e3ef/company-culture-graphic-12_resize.png",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Grupo informal com notícias de interesse geral."
+    },
+    {
+      "id": "referencia-20-03",
+      "titulo": "The Hero Role",
+      "publicacao": "https://www.todoist.com/inspiration/heroes-housekeeping-days",
+      "url_secao": "https://www.todoist.com/inspiration/heroes-housekeeping-days#the-hero-role",
+      "secao": "The Hero Role",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/MA0PMyzpuPRD967s7vjsU/c1bbbe309d6eb0a2dd170d2acb51079e/hero.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "O desenho do fluxo contém um rascunho de exemplo e uma lista de grupos, sem evidência de envio da mensagem."
+    },
+    {
+      "id": "referencia-21-01",
+      "titulo": "Build clarity, transparency, and accountability with a centralized project management system",
+      "publicacao": "https://async.twist.com/compassionate-approach-virtual-firing/",
+      "url_secao": "https://async.twist.com/compassionate-approach-virtual-firing/#build-clarity-transparency-and-accountability-with-a-centralized-project-management-system",
+      "secao": "Build clarity, transparency, and accountability with a centralized project management system",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/07/blog_meetings-to-twist_01-1.png",
+      "equipe": "Doist",
+      "estado": "duplicata",
+      "evidencia": "A mesma atualização de Samuel registrada em atualizacao-semanal-samuel."
+    },
+    {
+      "id": "referencia-25-06",
+      "titulo": "Standups & status updates → async snippets",
+      "publicacao": "https://async.twist.com/flipped-meeting-model/",
+      "url_secao": "https://async.twist.com/flipped-meeting-model/#standups-status-updates-%E2%86%92-async-snippets",
+      "secao": "Standups & status updates → async snippets",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/06/CXO-Snippets-template.png",
+      "equipe": "Doist",
+      "estado": "modelo",
+      "evidencia": "Mostra o formulário de snippets sem uma atualização humana preenchida."
+    },
+    {
+      "id": "referencia-26-09",
+      "titulo": "But! You still need synchronous communication too",
+      "publicacao": "https://async.twist.com/asynchronous-communication/",
+      "url_secao": "https://async.twist.com/asynchronous-communication/#but-you-still-need-synchronous-communication-too",
+      "secao": "But! You still need synchronous communication too",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/09/Snippets.png",
+      "equipe": "Doist",
+      "estado": "duplicata",
+      "evidencia": "A mesma atualização de Allan registrada em atualizacao-semanal-diretoria."
+    },
+    {
+      "id": "referencia-29-01",
+      "titulo": "Front-load the important stuff",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#front-load-the-important-stuff",
+      "secao": "Front-load the important stuff",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-2_resize_crop.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Didática de redação com material de demonstração."
+    },
+    {
+      "id": "referencia-29-02",
+      "titulo": "Make your call to action prominent and clear",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#make-your-call-to-action-prominent-and-clear",
+      "secao": "Make your call to action prominent and clear",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-3.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Didática de redação com material de demonstração."
+    },
+    {
+      "id": "referencia-29-03",
+      "titulo": "Say less",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#say-less",
+      "secao": "Say less",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-4.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Exemplo de e-mail ruim em exercício de comparação."
+    },
+    {
+      "id": "referencia-29-04",
+      "titulo": "Say less",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#say-less",
+      "secao": "Say less",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-5.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Reescrita do e-mail em exercício de comparação."
+    },
+    {
+      "id": "referencia-29-05",
+      "titulo": "Make it skimmable",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#make-it-skimmable",
+      "secao": "Make it skimmable",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-6.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Exemplo de e-mail ruim em exercício de comparação."
+    },
+    {
+      "id": "referencia-29-06",
+      "titulo": "Make it skimmable",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#make-it-skimmable",
+      "secao": "Make it skimmable",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-7.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Reescrita do e-mail em exercício de comparação."
+    },
+    {
+      "id": "referencia-29-07",
+      "titulo": "Chunk information for retention",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#chunk-information-for-retention",
+      "secao": "Chunk information for retention",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-8.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Didática de redação com material de demonstração."
+    },
+    {
+      "id": "referencia-29-08",
+      "titulo": "Write in plain language",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#write-in-plain-language",
+      "secao": "Write in plain language",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-9_resize.png",
+      "equipe": "Doist",
+      "estado": "ilustrativo",
+      "evidencia": "Didática de redação com material de demonstração."
+    },
+    {
+      "id": "referencia-29-09",
+      "titulo": "Write in plain language",
+      "publicacao": "https://async.twist.com/writing-at-work/",
+      "url_secao": "https://async.twist.com/writing-at-work/#write-in-plain-language",
+      "secao": "Write in plain language",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2023/01/writing-is-designing_graphic-10.png",
+      "equipe": "Doist",
+      "estado": "fora do escopo",
+      "evidencia": "Trecho de carta aberta da Apple dirigida ao público, sem troca de trabalho no contexto da publicação."
+    },
+    {
+      "id": "referencia-35-02",
+      "titulo": "Step 1: Identify key people",
+      "publicacao": "https://async.twist.com/how-to-make-decisions-asynchronously/",
+      "url_secao": "https://async.twist.com/how-to-make-decisions-asynchronously/#step-1-identify-key-people",
+      "secao": "Step 1: Identify key people",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/12/1-tag-people-2.png",
+      "equipe": "Doist",
+      "estado": "hipotético",
+      "evidencia": "A publicação identifica o caso de Twitter Fleets como hipotético."
+    },
+    {
+      "id": "referencia-35-03",
+      "titulo": "Step 2: Set context",
+      "publicacao": "https://async.twist.com/how-to-make-decisions-asynchronously/",
+      "url_secao": "https://async.twist.com/how-to-make-decisions-asynchronously/#step-2-set-context",
+      "secao": "Step 2: Set context",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/12/2-give-context-2.png",
+      "equipe": "Doist",
+      "estado": "hipotético",
+      "evidencia": "A publicação identifica o caso de Twitter Fleets como hipotético."
+    },
+    {
+      "id": "referencia-35-04",
+      "titulo": "Step 3:  Use one channel for communication",
+      "publicacao": "https://async.twist.com/how-to-make-decisions-asynchronously/",
+      "url_secao": "https://async.twist.com/how-to-make-decisions-asynchronously/#step-3-use-one-channel-for-communication",
+      "secao": "Step 3:  Use one channel for communication",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/12/3-discuss-in-one-place-1.png",
+      "equipe": "Doist",
+      "estado": "hipotético",
+      "evidencia": "A publicação identifica o caso de Twitter Fleets como hipotético."
+    },
+    {
+      "id": "referencia-35-05",
+      "titulo": "Step 5: Push for a decision",
+      "publicacao": "https://async.twist.com/how-to-make-decisions-asynchronously/",
+      "url_secao": "https://async.twist.com/how-to-make-decisions-asynchronously/#step-5-push-for-a-decision",
+      "secao": "Step 5: Push for a decision",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/12/4-push-for-a-decision-1.png",
+      "equipe": "Doist",
+      "estado": "hipotético",
+      "evidencia": "A publicação identifica o caso de Twitter Fleets como hipotético."
+    },
+    {
+      "id": "referencia-35-06",
+      "titulo": "Step 5: Push for a decision",
+      "publicacao": "https://async.twist.com/how-to-make-decisions-asynchronously/",
+      "url_secao": "https://async.twist.com/how-to-make-decisions-asynchronously/#step-5-push-for-a-decision",
+      "secao": "Step 5: Push for a decision",
+      "url_original": "https://storage.ghost.io/c/3d/0b/3d0b3605-e62c-48fe-982e-7efe1e14e187/content/images/2022/12/5-document-2.png",
+      "equipe": "Doist",
+      "estado": "hipotético",
+      "evidencia": "A publicação identifica o caso de Twitter Fleets como hipotético."
+    },
+    {
+      "id": "referencia-47-06",
+      "titulo": "How we design our team retreats to maximize their value",
+      "publicacao": "https://www.todoist.com/inspiration/20-30-50-rule-remote-team-retreats",
+      "url_secao": "https://www.todoist.com/inspiration/20-30-50-rule-remote-team-retreats#how-we-design-our-team-retreats-to-maximize-their-value",
+      "secao": "How we design our team retreats to maximize their value",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/6VETwPBnoxXZnzkYSFvHIR/a7d36167e216e5fd4c0ac24e57c0b6e1/3e24-9210-2141-ccc45c6d3b6e.png",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Agenda de encontro em planilha, sem mensagem entre participantes."
+    },
+    {
+      "id": "referencia-49-04",
+      "titulo": "Messages",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#messages",
+      "secao": "Messages",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/416f54239b29e783a579535394115ded095d2c89/58e079f76fc9f11b539e3149d2f51176/Water_cooler_banter_in_our__Generalist__group_message_in_Twist",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "Conversa central do grupo informal. A captura inclui menções laterais truncadas a outros tópicos."
+    },
+    {
+      "id": "referencia-49-08",
+      "titulo": "Github & Azure",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#github--azure",
+      "secao": "Github & Azure",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/5dfa10aaa4b466becf856b8051c052a36927db7d/b002d1d3c57dc50401cfc788b87853cd/Doist_Azure_Setup",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Backlog da equipe Windows no Azure. O recorte apresenta títulos e estados de tarefas."
+    },
+    {
+      "id": "referencia-49-09",
+      "titulo": "Zeplin",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#zeplin",
+      "secao": "Zeplin",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/f0c05d2934a93e77977af042e90403985da20dcc/9ce6fc18eef2f3868341ff2d00303451/Checkboxes_Everywhere_Todoist_feature_on_Android_laid_out_in_Zeplin",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Mockup de interface do Todoist no Zeplin, sem troca legível."
+    },
+    {
+      "id": "referencia-49-10",
+      "titulo": "Ad-hoc meetings",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#ad-hoc-meetings",
+      "secao": "Ad-hoc meetings",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/39ad33f95ba4cfb50ffce3490634eb4019fbee56/7a94ca4bb2163fb8cf73940475726e3e/Zoom_Meeting___Doist",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Imagem de participantes de reunião, sem transcrição."
+    },
+    {
+      "id": "referencia-49-12",
+      "titulo": "Company Retreats",
+      "publicacao": "https://www.todoist.com/inspiration/remote-team-communication-tools",
+      "url_secao": "https://www.todoist.com/inspiration/remote-team-communication-tools#company-retreats",
+      "secao": "Company Retreats",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/12fd0d541fe2342ed7446980240aad1ba4b2e820/8e9222650305c7e05fe69bd8676b3e29/Our_2019_retreat_schedule",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Agenda do encontro, sem comunicação entre participantes."
+    },
+    {
+      "id": "referencia-52-06",
+      "titulo": "Set up a Todoist Project",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#set-up-a-todoist-project",
+      "secao": "Set up a Todoist Project",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/a6879ccbbe1eb79ee61bd4240dc3ed973c5bd13d/12c31665bc283e971d18c9975c8bfa2b/Design_and_development_workflow_Todoist_project",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Lista de tarefas de paridade na interface."
+    },
+    {
+      "id": "referencia-52-10",
+      "titulo": "Connect to Twist",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#connect-to-twist",
+      "secao": "Connect to Twist",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/23f7fe15c6fcfa344fed2b2fdcf08c4ba6b068c1/ef05797a099ed3bde37f0902718f22f2/Setting_up_your_Twist_and_Todoist_integration",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Tela de configuração da integração, sem troca de trabalho."
+    },
+    {
+      "id": "referencia-52-13",
+      "titulo": "Add Tasks to the Project",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#add-tasks-to-the-project",
+      "secao": "Add Tasks to the Project",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/2a843ebe016ae45ad7d1c1eae41c3b060fcdf565/1513601eb76c81038d2c5f5ac935f478/Annotate_images_for_greater_clarity",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Captura anotada da tela de login, sem mensagem."
+    },
+    {
+      "id": "referencia-52-14",
+      "titulo": "Add Tasks to the Project",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#add-tasks-to-the-project",
+      "secao": "Add Tasks to the Project",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/f987a939b25569819d3b904a0524b3584b8a5a4e/da9a958e889864ceba62719d3d5ff32a/Clearly_detail_the_specifics_of_a_task_including_links_to_designs_and_discussions",
+      "equipe": "Doist",
+      "estado": "origem incerta",
+      "evidencia": "A captura contém uma mensagem com um marcador de responsável e links ilustrativos. O artigo ensina a compor um pedido, sem confirmar o envio dessa versão."
+    },
+    {
+      "id": "referencia-52-18",
+      "titulo": "Assign Task Back to the Designer",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#assign-task-back-to-the-designer",
+      "secao": "Assign Task Back to the Designer",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/d102ba4058c12b77211219f034c7c23270b13149/7391cf08da4444bc57fa85bb825e0706/Assign_task_back_to_a_designer",
+      "equipe": "Doist",
+      "estado": "duplicata",
+      "evidencia": "O mesmo comentário de status registrado em status-correcao-interface, com menu de atribuição aberto."
+    },
+    {
+      "id": "referencia-52-19",
+      "titulo": "Assign Task Back to the Designer",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#assign-task-back-to-the-designer",
+      "secao": "Assign Task Back to the Designer",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/90909b2484fa9c7218c0bbe910371db30ce672a2/475579ee243e4da609d2d0920323d85e/Always_include_the_app_version_number_in_discussions",
+      "equipe": "Doist",
+      "estado": "duplicata",
+      "evidencia": "O mesmo comentário de status registrado em status-correcao-interface, com a versão acrescentada no título."
+    },
+    {
+      "id": "referencia-52-20",
+      "titulo": "Move the Task to “Review”",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#move-the-task-to-review",
+      "secao": "Move the Task to “Review”",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/9c05126f03473ec3242f9076e513270478d6b5f7/b5c28e3fad6d3b35d6fd699c7eb3b900/Move_the_task_to_the__In_review__section",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Movimentação de tarefa no quadro, sem comentários visíveis."
+    },
+    {
+      "id": "referencia-52-21",
+      "titulo": "Review Task and Move to “Done”",
+      "publicacao": "https://www.todoist.com/inspiration/design-development-workflow",
+      "url_secao": "https://www.todoist.com/inspiration/design-development-workflow#review-task-and-move-to-done",
+      "secao": "Review Task and Move to “Done”",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/e1cd49f14e9854b16d368e6c736907c41aafcce0/fb3b1489eb513490a955b914343efdbc/Move_the_task_to_the__Done__section",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Movimentação de tarefa no quadro, sem comentários visíveis."
+    },
+    {
+      "id": "referencia-58-02",
+      "titulo": "How we approach parenting at Todoist",
+      "publicacao": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide",
+      "url_secao": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide#how-we-approach-parenting-attodoist",
+      "secao": "How we approach parenting at Todoist",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/5cf0ae0735a42c63e704049c21f3b6ba495974ba/2c9fec5f326c71d934f1143836a839a2/fb46c-1ovwlcmcacjmdadrtv7ofvw",
+      "equipe": "Doist",
+      "estado": "social",
+      "evidencia": "A captura mostra anúncio pessoal de nascimento."
+    },
+    {
+      "id": "referencia-58-06",
+      "titulo": "Kids and meetings: An unpredictable combination",
+      "publicacao": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide",
+      "url_secao": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide#kids-and-meetings-an-unpredictable-combination",
+      "secao": "Kids and meetings: An unpredictable combination",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/7543aec3d4619d4132751d309ffa9b01920bd48c/3ceb1e099ee49bbb7680f56d2a107120/9fe25-15b-anlr8mfn9xxfd-sepvq",
+      "equipe": "Doist",
+      "estado": "duplicata",
+      "evidencia": "A mesma troca de horário registrada em combinar-reuniao-fuso."
+    },
+    {
+      "id": "referencia-58-07",
+      "titulo": "Kids and meetings: An unpredictable combination",
+      "publicacao": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide",
+      "url_secao": "https://www.todoist.com/inspiration/remote-working-parents-survival-guide#kids-and-meetings-an-unpredictable-combination",
+      "secao": "Kids and meetings: An unpredictable combination",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/16c0d55328b06981bf9c03f886d0b79434973a1d/e5960acacb278b41c4b3ded575fcdd71/af74b-1f9-qhap4jzmds5fffavrdw",
+      "equipe": "Doist",
+      "estado": "sem mensagem",
+      "evidencia": "Lista de tópicos e tarefas de reunião, sem contribuição textual identificada de colegas."
+    },
+    {
+      "id": "referencia-66-07",
+      "titulo": "Best practices for communicating asynchronously",
+      "publicacao": "https://twist.com/remote-work-guides/remote-project-management",
+      "url_secao": "https://twist.com/remote-work-guides/remote-project-management",
+      "secao": "Best practices for communicating asynchronously",
+      "url_original": "https://images.ctfassets.net/dm4oa8qtogq0/4VN2QsmEhAxv9ZjfbzdE7/b8456a7ec90f53b5ac0a8fd6c99e0ed5/Twist.png",
+      "equipe": "Doist",
+      "estado": "origem incerta",
+      "evidencia": "O guia identifica a interface do Twist, mas não confirma a proveniência da equipe Canoeist nem que a revisão exibida ocorreu."
+    }
+  ],
+  "contagem": {
+    "elegível": 46,
+    "ilustrativo": 12,
+    "sem mensagem": 17,
+    "social": 14,
+    "duplicata": 7,
+    "modelo": 1,
+    "fora do escopo": 1,
+    "hipotético": 5,
+    "origem incerta": 2
+  }
+}
