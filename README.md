@@ -2,6 +2,12 @@
 
 Colete exemplos de comunicação profissional em inglês publicados pela Doist e pelo Zulip e consulte o material localmente para estudar.
 
+## Wiki de inglês para o trabalho
+
+Abra o [índice da wiki](wiki/index.md) e escolha um tema ou uma situação, como pedir uma atualização, negociar um prazo ou dar feedback. As páginas ligam explicações e exercícios às fontes públicas da Doist e do Zulip. O [grafo local](wiki/grafo.md) permite pesquisar a coleta inteira, incluindo o texto extraído das capturas. No Codex, você pode pedir “Use a wiki para me ajudar a praticar como fechar uma reunião”.
+
+A wiki é uma adaptação de [LLM Wiki, de Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). O projeto mantém as fontes brutas na coleta local e versiona as páginas de estudo, o índice e o histórico de curadoria. As [instruções de manutenção](wiki/AGENTS.md) mostram como incorporar uma fonte nova e atualizar as páginas relacionadas.
+
 ## Baixar a coleta
 
 Abra o PowerShell na raiz do clone `workplace-english-practice` e rode com Python 3.11 ou superior e acesso à internet.

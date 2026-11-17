@@ -1,0 +1,10 @@
+{
+  "doist-pedir-atualizacao": ["gramatica", "vocabulario", "phrasal-verbs", "dia-a-dia", "pedir-atualizacao", "pedir-ajuda"],
+  "doist-dar-feedback": ["vocabulario", "phrasal-verbs", "dar-feedback"],
+  "doist-combinar-prazo": ["gramatica", "conversacao", "vocabulario", "linguagem-informal", "dia-a-dia", "negociar-prazo"],
+  "zulip-msg-1949967": ["phrasal-verbs", "linguagem-informal", "dia-a-dia", "dar-feedback", "esclarecer"],
+  "zulip-msg-1950081": ["phrasal-verbs", "confirmar-proximos-passos"],
+  "zulip-msg-2484306": ["comunicar-risco"],
+  "zulip-msg-2499678": ["gramatica", "conversacao", "vocabulario", "linguagem-informal", "dia-a-dia", "confirmar-proximos-passos"],
+  "zulip-msg-2552913": ["conversacao", "dia-a-dia", "se-apresentar"]
+}
