@@ -1,6 +1,6 @@
 # Wiki de inglês para o trabalho
 
-Escolha o que você quer conseguir fazer em inglês ou abra um tema para estudar a regra. As explicações estão em português e os exercícios usam inglês britânico. Trechos de conversas públicas vêm identificados com a fonte.
+Abra as [conversas para estudar](conversas/index.md). Cada caso traz o contexto, as frases relevantes e o que a troca resolveu ou deixou em aberto. As explicações estão em português e as adaptações usam inglês britânico. A [edição local do acervo](local/index.md) guarda as conversas completas em texto, além das capturas com OCR.
 
 ## Escolher uma situação
 
@@ -30,4 +30,4 @@ As [fontes](fontes.md) mostram onde cada conversa pode ser consultada. O [histó
 
 ## Explorar a coleta no grafo
 
-O [guia do grafo](grafo.md) mostra como incluir todas as mensagens locais e extrair texto das capturas. Use o grafo para procurar por tema, situação ou expressão e abrir o exemplo original. Os resultados automáticos são candidatos para conferência. As ligações marcadas como `curado` correspondem a exemplos usados nas páginas da wiki.
+O [índice local por tema e situação](local/temas/index.md) leva a conversas e capturas com os padrões procurados. Use o [grafo](grafo.md) para combinar filtros e procurar expressões no texto. Os resultados automáticos sugerem candidatos para conferência. As ligações marcadas como `curado` correspondem a exemplos conferidos.

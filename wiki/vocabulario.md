@@ -1,6 +1,7 @@
 ---
 title: Vocabulário para falar do trabalho
 kind: topic
+learning_uses: [vocabulario, dar-feedback, negociar-prazo, confirmar-proximos-passos]
 tags:
   - vocabulario
   - prazos

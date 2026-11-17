@@ -1,6 +1,7 @@
 ---
 title: Situações de trabalho
 kind: topic
+learning_uses: [pedir-atualizacao, negociar-prazo, dar-feedback, confirmar-proximos-passos, se-apresentar, pedir-ajuda, esclarecer, comunicar-risco]
 tags:
   - situacoes
   - pratica
@@ -60,7 +61,7 @@ Em uma revisão de texto publicada pela Doist, uma pessoa pede uma avaliação e
 <a id="confirmar-proximos-passos"></a>
 ## Confirmar próximos passos
 
-Em uma discussão do Zulip, alguém se oferece para abrir uma solicitação de mudança de código. O grupo ainda precisa decidir quando encerrar o ticket. Ao resumir uma conversa, identifique o que alguém assumiu e o que segue pendente. [Fonte do Zulip](fontes.md#zulip-combinar-proximos-passos)
+Em uma discussão do Zulip, alguém se oferece para abrir uma solicitação de mudança de código. Naquele momento, o grupo ainda precisava decidir quando encerrar o ticket. A conversa completa registra o fechamento no dia seguinte. Ao resumir uma conversa, identifique o que alguém assumiu e o que segue pendente. [Fonte do Zulip](fontes.md#zulip-combinar-proximos-passos)
 
 **Prática.** Você muda as instruções até sexta. Outra equipe precisa conferi-las antes de a solicitação ser encerrada. Registre as duas coisas num chat.
 

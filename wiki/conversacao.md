@@ -1,6 +1,7 @@
 ---
 title: Conversação no trabalho
 kind: topic
+learning_uses: [conversacao, negociar-prazo, confirmar-proximos-passos]
 tags:
   - conversacao
   - negociacao
@@ -12,7 +13,7 @@ sources:
 
 # Conversação no trabalho
 
-[Índice](index.md) · [Fontes](fontes.md) · [Inglês no dia a dia](dia-a-dia.md)
+[Índice](index.md) · [Conversas analisadas](conversas/index.md) · [Fontes](fontes.md) · [Inglês no dia a dia](dia-a-dia.md)
 
 Em uma conversa de trabalho, deixe claro o que cada pessoa precisa decidir ou fazer. Ao negociar, ouça a restrição do outro lado antes de fechar a proposta. Ao retomar uma discussão, lembre o que ficou combinado e o que ainda depende de uma decisão.
 
@@ -34,7 +35,7 @@ Nos comentários de uma tarefa sobre a imagem de um artigo, segunda-feira era a 
 
 ## Retomar e fechar próximos passos
 
-Num tópico público do Zulip, a equipe discutiu se devia documentar o comportamento de uma API. Uma pessoa assumiu a mudança com *“Will open a PR.”* Depois disso, outra perguntou se o ticket deveria ser encerrado ou ficar aberto até a atualização da documentação. A decisão seguia em aberto no recorte. [Discussão pública do Zulip](fontes.md#zulip-combinar-proximos-passos)
+Num tópico público do Zulip, a equipe discutiu se devia documentar o comportamento de uma API. Uma pessoa assumiu a mudança com *“Will open a PR.”* Depois disso, outra perguntou se o ticket deveria ser encerrado ou ficar aberto até a atualização da documentação. A decisão seguia em aberto no recorte. Na conversa completa, a proposta de mudança foi aberta e o ticket foi fechado no dia seguinte. [Discussão pública do Zulip](fontes.md#zulip-combinar-proximos-passos)
 
 **Simulação em inglês britânico** · Uma colega retoma uma conversa sobre instruções para clientes.
 

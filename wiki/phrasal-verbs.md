@@ -1,6 +1,7 @@
 ---
 title: Phrasal verbs em conversas de trabalho
 kind: topic
+learning_uses: [phrasal-verbs, pedir-atualizacao, dar-feedback, confirmar-proximos-passos]
 tags:
   - phrasal-verbs
   - ordem-das-palavras

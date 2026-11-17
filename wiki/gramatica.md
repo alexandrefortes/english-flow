@@ -1,6 +1,7 @@
 ---
 title: Gramática
 kind: topic
+learning_uses: [gramatica, pedir-atualizacao, negociar-prazo, confirmar-proximos-passos]
 tags:
   - gramatica
   - prazos
@@ -48,4 +49,4 @@ Um colega precisa rever o relatório na quinta. A equipe de Finanças só conseg
 
 </details>
 
-[Índice](index.md) · [Fontes](fontes.md) · [Conversação](conversacao.md) · [Dia a dia](dia-a-dia.md) · [Pronúncia](pronuncia.md)
+[Índice](index.md) · [Fontes](fontes.md) · [Padrões das conversas](conversas/padroes.md) · [Conversação](conversacao.md) · [Dia a dia](dia-a-dia.md) · [Pronúncia](pronuncia.md)

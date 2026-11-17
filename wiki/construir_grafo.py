@@ -202,6 +202,30 @@ def construir(dados, grafo):
         temporario.unlink(missing_ok=True)
 
 
+def atualizar_curadoria(grafo):
+    with closing(sqlite3.connect(grafo.resolve().as_uri() + "?mode=rw", uri=True)) as db, db:
+        db.execute("PRAGMA foreign_keys=ON")
+        db.execute("DELETE FROM ligacoes WHERE relacao='curado'")
+        registrar_curadoria(db)
+
+
+def pagina_local(db, identificador, url):
+    if identificador.startswith("doist-"):
+        pagina = f"local/doist/{identificador}.md"
+        return pagina if (WIKI / pagina).is_file() else None
+    if not identificador.startswith("zulip-msg-"):
+        return None
+    channel = re.search(r"/(?:channel|stream)/(\d+)", url or "")
+    thread = db.execute(
+        "SELECT destino FROM ligacoes WHERE origem=? AND relacao='pertence'", (identificador,)
+    ).fetchone()
+    if channel and thread:
+        pagina = f"local/zulip/canal-{channel[1]}/{thread[0]}.md"
+        if (WIKI / pagina).is_file():
+            return f"{pagina}#{identificador}"
+    return None
+
+
 def resumo(db):
     totais = dict(db.execute("SELECT tipo, count(*) FROM nos GROUP BY tipo"))
     ocr = dict(db.execute("SELECT estado, count(*) FROM nos WHERE tipo='captura' GROUP BY estado"))
@@ -249,7 +273,8 @@ def buscar(db, args):
         """, (linha["id"],))
         classificacao = [dict(vinculo) for vinculo in vinculos
                          if not destinos or vinculo["destino"] in destinos]
-        resultados.append({**dict(linha), "classificacao": classificacao})
+        resultados.append({**dict(linha), "classificacao": classificacao,
+                           "pagina_local": pagina_local(db, linha["id"], linha["url"])})
     if args.formato == "markdown":
         imprimir_resultados(resultados)
     else:
@@ -260,7 +285,8 @@ def imprimir_resultados(resultados):
     if not resultados:
         print("Nenhum exemplo encontrado para esses filtros.")
     for item in resultados:
-        print(f"- [{item['titulo']}]({item['url']}) · {item['fonte']} · `{item['id']}`")
+        destino = item["pagina_local"] or item["url"]
+        print(f"- [{item['titulo']}]({destino}) · {item['fonte']} · `{item['id']}`")
         if item["estado"]:
             print(f"  - Estado da imagem: {item['estado']}")
         for ligacao in item["classificacao"]:
@@ -281,7 +307,8 @@ def mostrar(db, identificador):
     entradas = db.execute("""
         SELECT relacao, count(*) AS quantidade FROM ligacoes WHERE destino=? GROUP BY relacao
     """, (identificador,))
-    imprimir_json({"no": dict(no), "ligacoes": [dict(linha) for linha in saidas],
+    imprimir_json({"no": dict(no), "pagina_local": pagina_local(db, identificador, no["url"]),
+                   "ligacoes": [dict(linha) for linha in saidas],
                    "ligacoes_recebidas": {linha["relacao"]: linha["quantidade"] for linha in entradas}})
 
 
@@ -291,10 +318,11 @@ def imprimir_json(objeto):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dados", type=Path, default=PROJETO / "dados", help="pasta raiz da coleta")
+    parser.add_argument("--dados", type=Path, help="pasta raiz da coleta")
     parser.add_argument("--grafo", type=Path, help="destino do índice SQLite")
     modos = parser.add_subparsers(dest="modo", required=True)
     modos.add_parser("construir", help="reconstrói o índice a partir da coleta local")
+    modos.add_parser("atualizar-curadoria", help="atualiza só as ligações curadas no grafo de origem")
     modos.add_parser("resumo", help="mostra a cobertura e os tipos de ligação")
     busca = modos.add_parser("buscar", help="procura exemplos e candidatos")
     busca.add_argument("--tema", choices=TEMAS)
@@ -308,8 +336,12 @@ def main():
     detalhe = modos.add_parser("mostrar", help="mostra um nó e suas ligações")
     detalhe.add_argument("id")
     args = parser.parse_args()
-    dados = args.dados.resolve()
-    grafo = (args.grafo or dados / "wiki" / "grafo.sqlite3").resolve()
+    dados = (args.dados or PROJETO / "dados").resolve()
+    padrão = dados / "wiki" / "grafo.sqlite3"
+    portátil = WIKI / "local" / "grafo.sqlite3"
+    if args.dados is None and args.modo not in ("construir", "atualizar-curadoria") and portátil.is_file():
+        padrão = portátil
+    grafo = (args.grafo or padrão).resolve()
     if args.modo == "construir":
         try:
             construir(dados, grafo)
@@ -317,9 +349,14 @@ def main():
             parser.error(str(exc))
     if not grafo.is_file():
         parser.error("Índice ausente. Execute o modo construir.")
+    if args.modo == "atualizar-curadoria":
+        try:
+            atualizar_curadoria(grafo)
+        except (OSError, ValueError, sqlite3.Error) as exc:
+            parser.error(str(exc))
     with abrir_leitura(grafo) as db:
         db.row_factory = sqlite3.Row
-        if args.modo in ("construir", "resumo"):
+        if args.modo in ("construir", "atualizar-curadoria", "resumo"):
             resumo(db)
         elif args.modo == "buscar":
             if not (1 <= args.limite <= 200) or args.pular < 0:

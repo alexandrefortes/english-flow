@@ -1,6 +1,7 @@
 ---
 title: Inglês no dia a dia do trabalho
 kind: topic
+learning_uses: [dia-a-dia, pedir-atualizacao, negociar-prazo, dar-feedback, confirmar-proximos-passos]
 tags:
   - dia-a-dia
   - comunicacao

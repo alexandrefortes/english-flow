@@ -1,6 +1,7 @@
 ---
 title: Pronúncia
 kind: topic
+learning_uses: [pronuncia, negociar-prazo, esclarecer]
 tags:
   - pronuncia
   - escuta
@@ -14,7 +15,7 @@ Em uma conversa de trabalho, a pronúncia ajuda o interlocutor a entender a aç�
 
 ## Ouvir um modelo
 
-Ouça o botão **UK** do Cambridge Dictionary para *Thursday*. O verbete registra /ˈθɜːz.deɪ/. A marca /ˈ/ indica que a primeira sílaba é tônica. Para praticar o /θ/ do início, compare o áudio de *think* no guia de símbolos e ouça a palavra inteira de novo. O dicionário fornece a gravação da palavra isolada. [Áudio de *Thursday*](https://dictionary.cambridge.org/pronunciation/english/thursday) · [Guia de símbolos do Cambridge Dictionary](https://dictionary.cambridge.org/help/phonetics.html)
+*Thursday* tem duas sílabas. A transcrição britânica /ˈθɜːz.deɪ/ marca a primeira com /ˈ/. Para produzir o /θ/ inicial, encoste levemente a ponta da língua nos dentes superiores e deixe o ar passar. É o mesmo som inicial de *think*. Diga as duas palavras e, em seguida, diga *by four on Thursday*. O botão **UK** do Cambridge Dictionary oferece um modelo de áudio opcional. [Áudio de *Thursday*](https://dictionary.cambridge.org/pronunciation/english/thursday) · [Guia de símbolos do Cambridge Dictionary](https://dictionary.cambridge.org/help/phonetics.html)
 
 ## Confirmar uma entrega
 
@@ -26,7 +27,7 @@ O aluno também pode confirmar o que ouviu. Em uma simulação em inglês britâ
 
 ## Prática
 
-1. Ouça *Thursday* e repita a palavra. Depois diga a frase da entrega em ritmo de conversa.
+1. Diga *think* e *Thursday* com o mesmo som no início. Depois diga a frase da entrega em ritmo de conversa.
 2. Peça a alguém que ouça sua mensagem sem ver o texto e repita a ação, o dia e a hora que entendeu.
 3. Se algum detalhe se perder, repita só a informação que faltou. Depois diga a frase inteira, mudando o horário. Confira se o novo horário ficou claro.
 

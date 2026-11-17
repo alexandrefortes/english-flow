@@ -1,6 +1,7 @@
 ---
 title: Linguagem informal no trabalho
 kind: topic
+learning_uses: [linguagem-informal, dar-feedback, negociar-prazo, confirmar-proximos-passos]
 tags:
   - registro
   - chat

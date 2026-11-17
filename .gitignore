@@ -1,4 +1,5 @@
 /dados/
+/wiki/local/
 __pycache__/
 *.py[cod]
 .pytest_cache/
