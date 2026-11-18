@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ingles-para-o-trabalho",
+  "version": "0.3.0",
+  "description": "Aulas e prática de inglês para o trabalho com acervo público e caderno local.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Inglês para o Trabalho",
+        "shortDescription": "Inglês com exemplos reais"
+      }
+    }
+  }
+}

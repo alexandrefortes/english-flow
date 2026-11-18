@@ -11,7 +11,9 @@ O [índice](index.md) é o ponto de entrada para consultas. As [páginas de conv
 
 ## Formato das páginas de estudo
 
-Use nomes de arquivo estáveis e links Markdown relativos dentro da wiki. Toda página com material ingerido tem um cabeçalho YAML com `learning_uses`. Use os identificadores de temas e situações do grafo, como `gramatica`, `pedir-atualizacao` ou `negociar-prazo`. Use `leitura-contextual` quando for possível estudar o contexto da conversa sem identificar um padrão específico. Preserve os IDs das fontes. Nos originais agrupados automaticamente, o campo `classification` informa a origem da classificação.
+Use nomes de arquivo estáveis e links Markdown relativos dentro da wiki. Toda página com material ingerido tem um cabeçalho YAML com `learning_uses`. Use os identificadores de temas e situações do grafo, como `gramatica`, `pedir-atualizacao` ou `negociar-prazo`. Use `leitura-contextual` quando for possível estudar o contexto da conversa sem identificar um padrão específico. Preserve os IDs nos nomes dos arquivos e nas âncoras das mensagens.
+
+Nos anexos, use apenas `learning_uses`, `learning_from_text` e `learning_from_context` no YAML. Em `## backlinks`, ligue às mensagens de origem. Em `## Content`, preserve o texto extraído, inclusive erros e quebras de linha. Omita seções vazias. Guarde o método de extração e as notas de revisão no [registro de extração](local/anexos/extracao.json).
 
 ```yaml
 ---

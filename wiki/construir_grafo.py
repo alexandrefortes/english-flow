@@ -9,30 +9,13 @@ import re
 import sqlite3
 from tempfile import NamedTemporaryFile
 
+from consulta_grafo import TEMAS, SITUACOES, abrir_leitura, buscar_exemplos, ler_no
 from regras import classificar
+from recibos_ocr import ler_recibo
 
 
 WIKI = Path(__file__).resolve().parent
 PROJETO = WIKI.parent
-TEMAS = {
-    "gramatica": "Gramática",
-    "conversacao": "Conversação",
-    "vocabulario": "Vocabulário",
-    "phrasal-verbs": "Phrasal verbs",
-    "linguagem-informal": "Linguagem informal e gírias",
-    "dia-a-dia": "Dia a dia no trabalho",
-    "pronuncia": "Pronúncia",
-}
-SITUACOES = {
-    "pedir-atualizacao": "Pedir uma atualização",
-    "negociar-prazo": "Negociar um prazo",
-    "dar-feedback": "Dar feedback",
-    "confirmar-proximos-passos": "Confirmar próximos passos",
-    "se-apresentar": "Apresentar-se a novos colegas",
-    "pedir-ajuda": "Pedir ajuda",
-    "esclarecer": "Pedir esclarecimento",
-    "comunicar-risco": "Comunicar risco",
-}
 DOIST_ALIASES = {
     "pedido-atualizacao-newsletter": "doist-pedir-atualizacao",
     "feedback-rascunho-google-docs": "doist-dar-feedback",
@@ -67,10 +50,6 @@ BLOCO = 3000
 
 def carregar_json(path):
     return json.loads(path.read_text(encoding="utf-8-sig"))
-
-
-def abrir_leitura(path):
-    return closing(sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True))
 
 
 def registrar_topicos(db):
@@ -141,6 +120,35 @@ def transcricoes(dados):
         return {item["id"]: item for line in arquivo if line.strip() for item in (json.loads(line),)}
 
 
+def aplicar_revisoes_doist(db, dados):
+    alterados = set()
+    for caminho in sorted((dados / "revisao-ocr" / "terra").glob("doist-*.json")):
+        try:
+            item = ler_recibo(caminho)
+        except (OSError, ValueError) as erro:
+            print(f"Revisão ignorada: {caminho.name}: {erro}", flush=True)
+            continue
+        linha = db.execute(
+            "SELECT caminho, texto, estado FROM nos WHERE id=? AND tipo='captura'", (item["id"],)
+        ).fetchone()
+        if not linha or not linha[0]:
+            continue
+        imagem = (dados / linha[0]).resolve()
+        if not imagem.is_relative_to(dados.resolve()) or not imagem.is_file():
+            continue
+        with imagem.open("rb") as arquivo:
+            if hashlib.file_digest(arquivo, "sha256").hexdigest() != item["sha256"]:
+                continue
+        if (linha[1], linha[2]) == (item["texto"], item["estado"]):
+            continue
+        db.execute("UPDATE nos SET texto=?,estado=? WHERE id=?", (item["texto"], item["estado"], item["id"]))
+        db.execute("DELETE FROM ligacoes WHERE origem=? AND relacao='candidato'", (item["id"],))
+        if item["texto"]:
+            db.executemany(INSERIR_LIGACAO, classificar_no(item["id"], item["texto"]))
+        alterados.add(item["id"])
+    return alterados
+
+
 def registrar_doist(db, dados):
     capturas = {arquivo.stem: arquivo for arquivo in sorted((dados / "doist" / "capturas").glob("*"))
                 if arquivo.is_file() and arquivo.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp")}
@@ -163,6 +171,7 @@ def registrar_doist(db, dados):
                                 caminho, texto, estado, None))
         if estado == "extraido":
             db.executemany(INSERIR_LIGACAO, classificar_no(identificador, texto))
+    aplicar_revisoes_doist(db, dados)
     db.execute("INSERT INTO entradas VALUES (?, ?)", ("fontes/doist.json (elegíveis)", len(elegiveis)))
     db.execute("INSERT INTO entradas VALUES (?, ?)", ("doist/wiki-ocr.jsonl", len(ocr)))
     print(f"Doist: {len(elegiveis)} capturas no catálogo, {len(ocr)} resultados de OCR", flush=True)
@@ -209,23 +218,6 @@ def atualizar_curadoria(grafo):
         registrar_curadoria(db)
 
 
-def pagina_local(db, identificador, url):
-    if identificador.startswith("doist-"):
-        pagina = f"local/doist/{identificador}.md"
-        return pagina if (WIKI / pagina).is_file() else None
-    if not identificador.startswith("zulip-msg-"):
-        return None
-    channel = re.search(r"/(?:channel|stream)/(\d+)", url or "")
-    thread = db.execute(
-        "SELECT destino FROM ligacoes WHERE origem=? AND relacao='pertence'", (identificador,)
-    ).fetchone()
-    if channel and thread:
-        pagina = f"local/zulip/canal-{channel[1]}/{thread[0]}.md"
-        if (WIKI / pagina).is_file():
-            return f"{pagina}#{identificador}"
-    return None
-
-
 def resumo(db):
     totais = dict(db.execute("SELECT tipo, count(*) FROM nos GROUP BY tipo"))
     ocr = dict(db.execute("SELECT estado, count(*) FROM nos WHERE tipo='captura' GROUP BY estado"))
@@ -241,40 +233,8 @@ def resumo(db):
 
 
 def buscar(db, args):
-    filtros = ["n.tipo IN ('mensagem', 'captura')"]
-    valores = []
-    destinos = [destino for destino in (args.tema, args.situacao) if destino]
-    for destino in destinos:
-        origem = " AND l.relacao='curado'" if args.curados else ""
-        filtros.append(f"EXISTS (SELECT 1 FROM ligacoes l WHERE l.origem=n.id AND l.destino=?{origem})")
-        valores.append(destino)
-    if args.curados and not (args.tema or args.situacao):
-        filtros.append("EXISTS (SELECT 1 FROM ligacoes l WHERE l.origem=n.id AND l.relacao='curado')")
-    if args.fonte:
-        filtros.append("n.fonte = ?")
-        valores.append(args.fonte)
-    if args.texto:
-        filtros.append("(instr(lower(n.texto), lower(?)) > 0 OR instr(lower(n.titulo), lower(?)) > 0)")
-        valores.extend((args.texto, args.texto))
-    where = " AND ".join(filtros)
-    cursor = db.execute(f"""
-        SELECT n.id, n.fonte, n.titulo, n.url, n.estado, substr(n.texto,1,320) AS previa
-        FROM nos n WHERE {where}
-        ORDER BY EXISTS (SELECT 1 FROM ligacoes l WHERE l.origem=n.id AND l.relacao='curado') DESC,
-                 n.ordem DESC, n.id
-        LIMIT ? OFFSET ?
-    """, (*valores, args.limite, args.pular))
-    resultados = []
-    for linha in cursor:
-        vinculos = db.execute("""
-            SELECT destino, relacao, trecho FROM ligacoes
-            WHERE origem=? AND relacao IN ('curado','candidato')
-            ORDER BY destino, relacao DESC
-        """, (linha["id"],))
-        classificacao = [dict(vinculo) for vinculo in vinculos
-                         if not destinos or vinculo["destino"] in destinos]
-        resultados.append({**dict(linha), "classificacao": classificacao,
-                           "pagina_local": pagina_local(db, linha["id"], linha["url"])})
+    resultados = buscar_exemplos(db, WIKI, tema=args.tema, situacao=args.situacao, fonte=args.fonte,
+                                 texto=args.texto, curados=args.curados, limite=args.limite, pular=args.pular)
     if args.formato == "markdown":
         imprimir_resultados(resultados)
     else:
@@ -293,23 +253,6 @@ def imprimir_resultados(resultados):
             trecho = " ".join((ligacao["trecho"] or "").split())
             exemplo = f" · {trecho}" if trecho else ""
             print(f"  - {ligacao['destino']} ({ligacao['relacao']}){exemplo}")
-
-
-def mostrar(db, identificador):
-    no = db.execute("SELECT * FROM nos WHERE id=?", (identificador,)).fetchone()
-    if no is None:
-        raise ValueError(f"Nó não encontrado: {identificador}")
-    saidas = db.execute("""
-        SELECT l.destino AS id, l.relacao, l.trecho, n.titulo, n.caminho
-        FROM ligacoes l JOIN nos n ON n.id=l.destino
-        WHERE l.origem=? ORDER BY l.relacao, l.destino
-    """, (identificador,))
-    entradas = db.execute("""
-        SELECT relacao, count(*) AS quantidade FROM ligacoes WHERE destino=? GROUP BY relacao
-    """, (identificador,))
-    imprimir_json({"no": dict(no), "pagina_local": pagina_local(db, identificador, no["url"]),
-                   "ligacoes": [dict(linha) for linha in saidas],
-                   "ligacoes_recebidas": {linha["relacao"]: linha["quantidade"] for linha in entradas}})
 
 
 def imprimir_json(objeto):
@@ -364,7 +307,7 @@ def main():
             buscar(db, args)
         else:
             try:
-                mostrar(db, args.id)
+                imprimir_json(ler_no(db, WIKI, args.id))
             except ValueError as exc:
                 parser.error(str(exc))
 

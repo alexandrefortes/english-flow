@@ -1,0 +1,20 @@
+{
+  "name": "workplace-english-local",
+  "interface": {
+    "displayName": "Workplace English Practice"
+  },
+  "plugins": [
+    {
+      "name": "ingles-para-o-trabalho",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ingles-para-o-trabalho"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education"
+    }
+  ]
+}

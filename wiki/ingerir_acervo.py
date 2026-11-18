@@ -19,6 +19,7 @@ DOIST_HOSTS = {"async.twist.com", "twist.com", "www.todoist.com"}
 ZULIP_HOSTS = {"chat.zulip.org"}
 RASTER = {".png", ".jpg", ".jpeg", ".webp"}
 MARCA = "workplace-english-practice-local-v1"
+LINK_ANEXOS = "[Anexos locais do Zulip](anexos/index.md)"
 RESUMO = {**TEMAS, **SITUACOES}
 GRAFIA_MARKDOWN = re.compile(r"_|[^ \w,.’–—]")
 CERCAS = re.compile(r"\x60+")
@@ -61,15 +62,9 @@ def link_oficial(url, hosts, texto):
     return f"[{texto}](<{uri}>)"
 
 
-def cabecalho(kind, identificador, titulo, ligacoes, **metadados):
+def cabecalho(ligacoes, **aprendizagem):
     slugs = {slug for grupo in ligacoes for slug, _, _ in grupo}
-    manual = any(relacao == "curado" for grupo in ligacoes for _, relacao, _ in grupo)
-    valores = {
-        "kind": kind, "title": titulo, "source_id": identificador,
-        "classification": "mixed" if manual else "automatic",
-        "learning_uses": sorted(slugs) or ["leitura-contextual"],
-        **metadados,
-    }
+    valores = {"learning_uses": sorted(slugs) or ["leitura-contextual"], **aprendizagem}
     return "---\n" + "".join(f"{key}: {json.dumps(value, ensure_ascii=False)}\n" for key, value in valores.items()) + "---\n\n"
 
 
@@ -92,7 +87,7 @@ def resumo_extrativo(fontes, ligacoes):
                     por_sinal[slug].append((fonte, trecho))
     if not por_sinal:
         return ""
-    linhas = ["## Sinais de inglês", "", "Resumo extrativo automático. Leia o contexto antes de usar os trechos.", ""]
+    linhas = ["## Sinais de inglês", ""]
     for slug in sorted(por_sinal):
         exemplos = []
         for fonte, trecho in por_sinal[slug]:
@@ -178,7 +173,7 @@ def copiar_capturas(db, dados, edicao, classificacoes):
         imagem = (dados / caminho).resolve()
         if not imagem.is_relative_to(dados) or imagem.suffix.lower() not in RASTER or not imagem.is_file():
             raise ValueError(f"Imagem indisponível para a captura {chave}.")
-        if estado != "extraido" or not texto:
+        if estado not in {"extraido", "parcial", "vazio"} or (estado != "vazio" and not texto):
             raise ValueError(f"OCR indisponível para a captura {chave}.")
         nome_imagem = chave + imagem.suffix.lower()
         edicao.copiar(f"doist/imagens/{nome_imagem}", imagem)
@@ -186,18 +181,17 @@ def copiar_capturas(db, dados, edicao, classificacoes):
         grupo = [classificacoes.get(chave, []) + rotulos_ocr]
         original = link_oficial(url, DOIST_HOSTS, "Publicação original")
         partes = [
-            cabecalho("capture", chave, titulo, grupo, source="Doist", original_url=url,
-                      image=f"imagens/{nome_imagem}", transcription="ocr",
-                      **({"additional_evidence": "ocr-catalogue"} if rotulos_ocr else {})),
+            cabecalho(grupo),
             f"# {rotulo(titulo)}\n\n",
-            "[Índice local](../index.md) · [Capturas Doist](index.md)\n\n",
-            f"ID {codigo_inline(chave)}" + (f" · {original}\n\n" if original else "\n\n"),
-            f"[Abrir imagem local](imagens/{nome_imagem})\n\n",
+            " · ".join(filter(None, ("[Índice local](../index.md)", "[Capturas Doist](index.md)", original))) + "\n\n",
             f"![Captura Doist](imagens/{nome_imagem})\n\n",
             resumo_extrativo([None], grupo),
-            "## Texto extraído da imagem\n\nOCR automático. Confira nomes, pontuação e formatação na captura.\n\n",
-            texto_original(texto),
         ]
+        if texto:
+            partes.append("## Content\n\n")
+            if estado == "parcial":
+                partes.append("Transcrição parcial.\n\n")
+            partes.append(texto_original(texto))
         edicao.escrever(f"doist/{chave}.md", "".join(partes))
         paginas.append(f"- [{rotulo(titulo)}]({chave}.md)")
         for slug in {slug for slug, _, _ in grupo[0]}:
@@ -206,7 +200,7 @@ def copiar_capturas(db, dados, edicao, classificacoes):
     return len(paginas), temas
 
 
-def ler_mensagens(db, dados):
+def ler_mensagens(db, dados, topicos=None):
     bancos = []
     for nome, pasta in (("completo", "zulip"), ("piloto", "zulip-piloto")):
         caminho = dados / pasta / "coleta.sqlite3"
@@ -221,9 +215,14 @@ def ler_mensagens(db, dados):
     else:
         campos = ", ".join("NULL" for _ in colunas)
     joins = "\n".join(f"LEFT JOIN {nome}.mensagens AS {nome} ON {nome}.id = m.ordem" for nome in bancos)
+    ligacoes = "ligacoes l"
+    if topicos is not None:
+        db.execute("CREATE TEMP TABLE topicos_selecionados (id TEXT PRIMARY KEY) WITHOUT ROWID")
+        db.executemany("INSERT INTO topicos_selecionados VALUES (?)", ((chave,) for chave in topicos))
+        ligacoes = "topicos_selecionados t CROSS JOIN ligacoes l ON l.destino = t.id"
     return db.execute(f"""
         SELECT l.destino, m.ordem, m.texto, m.url, c.titulo, c.url, {campos}
-        FROM ligacoes l CROSS JOIN nos m ON m.id = l.origem AND m.tipo = 'mensagem'
+        FROM {ligacoes} CROSS JOIN nos m ON m.id = l.origem AND m.tipo = 'mensagem'
         CROSS JOIN nos c ON c.id = l.destino AND c.tipo = 'conversa'
         {joins}
         WHERE l.relacao = 'pertence'
@@ -231,10 +230,12 @@ def ler_mensagens(db, dados):
     """)
 
 
-def copiar_topicos(db, dados, edicao, classificacoes):
+def copiar_topicos(db, dados, edicao, classificacoes, *, anexos_por_mensagem=None, topicos=None):
     canais = defaultdict(list)
     total = 0
-    for indice, (chave, linhas) in enumerate(groupby(ler_mensagens(db, dados), key=lambda linha: linha[0]), start=1):
+    anexos_por_mensagem = anexos_por_mensagem or {}
+    consultas = groupby(ler_mensagens(db, dados, topicos), key=lambda linha: linha[0])
+    for indice, (chave, linhas) in enumerate(consultas, start=1):
         if not re.fullmatch(r"zulip-topico-[0-9a-f]{24}", chave):
             raise ValueError(f"ID de tópico inesperado no grafo: {chave}.")
         mensagens = sorted(linhas, key=lambda linha: linha[1])
@@ -253,26 +254,29 @@ def copiar_topicos(db, dados, edicao, classificacoes):
         sinais = {}
         original = link_oficial(url, ZULIP_HOSTS, "Discussão no Zulip")
         partes = [
-            cabecalho("conversation", chave, topico, grupos, source="Zulip",
-                      channel_id=canal_id, channel=canal, message_count=len(mensagens), original_url=url,
-                      message_learning_default="leitura-contextual", learning_by_message=rotulos_mensagem),
+            cabecalho(grupos, message_learning_default="leitura-contextual", learning_by_message=rotulos_mensagem),
             f"# {rotulo(topico)}\n\n",
-            "[Índice local](../../index.md) · [Tópicos deste canal](index.md)\n\n",
-            f"Canal {rotulo(canal)} · {len(mensagens)} mensagens" + (f" · {original}\n\n" if original else "\n\n"),
+            " · ".join(filter(None, ("[Índice local](../../index.md)", f"[{rotulo(canal)}](index.md)", original))) + "\n\n",
             resumo_extrativo(fontes, grupos),
         ]
+        dia_anterior = None
         for fonte, linha in zip(fontes, mensagens, strict=True):
-            _, _, texto, mensagem_url, _, _, _, _, _, autor, data = linha
-            original = link_oficial(mensagem_url, ZULIP_HOSTS, "Mensagem original")
-            partes.extend((f"## {fonte}\n\n",
-                           " · ".join(filter(None, (rotulo(autor) if autor else "",
-                                       rotulo(data) if data else "", original))) + "\n\n"))
-            temas = rotulos_mensagem.get(fonte, [])
-            if temas:
-                partes.append("Sinais de inglês · " + ", ".join(codigo_inline(slug) for slug in temas) + "\n\n")
-                for slug in temas:
-                    sinais.setdefault(slug, fonte)
+            _, _, texto, _, _, _, _, _, _, autor, data = linha
+            partes.append(f"## {fonte}\n\n")
+            dia = data.partition("T")[0] if data else None
+            assinatura = [rotulo(autor)] if autor else []
+            if dia and dia != dia_anterior:
+                assinatura.append(rotulo(dia))
+            dia_anterior = dia
+            if assinatura:
+                partes.append(" · ".join(assinatura) + "\n\n")
+            for slug in rotulos_mensagem.get(fonte, ()):
+                sinais.setdefault(slug, fonte)
             partes.append(texto_original(texto))
+            anexos = anexos_por_mensagem.get(fonte, ())
+            if anexos:
+                links = " · ".join(f"[{rotulo(nome)}](../../anexos/{identificador}.md)" for identificador, nome in anexos)
+                partes.append(f"Anexos locais · {links}\n\n")
         edicao.escrever(f"zulip/canal-{canal_id}/{chave}.md", "".join(partes))
         canais[canal_id].append((topico, chave, len(mensagens), canal, mensagens[-1][1], sinais))
         total += len(mensagens)
@@ -300,6 +304,7 @@ def escrever_indices(edicao, canais, mensagens, capturas):
         "As mensagens do Zulip mantêm o texto integral da coleta, incluindo citações, Markdown e referências a anexos, "
         "em blocos de texto. Consulte a imagem ao usar o OCR da Doist.\n\n"
         f"[Ver as {capturas} capturas da Doist](doist/index.md) · [Procurar por tema ou situação](temas/index.md) · "
+        f"{LINK_ANEXOS} · "
         "[Grafo SQLite](grafo.sqlite3) · "
         "[Manifesto de integridade](manifesto.json)\n\n"
         "## Canais públicos do Zulip\n\n"
@@ -359,16 +364,20 @@ def escrever_indices_tematicos(edicao, canais, capturas_por_tema):
 
 
 def ingerir(dados, grafo, saida):
+    from ingerir_anexos import integrar
+
     edicao = Edicao(saida)
     with abrir_leitura(grafo) as db:
         classificacoes = ler_classificacoes(db)
         capturas, capturas_por_tema = copiar_capturas(db, dados, edicao, classificacoes)
-        canais, mensagens = copiar_topicos(db, dados, edicao, classificacoes)
+        anexos, _, totais_anexos = integrar(dados, db, edicao, classificacoes)
+        canais, mensagens = copiar_topicos(db, dados, edicao, classificacoes, anexos_por_mensagem=anexos)
         esperadas = db.execute("SELECT count(*) FROM nos WHERE tipo='mensagem'").fetchone()[0]
         if mensagens != esperadas:
             raise ValueError(f"Renderizadas {mensagens} de {esperadas} mensagens do grafo.")
         edicao.copiar("grafo.sqlite3", grafo)
     totais = escrever_indices(edicao, canais, mensagens, capturas)
+    totais.update(totais_anexos)
     escrever_indices_tematicos(edicao, canais, capturas_por_tema)
     totais["markdown"] = sum(caminho.endswith(".md") for caminho in edicao.arquivos)
     totais["imagens"] = capturas

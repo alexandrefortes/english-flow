@@ -1,5 +1,8 @@
 /dados/
 /wiki/local/
+/caderno de estudos/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.obsidian/
+llm-wiki.md
