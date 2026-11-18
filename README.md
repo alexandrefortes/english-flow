@@ -4,11 +4,11 @@ Pratique inglês profissional com exemplos reais de comunicação escrita. As ca
 
 ## Wiki de inglês para o trabalho
 
-O [plano para continuar o projeto na nuvem](PLANO.md) descreve a ampliação da busca, o refinamento pelo assistente, a curadoria e a edição compacta.
+Para trabalhar na nuvem, clone o repositório privado e execute `python -B preparar_nuvem.py` na raiz. O comando restaura o acervo de curadoria em `wiki/local/` e confere os hashes SHA-256. Os dados vêm do próprio checkout, sem Git LFS, downloads externos ou nova transcrição. A edição reúne texto, estados de leitura, contexto e referências. As mídias originais permanecem na máquina da coleta. Para usar o MCP, defina `INGLEST_PROJECT_DIR` como a raiz do checkout. O [plano de trabalho](PLANO.md) descreve a curadoria e as próximas mudanças na busca.
 
-Abra o [índice da wiki](wiki/index.md) e escolha um tema ou um [caso de trabalho](wiki/conversas/index.md). As páginas mostram o que aconteceu nas trocas da Doist e do Zulip, explicam as formulações em inglês e propõem exercícios. A edição local guarda as conversas completas e as imagens com OCR na própria wiki.
+Abra o [índice da wiki](wiki/index.md) e escolha um tema ou um [caso de trabalho](wiki/conversas/index.md). As páginas mostram o que aconteceu nas trocas da Doist e do Zulip, explicam as formulações em inglês e propõem exercícios. A edição de curadoria guarda as conversas completas e o texto extraído das imagens na própria wiki.
 
-A wiki é uma adaptação de [LLM Wiki, de Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). Versionamos as páginas de estudo, os metadados de aprendizagem e os scripts. A edição completa em `wiki/local/` é gerada a partir da coleta e fica fora do Git. Depois de gerá-la, copie a pasta `wiki/` inteira para estudar offline. [Gerar e usar a edição local](wiki/grafo.md) · [Incorporar novas fontes](wiki/AGENTS.md)
+A wiki é uma adaptação de [LLM Wiki, de Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). Versionamos as páginas de estudo, os metadados de aprendizagem, os scripts e a edição de curadoria compactada em `nuvem/`. Depois de restaurá-la, copie a pasta `wiki/` inteira para estudar offline. [Gerar e usar a edição local](wiki/grafo.md) · [Incorporar novas fontes](wiki/AGENTS.md)
 
 ## Usar o plugin no Codex
 

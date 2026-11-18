@@ -4,15 +4,15 @@ Para estudar, abra a [edição local](local/index.md). Ela guarda as interaçõe
 
 ## doist-pedir-atualizacao
 
-Uma pessoa pergunta pelo andamento de uma newsletter da Doist e oferece ajuda. A outra diz que a preparação parece avançar e que vai confirmar na segunda se está tudo pronto para o envio. Use em pedidos de atualização e ofertas de apoio. [Imagem e texto na wiki](local/doist/doist-pedir-atualizacao.md) · [Publicação original](https://async.twist.com/when-to-take-real-time-meetings-async/#moving-work-forward)
+Uma pessoa pergunta pelo andamento de uma newsletter da Doist e oferece ajuda. A outra diz que a preparação parece avançar e que vai confirmar na segunda se está tudo pronto para o envio. Use em pedidos de atualização e ofertas de apoio. [Transcrição na wiki](local/doist/doist-pedir-atualizacao.md) · [Publicação original](https://async.twist.com/when-to-take-real-time-meetings-async/#moving-work-forward)
 
 ## doist-dar-feedback
 
-Uma pessoa pede a opinião da colega sobre o tamanho de uma introdução. A colega responde num comentário do Google Docs. Use para observar como pedir uma avaliação específica num rascunho. [Imagem e texto na wiki](local/doist/doist-dar-feedback.md) · [Publicação original](https://www.todoist.com/inspiration/remote-team-communication-tools#google-docs)
+Uma pessoa pede a opinião da colega sobre o tamanho de uma introdução. A colega responde num comentário do Google Docs. Use para observar como pedir uma avaliação específica num rascunho. [Transcrição na wiki](local/doist/doist-dar-feedback.md) · [Publicação original](https://www.todoist.com/inspiration/remote-team-communication-tools#google-docs)
 
 ## doist-combinar-prazo
 
-Num comentário sobre a imagem de um artigo, uma pessoa propõe quinta em vez de segunda. A outra sugere receber a imagem até o fim da quarta para deixar tempo para ajustes antes da publicação. Use para estudar contrapropostas e combinar margem para revisão. [Imagem e texto na wiki](local/doist/doist-combinar-prazo.md) · [Publicação original](https://www.todoist.com/inspiration/remote-team-communication-tools#todoist)
+Num comentário sobre a imagem de um artigo, uma pessoa propõe quinta em vez de segunda. A outra sugere receber a imagem até o fim da quarta para deixar tempo para ajustes antes da publicação. Use para estudar contrapropostas e combinar margem para revisão. [Transcrição na wiki](local/doist/doist-combinar-prazo.md) · [Publicação original](https://www.todoist.com/inspiration/remote-team-communication-tools#todoist)
 
 ## zulip-dar-feedback
 

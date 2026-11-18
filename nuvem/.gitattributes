@@ -1,0 +1,2 @@
+# Keep the compressed parts byte-for-byte identical across checkouts.
+wiki-*.bin binary

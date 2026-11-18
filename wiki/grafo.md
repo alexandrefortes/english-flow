@@ -1,6 +1,6 @@
 # Explorar o grafo da coleta
 
-O [índice](index.md) reúne as páginas de estudo. Na [edição local](local/index.md), uma mensagem pode estar ligada ao tópico do Zulip, a uma situação como negociação de prazo e a um tema como gramática. As capturas da Doist têm a imagem e o texto extraído na própria wiki. Para conferir a redação de uma captura, abra a imagem local.
+O [índice](index.md) reúne as páginas de estudo. Na [edição local](local/index.md), uma mensagem pode estar ligada ao tópico do Zulip, a uma situação como negociação de prazo e a um tema como gramática. A edição de curadoria do repositório inclui as transcrições da Doist e as referências de origem. Na máquina da coleta também há imagens para conferência visual.
 
 ```mermaid
 graph LR

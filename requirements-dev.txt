@@ -1,0 +1,2 @@
+-r plugins/ingles-para-o-trabalho/requirements.txt
+Pillow>=10

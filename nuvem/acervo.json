@@ -1,0 +1,50 @@
+{
+  "versao": 1,
+  "manifesto_sha256": "15d4a0749b89719044677471340aaba6d499640f63c899f1a6d32046ef4d9fb5",
+  "arquivos_verificados": 57383,
+  "totais": {
+    "anexos": 28455,
+    "anexos_aguardam_transcricao": 0,
+    "anexos_com_texto": 27634,
+    "anexos_referencias": 29732,
+    "anexos_referencias_pendentes": 0,
+    "anexos_revisados_manualmente": 1788,
+    "canais": 26,
+    "capturas": 46,
+    "imagens": 0,
+    "markdown": 57380,
+    "mensagens": 493370,
+    "topicos": 28239
+  },
+  "mascaramento": {
+    "campos_do_grafo": 142,
+    "arquivos_de_texto": 221
+  },
+  "partes": [
+    {
+      "arquivo": "wiki-001.bin",
+      "bytes": 33554432,
+      "sha256": "cf998594019c0c6dbefa197d492ce9d60b13a0bdaeb6fbb88536549e145b321a"
+    },
+    {
+      "arquivo": "wiki-002.bin",
+      "bytes": 33554432,
+      "sha256": "e346a62f06580b701aa643a8e1b03b6cadac9fcd21e5160c4abab56298dc900a"
+    },
+    {
+      "arquivo": "wiki-003.bin",
+      "bytes": 33554432,
+      "sha256": "56f67bbd31e4c05aa62ce0f60691dc265387234c1a5a6e9e15664e5d0e281e7d"
+    },
+    {
+      "arquivo": "wiki-004.bin",
+      "bytes": 33554432,
+      "sha256": "fbf7e2b2a7776806b048a0dbfdd2d130df2d25dd71829b85ae498853f832ed90"
+    },
+    {
+      "arquivo": "wiki-005.bin",
+      "bytes": 21714554,
+      "sha256": "ef79faab255fa5820458751be0766f38e332b6971886a707336f0a6f01a313ee"
+    }
+  ]
+}
