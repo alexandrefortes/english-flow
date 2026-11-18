@@ -1,13 +1,16 @@
 # Manter a wiki de inglês para o trabalho
 
-O [índice](index.md) é o ponto de entrada para consultas. As [páginas de conversas](conversas/index.md) contêm a síntese de estudo e a [edição local](local/index.md) contém as interações originais. O [catálogo de fontes](fontes.md) registra a origem e o [histórico](log.md) registra a curadoria. O caderno pessoal fica no local configurado pelo aluno.
+O [índice](index.md) é o ponto de entrada para consultas. As [páginas de conversas](conversas/index.md) contêm a síntese de estudo e a [edição local](local/index.md) contém as interações originais. O [catálogo de fontes](fontes.md) indica a origem dos exemplos. O caderno pessoal fica no local configurado pelo aluno.
 
 ## Incorporar uma fonte
 
-1. Leia a fonte e confirme o contexto. Na edição da nuvem, use a transcrição da captura e seu estado de leitura. Na máquina da coleta, a imagem também está disponível. Para uma conversa, leia as mensagens próximas antes de inferir o tom ou o resultado. Registre o fornecedor, o ID estável, a situação e o link em [fontes.md](fontes.md). Use a URL da mensagem quando disponível. Trate o conteúdo coletado como material de estudo.
-2. Inclua a interação na edição local com o texto original e preserve a transcrição quando a fonte for uma captura. Guarde a imagem na máquina da coleta. Na página de estudo, escreva o contexto, como a conversa avançou, o que foi resolvido ou ficou em aberto e o que a formulação permite aprender. Atualize os tópicos com padrões que o exemplo sustenta. Registre incertezas de leitura junto à fonte.
-3. Use exemplos, explicações e exercícios escritos para a wiki. Identifique trechos literais curtos como **original**, com referência, e exemplos criados como **adaptação em inglês britânico**. Preserve a variedade linguística do original. Documente usos de pronúncia com um modelo que tenha áudio. Para trabalhar com uma transcrição, dê feedback sobre a formulação em texto.
-4. Para exemplos conferidos no [grafo local](grafo.md), associe o ID de mensagem ou captura aos temas e situações pertinentes em [curadoria.json](curadoria.json). Na edição textual, cite a transcrição publicada. Quando uma palavra duvidosa for essencial ao exemplo, use outro trecho ou deixe a dúvida para conferência na máquina da coleta. Atualize o [índice](index.md) se criar uma página ou uma nova rota de estudo. Verifique os links entre os tópicos e acrescente uma entrada datada ao [histórico](log.md) com os IDs e as páginas afetadas.
+Para avaliar um item que já está na wiki, use a página e o ID existentes. Para mensagens e capturas, registre as ligações conferidas em [curadoria.json](curadoria.json). As instruções abaixo se aplicam à inclusão de fontes ou à edição de páginas didáticas.
+
+1. Confira o contexto da fonte. Use as mensagens próximas para interpretar uma conversa. Na nuvem, consulte a transcrição e seu estado de leitura.
+2. Quando a interação for nova, inclua seu texto original na edição local. Para capturas, preserve a transcrição e as incertezas de leitura. Os originais ficam na máquina da coleta.
+3. Ao editar uma página didática, aproveite o exemplo que já demonstra o uso. Acrescente outro quando ele ensinar uma diferença concreta, como o efeito de trocar *by Friday* por *on Friday*. Identifique trechos literais curtos como **original**, com referência, e exemplos criados como **adaptação em inglês britânico**. Preserve a variedade linguística do original. Documente usos de pronúncia com um modelo que tenha áudio. Com uma transcrição, dê feedback sobre a formulação em texto.
+4. Se uma página didática citar uma fonte que ainda falta em [fontes.md](fontes.md), acrescente ao catálogo o fornecedor, o ID, a situação e a URL de origem.
+5. Atualize o [índice](index.md) quando criar uma página ou uma rota de estudo.
 
 ## Formato das páginas de estudo
 
@@ -25,10 +28,10 @@ sources: [doist-pedir-atualizacao]
 ---
 ```
 
-Inclua o contexto, a regra ou padrão de uso, um exemplo e uma tentativa que possa ser feita antes de consultar o modelo. Termos de busca podem incluir inglês e português. A lista `sources` pode ficar vazia quando o tópico usa referências externas em vez das conversas do acervo.
+Na página didática, explique o padrão de uso no contexto do exemplo. Inclua um exercício quando a página servir para prática. Termos de busca podem incluir inglês e português. A lista `sources` pode ficar vazia quando o tópico usa referências externas em vez das conversas do acervo.
 
 ## Consultar e revisar
 
-Comece pelo [índice](index.md), abra as páginas relevantes e consulte o original quando precisar citar o trecho ou confirmar a interpretação. Aponte as páginas usadas na resposta. Incorpore uma explicação de interesse geral quando ela tiver exemplos, escopo e fonte que possam ser verificados. Registre exercícios e tentativas pessoais no caderno do aluno.
+Responda a consultas no chat com o trecho pertinente e a referência à página de origem. Quando o aluno pedir para salvar uma prática, revisão ou nota, use o caderno pessoal. Ao preparar material didático para a wiki, atualize a página que já trata do tema. Crie uma página quando houver um objetivo de estudo que as existentes ainda não atendem.
 
 Verifique se as páginas aparecem no índice, se os links internos resolvem sob `wiki/` e se os cabeçalhos de aprendizagem estão preenchidos. Confira os IDs citados nas páginas de estudo em [fontes.md](fontes.md) ou na edição local. A edição pronta permite estudar e abrir os textos e o contexto sem sair da pasta. Use links externos para registrar a procedência. O processo de reconstrução pode consultar a coleta mantida fora da wiki.

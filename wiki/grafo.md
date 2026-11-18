@@ -14,7 +14,7 @@ graph LR
 
 ## Usar a edição pronta
 
-Copie a pasta `wiki/` inteira, incluindo `local/`. Abra `index.md` no destino. Na pasta copiada, você também pode usar o grafo SQLite incluído nela:
+Abra o [índice](index.md) na pasta `wiki/` do projeto. Para consultar o grafo SQLite pelo terminal, execute os comandos abaixo nessa pasta.
 
 ```powershell
 python -B -X utf8 construir_grafo.py resumo
@@ -33,13 +33,15 @@ O índice usa três relações. `pertence` leva a mensagem ao tópico. `candidat
 
 O [índice de anexos](local/anexos/index.md) abre o texto extraído dos arquivos. Cada página liga às mensagens que citaram o anexo, e essas mensagens ligam de volta à página. No YAML, `learning_from_text` indica sinais no texto extraído e `learning_from_context` indica sinais nas mensagens. O texto fica na própria wiki, pronto para leitura offline.
 
-Na raiz do projeto, rode `python -B -X utf8 wiki/processar_anexos.py` para baixar os anexos com acesso anônimo, extrair o texto e atualizar a edição local. Rode o mesmo comando para retomar. Use `--resumo` para ver a contagem sem rede ou `--so-transcrever` para concluir a transcrição e depois incorporá-la com `python -B -X utf8 wiki/ingerir_anexos.py`. Os arquivos baixados ficam na pasta da coleta.
+Na raiz do projeto da máquina da coleta, rode `python -B -X utf8 wiki/processar_anexos.py` para incorporar anexos novos. Rode o mesmo comando para retomar. Use `--resumo` para ver a contagem sem rede ou `--so-transcrever` para concluir a transcrição e depois incorporá-la com `python -B -X utf8 wiki/ingerir_anexos.py`. Os arquivos baixados ficam na pasta da coleta.
 
 O OCR usa Tesseract com o modelo `eng`. Para PDFs, instale PyMuPDF ou Poppler. Para vídeo e áudio, disponibilize FFmpeg e FFprobe. Passe `--modelo CAMINHO` com um modelo Whisper local para transcrever fala, e acrescente `--dispositivo cuda` se o ambiente tiver suporte. Em vídeo, o OCR usa quadros amostrados.
 
 Cada anexo com texto tem uma seção `Content`. A página indica quando a transcrição é parcial. Para conferir o método, o estado ou as notas de revisão, procure o ID do anexo no [registro de extração](local/anexos/extracao.json). Uma revisão manual tem `manual_review: true` nesse registro. A reconstrução reaplica as revisões de `dados/zulip/anexos/revisoes-manuais.json` quando o ID e o SHA-256 correspondem ao arquivo coletado.
 
 ### Revisão visual do OCR
+
+A revisão visual em massa está pausada. Para a curadoria na nuvem, use a transcrição publicada. As instruções desta seção servem para uma eventual retomada na máquina da coleta.
 
 A revisão com Terra médio usa as imagens originais da Doist e do Zulip. Em vídeos e animações, os lotes usam os quadros selecionados para OCR. PDFs e arquivos ZIP podem ter várias imagens por arquivo. Cada transcrição conferida fica em `dados/revisao-ocr/terra/`, identificada pelo ID e pelo SHA-256 do original. A página preserva o idioma, a grafia e a pontuação da imagem. A indicação de transcrição parcial cobre, por exemplo, uma linha cortada ou encoberta.
 

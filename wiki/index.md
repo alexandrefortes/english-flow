@@ -26,7 +26,7 @@ Abra [Situações de trabalho](situacoes.md) para praticar com um exemplo real, 
 - [Dia a dia no trabalho](dia-a-dia.md). Passe de uma mensagem escrita a uma resposta em voz e a um registro do combinado.
 - [Pronúncia](pronuncia.md). Use um modelo com áudio e pratique a clareza de pedidos e horários.
 
-As [fontes](fontes.md) mostram onde cada conversa pode ser consultada. O [histórico](log.md) registra o que entrou na wiki. Para alimentar ou revisar as páginas, veja as [instruções de manutenção](AGENTS.md).
+As [fontes](fontes.md) mostram onde cada conversa pode ser consultada. Para alimentar ou revisar as páginas, veja as [instruções de manutenção](AGENTS.md).
 
 ## Explorar a coleta no grafo
 
