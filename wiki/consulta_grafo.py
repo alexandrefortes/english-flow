@@ -24,11 +24,39 @@ SITUACOES = {
 }
 
 
-def abrir_leitura(path):
-    return closing(sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True))
+def abrir_leitura(path, indice=None):
+    db = sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True)
+    if indice and indice.is_file():
+        try:
+            db.execute("ATTACH DATABASE ? AS wiki", (indice.resolve().as_uri() + "?mode=ro",))
+            db.executescript("""
+                CREATE TEMP VIEW nos AS
+                SELECT * FROM main.nos WHERE tipo IN ('tema','situacao')
+                UNION ALL
+                SELECT i.id, CASE i.tipo WHEN 'topico' THEN 'conversa' ELSE i.tipo END,
+                       coalesce(n.titulo,i.titulo),i.fonte,n.origem,i.url,i.pagina,i.texto,i.qualidade,i.ordem
+                FROM wiki.itens i LEFT JOIN main.nos n ON n.id=i.id;
+                CREATE TEMP VIEW ligacoes AS
+                SELECT l.* FROM main.ligacoes l JOIN wiki.itens i ON i.id=l.origem
+                WHERE l.relacao='candidato' AND instr(' '||i.rotulos||' ', ' '||l.destino||' ')
+                UNION ALL SELECT id,pai,'pertence',NULL FROM wiki.itens WHERE pai IS NOT NULL
+                UNION ALL SELECT b.anexo,b.mensagem,'mencionado-em',NULL FROM wiki.backlinks b
+                          JOIN wiki.itens m ON m.id=b.mensagem
+                UNION ALL SELECT e.id,j.value,'curado',min(e.trecho) FROM wiki.evidencias e
+                          JOIN wiki.inventario i ON i.id=e.id AND i.estado='conferido',
+                          json_each('["' || replace(e.usos,' ','","') || '"]') j GROUP BY e.id,j.value;
+            """)
+        except BaseException:
+            db.close()
+            raise
+    return closing(db)
 
 
 def pagina_local(db, wiki, identificador, url):
+    if db.execute("SELECT 1 FROM pragma_database_list WHERE name='wiki'").fetchone():
+        linha = db.execute("SELECT pagina,tipo FROM wiki.itens WHERE id=?", (identificador,)).fetchone()
+        if linha:
+            return linha[0] + ("#" + identificador if linha[1] == "mensagem" else "")
     ancora = ""
     if re.fullmatch(r"doist-[a-z0-9-]+", identificador):
         pagina = f"local/doist/{identificador}.md"

@@ -16,6 +16,8 @@ import yaml
 
 import acervo_local as acervo
 import consulta_grafo as grafo
+import busca_wiki
+from indice_wiki import TIPOS, ESTADOS
 from acervo_original import MAX_DOWNLOAD, baixar, baixar_mensagens, verified_image_extension
 
 
@@ -107,7 +109,7 @@ def abrir_grafo():
     path = WIKI / "local" / "grafo.sqlite3"
     if not path.is_file():
         raise ValueError("Grafo ausente. Coloque a wiki completa em INGLEST_PROJECT_DIR/wiki, incluindo local/grafo.sqlite3.")
-    return grafo.abrir_leitura(path)
+    return grafo.abrir_leitura(path, path.with_name('consulta.sqlite3'))
 
 
 def search_graph(topic=None, situation=None, source=None, text=None, curated_only=False, limit=10, offset=0):
@@ -131,7 +133,23 @@ def read_graph_node(node_id):
     return item
 
 
+def search_wiki(**filtros):
+    return busca_wiki.consultar(WIKI, busca_wiki.buscar, **filtros)
+
+
+def read_wiki_item(item_id, offset=0, limit=9000):
+    return busca_wiki.consultar(WIKI, busca_wiki.abrir, chave=item_id, offset=offset, limit=limit)
+
+
 def source_ref(key):
+    if (WIKI / "local/consulta.sqlite3").is_file():
+        try:
+            item = read_wiki_item(key, limit=1)
+        except ValueError:
+            pass
+        else:
+            return {"id": key, "title": item["titulo"], "url": item["url"],
+                    "pagina_local": item["pagina_local"], "tool": "read_wiki_item"}
     ref = acervo.source_ref(DATA, key)
     if ref or not (WIKI / "local" / "grafo.sqlite3").is_file():
         return ref
@@ -223,6 +241,14 @@ def read_entry(entry_id):
     refs = {}
     if isinstance(source_refs, list):
         for ref in source_refs:
+            if (isinstance(ref, dict) and ref.get("tool") == "read_wiki_item"
+                    and isinstance(ref.get("id"), str) and ref.get("id") in entry["sources"] and isinstance(ref.get("title"), str)):
+                url = ref.get("url")
+                refs[ref["id"]] = source_ref(ref["id"]) or {
+                    "id": ref["id"], "title": ref["title"], "tool": "read_wiki_item",
+                    "url": url if isinstance(url, str) and url.startswith("https://") else None,
+                }
+                continue
             if isinstance(ref, dict) and all(isinstance(ref.get(key), str) for key in ("id", "title", "url")):
                 if ref["id"] in entry["sources"] and ref["url"].startswith("https://"):
                     refs[ref["id"]] = {key: ref[key] for key in ("id", "title", "url")}
@@ -239,7 +265,7 @@ def save_entry(kind, title, content, sources=None):
     sources = sorted(set(sources or []))
     refs = [source_ref(source) for source in sources]
     if any(ref is None for ref in refs):
-        raise ValueError("Use IDs de fontes retornados por list_sources, search_zulip ou search_graph.")
+        raise ValueError("Use IDs de fontes retornados por search_wiki, list_sources, search_zulip ou search_graph.")
     entry = {"schema_version": 1, "kind": kind, "language": "en", "title": title.strip(),
              "content": content.strip(), "sources": sources}
     key = hashlib.sha256(json.dumps(entry, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:24]
@@ -278,6 +304,23 @@ TOOLS = [
     tool("list_sources", "Lista as fontes públicas e indica quais estão disponíveis no disco."),
     tool("read_source", "Lê um trecho ou imagem do acervo local.", {"source_id": STRING}, ("source_id",)),
     tool("search_zulip", "Busca termos nas mensagens do Zulip já coletadas no disco.", {"query": STRING}, ("query",)),
+    tool("search_wiki", "Busca na wiki offline. O texto é uma expressão literal. Os filtros usam IDs "
+         "em português. 'conferido' exige evidência. Leia citar_id antes de citar. 'arquivo' é só nome.", {
+             "kind": {"type": "string", "enum": list(TIPOS)},
+             "source": {"type": "string", "enum": ["Doist", "Zulip", "Projeto"]},
+             "situation": {"type": "string", "enum": list(grafo.SITUACOES)},
+             "topic": {"type": "string", "enum": [*grafo.TEMAS, "leitura-contextual"]},
+             "function": STRING,
+             "text": {"type": "string", "minLength": 1, "maxLength": 200},
+             "curation": {"type": "string", "enum": list(ESTADOS)},
+             "limit": {"type": "integer", "minimum": 1, "maximum": 50},
+             "offset": {"type": "integer", "minimum": 0, "maximum": 2147483647},
+         }),
+    tool("read_wiki_item", "Abre o ID na página atual. Retorna evidência, origens e mensagens próximas. "
+         "Para continuar um texto longo, use next_offset.", {
+             "item_id": STRING, "offset": {"type": "integer", "minimum": 0, "maximum": 2147483647},
+             "limit": {"type": "integer", "minimum": 1, "maximum": 20000},
+         }, ("item_id",)),
     tool("search_graph", "Busca exemplos offline da Doist e do Zulip por tema, situação, fonte e texto. "
          "curated_only exige curadoria em cada filtro pedagógico. Retorna IDs para read_graph_node, "
          "prévia, classificação, página local e referência original.", {
@@ -342,7 +385,7 @@ def dispatch(method, params):
         requested = params.get("protocolVersion")
         return {"protocolVersion": requested if requested in versions else versions[-1],
                 "capabilities": {"tools": {}, "resources": {}},
-                "serverInfo": {"name": "ingles-para-o-trabalho", "version": "0.3.0"}}
+                "serverInfo": {"name": "ingles-para-o-trabalho", "version": "0.4.0"}}
     if method == "ping":
         return {}
     if method == "tools/list":

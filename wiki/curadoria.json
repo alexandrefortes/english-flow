@@ -1,33 +1,1705 @@
 {
-  "doist-combinar-prazo": ["comunicar-risco", "conversacao", "dia-a-dia", "gramatica", "linguagem-informal", "negociar-prazo", "vocabulario"],
-  "doist-dar-feedback": ["dar-feedback", "esclarecer", "gramatica", "phrasal-verbs", "vocabulario"],
-  "doist-orientacao-pedidos-integracao": ["confirmar-proximos-passos", "dia-a-dia", "gramatica"],
-  "doist-pedir-atualizacao": ["dia-a-dia", "gramatica", "pedir-ajuda", "pedir-atualizacao", "phrasal-verbs", "vocabulario"],
-  "doist-status-correcao-interface": ["confirmar-proximos-passos", "phrasal-verbs", "vocabulario"],
-  "doist-status-site-prazo": ["comunicar-risco", "conversacao", "esclarecer", "negociar-prazo", "vocabulario"],
-  "zulip-msg-1021504": ["pedir-atualizacao"],
-  "zulip-msg-1143250": ["esclarecer", "gramatica"],
-  "zulip-msg-1203947": ["esclarecer", "pedir-ajuda"],
-  "zulip-msg-1261780": ["gramatica", "comunicar-risco", "confirmar-proximos-passos"],
-  "zulip-msg-1327548": ["comunicar-risco", "gramatica"],
-  "zulip-msg-134596": ["pedir-ajuda"],
-  "zulip-msg-1421266": ["gramatica", "pedir-atualizacao"],
-  "zulip-msg-1518710": ["conversacao", "dar-feedback"],
-  "zulip-msg-1558349": ["confirmar-proximos-passos", "dar-feedback"],
-  "zulip-msg-1760852": ["confirmar-proximos-passos", "pedir-atualizacao"],
-  "zulip-msg-1949967": ["phrasal-verbs", "linguagem-informal", "dia-a-dia", "dar-feedback", "esclarecer"],
-  "zulip-msg-1950081": ["phrasal-verbs", "confirmar-proximos-passos"],
-  "zulip-msg-1991905": ["gramatica", "confirmar-proximos-passos"],
-  "zulip-msg-2288387": ["linguagem-informal", "pedir-atualizacao"],
-  "zulip-msg-2484306": ["comunicar-risco"],
-  "zulip-msg-2499678": ["confirmar-proximos-passos", "conversacao", "dia-a-dia", "gramatica", "linguagem-informal", "vocabulario"],
-  "zulip-msg-2508322": ["conversacao", "pedir-atualizacao"],
-  "zulip-msg-2531120": ["comunicar-risco", "dar-feedback"],
-  "zulip-msg-2532243": ["dia-a-dia", "phrasal-verbs", "pedir-atualizacao"],
-  "zulip-msg-2535843": ["conversacao", "esclarecer"],
-  "zulip-msg-2552913": ["conversacao", "dia-a-dia", "se-apresentar"],
-  "zulip-msg-535380": ["gramatica", "pedir-ajuda"],
-  "zulip-msg-575966": ["gramatica", "negociar-prazo"],
-  "zulip-msg-707334": ["confirmar-proximos-passos", "negociar-prazo"],
-  "zulip-msg-712937": ["pedir-ajuda", "se-apresentar"]
+  "doist-assuntos-diretoria": [
+    {
+      "funcao": "lembrar ação",
+      "trecho": "just a friendly reminder to complete this quick survey",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "a4ef7fe08da19a818dcf2a57"
+    }
+  ],
+  "doist-atualizacao-mensal-marketing": [
+    {
+      "funcao": "introduzir resumo",
+      "trecho": "I wanted to share a quick recap of our mini retreat",
+      "usos": [
+        "vocabulario",
+        "dia-a-dia"
+      ],
+      "assinatura": "8bc819b231046896b149db47"
+    }
+  ],
+  "doist-atualizacao-semanal-diretoria": [
+    {
+      "funcao": "solicitar balanço",
+      "trecho": "What commitments have I delivered last week?",
+      "usos": [
+        "pedir-atualizacao",
+        "gramatica"
+      ],
+      "assinatura": "e263589e3844e3f38eb7bcab"
+    }
+  ],
+  "doist-atualizacao-semanal-samuel": [
+    {
+      "funcao": "solicitar atualização",
+      "trecho": "Hi team, please share your snippets here",
+      "usos": [
+        "pedir-atualizacao",
+        "dia-a-dia"
+      ],
+      "assinatura": "08e8944d2ba608b4540a7bec"
+    }
+  ],
+  "doist-aviso-ferias-disponibilidade": [
+    {
+      "funcao": "oferecer ajuda",
+      "trecho": "if you need any help, please feel free to message me",
+      "usos": [
+        "pedir-ajuda",
+        "conversacao"
+      ],
+      "assinatura": "a79fd17ea9fc631b3f407ce6"
+    }
+  ],
+  "doist-brainstorm-conteudo-encontro": [
+    {
+      "funcao": "definir período",
+      "trecho": "The brainstorm will be open from today, April 13 to Wednesday, April 27.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "dia-a-dia"
+      ],
+      "assinatura": "ddca4659d95f2e33fb51b00b"
+    }
+  ],
+  "doist-brainstorm-sincronizacao": [
+    {
+      "funcao": "apresentar proposta",
+      "trecho": "To tackle this problem, we're thinking about a new syncing strategy",
+      "usos": [
+        "gramatica",
+        "vocabulario"
+      ],
+      "assinatura": "0b280b1f6ebae4b990dad5c2"
+    }
+  ],
+  "doist-capturas-app-store": [
+    {
+      "funcao": "anunciar entrega",
+      "trecho": "Here are all the new screenshots taken using the iPhone Xs Max",
+      "usos": [
+        "confirmar-proximos-passos",
+        "dia-a-dia"
+      ],
+      "assinatura": "d02450ade4d13295b24fd694"
+    }
+  ],
+  "doist-combinar-prazo": [
+    {
+      "funcao": "pedido",
+      "trecho": "Can we do Thursday instead of Monday?",
+      "usos": [
+        "negociar-prazo",
+        "conversacao",
+        "gramatica",
+        "dia-a-dia"
+      ],
+      "assinatura": "4d5be8c0ec8550baba6f796b"
+    },
+    {
+      "funcao": "contraproposta",
+      "trecho": "End of your day Wed should work well so we can make any little changes\nneeded for Thursday.",
+      "usos": [
+        "negociar-prazo",
+        "vocabulario",
+        "linguagem-informal"
+      ],
+      "assinatura": "4d5be8c0ec8550baba6f796b"
+    },
+    {
+      "funcao": "justificar atraso",
+      "trecho": "that only gives me today to work on it.. which is a bit of rush.",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "assinatura": "4d5be8c0ec8550baba6f796b"
+    }
+  ],
+  "doist-combinar-reuniao-fuso": [
+    {
+      "funcao": "combinar reunião",
+      "trecho": "Will you send a calendar invite\nGoncalo?",
+      "usos": [
+        "confirmar-proximos-passos",
+        "gramatica"
+      ],
+      "assinatura": "6e57cb0ea7585abf0c2cf728"
+    }
+  ],
+  "doist-comunicado-prioridades-2022": [
+    {
+      "funcao": "explicar objetivo",
+      "trecho": "This should give you a good overview of what we want to achieve in the year's first half.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "77bb001d1209734077a528d7"
+    }
+  ],
+  "doist-convite-coworking-doist": [
+    {
+      "funcao": "informar horário",
+      "trecho": "When: Today · Fri, March 26 · 12:30 PM - 1:30 PM",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "c47d03e8d554a0f360b93ea8"
+    }
+  ],
+  "doist-convite-talk-multiplataforma": [
+    {
+      "funcao": "anunciar evento",
+      "trecho": "Hello everyone. Doistalk June with @Nuno is happening tomorrow!",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "b77553efea9e4d07e2985416"
+    }
+  ],
+  "doist-dar-feedback": [
+    {
+      "funcao": "solicitar avaliação",
+      "trecho": "Could you check out this Twist intro? Is\nit too long?",
+      "usos": [
+        "dar-feedback",
+        "esclarecer",
+        "gramatica",
+        "phrasal-verbs",
+        "vocabulario"
+      ],
+      "assinatura": "c1082eb13407ecb62082c097"
+    }
+  ],
+  "doist-discussao-principios-design": [
+    {
+      "funcao": "elogiar trabalho",
+      "trecho": "Really terrific exploration.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "e79882dd4f622adf4a49d1c2"
+    }
+  ],
+  "doist-discussao-trabalho-parcial": [
+    {
+      "funcao": "pedir opinião",
+      "trecho": "What do you think? Does it make sense to standardize an approach",
+      "usos": [
+        "dar-feedback",
+        "conversacao"
+      ],
+      "assinatura": "b87315c2a0c9ac698f0bd29b"
+    }
+  ],
+  "doist-especificacao-mencoes": [
+    {
+      "funcao": "explicar condição",
+      "trecho": "If there’s no additional space we abbreviate and add “+1”, or “+2” accordingly.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "914df950eb0735729ccae6dc"
+    }
+  ],
+  "doist-feedback-ajustes-interface": [
+    {
+      "funcao": "sugerir correção",
+      "trecho": "Icon is outdated, please use email icon from dropdown menus",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "98739527eac9bd782eaa3e76"
+    }
+  ],
+  "doist-feedback-relatorio-suporte": [
+    {
+      "funcao": "solicitar avaliação",
+      "trecho": "We are opening this short-lived discussion group to get some feedback from your\nteam",
+      "usos": [
+        "dar-feedback",
+        "dia-a-dia"
+      ],
+      "assinatura": "b2bff08b7aafc72555747f6b"
+    }
+  ],
+  "doist-geeky-medics-github": [
+    {
+      "funcao": "instruir",
+      "trecho": "Reopen this thread to activate it again.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "523838418af0743503ebed18"
+    }
+  ],
+  "doist-geeky-medics-perguntas-dev": [
+    {
+      "funcao": "solicitar ajuda",
+      "trecho": "We have 2 questions on the thread\nthat ideally should be answered by\ndevelopers...",
+      "usos": [
+        "pedir-ajuda",
+        "gramatica"
+      ],
+      "assinatura": "11a7b1d046eeef1017eca0b4"
+    }
+  ],
+  "doist-geeky-medics-planejamento-video": [
+    {
+      "funcao": "indicar material",
+      "trecho": "We have already covered the bones of the pelvis in this article, so this is worth reviewing",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "013d04881f4ca4c650ca5c69"
+    }
+  ],
+  "doist-geeky-medics-publicacao-podcast": [
+    {
+      "funcao": "pedir informação",
+      "trecho": "Could you let me know if you have a Twitter account and\nalso provide a pic I could add to the team page?",
+      "usos": [
+        "esclarecer",
+        "gramatica"
+      ],
+      "assinatura": "a1248a9bf81d5e75e6544610"
+    }
+  ],
+  "doist-headstart-status-produto": [
+    {
+      "funcao": "avisar impedimento",
+      "trecho": "It’s still uploading\nmight be better to check back a bit later",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "assinatura": "c91e8c4a91003de2c041e186"
+    }
+  ],
+  "doist-kickoff-guias-todoist": [
+    {
+      "funcao": "abrir projeto",
+      "trecho": "Here's the kickoff thread for our DO!",
+      "usos": [
+        "dia-a-dia",
+        "vocabulario"
+      ],
+      "assinatura": "7f999f58344be53617812083"
+    }
+  ],
+  "doist-learning-ally-canal-individual": [
+    {
+      "funcao": "oferecer flexibilidade",
+      "trecho": "our meeting is my only\none that day so adjust as you need",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "a364d6fd70da51446d8ea170"
+    }
+  ],
+  "doist-learning-ally-inicio-nc807": [
+    {
+      "funcao": "pedir previsão",
+      "trecho": "Please post your anticipated timeline in the Schedule thread",
+      "usos": [
+        "pedir-atualizacao",
+        "vocabulario"
+      ],
+      "assinatura": "7d0e5b2b8244328d11d13694"
+    }
+  ],
+  "doist-learning-ally-inicio-nd524": [
+    {
+      "funcao": "assumir tarefa",
+      "trecho": "I claim this project as Narrator, and hope to begin\nrecording on Fri, Nov 20.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "4e6804822bb083e973ddcf4d"
+    }
+  ],
+  "doist-learning-ally-recepcao-voluntarios": [
+    {
+      "funcao": "apresentação",
+      "trecho": "Hello, I am a new volunteer and hoping I can find a way to be of assistance.",
+      "usos": [
+        "se-apresentar",
+        "conversacao"
+      ],
+      "assinatura": "a11cb1e507c8dc46b852b943"
+    }
+  ],
+  "doist-learning-ally-tecnica-narracao": [
+    {
+      "funcao": "indicar material",
+      "trecho": "To get things started, here's a link to the most recent \"Masterclass\" from ACX\nUniversity.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "56419c998e7405d35336804b"
+    }
+  ],
+  "doist-limites-trabalho-assincrono": [
+    {
+      "funcao": "sugerir mudança",
+      "trecho": "My suggestion was to use messages and video chats more freely",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "23826b3a07088169b3c6ca06"
+    }
+  ],
+  "doist-memorando-ambicao-equilibrio": [
+    {
+      "funcao": "descrever objetivo",
+      "trecho": "We want to create the best workplace that does not burn us out",
+      "usos": [
+        "phrasal-verbs",
+        "vocabulario"
+      ],
+      "assinatura": "e99af39ad4df0465d32017ed"
+    }
+  ],
+  "doist-microverse-curriculo": [
+    {
+      "funcao": "agradecer iniciativa",
+      "trecho": "Thank you for starting this!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "cc8b7368e26132c9dbd2ecc5"
+    }
+  ],
+  "doist-orientacao-pedidos-integracao": [
+    {
+      "funcao": "instrução condicional",
+      "trecho": "If there's no task with the name of the integration,\nplease add a new one and add the comment there.",
+      "usos": [
+        "gramatica",
+        "dia-a-dia",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "a7721857d275ce13b1883432"
+    }
+  ],
+  "doist-pedir-atualizacao": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Just wanted to check in if everything’s clear for the\nTodoist Windows email newsletter on Monday?",
+      "usos": [
+        "pedir-atualizacao",
+        "dia-a-dia",
+        "gramatica",
+        "phrasal-verbs"
+      ],
+      "assinatura": "112d5f796974c14bfd1f60c3"
+    },
+    {
+      "funcao": "oferecer ajuda",
+      "trecho": "Let me know if there’s anything I can help with",
+      "usos": [
+        "pedir-ajuda",
+        "dia-a-dia"
+      ],
+      "assinatura": "112d5f796974c14bfd1f60c3"
+    },
+    {
+      "funcao": "confirmação",
+      "trecho": "I’ll confirm on Monday that we’re ready to send it out.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "phrasal-verbs",
+        "vocabulario"
+      ],
+      "assinatura": "112d5f796974c14bfd1f60c3"
+    }
+  ],
+  "doist-perguntas-para-diretoria": [
+    {
+      "funcao": "orientar participação",
+      "trecho": "Ask your question on this thread. Questions are open till Wednesday, April 20, 2022.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "dia-a-dia"
+      ],
+      "assinatura": "1b24c3a1709b255488b85eed"
+    }
+  ],
+  "doist-reflexao-decisao-apos-reuniao": [
+    {
+      "funcao": "reconsiderar decisão",
+      "trecho": "only to completely change my mind after the fact",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "698559810bd9e0750e6a83f6"
+    }
+  ],
+  "doist-remote-how-atualizacoes-canal-geral": [
+    {
+      "funcao": "elogiar trabalho",
+      "trecho": "Great job @Magda S !!!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "dac3aa534794395dba3c4f7a"
+    }
+  ],
+  "doist-remote-how-decisao-academia": [
+    {
+      "funcao": "escolher alternativa",
+      "trecho": "Let’s go for:\n• Different colours of ”Academy”",
+      "usos": [
+        "confirmar-proximos-passos",
+        "conversacao"
+      ],
+      "assinatura": "ad7b9821fc93cf944f837412"
+    }
+  ],
+  "doist-remote-how-kickoff-academia": [
+    {
+      "funcao": "anunciar início",
+      "trecho": "I’m starting the Academy Verticals project.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "2536a7c9cf120cf84bbdb9cc"
+    }
+  ],
+  "doist-remote-how-resumo-encontro-comunidade": [
+    {
+      "funcao": "orientar participação",
+      "trecho": "If you want to participate, please submit your team activity via email",
+      "usos": [
+        "gramatica",
+        "dia-a-dia"
+      ],
+      "assinatura": "23917e168f0f0a0908e4250c"
+    }
+  ],
+  "doist-retrospectiva-task-view": [
+    {
+      "funcao": "relatar entrega",
+      "trecho": "On Tuesday, May 24th the team released a new task view on web and mobile to all users.",
+      "usos": [
+        "dia-a-dia",
+        "vocabulario"
+      ],
+      "assinatura": "86f4a16e06f5e8c4fea3e308"
+    }
+  ],
+  "doist-revisao-design-topicos-fixados": [
+    {
+      "funcao": "solicitar avaliação",
+      "trecho": "Feel free to leave your feedback in the doc\nor below if you have a minute.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "e5b8bd7d00c940250c391503"
+    }
+  ],
+  "doist-status-correcao-interface": [
+    {
+      "funcao": "anunciar versão",
+      "trecho": "Fix will go live with v1.13.52",
+      "usos": [
+        "confirmar-proximos-passos",
+        "vocabulario"
+      ],
+      "assinatura": "7586772b025d61dfafbee8c8"
+    }
+  ],
+  "doist-status-site-prazo": [
+    {
+      "funcao": "explicar limite",
+      "trecho": "I'd say we wont be ready Oct. 5",
+      "usos": [
+        "negociar-prazo",
+        "comunicar-risco"
+      ],
+      "assinatura": "465f6f96d69bfbbe05b439a3"
+    },
+    {
+      "funcao": "pedir esclarecimento",
+      "trecho": "I am curious what you mean by all the bells and whistles.",
+      "usos": [
+        "esclarecer",
+        "conversacao",
+        "vocabulario"
+      ],
+      "assinatura": "465f6f96d69bfbbe05b439a3"
+    }
+  ],
+  "doist-trechos-squad-notificacoes": [
+    {
+      "funcao": "explicar condição",
+      "trecho": "It depends on which scenario we choose",
+      "usos": [
+        "gramatica",
+        "conversacao"
+      ],
+      "assinatura": "43a7b3ed688c8a163218a587"
+    }
+  ],
+  "wiki/conversacao.md": [
+    {
+      "funcao": "contraproposta",
+      "trecho": "Would Wednesday at 4 pm work?",
+      "usos": [
+        "negociar-prazo",
+        "conversacao"
+      ],
+      "assinatura": "8bfabe28a4212112450fb399"
+    }
+  ],
+  "wiki/conversas/doist-coordenacao.md": [
+    {
+      "funcao": "explicar formulação provisória",
+      "trecho": "we’re thinking about",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "58040d91eccddfe7d129bd49"
+    }
+  ],
+  "wiki/conversas/doist-equipes.md": [
+    {
+      "funcao": "oferecer flexibilidade",
+      "trecho": "Feel free to move it if you need to",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "53d6e3139926ef444c32c307"
+    }
+  ],
+  "wiki/conversas/doist-feedback.md": [
+    {
+      "funcao": "explicar indecisão",
+      "trecho": "I’m on the fence about…",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "8481b573826f2cc1deaf3562"
+    }
+  ],
+  "wiki/conversas/doist.md": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Are we on track for Friday’s newsletter?",
+      "usos": [
+        "pedir-atualizacao",
+        "conversacao"
+      ],
+      "assinatura": "2a2702e8f457deb4b394f8eb"
+    }
+  ],
+  "wiki/conversas/padroes.md": [
+    {
+      "funcao": "conferir interpretação",
+      "trecho": "When you say “approved”, do you mean Finance has signed off?",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "439d446426b5bf36218608bf"
+    }
+  ],
+  "wiki/conversas/zulip-decisoes.md": [
+    {
+      "funcao": "confirmação",
+      "trecho": "I'll send the revised draft by tomorrow.",
+      "usos": [
+        "negociar-prazo",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "ec11e7b6b4df711cb8e9fee1"
+    }
+  ],
+  "wiki/conversas/zulip-risco-e-esclarecimento.md": [
+    {
+      "funcao": "alertar sobre consequência",
+      "trecho": "This could affect the Finance team",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "assinatura": "516890dde9a738181525dbcd"
+    }
+  ],
+  "wiki/conversas/zulip.md": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Do you have an update on the video preview?",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "0a82290c6b569519d86e7081"
+    }
+  ],
+  "wiki/dia-a-dia.md": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Hi Sam, are we on track for Friday's presentation?",
+      "usos": [
+        "pedir-atualizacao",
+        "dia-a-dia"
+      ],
+      "assinatura": "abdf8d0a71f22277168e4359"
+    }
+  ],
+  "wiki/gramatica.md": [
+    {
+      "funcao": "pergunta indireta",
+      "trecho": "Could you tell me whether the draft is ready?",
+      "usos": [
+        "gramatica",
+        "pedir-atualizacao"
+      ],
+      "assinatura": "b96f3fda953fb57677ff77ca"
+    }
+  ],
+  "wiki/linguagem-informal.md": [
+    {
+      "funcao": "explicar abreviação",
+      "trecho": "End of your day Wed",
+      "usos": [
+        "linguagem-informal",
+        "vocabulario"
+      ],
+      "assinatura": "650ff8f7c5794ef31f8544f5"
+    }
+  ],
+  "wiki/phrasal-verbs.md": [
+    {
+      "funcao": "anunciar envio",
+      "trecho": "The briefing's ready. I'll send it out after lunch.",
+      "usos": [
+        "phrasal-verbs",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "a5740034709c103ca874853a"
+    }
+  ],
+  "wiki/pronuncia.md": [
+    {
+      "funcao": "praticar som inicial com modelo de áudio",
+      "trecho": "by four on Thursday",
+      "usos": [
+        "pronuncia"
+      ],
+      "assinatura": "15b9c76e713a6457b214ec7b"
+    }
+  ],
+  "wiki/situacoes.md": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Could you let me know by Thursday lunchtime whether the evaluation is still on track for Friday?",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "df5dc56a3d140334c80e6072"
+    }
+  ],
+  "wiki/vocabulario.md": [
+    {
+      "funcao": "avisar sobre risco",
+      "trecho": "We may struggle to meet the deadline.",
+      "usos": [
+        "comunicar-risco",
+        "vocabulario"
+      ],
+      "assinatura": "4444e65baa53bd6d7440ead2"
+    }
+  ],
+  "zulip-anexo-01be82ee57dead6a7eaa49894f5eb8d2": [
+    {
+      "funcao": "pedir confirmação",
+      "trecho": "Are you sure this page exists?",
+      "usos": [
+        "esclarecer",
+        "gramatica"
+      ],
+      "assinatura": "c47f4b1d60f97ea3e6c950b0"
+    }
+  ],
+  "zulip-anexo-028391b23d44f9eeb58d16bb043d095a": [
+    {
+      "funcao": "instruir",
+      "trecho": "Please enter your credentials to login into your Zulip organization.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "eb4c67a0b2a1937ccc3605cb"
+    }
+  ],
+  "zulip-anexo-03669d8612457f19c3383e668bcbad77": [
+    {
+      "funcao": "agradecer contribuição",
+      "trecho": "Thank you for your valuable contributions to Zulip!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "f287530ba8613c41e94c538f"
+    }
+  ],
+  "zulip-anexo-0461a57a192ad35146a200aa9dbdb5b1": [
+    {
+      "funcao": "pedir confirmação",
+      "trecho": "Would you like to delete them?",
+      "usos": [
+        "esclarecer",
+        "gramatica"
+      ],
+      "assinatura": "327ba6057e58a51ced5d59dc"
+    }
+  ],
+  "zulip-anexo-0d1d5afcd4c82604931d79ec8832512a": [
+    {
+      "funcao": "solicitar ajuda",
+      "trecho": "Could you help me identify the right\ndirection for my proposal?",
+      "usos": [
+        "pedir-ajuda",
+        "gramatica"
+      ],
+      "assinatura": "4552db14e868a88948c97c37"
+    }
+  ],
+  "zulip-msg-1021504": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Do you have any update on this feature request?",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "4a664a84fbb8d2ab8291264d"
+    }
+  ],
+  "zulip-msg-1035203": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "695bf8561b4a435cebfd3229"
+    }
+  ],
+  "zulip-msg-1067549": [
+    {
+      "funcao": "agradecer esclarecimento",
+      "trecho": "Thanks for clarifying!!",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "b4e60b9b0de0ad45418e72da"
+    }
+  ],
+  "zulip-msg-1116249": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look!",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "442aa6a53d963b3a9e967aa0"
+    }
+  ],
+  "zulip-msg-1128254": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "80e206044968c5e2490491f7"
+    }
+  ],
+  "zulip-msg-1143250": [
+    {
+      "funcao": "conferir interpretação",
+      "trecho": "Just to confirm, are backend tests which have a prefix underscore",
+      "usos": [
+        "esclarecer",
+        "gramatica"
+      ],
+      "assinatura": "4877656bc5e3c30a2993386a"
+    }
+  ],
+  "zulip-msg-1203947": [
+    {
+      "funcao": "conferir interpretação",
+      "trecho": "by incremental backups, do you mean the `wal-g` system?",
+      "usos": [
+        "esclarecer",
+        "pedir-ajuda"
+      ],
+      "assinatura": "ebc8f0b1001fc10efb4f1a21"
+    }
+  ],
+  "zulip-msg-1235911": [
+    {
+      "funcao": "oferecer ajuda",
+      "trecho": "Let me know if you have any questions!",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "4d12fdf1d07bdc607e2ba8f3"
+    }
+  ],
+  "zulip-msg-1236079": [
+    {
+      "funcao": "recusa",
+      "trecho": "won't be able to get a fix in tonight, but can take a look first thing tomorrow!",
+      "usos": [
+        "negociar-prazo",
+        "comunicar-risco"
+      ],
+      "assinatura": "1e75d6ac7c5b3e11aaa668cf"
+    }
+  ],
+  "zulip-msg-1255877": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Any updates on this?",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "931525fdf4c825c0f752c87a"
+    }
+  ],
+  "zulip-msg-126127": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "2e32ea10f4e79f1a7e4fb795"
+    }
+  ],
+  "zulip-msg-1261780": [
+    {
+      "funcao": "explicar impedimento",
+      "trecho": "I'm blocked on #19200 with some test failures trying to rebase it. I'll try fixing it tomorrow.",
+      "usos": [
+        "comunicar-risco",
+        "confirmar-proximos-passos",
+        "gramatica"
+      ],
+      "assinatura": "e613eec0540b4fbf0cd2eb50"
+    }
+  ],
+  "zulip-msg-1261785": [
+    {
+      "funcao": "agradecer atualização",
+      "trecho": "Thanks for the update!",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "c338c35380c0fd65cb07aac1"
+    }
+  ],
+  "zulip-msg-1327548": [
+    {
+      "funcao": "alertar sobre consequência",
+      "trecho": "my worry is just that this could break in a refactor more than a normal migration can.",
+      "usos": [
+        "comunicar-risco",
+        "gramatica"
+      ],
+      "assinatura": "444999b7e8ddc8976879d528"
+    }
+  ],
+  "zulip-msg-1329573": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "37a5af2917f2a947d3e45223"
+    }
+  ],
+  "zulip-msg-134596": [
+    {
+      "funcao": "solicitar ajuda",
+      "trecho": "Can someone help me  with this issue.",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "b917607ea89c4ba336e58df7"
+    }
+  ],
+  "zulip-msg-1384971": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "038f928ac8535ce5264287f0"
+    }
+  ],
+  "zulip-msg-1421266": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Just checking in to see if there was any update to the Preload script issue?",
+      "usos": [
+        "gramatica",
+        "pedir-atualizacao"
+      ],
+      "assinatura": "1c755a7d6a1093eedc37e34a"
+    }
+  ],
+  "zulip-msg-1497770": [
+    {
+      "funcao": "agradecer atualização",
+      "trecho": "Thanks for the update!",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "b5d7b1cafa3bbc8b41190bdb"
+    }
+  ],
+  "zulip-msg-1518710": [
+    {
+      "funcao": "responder à avaliação",
+      "trecho": "Okay, thanks for the feedback. Based on what you said, I think it makes sense to go with the checkbox design.",
+      "usos": [
+        "conversacao",
+        "dar-feedback"
+      ],
+      "assinatura": "5f9525ff8d1af6202256f172"
+    }
+  ],
+  "zulip-msg-1558349": [
+    {
+      "funcao": "responder à avaliação",
+      "trecho": "We are working on a redesign for the left sidebar that will indeed make the \"more topics\" UI more visually clear.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "dar-feedback"
+      ],
+      "assinatura": "1de2433eca57a12b3c34b41a"
+    }
+  ],
+  "zulip-msg-1590030": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "55ee9658afa97683a462a7b3"
+    }
+  ],
+  "zulip-msg-1660622": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "dcbfc7018a3b8305d2795195"
+    }
+  ],
+  "zulip-msg-1760852": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Just checking in here to see if you're planning on opening a PR to fix this or if we should put up an issue to track it.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "pedir-atualizacao"
+      ],
+      "assinatura": "bb067830f8c4b9902f72ad91"
+    }
+  ],
+  "zulip-msg-1776887": [
+    {
+      "funcao": "agradecer atualização",
+      "trecho": "Thanks for the update!",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "0489d4890f6fb09540d3789d"
+    }
+  ],
+  "zulip-msg-1889889": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look!",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "6ce40433a5e6860355bc61a9"
+    }
+  ],
+  "zulip-msg-1949967": [
+    {
+      "funcao": "conferir sugestão",
+      "trecho": "Bumping it up a bit sounds like a good easy step to try, yeah. Is the suggestion to just increase text opacity by 5%?",
+      "usos": [
+        "phrasal-verbs",
+        "linguagem-informal",
+        "dia-a-dia",
+        "dar-feedback",
+        "esclarecer"
+      ],
+      "assinatura": "4ee11175bbb278be292054fd"
+    }
+  ],
+  "zulip-msg-1950081": [
+    {
+      "funcao": "prometer retorno",
+      "trecho": "Let me get back with a proposal",
+      "usos": [
+        "phrasal-verbs",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "1720b07d1854f32452e8f663"
+    }
+  ],
+  "zulip-msg-1989512": [
+    {
+      "funcao": "agradecer esclarecimento",
+      "trecho": "Thanks for clarifying!",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "6fab00dd1b8bf9cd43a7208e"
+    }
+  ],
+  "zulip-msg-1991905": [
+    {
+      "funcao": "confirmar decisão",
+      "trecho": "Let's leave it open, since the issue is not resolved.",
+      "usos": [
+        "gramatica",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "eff977c076cf5a91535777c2"
+    }
+  ],
+  "zulip-msg-2017781": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "any updates on this?",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "5fa4d3f1e52fd5b2f73896ca"
+    }
+  ],
+  "zulip-msg-2021097": [
+    {
+      "funcao": "agradecer esclarecimento",
+      "trecho": "Thanks for clarifying!",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "83fed94fe9ca36730a275030"
+    }
+  ],
+  "zulip-msg-2048300": [
+    {
+      "funcao": "agradecer esclarecimento",
+      "trecho": "Thanks for clarifying.",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "b2eb5d83a8ef014287126f66"
+    }
+  ],
+  "zulip-msg-2051600": [
+    {
+      "funcao": "agradecer esclarecimento",
+      "trecho": "Thanks for clarifying!",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "aadfb2d3c7e31d53297f127f"
+    }
+  ],
+  "zulip-msg-2179353": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look!",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "f1be2fe29bec95cc91d896b5"
+    }
+  ],
+  "zulip-msg-2183474": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "114b53c1d95ae21262eb5886"
+    }
+  ],
+  "zulip-msg-2211219": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "ae44b2c601e73bbdb3c40abc"
+    }
+  ],
+  "zulip-msg-222652": [
+    {
+      "funcao": "agradecer atualização",
+      "trecho": "Thanks for the update!",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "b8c5e83a97a8b8289175bf35"
+    }
+  ],
+  "zulip-msg-2247882": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "38bff72b0ad1c5e2a6e81e10"
+    }
+  ],
+  "zulip-msg-2260527": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "fd3bc0fddae7a56511c636b1"
+    }
+  ],
+  "zulip-msg-2288387": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Any update on this?",
+      "usos": [
+        "linguagem-informal",
+        "pedir-atualizacao"
+      ],
+      "assinatura": "4bd173718931a7244a5fddb4"
+    }
+  ],
+  "zulip-msg-2484306": [
+    {
+      "funcao": "explicar impacto",
+      "trecho": "It will actually involve passing `deactivated` and `is_archived` fields to more events and then handling them in event queue.",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "assinatura": "6185dc476802ad07c2775835"
+    }
+  ],
+  "zulip-msg-2499678": [
+    {
+      "funcao": "assumir tarefa",
+      "trecho": "Yes, we should update the documentation. Will open a PR.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "conversacao",
+        "dia-a-dia",
+        "gramatica",
+        "linguagem-informal",
+        "vocabulario"
+      ],
+      "assinatura": "0fbca509a04f5cbad9d84310"
+    }
+  ],
+  "zulip-msg-2508322": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "How’s it going?",
+      "usos": [
+        "conversacao",
+        "pedir-atualizacao"
+      ],
+      "assinatura": "e0adadc4cbca86f39c3bf3a7"
+    }
+  ],
+  "zulip-msg-2531120": [
+    {
+      "funcao": "alertar sobre consequência",
+      "trecho": "This could break workflows.",
+      "usos": [
+        "comunicar-risco",
+        "dar-feedback"
+      ],
+      "assinatura": "a2bb267e533d28f4c6bf292a"
+    }
+  ],
+  "zulip-msg-2532243": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Hi, just checking in on this PR. Any updates on what needs more work or anything else needed from my side?",
+      "usos": [
+        "dia-a-dia",
+        "phrasal-verbs",
+        "pedir-atualizacao"
+      ],
+      "assinatura": "cc9a31ba305f94d9d7521d26"
+    }
+  ],
+  "zulip-msg-253464": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "4b60ad41704924ac2439a9f7"
+    }
+  ],
+  "zulip-msg-2535843": [
+    {
+      "funcao": "pedir esclarecimento",
+      "trecho": "What do you mean by related reaction counts in the combined view and channel feed?",
+      "usos": [
+        "conversacao",
+        "esclarecer"
+      ],
+      "assinatura": "40fd6071704ffd271cfc94df"
+    }
+  ],
+  "zulip-msg-2552913": [
+    {
+      "funcao": "apresentação",
+      "trecho": "I'm Sundaram, a Computer Science student and a beginner in open-source contributions.",
+      "usos": [
+        "conversacao",
+        "dia-a-dia",
+        "se-apresentar"
+      ],
+      "assinatura": "fff98b4a1498e4984407b058"
+    }
+  ],
+  "zulip-msg-298760": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Any updates on this?",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "d787a65b816d9287dee7026c"
+    }
+  ],
+  "zulip-msg-413776": [
+    {
+      "funcao": "pedido",
+      "trecho": "Could someone extend the deadline for the salesforce bot task.",
+      "usos": [
+        "negociar-prazo",
+        "gramatica"
+      ],
+      "assinatura": "9a35e73ca98bc0870fd6f4cd"
+    }
+  ],
+  "zulip-msg-413781": [
+    {
+      "funcao": "consultar prazo alternativo",
+      "trecho": "Sure. How much time do you think you need?",
+      "usos": [
+        "negociar-prazo",
+        "esclarecer"
+      ],
+      "assinatura": "8443412a1bdb844cec592658"
+    }
+  ],
+  "zulip-msg-413783": [
+    {
+      "funcao": "contraproposta",
+      "trecho": "Hmm... Probably 2-3 days",
+      "usos": [
+        "negociar-prazo"
+      ],
+      "assinatura": "c5cf31fe750b8c8a9740a6aa"
+    }
+  ],
+  "zulip-msg-413787": [
+    {
+      "funcao": "confirmação",
+      "trecho": "Added 3 days. Best of luck!",
+      "usos": [
+        "negociar-prazo",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "4dd38957fd7dd587c514f63d"
+    }
+  ],
+  "zulip-msg-443690": [
+    {
+      "funcao": "pedido",
+      "trecho": "could you extend the deadline for my task?",
+      "usos": [
+        "negociar-prazo",
+        "gramatica"
+      ],
+      "assinatura": "1c64fa6ddf92f6e05d617177"
+    }
+  ],
+  "zulip-msg-454554": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "8f316077183856acd5e0a497"
+    }
+  ],
+  "zulip-msg-535380": [
+    {
+      "funcao": "solicitar ajuda",
+      "trecho": "Can somebody with a MacOS host system test the PR #8655 and let me know how long ./tools/test-backend takes with and without the PR merged?",
+      "usos": [
+        "gramatica",
+        "pedir-ajuda"
+      ],
+      "assinatura": "b2303fc1531992f5ab49420b"
+    }
+  ],
+  "zulip-msg-575966": [
+    {
+      "funcao": "confirmação",
+      "trecho": "I'll make the changes and update the PR by tomorrow.",
+      "usos": [
+        "gramatica",
+        "negociar-prazo"
+      ],
+      "assinatura": "680c9ea84cfbc6efc6c27551"
+    }
+  ],
+  "zulip-msg-608222": [
+    {
+      "funcao": "agradecer atualização",
+      "trecho": "Thanks for the update",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "4a43239840465519e61b795a"
+    }
+  ],
+  "zulip-msg-665353": [
+    {
+      "funcao": "agradecer atualização",
+      "trecho": "thanks for the update!",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "86e6574bad9652afc0287ea4"
+    }
+  ],
+  "zulip-msg-707334": [
+    {
+      "funcao": "confirmação",
+      "trecho": "I will submit a PR by tomorrow morning.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "negociar-prazo"
+      ],
+      "assinatura": "69b6f3b3d94b6267f7480b66"
+    }
+  ],
+  "zulip-msg-712406": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "45111ae823501cdcd1316586"
+    }
+  ],
+  "zulip-msg-712937": [
+    {
+      "funcao": "solicitar ajuda",
+      "trecho": "Can someone help me to get started, please?",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "3315208c2fe37ccbb301adc7"
+    },
+    {
+      "funcao": "apresentação",
+      "trecho": "I'm Prashant Manda, currently an Interaction Design Student at NID Bengaluru, India.",
+      "usos": [
+        "se-apresentar"
+      ],
+      "assinatura": "3315208c2fe37ccbb301adc7"
+    }
+  ],
+  "zulip-msg-745491": [
+    {
+      "funcao": "contraproposta",
+      "trecho": "I won’t be able to access until Monday. I can send it then.",
+      "usos": [
+        "negociar-prazo"
+      ],
+      "assinatura": "990a5f5912e73cda7321810f"
+    }
+  ],
+  "zulip-msg-790731": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "7d0009ed81116a5ad1120025"
+    }
+  ],
+  "zulip-msg-837578": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "acf704ba931ec888a1e079e3"
+    }
+  ],
+  "zulip-msg-851420": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "a5a8ec58f28f262f22fc0a90"
+    }
+  ],
+  "zulip-msg-853756": [
+    {
+      "funcao": "pedido de atualização",
+      "trecho": "Any updates on this?",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "d3cda07654d646d41a8dda42"
+    }
+  ],
+  "zulip-msg-857054": [
+    {
+      "funcao": "assumir revisão",
+      "trecho": "I'll take a look.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "1672fcc0ec11861755342127"
+    }
+  ],
+  "zulip-msg-940272": [
+    {
+      "funcao": "acolher avaliação",
+      "trecho": "Thanks for the feedback!",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "87ba9fc06317ecf09d4bf7bc"
+    }
+  ],
+  "zulip-msg-982241": [
+    {
+      "funcao": "agradecer esclarecimento",
+      "trecho": "Thanks for clarifying!",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "da66661d8e277f6c0a52de80"
+    }
+  ],
+  "zulip-anexo-62d5fe516c5d50c640c13072cba7eb0d": [
+    {
+      "trecho": "is there any update on this features?",
+      "funcao": "pedido de atualização",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "f648bad00095116d0d4234bf"
+    }
+  ],
+  "zulip-anexo-c2c8a90cfe32cd62687eb1f2aac4c1fd": [
+    {
+      "trecho": "Any update on releasing this, if PR is good to you?",
+      "funcao": "pedido de atualização",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "assinatura": "2ef42b416936ee19532ef41a"
+    }
+  ],
+  "zulip-anexo-354fb80720d8a409a8d7c5b698a43ea5": [
+    {
+      "trecho": "Please can anyone help me get a good first issue in python",
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "b101ed6097de72229522ecf0"
+    }
+  ],
+  "zulip-anexo-be08584b1f554872c97b4b076a7d2d69": [
+    {
+      "trecho": "Can anyone help me?",
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "35b50a1ced6587267a758921"
+    }
+  ],
+  "zulip-anexo-f389d5b4c11e72645853172ff381e181": [
+    {
+      "trecho": "Could someone help me on that issue ?",
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda",
+        "gramatica"
+      ],
+      "assinatura": "1fa1a0f08e23ad4eaaddd7cb"
+    }
+  ],
+  "zulip-anexo-0aacf9739cc4ede98997dba8426bd358": [
+    {
+      "trecho": "What do you mean by you didn't change the channel.patch function?",
+      "funcao": "pedir esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "52facae5342fe565331a3fb1"
+    }
+  ],
+  "zulip-anexo-0d08868324a1ccc7abaf1c822b116901": [
+    {
+      "trecho": "I don't follow this part -- what do you mean by full quote vs. last message?",
+      "funcao": "pedir esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "2bb13fda1fdb0c7abbefc163"
+    }
+  ],
+  "zulip-anexo-a846a8a00cf7a34a5d13e25b467a4483": [
+    {
+      "trecho": "what do you mean by different search types?",
+      "funcao": "pedir esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "a50439a5362433627072a477"
+    }
+  ],
+  "zulip-anexo-eabe21de5141ae65ae04bb6ee639a626": [
+    {
+      "trecho": "Sorry, what do you mean by that?",
+      "funcao": "pedir esclarecimento",
+      "usos": [
+        "esclarecer",
+        "conversacao"
+      ],
+      "assinatura": "8b0d116ebffadc63264f55d7"
+    }
+  ],
+  "zulip-anexo-014647767039ae39746a55b69621e176": [
+    {
+      "trecho": "Looks good to me also",
+      "funcao": "aprovar sugestão",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "cddeb9253a1fa152997a13b7"
+    }
+  ],
+  "zulip-anexo-0e21f64e3ebfb57be4325129a677c10f": [
+    {
+      "trecho": "Thanks for the feedback, @geeeeeeeeek should i send a PR ?",
+      "funcao": "pedir próximo passo",
+      "usos": [
+        "dar-feedback",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "0bc1ccca2df430588729ddff"
+    }
+  ],
+  "zulip-anexo-19a31e7e76f451a8024bcd24b6a0a1f6": [
+    {
+      "trecho": "Thanks for the feedback, Garrett!",
+      "funcao": "agradecer avaliação",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "1686c5cae83939cda02e10cf"
+    }
+  ],
+  "zulip-anexo-3d9ef9ab0e498c4e4a78998a615c0280": [
+    {
+      "trecho": "Thanks for the feedback! I've updated the PR",
+      "funcao": "responder à avaliação",
+      "usos": [
+        "dar-feedback",
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "5d58be84cf3b783e31b49c68"
+    }
+  ],
+  "zulip-anexo-aa6cdad8e43061a846741ffb0814f4db": [
+    {
+      "trecho": "Thanks for the suggestions!",
+      "funcao": "acolher sugestões",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "171d4c5a6c8b8f7071909c92"
+    }
+  ],
+  "zulip-anexo-2d0b47d9bad0cee6f4dede5f74224aee": [
+    {
+      "trecho": "I'll send a screenshot from the new\n\ndevice.",
+      "funcao": "assumir envio",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "8aece28bd6a69b90f54058f0"
+    }
+  ],
+  "zulip-anexo-34597407092572f303847690467a126a": [
+    {
+      "trecho": "I'll send her a follow up",
+      "funcao": "prometer retorno",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "7a8e05672049b7696757f363"
+    }
+  ],
+  "zulip-anexo-bcde7626ba3a02ff3d6155765b9a02ba": [
+    {
+      "trecho": "I'll follow up again upon release of #F 1852",
+      "funcao": "prometer retorno",
+      "usos": [
+        "confirmar-proximos-passos",
+        "phrasal-verbs"
+      ],
+      "assinatura": "adb2a53570e28949eca90173"
+    }
+  ],
+  "zulip-anexo-336257041d64f7076452ac5e6413f82e": [
+    {
+      "trecho": "If you are new to Zulip, check out our Getting started guide!",
+      "funcao": "orientar recém-chegados",
+      "usos": [
+        "gramatica",
+        "phrasal-verbs"
+      ],
+      "assinatura": "b32caae392216a1973ec90d3"
+    }
+  ]
 }

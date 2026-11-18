@@ -31,3 +31,5 @@ As [fontes](fontes.md) mostram onde cada conversa pode ser consultada. Para alim
 ## Explorar a coleta no grafo
 
 O [índice local por tema e situação](local/temas/index.md) leva a conversas e capturas com os padrões procurados. Use o [grafo](grafo.md) para combinar filtros e procurar expressões no texto. Os resultados automáticos sugerem candidatos para conferência. As ligações marcadas como `curado` correspondem a exemplos conferidos.
+
+A busca do MCP inclui cada mensagem, tópico, captura, anexo e página da wiki. Peça um exemplo no chat e abra a fonte pelo ID. O [guia do grafo](grafo.md#decisões-por-id) descreve as decisões, os filtros e a retomada da curadoria.

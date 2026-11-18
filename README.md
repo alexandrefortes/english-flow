@@ -81,7 +81,7 @@ Para estudar offline em outro computador, copie a pasta `wiki/` inteira após a 
 3. Peça “Busque exemplos conferidos da Doist sobre negociar um prazo”. Você também pode fazer o pedido em inglês.
 4. Peça “Mostre a conversa de origem” para ler o trecho em contexto.
 
-O plugin busca mensagens do Zulip e transcrições da Doist no grafo da wiki. Para ler a transcrição de um anexo, abra o índice de anexos pelo [guia da wiki](wiki/grafo.md#anexos-do-zulip). Ao definir `INGLEST_PROJECT_DIR`, o caderno padrão passa a ser a pasta `caderno de estudos` desse repositório.
+O plugin busca em toda a wiki. Peça um trecho, abra sua página e, se quiser guardá-lo, peça “Salve esta referência no caderno”. Ao definir `INGLEST_PROJECT_DIR`, o caderno padrão passa a ser a pasta `caderno de estudos` desse repositório.
 
 ## Praticar por 20 minutos
 

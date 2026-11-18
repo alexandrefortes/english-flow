@@ -179,10 +179,16 @@ def registrar_doist(db, dados):
 
 def registrar_curadoria(db):
     curadoria = carregar_json(WIKI / "curadoria.json")
-    for origem, destinos in curadoria.items():
+    for origem, exemplos in curadoria.items():
         if not db.execute("SELECT 1 FROM nos WHERE id=?", (origem,)).fetchone():
             continue  # O índice também pode ser criado com uma coleta parcial.
-        db.executemany(INSERIR_LIGACAO, [(origem, destino, "curado", None) for destino in destinos])
+        texto, = db.execute("SELECT texto FROM nos WHERE id=?", (origem,)).fetchone()
+        for exemplo in exemplos:
+            if isinstance(exemplo, str):
+                db.execute(INSERIR_LIGACAO, (origem, exemplo, "curado", None))
+            elif exemplo["trecho"] in (texto or ""):
+                db.executemany(INSERIR_LIGACAO, ((origem, destino, "curado", exemplo["trecho"])
+                                                 for destino in exemplo["usos"]))
 
 
 def construir(dados, grafo):
@@ -297,7 +303,8 @@ def main():
             atualizar_curadoria(grafo)
         except (OSError, ValueError, sqlite3.Error) as exc:
             parser.error(str(exc))
-    with abrir_leitura(grafo) as db:
+    indice = grafo.with_name("consulta.sqlite3") if grafo.resolve() == portátil.resolve() else None
+    with abrir_leitura(grafo, indice) as db:
         db.row_factory = sqlite3.Row
         if args.modo in ("construir", "atualizar-curadoria", "resumo"):
             resumo(db)

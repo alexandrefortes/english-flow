@@ -295,7 +295,7 @@
     const known = findSource(reference.id);
     const label = reference.title || (known ? titleFor(known) : reference.id);
     const url = httpsUrl(reference.url);
-    return sourceButton(label, reference.id, {title: label, url});
+    return sourceButton(label, reference.id, {title: label, url, tool: reference.tool});
   }
 
   function inline(container, value) {
@@ -434,14 +434,16 @@
   async function showSource(id, trigger, reference) {
     const request = ++latestSourceRequest;
     const known = findSource(id);
-    if (known?.available === false) {
+    if (known?.available === false && !reference?.tool) {
       unavailableSource(known, trigger);
       return;
     }
     status("Abrindo fonte…");
     let response;
     try {
-      response = await call("read_source", {source_id: id});
+      response = reference?.tool === "read_wiki_item"
+        ? await call("read_wiki_item", {item_id: id})
+        : await call("read_source", {source_id: id});
     } catch (error) {
       if (request !== latestSourceRequest) return;
       if (!reference?.url) throw error;
@@ -451,14 +453,14 @@
     if (request !== latestSourceRequest) return;
     const {structuredContent: source, content = []} = response;
     const panel = get("source");
-    const label = source.title || source.topic || (known ? titleFor(known) : source.company);
+    const label = source.titulo || source.title || source.topic || (known ? titleFor(known) : source.company);
     openPanel(panel, label, trigger, source.topic && !source.title ? "en" : undefined);
     const meta = [source.company, source.channel].filter(Boolean).join(" · ");
     if (meta) panel.append(element("p", meta, "hint"));
     const description = source.description || known?.description;
     const transcript = source.transcript || known?.transcript;
-    if (source.excerpt) {
-      const excerpt = element("pre", source.excerpt);
+    if (source.texto || source.excerpt) {
+      const excerpt = element("pre", source.texto || source.excerpt);
       excerpt.lang = "en";
       panel.append(excerpt);
     }

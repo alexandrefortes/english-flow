@@ -4,7 +4,7 @@ O [índice](index.md) é o ponto de entrada para consultas. As [páginas de conv
 
 ## Incorporar uma fonte
 
-Para avaliar um item que já está na wiki, use a página e o ID existentes. Para mensagens e capturas, registre as ligações conferidas em [curadoria.json](curadoria.json). As instruções abaixo se aplicam à inclusão de fontes ou à edição de páginas didáticas.
+Para avaliar um item que já está na wiki, use a página e o ID existentes. Registre o trecho literal, a função e os usos conferidos em [curadoria.json](curadoria.json). Consulte o [procedimento por ID](grafo.md#decisões-por-id) para retomar a avaliação e conferir a cobertura. As instruções abaixo se aplicam à inclusão de fontes ou à edição de páginas didáticas.
 
 1. Confira o contexto da fonte. Use as mensagens próximas para interpretar uma conversa. Na nuvem, consulte a transcrição e seu estado de leitura.
 2. Quando a interação for nova, inclua seu texto original na edição local. Para capturas, preserve a transcrição e as incertezas de leitura. Os originais ficam na máquina da coleta.

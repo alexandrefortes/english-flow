@@ -67,6 +67,12 @@ if __name__ == "__main__":
     parser.add_argument("--destino", type=Path, default=ROOT / "wiki/local")
     args = parser.parse_args()
     try:
-        print(restaurar(ROOT / "nuvem", args.destino))
+        print(restaurar(ROOT / "nuvem", args.destino), flush=True)
+        if args.destino.resolve() == (ROOT / "wiki/local").resolve():
+            sys.path.insert(0, str(ROOT / "plugins/ingles-para-o-trabalho"))
+            from indice_wiki import conectar
+            from contextlib import closing
+            with closing(conectar(ROOT / "wiki")) as db:
+                print("IDs disponíveis para busca:", db.execute("SELECT count(*) FROM itens").fetchone()[0])
     except (ValueError, OSError, tarfile.TarError) as exc:
         parser.exit(1, f"{exc}\n")
