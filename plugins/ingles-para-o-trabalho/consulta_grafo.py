@@ -1,5 +1,3 @@
-"""Consultas de leitura usadas pela wiki portátil e pelo plugin local."""
-
 from contextlib import closing
 import re
 import sqlite3

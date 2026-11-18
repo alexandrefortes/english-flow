@@ -1,5 +1,3 @@
-"""Baixa a coleta pública da Doist e do Zulip para dados/."""
-
 import json
 from datetime import datetime, timezone
 from io import BytesIO
@@ -71,7 +69,6 @@ def extensao_imagem(dados):
 
 
 def capture_extension(stream, size):
-    """Check the image type, size and end marker before exposing a capture."""
     if not 16 <= size <= MAX_DOWNLOAD:
         raise ValueError("Tamanho de captura inválido.")
     header = stream.read(24)
@@ -96,7 +93,6 @@ def verified_image_extension(data):
 
 
 def baixar_mensagens(canal, topico, ancora, ids):
-    # Endpoint de leitura anônima para canais que o Zulip publica na web.
     filtro = [
         {"operator": "channels", "operand": "web-public"},
         {"operator": "channel", "operand": canal},

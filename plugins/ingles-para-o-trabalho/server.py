@@ -1,5 +1,3 @@
-"""Serve the study notebook over MCP stdio."""
-
 import base64
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timezone

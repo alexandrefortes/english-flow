@@ -1,5 +1,3 @@
-"""Read the public study sources already present in the project directory."""
-
 from contextlib import closing
 from functools import lru_cache
 import json

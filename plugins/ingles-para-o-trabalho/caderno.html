@@ -298,7 +298,6 @@
     return sourceButton(label, reference.id, {title: label, url});
   }
 
-  // Render classroom Markdown as DOM nodes. HTML in notes remains text.
   function inline(container, value) {
     const tokens = /\[([^\]\n]+)\]\(([^)\s]+)\)|\*\*([^*\n]+)\*\*|\*([^*\n]+)\*|\x60([^\x60\n]+)\x60/g;
     let offset = 0;

@@ -1,45 +1,43 @@
-# Renegotiating a deadline
+# Negociar um prazo
 
-## Source and context
+A conversa da Doist trata de uma ilustração. Uma pessoa propõe quinta-feira em vez de segunda-feira. A outra sugere o fim da quarta-feira para ter tempo de pedir ajustes. A fonte registra uma proposta. [Conversa original da Doist](https://www.todoist.com/inspiration/remote-team-communication-tools#todoist)
 
-The source is a written exchange in Todoist about an article illustration. One colleague proposes Thursday instead of Monday. The other suggests sending the work by the end of Wednesday to leave time for changes before Thursday. Read the capture before quoting it. The exchange records a proposed deadline. [Doist publication and original capture](https://www.todoist.com/inspiration/remote-team-communication-tools#todoist)
+Para citar a conversa, consulte o ID `doist-combinar-prazo` ou `prazo-imagem-todoist`, conforme o acervo disponível. As falas abaixo são uma **adaptação em inglês britânico**.
 
-Use source ID `doist-combinar-prazo` or `prazo-imagem-todoist`, whichever is available in the local archive. The scenario and dialogue below are simulations in British English. They carry over the act of proposing and confirming timings. The people, deliverable and constraints are invented.
+## Primeira tentativa
 
-## First attempt
+Na simulação, o aluno prepara um relatório. Você precisa dele na segunda-feira. O Financeiro só terá os números finais na terça-feira de manhã. O aluno pode entregar o rascunho até as 16h de quarta-feira. Você precisa de tempo para revisá-lo antes da reunião de quinta-feira.
 
-The learner owns an internal report. A colleague asks for it by Monday. Finance can send the last figures on Tuesday morning. The learner can send a draft by Wednesday at 4 pm. The colleague needs to leave time for comments before Thursday's meeting.
+1. Abra a conversa no papel do colega.
 
-Open the conversation as the colleague.
+   > Could you send me the report by Monday?
 
-> Could you send me the report by Monday?
+2. Se o aluno pedir uma pista, ofereça o início *Would Wednesday …?*
+3. Depois da proposta do aluno, pergunte sobre o ponto que ficou em aberto. Esta contraproposta serve quando o colega precisa de uma entrega parcial mais cedo.
 
-Once the learner proposes another date, ask about any point that remains unclear. Use this counterproposal if it fits the conversation.
+   > Could you send me the draft by lunchtime on Wednesday? I'd like some time to review it before Thursday's meeting.
 
-> Could you send me the draft by lunchtime on Wednesday? I'd like some time to review it before Thursday's meeting.
+4. Mostre o modelo após a tentativa, ou antes se o aluno pedir.
 
-Success is a workable proposal, a short reason for the change, and a confirmation of who sends what and when. If the learner cannot accommodate the counterproposal, a clear alternative can also meet the goal.
+   > Would Wednesday at 4 pm work? Finance can send the final figures on Tuesday morning. If you need something by lunchtime on Wednesday, I can send the sections that are ready and add the remaining figures by 4 pm.
+   >
+   > Just to confirm, I'll send you the main sections by lunchtime on Wednesday and the full draft by 4 pm.
 
-For a hint, offer the start *Would Wednesday …?* or the distinction between *by Wednesday* and *on Wednesday*. Show the model after the attempt, or before it if the learner requests a model.
+## Feedback
 
-> Would Wednesday at 4 pm work? Finance can send the final figures on Tuesday morning. If you need something by lunchtime on Wednesday, I can send the sections that are ready and add the remaining figures by 4 pm.
->
-> Just to confirm, I'll send you the main sections by lunchtime on Wednesday and the full draft by 4 pm.
+1. Confira se o aluno propôs uma data viável, explicou o motivo e confirmou quem entrega o quê e quando. Outra data também pode funcionar.
+2. Explique a mudança que mais ajuda o aluno. Por exemplo, *by 4 pm* marca o prazo de entrega. *Until 4 pm* indica até quando uma atividade continua.
+3. Peça uma nova confirmação com outra data.
 
-## Feedback and second attempt
+## Retomar em outro dia
 
-Say whether the proposal, reason and confirmation were clear. Pick one change that matters. If the learner used *until 4 pm* to promise delivery, explain that *by 4 pm* states the latest delivery time. Ask them to confirm the agreement again. Change the date or move the discussion from chat to a brief call.
+Na nova simulação, um fornecedor espera a aprovação assinada até sexta-feira. O gerente do aluno volta na segunda-feira. O aluno pode enviar uma atualização até sexta-feira. A aprovação está prevista para terça-feira às 11h.
 
-## Transfer after a few days
+1. Abra a conversa no papel do fornecedor, sem mostrar o modelo.
 
-Present the new scenario without the earlier model. The learner is replying to an external supplier who expects signed approval by Friday. Their manager is back on Monday, and the learner can send the supplier a written update on Friday. They expect to have the signed approval by 11 am on Tuesday.
+   > Will you be able to send over the signed approval by Friday?
 
-> Will you be able to send over the signed approval by Friday?
+2. Confira se a resposta distingue a atualização prometida para sexta-feira da aprovação prevista para terça-feira.
+3. Após a tentativa, ofereça uma formulação adequada para o fornecedor.
 
-Look for the new date, a brief reason, and a clear distinction between Friday's update and Tuesday's expected approval. Keep the register suited to a supplier. Treat the Tuesday approval as a dependency when the wording implies it is still pending.
-
-Offer this possible response after the learner's attempt.
-
-> Could we move the deadline for the signed approval to Tuesday at 11 am? Our manager is back on Monday. I'll send you an update by Friday and confirm the delivery time once the approval is signed.
-
-If requested, save the outcome of the exercise and the next task in the learner's notebook. Use the heading `Next practice` so the learner can ask to pick it up in a later session.
+   > Could we move the deadline for the signed approval to Tuesday at 11 am? Our manager is back on Monday. I'll send you an update by Friday and confirm the delivery time once the approval is signed.

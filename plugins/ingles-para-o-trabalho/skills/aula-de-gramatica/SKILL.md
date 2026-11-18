@@ -1,15 +1,27 @@
 ---
 name: aula-de-gramatica
-description: Use para apresentar, repetir ou continuar aulas de gramática do inglês para o trabalho com exemplos de conversas públicas.
+description: Use quando o aluno pedir uma aula de gramática de inglês para o trabalho, a próxima aula ou a repetição da aula em andamento.
 ---
 
-Para encontrar exemplos por tema ou situação, use `search_graph` com `curated_only: true`. Leia o texto e as ligações do exemplo com `read_graph_node` antes de citá-lo. Se a busca vier vazia, você pode procurar candidatos e conferir o trecho no contexto. Se a wiki estiver indisponível, consulte as fontes locais com `list_sources`, `read_source` ou `search_zulip`.
+## Escolher o exemplo
 
-Consulte `open_notebook` para situar a aula na sequência. Escolha um trecho curto e pertinente. Siga a preferência de fonte do aluno e varie as situações e os registros entre aulas.
+1. Para continuar a sequência de aulas, consulte os títulos com `open_notebook`.
+2. Escolha a ação que a regra ajuda a realizar. Por exemplo, pedir uma atualização sobre um relatório.
+3. Selecione um trecho original da fonte pedida, de preferência em uma situação diferente da aula anterior. [Consultar uma fonte](../revisar-caderno/SKILL.md#consultar-uma-fonte)
 
-1. Declare uma ação observável, como pedir uma atualização sobre um relatório respeitando a ordem das palavras na pergunta indireta.
-2. Situe o exemplo. Explique quem fala com quem, em que canal e com qual objetivo. Cite o link original e preserve as palavras da fonte. Identifique as adaptações em inglês britânico como exemplos criados e diga o que mudou quando isso ajuda a entender o uso.
-3. Explique em português do Brasil por padrão, com exemplos em inglês e tradução. Mostre uma regra por vez, uma variação relevante e um exemplo de trabalho. Respeite o ritmo pedido e mantenha o tema ao repetir ou trocar de idioma. A aula expositiva pode terminar com a explicação. Ofereça um exercício apenas se fizer sentido para o pedido.
-4. Use `save_entry` para registrar cada aula nova com `kind: lesson`, título, objetivo, regra e exemplos em inglês, e IDs das fontes consultadas. Repetir a explicação não cria outro registro. Informe o salvamento após a confirmação do MCP.
+## Explicar a regra
 
-Se o acervo estiver vazio, indique o botão de download ou ofereça `download_sources`. Uma adaptação pode servir como exemplo enquanto o trecho original está indisponível. Informe quando a fonte não pôde ser consultada.
+1. Explique quem fala, com quem e para quê.
+2. Mostre a frase em inglês com a tradução para o português.
+3. Explique uma regra por vez em português do Brasil, no ritmo pedido.
+4. Mostre uma variação que esclareça a regra, como a posição do sujeito em uma pergunta indireta.
+
+Se o aluno pedir outro idioma, use esse idioma para a explicação. Se pedir uma repetição, mantenha o tema e o exemplo. Em uma aula expositiva, encerre após a explicação. Proponha um exercício quando o aluno pedir prática.
+
+## Salvar a aula
+
+Uma repetição usa o registro da aula existente. Para uma aula nova, siga estes passos.
+
+1. Escreva o título, o objetivo, a regra e os exemplos em inglês.
+2. Salve a aula com `save_entry` e `kind: lesson`. O campo `sources` contém os IDs das fontes consultadas.
+3. Confirme o salvamento quando a ferramenta retornar o ID do registro.
