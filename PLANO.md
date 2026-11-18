@@ -1,6 +1,6 @@
 # Plano de curadoria e busca da wiki
 
-O aluno deve poder pedir uma situação em português, encontrar um exemplo real, ler o contexto e guardar a referência no caderno. A edição de estudo deve funcionar offline. As etapas abaixo são trabalho proposto para o Codex na nuvem.
+O aluno deve poder pedir exemplos em português ou em inglês, ler a conversa em que aparecem e guardar a referência no caderno. A edição de estudo deve funcionar offline. As etapas abaixo são trabalho proposto para o Codex na nuvem.
 
 ## Ponto de partida
 
@@ -37,6 +37,8 @@ O assistente começa pela intenção e pelos filtros explícitos do aluno. Lê o
 Se necessário, testar até duas novas consultas. Na primeira, trocar a formulação ou buscar uma expressão provável em inglês. Na segunda, ampliar um filtro opcional, como o tipo de material. Preservar exigências como “só Doist” e “só exemplos conferidos”. Ler o contexto antes de citar. Se a fonte continuar insuficiente, explicar a lacuna ao aluno.
 
 **Aceite.** Testar uma busca vazia, outra com coincidência irrelevante e uma com bom resultado inicial. Registrar a consulta, o motivo do ajuste e o ID escolhido. A busca bem-sucedida encerra as tentativas. O próprio assistente faz o refinamento, sem iniciar outro agente.
+
+Verificar também se “Como peço mais tempo para entregar um relatório?” e “How can I ask for more time to finish a report?” levam a exemplos de negociação de prazo. O aluno pode fazer qualquer um dos pedidos diretamente no idioma que preferir.
 
 ## 4. Ampliar a curadoria por valor didático
 
