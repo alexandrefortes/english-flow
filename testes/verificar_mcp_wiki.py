@@ -63,7 +63,7 @@ class WikiOffline(unittest.TestCase):
 
     def test_fontes_exclusivas_caderno_e_origem(self):
         casos = [
-            ("fixing CSS specificity problems", "zulip-anexo-0d1d5afcd4c82604931d79ec8832512a"),
+            ("Could you help me identify the right direction for my proposal?", "zulip-anexo-0d1d5afcd4c82604931d79ec8832512a"),
             ("The briefing's ready. I'll send it out after lunch.", "wiki/phrasal-verbs.md"),
         ]
         for texto, chave in casos:
@@ -73,10 +73,11 @@ class WikiOffline(unittest.TestCase):
                 filtrado = self.buscar(text=texto, curation="conferido")
                 self.assertEqual([(r["id"], r["pagina_local"]) for r in filtrado], [(chave, geral[0]["pagina_local"])])
                 item = self.abrir(chave)
-                self.assertIn(texto, item["texto"])
+                self.assertIn(texto, " ".join(item["texto"].split()))
                 self.assertEqual(geral[0]["pagina_local"], item["pagina_local"])
                 if item["tipo"] == "anexo":
                     self.assertEqual(item["qualidade_transcricao"], "parcial")
+                    self.assertEqual(self.buscar(text="fixing CSS specificity problems", curation="conferido"), [])
                     origem, = item["origens"]
                     self.assertEqual(origem["id"], "zulip-msg-2407782")
                     mensagem = self.abrir(origem["id"])

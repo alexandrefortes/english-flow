@@ -197,6 +197,17 @@ def sincronizar(db, wiki):
             SELECT DISTINCT a.pagina FROM topicos_alterados t JOIN itens m ON m.pagina=t.pagina
             JOIN backlinks b ON b.mensagem=m.id JOIN itens a ON a.id=b.anexo
         """) if r[0] in atuais)
+        if anteriores:
+            db.execute("CREATE TEMP TABLE IF NOT EXISTS mensagens_alteradas (id TEXT PRIMARY KEY)")
+            for p in topicos:
+                if p in alteradas:
+                    corpo = (wiki / p).read_text(encoding="utf-8-sig")
+                    db.executemany("INSERT OR IGNORE INTO mensagens_alteradas VALUES (?)",
+                                   ((m[1],) for m in MENSAGEM.finditer(corpo)))
+            alteradas.update(r[0] for r in db.execute("""
+                SELECT DISTINCT a.pagina FROM mensagens_alteradas m JOIN backlinks b ON b.mensagem=m.id
+                JOIN itens a ON a.id=b.anexo
+            """) if r[0] in atuais)
     for p in removidas | alteradas:
         db.execute("DELETE FROM backlinks WHERE anexo IN (SELECT id FROM itens WHERE pagina=?)", (p,))
         if p.startswith("local/anexos/zulip-anexo-"):

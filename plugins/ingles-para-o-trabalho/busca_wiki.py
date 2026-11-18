@@ -172,6 +172,16 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
             WHERE {where} AND NOT ({do_texto}) AND {da_mensagem}"""
     if termo:
         db.create_function("origem_citada", 3, origem_citada, deterministic=True)
+        validacao = ""
+        if curation == "conferido":
+            condicoes = ["e.id=coalesce(o.id,d.id)", contem("replace(e.trecho,char(10),' ')")]
+            for campo in ("tema", "situacao"):
+                if campo in args:
+                    condicoes.append(f"instr(' '||e.usos||' ', ' '||:{campo}||' ')")
+            if function:
+                condicoes.append("e.funcao=:funcao")
+            validacao = ("WHERE d.via!='texto' OR EXISTS (SELECT 1 FROM evidencias e JOIN inventario v ON v.id=e.id "
+                         "WHERE v.estado='conferido' AND " + " AND ".join(condicoes) + ")")
         sql = f"""
             WITH diretos AS MATERIALIZED ({sql}),
             citados AS MATERIALIZED (
@@ -184,6 +194,7 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
             SELECT d.id,coalesce(o.id,d.id) AS citar,d.estado,
                    CASE WHEN o.id IS NULL THEN d.via ELSE 'contexto' END AS via
             FROM citados d LEFT JOIN itens o ON o.id=d.alvo AND {contem(texto_pesquisavel('o'))}
+            {validacao}
         """
     if termo and kind in ("anexo", "topico"):
         vinculo = ("JOIN backlinks b ON b.anexo=i.id JOIN itens m ON m.id=b.mensagem" if kind == "anexo"
@@ -192,7 +203,7 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
         if curation == "conferido":
             filtro_citacao = (" AND EXISTS (SELECT 1 FROM inventario origem JOIN evidencias e ON e.id=origem.id "
                               "WHERE origem.id=m.id AND origem.estado='conferido' AND "
-                              + contem("replace(e.trecho,char(10),' ')") + ")")
+                              + " AND ".join(condicoes[1:]) + ")")
         sql += f""" UNION ALL SELECT i.id,m.id,i.estado,'contexto' FROM inventario i {vinculo}
                    WHERE {where} AND {contem(texto_pesquisavel("m"))}{filtro_citacao}"""
     query = f"""WITH achados AS ({sql}), unicos AS (
