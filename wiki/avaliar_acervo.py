@@ -10,7 +10,7 @@ from tempfile import NamedTemporaryFile
 
 WIKI = Path(__file__).resolve().parent
 sys.path.insert(0, str(WIKI.parent / "plugins/ingles-para-o-trabalho"))
-from indice_wiki import DECISOES, conectar, pagina_id, sincronizar
+from indice_wiki import DECISOES, TIPOS, conectar, pagina_id, sincronizar
 from consulta_grafo import SITUACOES, TEMAS, abrir_leitura
 
 
@@ -127,13 +127,28 @@ def conferir(db, wiki):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--registrar", action="store_true")
+    operacao = parser.add_mutually_exclusive_group()
+    operacao.add_argument("--registrar", action="store_true")
+    operacao.add_argument("--pendentes", choices=TIPOS, metavar="TIPO", help="listar IDs pendentes de um tipo em JSONL")
+    parser.add_argument("--apos", metavar="ID", help="continuar depois deste ID na ordem da listagem")
+    parser.add_argument("--limite", type=int, help="número máximo de pendentes a listar (padrão 50)")
     parser.add_argument("--revisoes", type=Path, nargs="+", default=[], help="decisões individuais em JSONL")
     args = parser.parse_args()
     if args.revisoes and not args.registrar:
         parser.error("Para gravar as revisões, use --registrar.")
+    if (args.apos is not None or args.limite is not None) and not args.pendentes:
+        parser.error("--apos e --limite são opções da listagem --pendentes.")
+    if args.limite is not None and args.limite < 1:
+        parser.error("O limite deve ser positivo.")
     with closing(conectar(WIKI)) as db:
-        if args.registrar:
+        if args.pendentes:
+            for item in db.execute("SELECT id,tipo,assinatura,pagina FROM inventario "
+                                   "WHERE estado='pendente' AND tipo=? AND id>? ORDER BY id LIMIT ?",
+                                   (args.pendentes, args.apos or "", args.limite or 50)):
+                print(json.dumps(dict(item), ensure_ascii=False))
+        elif args.registrar:
             registrar(db, WIKI, args.revisoes)
-    with closing(conectar(WIKI)) as db:
-        print(json.dumps(conferir(db, WIKI), ensure_ascii=False, indent=2))
+            with db:
+                sincronizar(db, WIKI)
+        if not args.pendentes:
+            print(json.dumps(conferir(db, WIKI), ensure_ascii=False, indent=2))

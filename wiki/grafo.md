@@ -48,7 +48,7 @@ O [registro de decisões](decisoes.tsv.gz) usa uma linha por item com ID, tipo, 
 
 A busca atualiza as páginas que mudaram e exclui as removidas. Uma mudança no texto ou no contexto relevante deixa a decisão pendente de avaliação. A qualidade da transcrição aparece em um campo próprio.
 
-Na raiz do projeto, execute `python -B wiki/avaliar_acervo.py` para comparar os IDs com o grafo, os catálogos e as páginas. Consulte `search_wiki` com `curation: pendente` para retomar a leitura. Cada situação conta o mesmo ID uma vez.
+Na raiz do projeto, execute `python -B wiki/avaliar_acervo.py` para comparar os IDs com o grafo, os catálogos e as páginas. Consulte `search_wiki` com `curation: pendente` para retomar a leitura. Para listar um lote por ID, execute `python -B wiki/avaliar_acervo.py --pendentes mensagem --limite 50`. A próxima página aceita `--apos ID` com o último ID exibido. Cada situação conta o mesmo ID uma vez.
 
 Abra o ID e confira o texto e o contexto da página. Registre a decisão em um lote JSONL, uma linha por item com `id`, `tipo`, `assinatura`, `estado` e `motivo`. Use `apoio` com a função do material, ou `sem-uso` com o motivo. Para `conferido`, inclua `evidencias` com o trecho literal, a função em `funcao` e a lista de `usos` de cada exemplo. A assinatura vem de `read_wiki_item`.
 

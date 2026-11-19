@@ -98,6 +98,23 @@ class BuscaWiki(unittest.TestCase):
         with closing(conectar(self.wiki)) as db, self.assertRaises(ValueError):
             registrar(db, self.wiki, [lote])
 
+    def test_anexo_sem_rotulo_automatico_com_uso_conferido(self):
+        pasta = self.wiki / "local/anexos"
+        pasta.mkdir()
+        chave = "zulip-anexo-revisado"
+        nome = "proposta.png"
+        texto = "Could we extend the deadline by a week?"
+        (pasta / "extracao.json").write_text(json.dumps({chave: {"name": nome, "transcription": "parcial"}}))
+        (pasta / (chave + ".md")).write_text(f"# {nome}\n\n## Content\n\n```text\n{texto}\n```\n")
+        assinatura = self.abrir(chave)["assinatura"]
+        exemplo = {"trecho": texto, "funcao": "pedido", "usos": ["negociar-prazo"], "assinatura": assinatura}
+        (self.wiki / "curadoria.json").write_text(json.dumps({chave: [exemplo]}))
+        with gzip.open(self.wiki / "decisoes.tsv.gz", "wt") as out:
+            out.write(f"{chave}\tanexo\t{assinatura}\tconferido\tpedido\n")
+        for curation in (None, "conferido"):
+            resultado, = self.buscar(kind="anexo", situation="negociar-prazo", curation=curation)
+            self.assertEqual((resultado["id"], resultado["citar_id"], resultado["trecho"]), (chave, chave, texto))
+
     def test_sem_transcricao_e_varias_origens(self):
         pasta = self.wiki / "local/anexos"
         pasta.mkdir()

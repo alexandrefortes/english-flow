@@ -166,10 +166,13 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
         campos = [campo for campo in ("tema", "situacao") if campo in args]
         do_texto = " AND ".join(f"instr(' '||u.do_texto||' ', ' '||:{campo}||' ')" for campo in campos)
         da_mensagem = " AND ".join(f"instr(' '||m.rotulos||' ', ' '||:{campo}||' ')" for campo in campos)
-        sql += f""" AND (i.tipo!='anexo' OR EXISTS (SELECT 1 FROM usos_anexo u WHERE u.id=i.id AND {do_texto}))
+        usos_conferidos = " AND ".join(f"instr(' '||e.usos||' ', ' '||:{campo}||' ')" for campo in campos)
+        conferido = ("(i.estado='conferido' AND EXISTS (SELECT 1 FROM evidencias e WHERE e.id=i.id AND "
+                     + usos_conferidos + "))")
+        sql += f""" AND (i.tipo!='anexo' OR {conferido} OR EXISTS (SELECT 1 FROM usos_anexo u WHERE u.id=i.id AND {do_texto}))
             UNION ALL SELECT i.id,m.id,i.estado,'rotulo' FROM inventario i JOIN usos_anexo u ON u.id=i.id
             JOIN backlinks b ON b.anexo=i.id JOIN itens m ON m.id=b.mensagem
-            WHERE {where} AND NOT ({do_texto}) AND {da_mensagem}"""
+            WHERE {where} AND NOT {conferido} AND NOT ({do_texto}) AND {da_mensagem}"""
     if termo:
         db.create_function("origem_citada", 3, origem_citada, deterministic=True)
         validacao = ""
@@ -222,7 +225,7 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
                           and (not function or e["funcao"] == function)), None)
         if via == "arquivo":
             trecho, pos = item["titulo"], 0
-        elif escolhido and not termo:
+        elif escolhido and not termo and citar["id"] == item["id"]:
             trecho, pos = escolhido["trecho"], item["texto"].find(escolhido["trecho"])
         elif via == "rotulo" and citar["id"] != item["id"]:
             trecho, pos = recortar(citar["texto"], "")
