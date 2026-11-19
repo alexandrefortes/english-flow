@@ -1,0 +1,11 @@
+{
+  "name": "english-flow",
+  "version": "0.6.0",
+  "description": "Practice workplace English with real sources and a personal notebook.",
+  "skills": "./skills",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "English Flow",
+    "shortDescription": "English with real examples"
+  }
+}

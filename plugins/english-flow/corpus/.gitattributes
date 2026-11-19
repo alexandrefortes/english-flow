@@ -1,0 +1,3 @@
+wiki-*.bin binary
+project.tar.gz binary
+project.sha256 text eol=lf

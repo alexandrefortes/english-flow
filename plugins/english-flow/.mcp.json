@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "english-flow": {
+      "command": "python",
+      "args": ["-B", "-u", "${PLUGIN_ROOT}/server.py"],
+      "cwd": "${PLUGIN_ROOT}",
+      "env_vars": ["ENGLISH_FLOW_PROJECT_DIR", "ENGLISH_FLOW_NOTEBOOK_DIR"],
+      "tool_timeout_sec": 180
+    }
+  }
+}

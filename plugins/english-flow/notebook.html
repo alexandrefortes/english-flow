@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Flow</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    font: 16px/1.5 "Geist", system-ui, sans-serif;
+    color: light-dark(#18312b, #e6f1ea);
+    background: light-dark(#f3f6ef, #14231f);
+    --paper: light-dark(#fcfdf9, #1b3028);
+    --border: light-dark(#b9cfc1, #4b695b);
+    --muted: light-dark(#465c51, #c1d5c7);
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; }
+  main { max-width: 920px; margin: auto; padding: clamp(14px, 4vw, 38px); }
+  h1 { margin: 0 0 16px; font: 650 clamp(2rem, 7vw, 3.7rem)/1.04 "Instrument Serif", Georgia, serif; }
+  h2, h3, h4, h5, h6 { line-height: 1.25; }
+  h2 { margin: 0; font-size: 1.25rem; }
+  h3 { margin: 0; font-size: 1.15rem; }
+  p { margin: .55em 0; }
+  .card, .panel { border: 1px solid var(--border); background: var(--paper); }
+  .card { margin: 14px 0; padding: clamp(12px, 3vw, 20px); border-radius: 14px; }
+  .panel { margin: 12px 0; padding: 14px; border-radius: 9px; overflow-wrap: anywhere; }
+  .actions, .heading { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .heading { justify-content: space-between; }
+  .field { flex: 1 1 200px; min-width: 0; }
+  .field label { display: block; margin-bottom: 4px; }
+  .field input, .field select { width: 100%; }
+  .filters { align-items: flex-end; margin: .65em 0; }
+  button, input, select, textarea { max-width: 100%; font: inherit; padding: .45em .7em; color: inherit; border: 1px solid light-dark(#567767, #a4c7b1); background: var(--paper); border-radius: 7px; }
+  button { cursor: pointer; min-height: 42px; text-align: left; overflow-wrap: anywhere; }
+  button.primary { background: #1e6048; color: #fff; border-color: #1e6048; }
+  button:disabled { cursor: wait; opacity: .65; }
+  .link-button { border: 0; background: transparent; color: light-dark(#165742, #b0e4c3); padding-inline: .15em; text-decoration: underline; text-underline-offset: .15em; }
+  :focus-visible { outline: 3px solid light-dark(#944315, #ffd0a3); outline-offset: 3px; }
+  .list { list-style: none; padding: 0; margin: 0; }
+  .list li { padding: 8px 0; border-bottom: 1px solid var(--border); overflow-wrap: anywhere; }
+  .list li:last-child { border-bottom: 0; }
+  .list p { margin: .25em 0; }
+  .markdown { max-width: 72ch; }
+  .markdown blockquote { border-inline-start: 3px solid var(--border); margin-inline: 0; padding-inline-start: 1em; }
+  .markdown ul, .markdown ol { padding-inline-start: 1.5em; }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  figure { margin: 1em 0; }
+  img { display: block; max-width: 100%; height: auto; }
+  small, .hint { color: var(--muted); }
+  #status { min-height: 1.5em; }
+  #manual-value { display: block; width: 100%; margin-block: 5px 9px; resize: vertical; }
+</style>
+</head>
+<body>
+<main>
+  <h1>English Flow</h1>
+  <nav class="actions" aria-label="Study activities">
+    <button class="primary" data-prompt="Start the next grammar lesson. Use English examples from the wiki and save the lesson in English.">Grammar</button>
+    <button data-prompt="Start a workplace role-play from the wiki. Take one turn at a time and give feedback on my wording.">English practice</button>
+    <button data-prompt="Review the grammar in my saved lessons. Keep the examples in English.">Review lessons</button>
+    <button data-prompt="Help me practice from memory. Ask one question at a time. Wait for my answer before giving a hint or feedback.">Practice from memory</button>
+  </nav>
+  <p id="status" role="status">Opening your notebook…</p>
+  <section id="manual" class="panel" aria-labelledby="manual-label" hidden>
+    <label for="manual-value" id="manual-label"></label>
+    <textarea id="manual-value" rows="3" readonly></textarea>
+    <div class="actions">
+      <button id="manual-copy" type="button">Copy</button>
+      <button id="manual-close" type="button">Close</button>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="entries-title">
+    <div class="heading"><h2 id="entries-title">Study notebook</h2><button id="refresh" type="button" disabled>Refresh</button></div>
+    <div class="field filters">
+      <label for="entry-filter">Filter notebook</label>
+      <input id="entry-filter" type="search" placeholder="Lesson, practice, or note title">
+    </div>
+    <article id="entry" class="panel" aria-label="Selected entry" hidden></article>
+    <ul id="entries" class="list" role="list"></ul>
+  </section>
+
+  <section class="card" aria-labelledby="sources-title">
+    <div class="heading"><h2 id="sources-title">Public sources</h2><button id="download" type="button" disabled>Download sample</button></div>
+    <p id="coverage" class="hint"></p>
+    <div class="field filters">
+      <label for="intent">Work situation</label>
+      <select id="intent">
+        <option value="all">All situations</option>
+        <option value="updates">Ask for or give an update</option>
+        <option value="deadline">Agree on deadlines and next steps</option>
+        <option value="feedback">Give or request feedback</option>
+        <option value="coordination">Coordinate work</option>
+        <option value="other">Other situations</option>
+      </select>
+    </div>
+    <article id="source" class="panel" aria-label="Selected source" hidden></article>
+    <ul id="sources" class="list" role="list"></ul>
+    <form id="search" class="actions filters">
+      <div class="field">
+        <label for="query">Search Zulip messages</label>
+        <input id="query" type="search" minlength="2" maxlength="120" required placeholder="Example: deadline" aria-describedby="search-info">
+      </div>
+      <button id="search-submit" type="submit" disabled>Search</button>
+    </form>
+    <p id="search-info" class="hint" role="status"></p>
+    <ul id="matches" class="list" role="list"></ul>
+  </section>
+
+  <aside class="card" aria-labelledby="voice-title">
+    <h2 id="voice-title">Practice with voice</h2>
+    <p><strong>Voice chat.</strong> Use ChatGPT voice to practice. Say “Let's have a meeting in English. Take one turn at a time.” If the notebook is unavailable, ask the plugin to save the material later.</p>
+    <p><strong>Dictation.</strong> The dictation microphone converts speech to text. Check the transcript before you send it.</p>
+  </aside>
+</main>
+<script>
+  const get = id => document.getElementById(id);
+  const pending = new Map();
+  const state = {entries: [], sources: [], coverage: null, wiki: false};
+  const kindNames = {lesson: "Lesson", practice: "Practice", review: "Review", note: "Note"};
+  const scopeNames = {sample: "Sample", pilot: "Pilot", full: "Full collection"};
+  const searchableControls = ["refresh", "download", "search-submit"];
+  let nextId = 0;
+  let initialized = false;
+  let manualTrigger;
+  let latestEntryRequest = 0;
+  let latestSourceRequest = 0;
+
+  function status(text) {
+    get("status").textContent = text;
+  }
+
+  function send(message) {
+    window.parent.postMessage({jsonrpc: "2.0", ...message}, "*");
+  }
+
+  function rpc(method, params, timeout = 15000) {
+    const id = ++nextId;
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        pending.delete(id);
+        reject(new Error("The app did not respond in time. Try again."));
+      }, timeout);
+      pending.set(id, {resolve, reject, timer});
+      send({id, method, params});
+    });
+  }
+
+  window.addEventListener("message", event => {
+    if (event.source !== window.parent || event.data?.jsonrpc !== "2.0") return;
+    const message = event.data;
+    if (message.method === "ui/notifications/tool-result" && !message.params?.isError) {
+      const data = message.params?.structuredContent;
+      if (Array.isArray(data?.entries)) render(data);
+    }
+    const request = pending.get(message.id);
+    if (!request) return;
+    pending.delete(message.id);
+    clearTimeout(request.timer);
+    if (message.error) request.reject(new Error(message.error.message));
+    else request.resolve(message.result);
+  });
+
+  function element(tag, text, className) {
+    const node = document.createElement(tag);
+    if (text !== undefined) node.textContent = text;
+    if (className) node.className = className;
+    return node;
+  }
+
+  function action(text, callback, className) {
+    const button = element("button", text, className);
+    button.type = "button";
+    button.addEventListener("click", () => run(button, () => callback(button)));
+    return button;
+  }
+
+  async function run(button, callback) {
+    button.disabled = true;
+    try { await callback(); }
+    catch (error) { status(error.message); }
+    finally { button.disabled = false; }
+  }
+
+  async function call(name, args = {}, timeout) {
+    if (!initialized) throw new Error("Open the panel from the plugin to access your notebook.");
+    const response = await rpc("tools/call", {name, arguments: args}, timeout);
+    if (response?.isError) {
+      throw new Error(response.structuredContent?.error || "The request failed. Try again.");
+    }
+    if (!response?.structuredContent) throw new Error("The notebook response is incomplete.");
+    return response;
+  }
+
+  function offerManual(label, value, trigger) {
+    manualTrigger = trigger;
+    get("manual-label").textContent = label;
+    const field = get("manual-value");
+    field.value = value;
+    get("manual").hidden = false;
+    field.focus();
+    field.select();
+  }
+
+  function closeManual(restoreFocus = false) {
+    if (get("manual").hidden) return;
+    get("manual").hidden = true;
+    get("manual-value").value = "";
+    if (restoreFocus && manualTrigger?.isConnected) manualTrigger.focus();
+  }
+
+  get("manual-copy").addEventListener("click", async () => {
+    const field = get("manual-value");
+    try {
+      await navigator.clipboard.writeText(field.value);
+      status("Text copied.");
+    } catch {
+      field.focus();
+      field.select();
+      status("Copy the selected text.");
+    }
+  });
+  get("manual-close").addEventListener("click", () => closeManual(true));
+
+  async function sendPrompt(prompt, trigger) {
+    closeManual();
+    try {
+      if (!initialized) throw new Error();
+      const reply = await rpc("ui/message", {role: "user", content: [{type: "text", text: prompt}]});
+      if (reply?.isError) throw new Error();
+      status("Request sent to the chat.");
+    } catch {
+      status("Copy the request into the plugin chat.");
+      offerManual("Chat request", prompt, trigger);
+    }
+  }
+
+  function httpsUrl(value) {
+    try {
+      const url = new URL(value);
+      return url.protocol === "https:" && !url.username && !url.password ? url.href : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function externalLink(label, url) {
+    return action(label, async trigger => {
+      closeManual();
+      try {
+        const reply = await rpc("ui/open-link", {url});
+        if (reply?.isError) throw new Error();
+        status("Link sent to the browser.");
+      } catch {
+        status("Copy the link and open it in your browser.");
+        offerManual("Publication link", url, trigger);
+      }
+    }, "link-button");
+  }
+
+  function norm(text) {
+    return String(text ?? "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+  }
+
+  function categories(source) {
+    const label = norm([source.title, source.topic, source.id, source.intent].join(" "));
+    const result = [];
+    if (/atualiz|status|update|report|progress/.test(label)) result.push("updates");
+    if (/prazo|passos|deadline|next steps|timeline|due/.test(label)) result.push("deadline");
+    if (/feedback|revis|review|critique/.test(label)) result.push("feedback");
+    if (/coorden|planeja|combinar|reuniao|meeting|kickoff|proposta|decis|convite/.test(label)) result.push("coordination");
+    return result.length ? result : ["other"];
+  }
+
+  function titleFor(source) {
+    return source.title || source.topic || source.id.split("-").slice(1).join(" ");
+  }
+
+  function findSource(id) {
+    return state.sources.find(source => source.id === id || source.aliases?.includes(id));
+  }
+
+  function sourceButton(label, id, reference) {
+    return action(label, trigger => showSource(id, trigger, reference), "link-button");
+  }
+
+  function referenceButton(reference) {
+    const known = findSource(reference.id);
+    const label = reference.title || (known ? titleFor(known) : reference.id);
+    const url = httpsUrl(reference.url);
+    return sourceButton(label, reference.id, {title: label, url, tool: reference.tool});
+  }
+
+  function inline(container, value) {
+    const tokens = /\[([^\]\n]+)\]\(([^)\s]+)\)|\*\*([^*\n]+)\*\*|\*([^*\n]+)\*|\x60([^\x60\n]+)\x60/g;
+    let offset = 0;
+    for (const token of value.matchAll(tokens)) {
+      container.append(document.createTextNode(value.slice(offset, token.index)));
+      if (token[1]) {
+        const url = httpsUrl(token[2]);
+        container.append(url ? externalLink(token[1], url) : document.createTextNode(token[1]));
+      } else {
+        container.append(token[3] ? element("strong", token[3])
+          : token[4] ? element("em", token[4]) : element("code", token[5]));
+      }
+      offset = token.index + token[0].length;
+    }
+    container.append(document.createTextNode(value.slice(offset)));
+  }
+
+  function renderMarkdown(value, title) {
+    const article = element("div", undefined, "markdown");
+    article.lang = "en";
+    let list;
+    let paragraph = [];
+    let codeLines;
+    function flushParagraph() {
+      if (!paragraph.length) return;
+      const node = element("p");
+      inline(node, paragraph.join(" "));
+      article.append(node);
+      paragraph = [];
+    }
+    for (const line of value.split(/\r?\n/)) {
+      if (/^(\x60{3,}|~{3,})/.test(line)) {
+        flushParagraph();
+        list = undefined;
+        if (codeLines) {
+          const pre = element("pre");
+          pre.append(element("code", codeLines.join("\n")));
+          article.append(pre);
+          codeLines = undefined;
+        } else {
+          codeLines = [];
+        }
+        continue;
+      }
+      if (codeLines) {
+        codeLines.push(line);
+        continue;
+      }
+      const heading = /^(#{1,6})\s+(.+)$/.exec(line);
+      const item = /^\s*(?:([-+*])|\d+\.)\s+(.+)$/.exec(line);
+      const quote = /^>\s?(.*)$/.exec(line);
+      if (item) {
+        flushParagraph();
+        const type = item[1] ? "ul" : "ol";
+        if (!list || list.localName !== type) {
+          list = element(type);
+          article.append(list);
+        }
+        const entry = element("li");
+        inline(entry, item[2]);
+        list.append(entry);
+        continue;
+      }
+      list = undefined;
+      if (!line.trim() || heading || quote || /^-{3,}$/.test(line)) flushParagraph();
+      if (heading) {
+        if (heading[2] === title) continue;
+        const node = element("h" + Math.max(4, Math.min(heading[1].length + 2, 6)));
+        inline(node, heading[2]);
+        article.append(node);
+      } else if (quote) {
+        const node = element("blockquote");
+        inline(node, quote[1]);
+        article.append(node);
+      } else if (/^-{3,}$/.test(line)) {
+        article.append(element("hr"));
+      } else if (line.trim()) {
+        paragraph.push(line.trim());
+      }
+    }
+    flushParagraph();
+    if (codeLines) article.append(element("pre", codeLines.join("\n")));
+    return article;
+  }
+
+  function openPanel(panel, title, trigger, language) {
+    const heading = element("h3", title);
+    if (language) heading.lang = language;
+    heading.tabIndex = -1;
+    const header = element("div", undefined, "heading");
+    header.append(heading, action("Close", () => {
+      panel.hidden = true;
+      if (trigger?.isConnected) trigger.focus();
+    }));
+    panel.replaceChildren(header);
+    panel.hidden = false;
+    heading.focus();
+  }
+
+  async function showEntry(id, trigger) {
+    const request = ++latestEntryRequest;
+    status("Opening entry…");
+    const {structuredContent: entry} = await call("read_entry", {entry_id: id});
+    if (request !== latestEntryRequest) return;
+    const panel = get("entry");
+    openPanel(panel, entry.title, trigger, "en");
+    panel.append(renderMarkdown(entry.content, entry.title));
+    const actions = element("div", undefined, "actions");
+    const entryRef = JSON.stringify(entry.id || id);
+    actions.append(action("Review explanation", button => sendPrompt(
+      "Read notebook entry " + entryRef + " and review its explanation. Keep the examples in English.", button
+    )));
+    actions.append(action(entry.kind === "lesson" ? "Review this lesson" : "Practice from memory", button => sendPrompt(
+      "Read notebook entry " + entryRef + " and help me practice from memory. Ask one question and wait for my answer. Give a hint if needed.", button
+    )));
+    const references = entry.source_refs?.length
+      ? entry.source_refs : (entry.sources || []).map(id => ({id}));
+    for (const reference of references) actions.append(referenceButton(reference));
+    panel.append(actions);
+    status("");
+  }
+
+  function unavailableSource(reference, trigger) {
+    const panel = get("source");
+    openPanel(panel, titleFor(reference), trigger);
+    if (reference.description) panel.append(element("p", reference.description, "hint"));
+    const url = httpsUrl(reference.url);
+    if (url) panel.append(externalLink("Open original publication", url));
+    status("The local source is unavailable. Download the sample or open the original publication.");
+  }
+
+  async function showSource(id, trigger, reference) {
+    const request = ++latestSourceRequest;
+    const known = findSource(id);
+    if (known?.available === false && !reference?.tool) {
+      unavailableSource(known, trigger);
+      return;
+    }
+    status("Opening source…");
+    let response;
+    try {
+      response = reference?.tool === "read_wiki_item"
+        ? await call("read_wiki_item", {item_id: id, offset: reference.offset_texto || 0})
+        : await call("read_source", {source_id: id});
+    } catch (error) {
+      if (request !== latestSourceRequest) return;
+      if (!reference?.url) throw error;
+      unavailableSource(reference, trigger);
+      return;
+    }
+    if (request !== latestSourceRequest) return;
+    const {structuredContent: source, content = []} = response;
+    const panel = get("source");
+    const label = source.titulo || source.title || source.topic || (known ? titleFor(known) : source.company);
+    openPanel(panel, label, trigger, source.topic && !source.title ? "en" : undefined);
+    const meta = [source.company, source.channel].filter(Boolean).join(" · ");
+    if (meta) panel.append(element("p", meta, "hint"));
+    const description = source.description || known?.description;
+    const transcript = source.transcript || known?.transcript;
+    if (source.texto || source.excerpt) {
+      const excerpt = element("pre", source.texto || source.excerpt);
+      excerpt.lang = "en";
+      panel.append(excerpt);
+    }
+    const image = content.find(item => item.type === "image" &&
+      ["image/png", "image/jpeg", "image/webp"].includes(item.mimeType));
+    if (image) {
+      const figure = element("figure");
+      const img = element("img");
+      img.alt = transcript ? "Image of the conversation. The transcript follows." : description || "Image of the conversation: " + label;
+      img.src = "data:" + image.mimeType + ";base64," + image.data;
+      figure.append(img);
+      if (description) figure.append(element("figcaption", description, "hint"));
+      panel.append(figure);
+      if (transcript) {
+        const text = element("pre", transcript);
+        text.lang = "en";
+        panel.append(element("h4", "Transcript"), text);
+      } else {
+        panel.append(element("p", "Open a Zulip message for text practice or use the description as a scenario.", "hint"));
+      }
+    } else if (description) {
+      panel.append(element("p", description, "hint"));
+    }
+    const actions = element("div", undefined, "actions");
+    const sourceId = source.id || id;
+    const deadlinePilot = ["doist-combinar-prazo", "prazo-imagem-todoist"].some(pilot =>
+      [sourceId, id, ...(known?.aliases || [])].includes(pilot));
+    actions.append(action("Practice with this passage", button => sendPrompt(
+      "Open source " + JSON.stringify(sourceId) + " in the wiki. "
+        + (deadlinePilot ? "Start the deadline exercise. " : "Use this passage for workplace English practice. ")
+        + "Explain the context. Take one role-play turn in English and wait for my reply.", button
+    ), "primary"));
+    const url = httpsUrl(source.url);
+    if (url) actions.append(externalLink("Open original publication", url));
+    panel.append(actions);
+    status("");
+  }
+
+  function renderEntries() {
+    const query = norm(get("entry-filter").value).trim();
+    const entries = state.entries.filter(entry => norm(entry.title + " " + (kindNames[entry.kind] || "")).includes(query));
+    const rows = entries.map(entry => {
+      const row = element("li");
+      const button = action(entry.title, trigger => showEntry(entry.id, trigger), "link-button");
+      button.lang = "en";
+      row.append(button, " ", element("small", kindNames[entry.kind] || entry.kind));
+      return row;
+    });
+    const empty = query ? "No entries match your filter." : "Your notebook is empty. Start a lesson or ask the chat to save a practice session.";
+    get("entries").replaceChildren(...(rows.length ? rows : [element("li", empty)]));
+  }
+
+  function renderSources() {
+    const soWiki = state.wiki && !state.sources.some(source => source.available);
+    get("download").hidden = soWiki;
+    get("intent").parentElement.hidden = soWiki;
+    if (soWiki) {
+      const row = element("li");
+      row.append(referenceButton({id: "wiki/index.md", title: "Wiki index", tool: "read_wiki_item"}));
+      get("sources").replaceChildren(row);
+      return;
+    }
+    const intent = get("intent").value;
+    const matching = state.sources.filter(source => intent === "all" || categories(source).includes(intent));
+    const rows = matching.map(source => {
+      const row = element("li");
+      const button = sourceButton(titleFor(source), source.id);
+      const scope = scopeNames[source.scope];
+      const available = source.available ? "Available" : "Download required";
+      const details = [source.company, scope, available].filter(Boolean).join(" · ");
+      row.append(button, " ", element("small", details));
+      if (source.description) row.append(element("p", source.description, "hint"));
+      return row;
+    });
+    get("sources").replaceChildren(...(rows.length ? rows : [element("li", "No local source matches this situation.")]));
+  }
+
+  function scopesFor(coverage) {
+    const zulip = coverage?.zulip;
+    if (!zulip) return [];
+    const scopes = [];
+    if (zulip.sample?.available) scopes.push("sample");
+    if (zulip.pilot?.available) scopes.push("pilot");
+    if (zulip.full?.available) scopes.push(zulip.full.complete ? "full collection" : "partial collection");
+    return scopes;
+  }
+
+  function renderCoverage(coverage) {
+    get("query").labels[0].textContent = state.wiki ? "Search the wiki" : "Search Zulip messages";
+    if (state.wiki) {
+      get("coverage").textContent = "The full wiki is available offline.";
+      return;
+    }
+    if (!coverage) return;
+    const parts = [];
+    const doist = coverage.doist;
+    if (doist?.total) parts.push("Doist: " + doist.available + " of " + doist.total + " local images");
+    const scopes = scopesFor(coverage);
+    if (scopes.length) parts.push("Zulip: " + scopes.join(", "));
+    if (coverage.zulip && !scopes.length) parts.push("Zulip: no local messages yet");
+    get("coverage").textContent = parts.join(" · ");
+    if (!scopes.length && coverage.zulip) {
+      get("search-info").textContent = "Download the sample to search Zulip messages.";
+    } else if (scopes.length && !get("matches").childElementCount) {
+      get("search-info").textContent = "Search covers " + scopes.join(", ") + " in the local collection.";
+    }
+  }
+
+  function render(data) {
+    state.entries = data.entries ?? state.entries;
+    state.sources = data.sources ?? state.sources;
+    state.coverage = data.coverage ?? state.coverage;
+    state.wiki = data.wiki_disponivel ?? state.wiki;
+    renderEntries();
+    renderSources();
+    renderCoverage(state.coverage);
+    status(data.skipped?.length ? data.skipped.length + " notebook files could not be read." : "");
+  }
+
+  async function refresh() {
+    render((await call("open_notebook")).structuredContent);
+  }
+
+  function renderMatches(matches, query) {
+    const normalizedQuery = query.toLowerCase();
+    const rows = matches.map(match => {
+      const row = element("li");
+      const reference = match.citar_id ? {tool: "read_wiki_item", offset_texto: match.offset_texto} : undefined;
+      const button = sourceButton(match.titulo || match.topic || "Open message", match.citar_id || match.id, reference);
+      const details = match.citar_id ? [match.fonte, match.tipo] : [match.channel, scopeNames[match.scope]];
+      row.append(button, " ", element("small", details.filter(Boolean).join(" · ")));
+      if (match.trecho || match.excerpt) {
+        const excerpt = (match.trecho || match.excerpt).replace(/\s+/g, " ").trim();
+        const position = excerpt.toLowerCase().indexOf(normalizedQuery);
+        const start = Math.max(0, position - 70);
+        const end = Math.min(excerpt.length, start + Math.max(200, query.length + 85));
+        const preview = element("p");
+        preview.lang = "en";
+        if (start) preview.append("…");
+        if (position >= 0) {
+          preview.append(excerpt.slice(start, position), element("mark", excerpt.slice(position, position + query.length)),
+            excerpt.slice(position + query.length, end));
+        } else {
+          preview.append(excerpt.slice(start, end));
+        }
+        if (end < excerpt.length) preview.append("…");
+        row.append(preview);
+      }
+      return row;
+    });
+    get("matches").replaceChildren(...rows);
+  }
+
+  get("entry-filter").addEventListener("input", renderEntries);
+  get("intent").addEventListener("change", renderSources);
+  get("refresh").addEventListener("click", event => run(event.currentTarget, refresh));
+  get("search").addEventListener("submit", event => {
+    event.preventDefault();
+    run(event.submitter || get("search-submit"), async () => {
+      const query = get("query").value.trim();
+      if (query.length < 2) {
+        get("search-info").textContent = "Enter at least two characters.";
+        return;
+      }
+      get("search-info").textContent = "Searching the local collection…";
+      get("matches").replaceChildren();
+      try {
+        const {structuredContent: data} = state.wiki
+          ? await call("search_wiki", {text: query}, 185000)
+          : await call("search_zulip", {query});
+        const coverage = data.coverage ?? state.coverage;
+        const scopes = scopesFor(coverage);
+        if (!state.wiki && coverage?.zulip?.searchable === false) {
+          get("search-info").textContent = "Download the sample to search Zulip messages.";
+          return;
+        }
+        renderMatches(data.matches, query);
+        const count = data.matches.length;
+        const location = !state.wiki && scopes.length ? " (" + scopes.join(", ") + ")" : "";
+        get("search-info").textContent = count ? "Results: " + count + location
+          : "No results for “" + query + "”" + location + ".";
+      } catch (error) {
+        get("search-info").textContent = "Search did not finish. Try again.";
+        throw error;
+      }
+    });
+  });
+  get("download").addEventListener("click", event => run(event.currentTarget, async () => {
+    status("Downloading the sample…");
+    const {structuredContent: data} = await call("download_sources", {}, 185000);
+    render(data);
+    const count = data.downloaded?.length || 0;
+    const missing = data.failures?.length || 0;
+    if (missing) status(count + " sources downloaded. Still missing: " + missing + ". Select the button to try again.");
+    else status(count ? count + " sample sources downloaded." : "The sample is already available.");
+  }));
+  for (const button of document.querySelectorAll("[data-prompt]")) {
+    button.addEventListener("click", () => run(button, () => sendPrompt(button.dataset.prompt, button)));
+  }
+
+  async function connect() {
+    if (window.parent === window) {
+      status("Open the panel from the plugin to use the notebook. You can copy a study request into the chat.");
+      return;
+    }
+    await rpc("ui/initialize", {
+      appInfo: {name: "English Flow", version: "0.6.0"},
+      appCapabilities: {}, protocolVersion: "2026-01-26"
+    });
+    initialized = true;
+    send({method: "ui/notifications/initialized", params: {}});
+    for (const id of searchableControls) get(id).disabled = false;
+    await refresh();
+  }
+  connect().catch(() => status("The panel could not open the notebook. Open the panel from the plugin or copy a study request into the chat."));
+</script>
+</body>
+</html>

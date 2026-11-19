@@ -1,6 +1,6 @@
 /dados/
 /wiki/local/
-/caderno de estudos/
+/notebook/
 __pycache__/
 *.py[cod]
 .pytest_cache/

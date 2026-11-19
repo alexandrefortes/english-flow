@@ -1,14 +1,14 @@
 {
-  "name": "workplace-english-local",
+  "name": "english-flow-local",
   "interface": {
-    "displayName": "Workplace English Practice"
+    "displayName": "English Flow"
   },
   "plugins": [
     {
-      "name": "ingles-para-o-trabalho",
+      "name": "english-flow",
       "source": {
         "source": "local",
-        "path": "./plugins/ingles-para-o-trabalho"
+        "path": "./plugins/english-flow"
       },
       "policy": {
         "installation": "AVAILABLE",

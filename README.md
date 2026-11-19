@@ -1,146 +1,130 @@
-# Workplace English Practice
+# English Flow
 
-Use o plugin **Inglês para o Trabalho** para estudar gramática, simular conversas e revisar o que você salvou no caderno. Os exemplos vêm de conversas escritas da Doist e do Zulip.
+Study English with conversations from Doist and Zulip. Use the Codex plugin for grammar lessons, work conversations, and notebook review. The plugin includes the full text wiki. A fork also includes the tools that maintain the wiki and build the plugin.
 
-## Instalar a versão com a wiki completa
+## Install English Flow
 
-Use o Codex CLI com suporte a plugins, Git e Python 3.11 ou superior disponível como `python`. Para instalar a edição publicada por tag, execute:
+Use Git, a Codex CLI with plugin support, and Python 3.11 or later. Use the checkout or fork that contains this edition. Run both commands at its root.
+
+~~~sh
+codex plugin marketplace add .
+codex plugin add english-flow@english-flow-local
+~~~
+
+To install from a GitHub tag, use the following commands. Replace `OWNER/REPOSITORY` with the fork name. Replace `TAG` with a published tag that contains English Flow.
+
+~~~sh
+codex plugin marketplace add OWNER/REPOSITORY --ref TAG
+codex plugin add english-flow@english-flow-local
+~~~
+
+Type `@english-flow` and select **English Flow** in a local Codex chat. The first search restores the wiki and builds its index. Allow about 2 GB of disk space. Later searches use that index. [Plugin guide](plugins/english-flow/README.md)
+
+## Work on a fork
+
+| Path | Contents |
+| --- | --- |
+| `.claude-plugin/` | The marketplace catalog points to the plugin directory. |
+| `plugins/english-flow/` | The MCP server, notebook panel, skills, and published wiki archive. |
+| `wiki/` | Study pages, source links, and review decisions. |
+| `tools/collection/` | Tools to collect and read original sources. |
+| `tools/curation/` | Tools to build the wiki and check review decisions. |
+| `tools/packaging/` | Tools to restore the wiki and build its archives. |
+| `tests/` | Tests for the code and the offline MCP server. |
+
+## Study in a chat
+
+English Flow starts the conversation in English. Ask for another language to change the explanations, instructions, and feedback. For example, ask “Explique em português.” Quotations, model answers, and English practice stay in English.
+
+| Activity | Example |
+| --- | --- |
+| Study a rule | “How do I ask for an update?” |
+| Practice a conversation | “You need my report on Monday. I need more time. Start the conversation.” |
+| Review a lesson | “Review my lesson about deadlines.” |
+| Practice from memory | “Give me a situation from the last lesson. Wait for my answer.” |
+
+Ask the agent to show the source before you save an example. Ask “Save this reference in my notebook” to keep its ID. The agent saves each new lesson in English. To open saved material, ask “Open my notebook.”
+
+The default notebook is `English Flow/notebook` in your home folder. Set `ENGLISH_FLOW_NOTEBOOK_DIR` before you start Codex to select another folder.
+
+For voice practice, use the ChatGPT voice control. Use dictation to send a transcript in the plugin chat. A transcript supports feedback about wording. Pronunciation feedback requires audio. [ChatGPT voice guide](https://help.openai.com/en/articles/20001274-chatgpt-voice)
+
+## Work on the wiki
+
+Use the published transcripts for review. Run the restore command once in a new clone. It verifies the archive and restores the source pages under `wiki/local/`.
 
 ```sh
-codex plugin marketplace add alexandrefortes/workplace-english-practice --ref v0.5.0
-codex plugin add ingles-para-o-trabalho@workplace-english-local
+python -B -m tools.packaging.restore_wiki
 ```
 
-Selecione **Inglês para o Trabalho** no Codex. A tag de distribuição reúne o plugin e o catálogo de instalação. A primeira consulta prepara a wiki no cache pessoal a partir dos arquivos incluídos no plugin. As consultas seguintes usam o índice local. [Instalação e uso](plugins/ingles-para-o-trabalho/README.md)
+Open the [wiki index](wiki/index.md) or choose a [work conversation](wiki/conversas/index.md). For offline study on another computer, copy the restored `wiki/` directory. [Wiki design reference](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 
-## Instalar a partir do repositório
+To search an edited checkout, set `ENGLISH_FLOW_PROJECT_DIR` to the repository root before you start Codex.
 
-Use Python 3.11 ou superior. Execute os comandos na raiz do repositório.
+```sh
+export ENGLISH_FLOW_PROJECT_DIR="$PWD"
+```
 
-1. Registre o catálogo local de plugins no Codex.
+In PowerShell, use `$env:ENGLISH_FLOW_PROJECT_DIR = (Get-Location).Path`. Start Codex in that session. Ask for a verified Doist example about a deadline. Open the source and save its ID if needed.
 
-   ```sh
-   codex plugin marketplace add .
-   ```
+To practice for 20 minutes, read a [Doist case](wiki/conversas/doist.md) for four minutes. Take six minutes to reply in English. Use five minutes for feedback. Try another deadline for the last five minutes.
 
-2. Instale o plugin.
+The wiki retains its original text and command examples. Use the following commands in this checkout.
 
-   ```sh
-   codex plugin add ingles-para-o-trabalho@workplace-english-local
-   ```
-
-Para distribuir alterações nas páginas, nos catálogos e na curadoria de `wiki/`, execute `python -B nuvem/empacotar_projeto.py` e versione os dois arquivos `projeto.*` atualizados em `plugins/ingles-para-o-trabalho/acervo/`.
-
-## Abrir o caderno
-
-1. Abra uma conversa local no Codex.
-2. Selecione **Inglês para o Trabalho**.
-3. Peça “Abra meu caderno de estudos”. O painel mostra as aulas, as práticas e as revisões salvas.
-4. Na edição completa, use **Buscar em toda a wiki**. Na instalação sem wiki, **Baixar amostra** oferece cinco exemplos e requer internet.
-
-Por padrão, o caderno fica em `Inglês para o Trabalho/caderno de estudos` na sua pasta pessoal. Se já tem um caderno em outra pasta, defina `INGLEST_NOTEBOOK_DIR` com o caminho completo dessa pasta antes de iniciar o Codex.
-
-## Escolher uma atividade
-
-| O que você quer fazer | Botão do painel | Exemplo de pedido |
-| --- | --- | --- |
-| Estudar uma regra de gramática | **Gramática** | “Explique em português como pedir uma atualização em inglês. Vá devagar.” |
-| Simular uma conversa | **Prática de inglês** | “Você precisa do relatório na segunda. Eu preciso de mais tempo. Comece a conversa em inglês.” |
-| Reler uma aula | **Rever explicações** | “Repita a aula sobre prazos em português.” |
-| Testar o que lembra | **Praticar sem consulta** | “Dê uma situação da última aula. Espere minha resposta antes de mostrar o exemplo.” |
-
-O plugin salva cada aula nova em inglês, em um arquivo Markdown com cabeçalho YAML. Para salvar uma prática ou revisão, peça “Salve no caderno”. Para reler o registro, selecione o título no painel.
-
-**Para conversar por voz**, use o controle de voz do ChatGPT. Se o caderno estiver indisponível na conversa por voz, leve o trecho que quer salvar ao chat do plugin no Codex. [Voz no ChatGPT](https://help.openai.com/en/articles/20001274-chatgpt-voice)
-
-**Para ditar uma mensagem**, use o microfone de ditado. Confira a transcrição antes de enviar. O agente recebe o texto para correção.
-
-## Usar a wiki completa
-
-1. Se `wiki/local/` ainda não existir, restaure a wiki a partir da raiz do repositório. O comando verifica os arquivos e grava as transcrições nessa pasta.
-
-   ```sh
-   python -B preparar_nuvem.py
-   ```
-
-2. Abra o [índice da wiki](wiki/index.md).
-3. Escolha um [caso de trabalho](wiki/conversas/index.md). Cada caso mostra o contexto e o que ficou decidido ou em aberto.
-
-Para estudar offline em outro computador, copie a pasta `wiki/` inteira após a restauração. A wiki segue a ideia de manter o material de estudo em páginas ligadas às fontes. [LLM Wiki, de Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-
-### Consultar uma wiki de desenvolvimento
-
-Para consultar as edições que você faz no checkout, indique a pasta do projeto ao plugin. A instalação pela tag já inclui a edição publicada.
-
-1. Na raiz do repositório, defina `INGLEST_PROJECT_DIR` com o comando do seu ambiente.
-
-   **Windows · PowerShell**
-
-   ```powershell
-   [Environment]::SetEnvironmentVariable('INGLEST_PROJECT_DIR', (Get-Location).Path, 'User')
-   ```
-
-   **Linux · terminal da sessão**
-
-   ```sh
-   export INGLEST_PROJECT_DIR="$PWD"
-   ```
-
-2. No Windows, reinicie o Codex. No Linux, inicie o plugin no ambiente que recebeu a variável.
-3. Peça “Busque exemplos conferidos da Doist sobre negociar um prazo”. Você também pode fazer o pedido em inglês.
-4. Peça “Mostre a conversa de origem” para ler o trecho em contexto.
-
-O plugin busca em toda a wiki. Peça um trecho, abra sua página e, se quiser guardá-lo, peça “Salve esta referência no caderno”. Ao definir `INGLEST_PROJECT_DIR`, o caderno padrão passa a ser a pasta `caderno de estudos` desse repositório.
-
-## Praticar por 20 minutos
-
-| Tempo | Ação |
+| Task | Current command |
 | --- | --- |
-| 4 min | Identifique o pedido em uma [conversa da Doist](wiki/conversas/doist.md). |
-| 6 min | Responda em inglês como se o pedido fosse para você. |
-| 5 min | Peça feedback sobre a frase que comunica o prazo. |
-| 5 min | Tente outra vez com uma data diferente, sem consultar o modelo. |
+| Check review coverage | `python -B -m tools.curation.review_items` |
+| List unreviewed messages | `python -B -m tools.curation.review_items --pending mensagem` |
+| Record a reviewed batch | `python -B -m tools.curation.review_items --record --reviews batch.jsonl` |
+| Show graph coverage | `python -B -m tools.curation.build_graph summary` |
+| Search verified deadline examples | `python -B -m tools.curation.build_graph search --situation negociar-prazo --verified-only` |
+| Read a node | `python -B -m tools.curation.build_graph show zulip-msg-2552913` |
+| Check the local edition | `python -B -m tools.curation.build_wiki --verify` |
+| Check attachment progress | `python -B -m tools.curation.process_attachments --summary` |
+| Check image review progress | `python -B -m tools.curation.review_images summary` |
 
-## Baixar e abrir a coleta
+## Build and test an edition
 
-Use esta seção se quiser consultar os arquivos públicos fora da wiki. A coleta requer internet.
+Install the development dependencies. Run the unit tests. Run the MCP checks with the restored wiki.
 
-| O que você quer fazer | Ação na raiz do repositório |
-| --- | --- |
-| Baixar a amostra pelo terminal | Execute `python baixar_conversas.py --amostra`. |
-| Ler a amostra | Abra `dados/fontes.md`. |
-| Baixar ou retomar a coleta completa | Execute `python baixar_conversas.py`. |
-| Ver as capturas da Doist | Abra `dados/doist/index.html`. |
-| Iniciar o leitor local do Zulip | Execute `python ler_zulip.py`. |
-| Ler as mensagens no navegador | Abra o [leitor local](http://127.0.0.1:8765/). |
-| Encerrar o leitor local | Pressione `Ctrl+C` no terminal. |
-| Criar uma coleta pequena do Zulip | Execute `python baixar_zulip.py --diretorio dados/zulip-piloto --max-paginas 2 --exportar-piloto`. |
-| Abrir essa coleta no leitor local | Execute `python ler_zulip.py --dados dados/zulip-piloto`. |
+```sh
+python -m pip install -r requirements-dev.txt
+python -B -X utf8 -m unittest discover -s tests
+python -B -X utf8 tests/check_wiki_mcp.py
+```
 
-Se a coleta terminar com o código `3`, consulte `issues` em `dados/zulip/coleta.json`. O arquivo `mensagens.jsonl` foi exportado com ressalvas de cobertura. Para verificar o acesso aos anexos, consulte `dados/zulip/anexos-resumo.json`. Antes de redistribuir material da coleta, consulte os termos da fonte. [Termos do Todoist](https://www.todoist.com/terms-of-service) · [Termos do Zulip](https://zulip.com/policies/terms)
+After you edit study pages or decisions, add the source files to Git. Build the editorial archive. Test the plugin package with its own cache and a temporary notebook.
 
-### Conferir os dados da coleta
+```sh
+python -B -m tools.packaging.pack_wiki
+python -B -X utf8 tests/check_wiki_mcp.py --plugin plugins/english-flow
+```
 
-| O que você quer conferir | Onde consultar |
-| --- | --- |
-| Por que uma captura da Doist entrou no acervo | Campos `estado` e `evidencia` em [fontes/doist.json](fontes/doist.json). |
-| Se o arquivo da captura foi baixado inteiro | Tamanho em bytes e SHA-256 em `dados/doist/coleta.json`. |
-| Quais mensagens do Zulip pertencem à mesma conversa | Campos `stream_id` e `topic` em `dados/zulip/mensagens.jsonl`. Cada linha é uma mensagem. |
-| Qual mensagem contém a referência a um anexo | Lista `mensagens` da URL em `dados/zulip/anexos.jsonl`. |
-| Se a coleta alcançou o início do histórico público | Campos `found_oldest`, `page_chain_verified` e `issues` em `dados/zulip/coleta.json`. |
+Commit the editorial archive and its checksum with the source changes. To check a committed edition, run `python -B -m tools.packaging.pack_wiki --ref HEAD --check`. To rebuild the source archive, use `python -B -m tools.packaging.pack_sources wiki/local OUTPUT_DIRECTORY`. Use an empty output directory. Verify the new parts and manifest before you replace the files in the plugin archive.
 
-## Conferir mudanças no projeto
+## Collect original sources
 
-1. Instale as dependências de teste.
+The published wiki is sufficient for study and editorial review. Source collection requires internet access. Run `python -B -m tools.collection.collect_sources --sample` to download five examples. Open `dados/fontes.md` to read the sample.
 
-   ```sh
-   python -m pip install -r requirements-dev.txt
-   ```
+Run `python -B -m tools.collection.collect_sources` for a full collection. Run the same command to resume. Open `dados/doist/index.html` to inspect images. Run `python -B -m tools.collection.read_zulip` to open the [local Zulip reader](http://127.0.0.1:8765/). Press Ctrl+C to stop it.
 
-2. Execute os testes sem rede.
+For a small Zulip collection, run the following commands.
 
-   ```sh
-   python -B -m unittest discover -s testes -v
-   ```
+```sh
+python -B -m tools.collection.download_zulip --directory dados/zulip-piloto --max-pages 2 --export-pilot
+python -B -m tools.collection.read_zulip --data dados/zulip-piloto
+```
 
-Para revisar o acervo ou incorporar uma fonte à wiki, siga as [instruções de curadoria](wiki/AGENTS.md).
+If the collector returns exit code 3, read `issues` in `dados/zulip/coleta.json`. Check `found_oldest` and `page_chain_verified` for history coverage. Inspect `dados/zulip/anexos-resumo.json` for attachment access. The original files stay on the collection computer.
+
+The [Doist catalog](plugins/english-flow/doist-catalog.json) identifies each image and its evidence. The Doist collection records its size and SHA-256. Zulip messages contain a stream ID and topic. Attachment records identify the messages that refer to each URL. See the [wiki review guide](wiki/AGENTS.md).
+
+## Credits and license
+
+Doist published the images used in the wiki transcripts. The source records link to the original articles. [Async by Doist](https://async.twist.com/when-to-take-real-time-meetings-async/#moving-work-forward) · [Todoist](https://www.todoist.com/inspiration/remote-team-communication-tools)
+
+Members of the Zulip community wrote the public messages and shared the attachment references. The wiki links to the original conversations. [Zulip community](https://chat.zulip.org/) · [Wiki source catalog](wiki/fontes.md)
+
+The original software uses the PolyForm Noncommercial License 1.0.0. You can study, change, and share it for permitted purposes. When you distribute a fork, include the license text or URL and the required notice. [License](LICENSE) · [Project credit](NOTICE)
+
+The source material and third-party software have their own terms. PyYAML includes its MIT license in `lib/pyyaml.zip` in the plugin. [Todoist terms](https://www.todoist.com/terms-of-service) · [Zulip terms](https://zulip.com/policies/terms)
