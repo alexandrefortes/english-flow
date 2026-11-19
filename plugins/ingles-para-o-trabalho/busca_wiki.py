@@ -107,7 +107,6 @@ UPLOAD = re.compile(r"!?\[[^\]\n]*\]\((?:https?://[^/ )]+)?/user_uploads/[^)\n]+
                     r"|(?:https?://[^/\s]+)?/user_uploads/[^\s)]+", re.I)
 
 
-# O Zulip traduz o texto do link de citação. O ID vem do endereço.
 CITACAO = re.compile(r"\[[^\]\n]+\]\(https://chat\.zulip\.org/[^)\s]*/near/(\d+)\)[:：]?[ \t]*\n"
                      r"(?:[ \t]*\n)*(`{3,}|~{3,})quote[ \t]*\n")
 REFERENCIA = re.compile(r"(?:#|/)((?:zulip-msg-\d+|doist-[\w-]+))(?=\)|\.md\))")
@@ -120,7 +119,6 @@ def origem_citada(tipo, texto, termo):
             fim = re.compile(r"^" + re.escape(abertura[2]) + r"[ \t]*$", re.M).search(texto, abertura.end())
             if fim:
                 partes.append((abertura.end(), fim.start(), "zulip-msg-" + abertura[1]))
-        # A origem mais interna identifica o autor quando a resposta cita outra citação.
         partes.sort(key=lambda parte: parte[1] - parte[0])
     elif tipo == "didatica":
         partes = []
