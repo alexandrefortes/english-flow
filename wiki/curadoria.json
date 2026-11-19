@@ -367619,7 +367619,7 @@
   ],
   "zulip-msg-301798": [
     {
-      "trecho": "In terms of priorities, I think the main focus for my time right now is the release, but after that, getting StateHandler and ConfigHandler supported in the embedded bots",
+      "trecho": "In terms of priorities, I think the main focus for my time right now is the release",
       "usos": [
         "dia-a-dia"
       ],
@@ -367829,7 +367829,7 @@
   ],
   "zulip-msg-302078": [
     {
-      "trecho": "my hope is to merge commits starting from the bottom, so if you get to the point where the buttom 10 commits are all good, we can merge those to shrink the branch and avoid",
+      "trecho": "my hope is to merge commits starting from the bottom",
       "usos": [
         "confirmar-proximos-passos"
       ],
@@ -406994,7 +406994,7 @@
   ],
   "zulip-msg-305576": [
     {
-      "trecho": "we should also celebrate @**Alena Volkova**'s work on mypy-annotating the bots subsystem; aside from a few `type: ignore`s that are probably typeshed bugs, we now have full",
+      "trecho": "we should also celebrate @**Alena Volkova**'s work on mypy-annotating the bots subsystem",
       "usos": [
         "dar-feedback"
       ],
@@ -407064,7 +407064,7 @@
   ],
   "zulip-msg-305643": [
     {
-      "trecho": "one quick announcement: We've now fixed the issue @**Noe Martinez** reported where you had to subscribe DEFAULT_BOT bots to streams in order for them to see messages that",
+      "trecho": "one quick announcement: We've now fixed the issue",
       "usos": [
         "dia-a-dia"
       ],
@@ -407244,7 +407244,7 @@
   ],
   "zulip-msg-309024": [
     {
-      "trecho": "I suspect something like #7261 is possible; I remember talking to @**Reid Barton** about an approach where we use the type annotations at runtime to tell `REQ` what sort of",
+      "trecho": "I suspect something like #7261 is possible",
       "usos": [
         "conversacao"
       ],
@@ -407304,7 +407304,7 @@
   ],
   "zulip-msg-309034": [
     {
-      "trecho": "There's some risk that folks would find that code too magical to read, and it'd take some effort to get `check_dict` working in that system, but it would be a nice way to avoid",
+      "trecho": "There's some risk that folks would find that code too magical to read",
       "usos": [
         "comunicar-risco"
       ],
@@ -410628,6 +410628,5680 @@
         "pedir-ajuda"
       ],
       "assinatura": "529a7ce83627a57f5f894576"
+    }
+  ],
+  "zulip-anexo-1057648ad1af53ddde4860b250af560b": [
+    {
+      "trecho": "This isn't the right channel for mobile",
+      "funcao": "Avisar que uma discussão está no canal inadequado.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "af1ed818ac47e9ede339566b"
+    }
+  ],
+  "zulip-anexo-1ca22c2a0e2eb04f4993008d0c1345f3": [
+    {
+      "trecho": "Navigate to the directory which contains the Mattermost\n\nexecutable.",
+      "funcao": "Indicar para onde navegar e identificar o diretório com oração relativa.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "1edd86ad1b275f500b4d06d6"
+    }
+  ],
+  "zulip-anexo-295578cbf3ea798b7bfe85d4bb3bafa0": [
+    {
+      "trecho": "How can I run only a\n\nparticular subset of tests",
+      "funcao": "Pedir orientação específica ao depurar os testes.",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "f0e2689ff224abbfa2caefaa"
+    }
+  ],
+  "zulip-anexo-2fad849bf75166f2a0cf5c0356be7736": [
+    {
+      "trecho": "Navigate to the directory which contains the Mattermost\n\nexecutable.",
+      "funcao": "Indicar para onde navegar e identificar o diretório com oração relativa.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "4689039e7588f1fc5f674fd5"
+    }
+  ],
+  "zulip-anexo-385410f6cbdd839c46d3983e28f00b46": [
+    {
+      "trecho": "could you please assign it to me?",
+      "funcao": "Pedir educadamente que uma tarefa seja atribuída a quem escreve.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "dc633709ce02d1261c3c4515"
+    }
+  ],
+  "zulip-anexo-38dfb6fbbff5d30cf85994824a1b49f1": [
+    {
+      "trecho": "Navigate to the directory which contains the Mattermost executable.",
+      "funcao": "Indicar para onde navegar e identificar o diretório com oração relativa.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "bcf813869b175ab436b1042c"
+    }
+  ],
+  "zulip-anexo-3edb97d2cbc1546b6e8d4ccefca3898a": [
+    {
+      "trecho": "Have you restarted the cli after making the changes?",
+      "funcao": "Conferir em um diagnóstico se uma ação já foi executada.",
+      "usos": [
+        "esclarecer",
+        "gramatica"
+      ],
+      "assinatura": "525c0f7c6ed84e06257d6c77"
+    }
+  ],
+  "zulip-anexo-465ac18419a189942797c3b21510154b": [
+    {
+      "trecho": "You can select a maximum of 3 languages",
+      "funcao": "Comunicar um limite máximo de opções de idioma.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "7c49f8ca18e5cfe8a2fc8627"
+    }
+  ],
+  "zulip-anexo-4c83e116deab7a60f860c2666e2d8272": [
+    {
+      "trecho": "Topics make it easy to catch up after a day of meetings.",
+      "funcao": "Explicar a retomada de conversas perdidas depois de reuniões usando catch up.",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "d72c8d624e5625d7107729d7"
+    }
+  ],
+  "zulip-anexo-59b77f0b858c236605bfcdffec1ff684": [
+    {
+      "trecho": "Thoughts on providers in the area?",
+      "funcao": "Pedir opiniões sobre fornecedores numa conversa de organização de evento.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "13b6fd8265bac4ba7f965680"
+    }
+  ],
+  "zulip-anexo-5d33ca8222ce30103bf933fb619bc593": [
+    {
+      "trecho": "You can select a maximum of 3 languages",
+      "funcao": "Comunicar um limite máximo de opções de idioma.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "20a524f1883224714438df18"
+    }
+  ],
+  "zulip-anexo-606db0b58f9b028e8c3b24eb48550903": [
+    {
+      "trecho": "The difference is extremely minor and visually indistinguishable unless you're doing pixel-perfect\n\ncolor matching.",
+      "funcao": "Avaliar a visibilidade da diferença e indicar a condição para percebê-la.",
+      "usos": [
+        "dar-feedback",
+        "gramatica"
+      ],
+      "assinatura": "36033fe271f6d865dbfe6553"
+    }
+  ],
+  "zulip-anexo-69613ec232bfed01c356581ec6a913e4": [
+    {
+      "trecho": "I'd like to check them out, too.",
+      "funcao": "Manifestar interesse em examinar algo com check out.",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "4ee6b8455b79c142d6187175"
+    }
+  ],
+  "zulip-anexo-70dc0024cb880ef6684ae54e38d0c7ee": [
+    {
+      "trecho": "it refuses\n\nto tell me details from outside\n\nthe submodule",
+      "funcao": "Descrever uma limitação de ferramenta com refuse to.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "5b33a27565158d39c652eb06"
+    }
+  ],
+  "zulip-anexo-74963a0cfe5ff0efcc619cac43dbf28e": [
+    {
+      "trecho": "You can select a maximum of 3 languages",
+      "funcao": "Comunicar um limite máximo de opções de idioma.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "0139c5f548b455ef6d28e5fc"
+    }
+  ],
+  "zulip-anexo-7ae4a30a1200e6d843904f6a6b604cda": [
+    {
+      "trecho": "will appear in the featured gallery",
+      "funcao": "Explicar o resultado futuro de destacar um objetivo.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "51db0852ac5ab0ffbccc053f"
+    }
+  ],
+  "zulip-anexo-7b90a1ea6fd540cd67c254d2a7cfa44c": [
+    {
+      "trecho": "Overview of ongoing conversations.",
+      "funcao": "Usar ongoing para indicar que as conversas continuam em andamento.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "18ed17aa84224bf69d1d9a98"
+    }
+  ],
+  "zulip-anexo-7c82a7170ee7182503e89fc5c3c9d726": [
+    {
+      "trecho": "was wondering if there's a simpler example",
+      "funcao": "Solicitar uma explicação alternativa com a formulação indireta was wondering if.",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "e56e908e51c5f17f47cd66de"
+    }
+  ],
+  "zulip-anexo-7cbf276579d0354ef463b7af7e3b4759": [
+    {
+      "trecho": "I've deployed the updated version here just now.",
+      "funcao": "Comunicar a conclusão recente de uma atualização.",
+      "usos": [
+        "conversacao",
+        "gramatica"
+      ],
+      "assinatura": "03063f672bbfab698c423a9b"
+    }
+  ],
+  "zulip-anexo-83ca22fe8a8bb9161407074d1928a4d3": [
+    {
+      "trecho": "Any replies will show up in All Threads",
+      "funcao": "Explicar onde as respostas aparecerão usando show up.",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "a5a4ee12308d09549c4e049a"
+    }
+  ],
+  "zulip-anexo-864fe297f332b571b11311a4f72b316d": [
+    {
+      "trecho": "I've deployed the updated version here just now.",
+      "funcao": "Comunicar a conclusão recente de uma atualização.",
+      "usos": [
+        "conversacao",
+        "gramatica"
+      ],
+      "assinatura": "8b98c38d8cf8151edaf145b0"
+    }
+  ],
+  "zulip-anexo-8c91a8900e299e52180339e7a2167e86": [
+    {
+      "trecho": "What's the matter\n\nwith you then",
+      "funcao": "Perguntar o que se passa com outra pessoa no diálogo.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "e319728d4f021bc8b36c7391"
+    }
+  ],
+  "zulip-anexo-92add4b94be7c52a4ef15cf855834b01": [
+    {
+      "trecho": "why did it take so long?",
+      "funcao": "Pedir explicação sobre a duração de uma operação.",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "e3c8c4cc0dea31b63c422e6f"
+    }
+  ],
+  "zulip-anexo-a1bd8afec0b42111a3b0392a519138a7": [
+    {
+      "trecho": "In Zulip, each stream message also has a topic.",
+      "funcao": "Descrever a organização das mensagens com each.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "3c71b5755369b376cb7856c0"
+    }
+  ],
+  "zulip-anexo-a2d80468ffcf79482b27e9e66de8144e": [
+    {
+      "trecho": "Topics make it easy to catch up after a day of meetings.",
+      "funcao": "Explicar a retomada de conversas perdidas depois de reuniões usando catch up.",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "ad166358451b0f812fde299f"
+    }
+  ],
+  "zulip-anexo-a7469980c3f5329e0d484a4115239584": [
+    {
+      "trecho": "Did you mix up auth_token and access_token?",
+      "funcao": "Perguntar se dois nomes foram confundidos usando mix up.",
+      "usos": [
+        "esclarecer",
+        "phrasal-verbs"
+      ],
+      "assinatura": "f0d529a45425a71512da3709"
+    }
+  ],
+  "zulip-anexo-a8a72d86bf3056ebe67cf962277bb2f1": [
+    {
+      "trecho": "What's the matter with you then",
+      "funcao": "Perguntar o que se passa com outra pessoa no diálogo.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "005e0c74ad48d0224291d1e4"
+    }
+  ],
+  "zulip-anexo-ac929d6e778fa7c6e8bdd994a18ebda5": [
+    {
+      "trecho": "it refuses\n\nto tell me details from outside\n\nthe submodule",
+      "funcao": "Descrever uma limitação de ferramenta com refuse to.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "2f0f92a0a0fcb915707acccf"
+    }
+  ],
+  "zulip-anexo-ad5c6b8f5dc9d606218f98bc02a30262": [
+    {
+      "trecho": "I'll fix this asap.",
+      "funcao": "Comprometer-se com uma correção urgente usando asap.",
+      "usos": [
+        "confirmar-proximos-passos",
+        "linguagem-informal"
+      ],
+      "assinatura": "106bfed2d13c315ca8bf28bb"
+    }
+  ],
+  "zulip-anexo-b8fdb5cc6d151dae8d2428eedfec6f28": [
+    {
+      "trecho": "Thoughts on providers in the area?",
+      "funcao": "Pedir opiniões sobre fornecedores numa conversa de organização de evento.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "bb370afc8f0b3d9db8285c88"
+    }
+  ],
+  "zulip-anexo-b96b7e7d6c66e1707fbcac384d53698e": [
+    {
+      "trecho": "You can select a maximum of 3 languages",
+      "funcao": "Comunicar um limite máximo de opções de idioma.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "ed43db8f1a86eeb8a9acbf13"
+    }
+  ],
+  "zulip-anexo-bc1835d53243f5df884d409e6cc2fbc8": [
+    {
+      "trecho": "This isn't the right channel for mobile",
+      "funcao": "Avisar que uma discussão está no canal inadequado.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "4b7879de212fde767dcf863d"
+    }
+  ],
+  "zulip-anexo-be6044422c8a20f30dd8c17a518a6518": [
+    {
+      "trecho": "Have you restarted the cli after making the changes?",
+      "funcao": "Conferir em um diagnóstico se uma ação já foi executada.",
+      "usos": [
+        "esclarecer",
+        "gramatica"
+      ],
+      "assinatura": "9f1b9001af96f650da461e59"
+    }
+  ],
+  "zulip-anexo-bf434a6ca8ad5b85fbe3f8201b5ba716": [
+    {
+      "trecho": "But let me get this test-deployed here.",
+      "funcao": "Indicar a próxima ação de disponibilizar uma versão de teste.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "9cc4f51af4d273536f251e62"
+    }
+  ],
+  "zulip-anexo-bf5d26aca7d9645faf9ecc122a9ddedd": [
+    {
+      "trecho": "This code is not working for me can we try different\n\none?",
+      "funcao": "Relatar o problema e sugerir que se teste uma alternativa.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "d32964e2941e6e23ef550502"
+    }
+  ],
+  "zulip-anexo-cb3bc5a849778aa5357e4a92c41530f7": [
+    {
+      "trecho": "Navigate to the directory which contains the Mattermost\n\nexecutable.",
+      "funcao": "Indicar para onde navegar e identificar o diretório com oração relativa.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "dcf3be79e22c2602c2549149"
+    }
+  ],
+  "zulip-anexo-cf1b8ba267a0b1030317ce3030066152": [
+    {
+      "trecho": "Can I somehow limit the access to custom emoji and give access to certain user group?",
+      "funcao": "Perguntar ao grupo como configurar as permissões desejadas.",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "35cdc24b390c9691f7b76b40"
+    }
+  ],
+  "zulip-anexo-d0f6a421f9b9f44ec1001a09fd4ff606": [
+    {
+      "trecho": "a PR may need to be updated to address reviewer feedback or to pass tests.",
+      "funcao": "Explicar por que um trabalho pode precisar de revisão.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "dde49e050925c6d15dc27796"
+    }
+  ],
+  "zulip-anexo-d1daaed61ded9e7ca5a26ed28a44f5dd": [
+    {
+      "trecho": "Whisk milk, eggs, vanilla, cinnamon, and salt together in a shallow bowl.",
+      "funcao": "Dar instruções culinárias e nomear utensílio e ingredientes.",
+      "usos": [
+        "dia-a-dia",
+        "vocabulario"
+      ],
+      "assinatura": "1e5f02338a3520c38aaff19b"
+    }
+  ],
+  "zulip-anexo-d3babf2241f41dae55835be560981539": [
+    {
+      "trecho": "Finally, copy the exported tar file from the server to your local\n\ncomputer.",
+      "funcao": "Indicar o último passo de uma operação com finally.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "442a7edf9c7a4b53b7842aa1"
+    }
+  ],
+  "zulip-anexo-d575332cb6a6cf0ba06732eeda484344": [
+    {
+      "trecho": "You will not appear online, but will have full access to\n\nall of Discord.",
+      "funcao": "Contrastar com but dois efeitos do estado invisível.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "d6997abffc286cb0dcfca64a"
+    }
+  ],
+  "zulip-anexo-dc2c87ee48106c13e50f869a4f0d64e0": [
+    {
+      "trecho": "was wondering if there's a simpler example",
+      "funcao": "Solicitar uma explicação alternativa com a formulação indireta was wondering if.",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "2a2339f4033d594cf08006f3"
+    }
+  ],
+  "zulip-anexo-e2de12170a34b6477b053d2d37ebe7cc": [
+    {
+      "trecho": "Guessing this one is some sort of filesystem\n\nproblem",
+      "funcao": "Levantar uma hipótese cautelosa sobre a origem de uma falha.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "b2e0e59c7e71c8cc8ad5cfdc"
+    }
+  ],
+  "zulip-anexo-e426e8dbc82178f90ceffe8e4da8be5e": [
+    {
+      "trecho": "What's the matter with you then",
+      "funcao": "Perguntar o que se passa com outra pessoa no diálogo.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "8233023b9df1e519e5fb32ef"
+    }
+  ],
+  "zulip-anexo-e56c9a14555e6550bc63cfac039b30f8": [
+    {
+      "trecho": "Navigate to the directory which contains the Mattermost\n\nexecutable.",
+      "funcao": "Indicar para onde navegar e identificar o diretório com oração relativa.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "ac2c91f41b8293dc7a0530fb"
+    }
+  ],
+  "zulip-anexo-e5bae078f38577d21ca0ad72eeb37159": [
+    {
+      "trecho": "hello i have some questions...",
+      "funcao": "Abrir informalmente uma conversa para fazer perguntas.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "f94aacc918826db4a14b297a"
+    }
+  ],
+  "zulip-anexo-e787a02650425bd9b317a94f4c1427df": [
+    {
+      "trecho": "I think it's important to figure something out here.",
+      "funcao": "Defender a necessidade de esclarecer uma questão com figure out.",
+      "usos": [
+        "phrasal-verbs",
+        "conversacao"
+      ],
+      "assinatura": "55a3bc76f74ed036ae7d7025"
+    }
+  ],
+  "zulip-anexo-edf8ce534ef1ff5def52488f902efb3a": [
+    {
+      "trecho": "I'd like to check them out, too.",
+      "funcao": "Manifestar interesse em examinar algo com check out.",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "d883f628e7f3802e10f0f428"
+    }
+  ],
+  "zulip-anexo-ef9bb7bf6c11b19d237cf041d63898c5": [
+    {
+      "trecho": "Whisk milk, eggs, vanilla, cinnamon, and salt together in a shallow bowl.",
+      "funcao": "Dar instruções culinárias e nomear utensílio e ingredientes.",
+      "usos": [
+        "dia-a-dia",
+        "vocabulario"
+      ],
+      "assinatura": "45fb7c60d549ff329c3f0b7d"
+    }
+  ],
+  "zulip-anexo-f3fdf2e2b4dadeb3bf8720f5fb035c38": [
+    {
+      "trecho": "Open source work is done and communicated in public",
+      "funcao": "Descrever uma prática de colaboração usando a voz passiva.",
+      "usos": [
+        "gramatica"
+      ],
+      "assinatura": "4fa1a59aea67bb6be3c20204"
+    }
+  ],
+  "zulip-anexo-fe5887e62cc45b30a08029c39946f2a9": [
+    {
+      "trecho": "This is where we discuss suggestions about this server",
+      "funcao": "Apresentar a finalidade de um espaço de discussão.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "70a51f322df87d429a9b06db"
+    }
+  ],
+  "zulip-msg-14644": [
+    {
+      "trecho": "yeah I can make that case work for you, since that's how I do development",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "3c4a18c88a714f5f69db3c61"
+    }
+  ],
+  "zulip-msg-14645": [
+    {
+      "trecho": "So don't worry about it",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "aa038eda41e5a431d94e2808"
+    }
+  ],
+  "zulip-msg-14667": [
+    {
+      "trecho": "sorry bash makes me irritable",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "c33f98c4a2a98920b4fe7df2"
+    }
+  ],
+  "zulip-msg-14705": [
+    {
+      "trecho": "What's the error?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "2a20c784342733282568e155"
+    }
+  ],
+  "zulip-msg-14803": [
+    {
+      "trecho": "yeah, this is crazy flaky",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "4f9ed0689a1bf7c10360c16f"
+    }
+  ],
+  "zulip-msg-14818": [
+    {
+      "trecho": "heh, that works",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "76d9989bbff1395ebf8091ac"
+    }
+  ],
+  "zulip-msg-14831": [
+    {
+      "trecho": "is that ok to do if you're already inside a venv?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "269664992ec9c1cb624ef842"
+    }
+  ],
+  "zulip-msg-14838": [
+    {
+      "trecho": "I am throwing in the towel on this for now.",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "3cf3f54ef7afd974fec8d071"
+    }
+  ],
+  "zulip-msg-14874": [
+    {
+      "trecho": "So the issue has to do with pseudo terminals and not being able to use them in git hooks?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "faf570f95a32d3cd4481655c"
+    }
+  ],
+  "zulip-msg-14900": [
+    {
+      "trecho": "that's worth a shot.",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "7a7fc4891ea433bd16364156"
+    }
+  ],
+  "zulip-msg-14902": [
+    {
+      "trecho": "Shouldn't take me more than 5 minutes, so you'll probably hear from me in about half an hour.",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "148a4af91ca7ab24eb17ea7f"
+    }
+  ],
+  "zulip-msg-14916": [
+    {
+      "trecho": "gotcha",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "20ceb5735831b23cced8beac"
+    }
+  ],
+  "zulip-msg-14917": [
+    {
+      "trecho": "I'm happy to try it on my end if you want.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "3e6f234a0fcf6565284bd458"
+    }
+  ],
+  "zulip-msg-14918": [
+    {
+      "trecho": "I'm taking a look now.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "funcao": "comunicar uma situação do trabalho cotidiano",
+      "assinatura": "1d2efe978ac3c303ba6d2bfe"
+    }
+  ],
+  "zulip-msg-14920": [
+    {
+      "trecho": "let me know if you have any questions or want me to try out anything on my side.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "4044e29c5514bb694f9a4ada"
+    }
+  ],
+  "zulip-msg-14985": [
+    {
+      "trecho": "I'm having trouble understanding this line:",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "c595f5ef613b3b8b201c903d"
+    }
+  ],
+  "zulip-msg-15005": [
+    {
+      "trecho": "yes, that explanation makes sense.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "7e1a64384a3a0b97a41f0a09"
+    }
+  ],
+  "zulip-msg-15006": [
+    {
+      "trecho": "don't worry, questions are good here.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "c5400bf8e9c095bcf0cf78b7"
+    }
+  ],
+  "zulip-msg-15008": [
+    {
+      "trecho": "why use a pipe vs new file handles specific to this child processes?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "36746a9f2f0bae939056b5dd"
+    }
+  ],
+  "zulip-msg-15022": [
+    {
+      "trecho": "don't quote me rigorously on this",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "4377e066cbff286ff5779498"
+    }
+  ],
+  "zulip-msg-15127": [
+    {
+      "trecho": "I take that back",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "31939d9378cc086f3673f473"
+    }
+  ],
+  "zulip-msg-15208": [
+    {
+      "trecho": "What happens if you just redirect to a file at the tools/lint-all level?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "6ee1ff2665338b6be84a8c35"
+    }
+  ],
+  "zulip-msg-15223": [
+    {
+      "trecho": "Let me try something on my end...",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "funcao": "combinar ou assumir uma próxima ação",
+      "assinatura": "e3a74786b41d78974d61734c"
+    }
+  ],
+  "zulip-msg-15227": [
+    {
+      "trecho": "I may have mis-understood what you meant.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "0ab1b04ee06feb7135b26a3f"
+    }
+  ],
+  "zulip-msg-15232": [
+    {
+      "trecho": "To be clear, you mean replacing the sys.std.write statements, right?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "26fb80f4eec0a87fe189cece"
+    }
+  ],
+  "zulip-msg-15276": [
+    {
+      "trecho": "oh my god",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "db18321c07387ae4b8b4dc20"
+    }
+  ],
+  "zulip-msg-15278": [
+    {
+      "trecho": "I figured it out.",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "funcao": "empregar um phrasal verb no contexto profissional",
+      "assinatura": "22d199e1cdf0a1a5abe71335"
+    }
+  ],
+  "zulip-msg-15288": [
+    {
+      "trecho": "so many red herrings!",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "8a829206b1b5f426f696e0c8"
+    }
+  ],
+  "zulip-msg-15299": [
+    {
+      "trecho": "j/k",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "619a0780945e612428167474"
+    }
+  ],
+  "zulip-msg-15308": [
+    {
+      "trecho": "It's all good,",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "9f3778274df3e38cc80f269d"
+    }
+  ],
+  "zulip-msg-15315": [
+    {
+      "trecho": "Ooh, just found a render ordering bug",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "funcao": "comunicar uma situação do trabalho cotidiano",
+      "assinatura": "e67af9732f837814a29abe38"
+    }
+  ],
+  "zulip-msg-15318": [
+    {
+      "trecho": "did you put that in backticks?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "534caccfcf8c9d313eac536e"
+    }
+  ],
+  "zulip-msg-15335": [
+    {
+      "trecho": "In your PR you might want to flush stderr for good measure.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "funcao": "avaliar uma proposta ou sugerir mudanças",
+      "assinatura": "e6f5b3f36912dee981e8ae7a"
+    }
+  ],
+  "zulip-msg-15338": [
+    {
+      "trecho": "haha gmta",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "4a58ebbb92d9e46c5a3b51be"
+    }
+  ],
+  "zulip-msg-15597": [
+    {
+      "trecho": "when is that .vagrant directory created?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "c36dbc53b83c4bda34e6a2d6"
+    }
+  ],
+  "zulip-msg-16009": [
+    {
+      "trecho": "there's only so much time in the day!",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "c679377bf5e1c4612bd4f61b"
+    }
+  ],
+  "zulip-msg-20329": [
+    {
+      "trecho": "you're welcome! I hope it was useful",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "a2dc6bc3f33c6285c868c67f"
+    }
+  ],
+  "zulip-msg-21916": [
+    {
+      "trecho": "+1 to doing that",
+      "usos": [
+        "dar-feedback"
+      ],
+      "funcao": "avaliar uma proposta ou sugerir mudanças",
+      "assinatura": "9365d79186c9b59ea076b4d1"
+    }
+  ],
+  "zulip-msg-21917": [
+    {
+      "trecho": "Indeed, that's probably a good place to start.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "funcao": "avaliar uma proposta ou sugerir mudanças",
+      "assinatura": "e308d4c4741e541a0355d302"
+    }
+  ],
+  "zulip-msg-21922": [
+    {
+      "trecho": "What were you thinking in terms of addressing the concurrency stuff?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "2318fffb5c763d4dd62e87e0"
+    }
+  ],
+  "zulip-msg-1336876": [
+    {
+      "trecho": "Okay, will work on it soon.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "funcao": "combinar ou assumir uma próxima ação",
+      "assinatura": "69f83451e2c4c022f1efbb52"
+    }
+  ],
+  "zulip-msg-1337815": [
+    {
+      "trecho": "Thanks for that!",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "678e448d3c511a0e8fbe46cf"
+    }
+  ],
+  "zulip-msg-1337820": [
+    {
+      "trecho": "Merged, thanks!",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "funcao": "comunicar uma situação do trabalho cotidiano",
+      "assinatura": "1545125f3ec63d1317ff5bea"
+    }
+  ],
+  "zulip-msg-1338797": [
+    {
+      "trecho": "Yeah, that feature is pretty useful.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "funcao": "avaliar uma proposta ou sugerir mudanças",
+      "assinatura": "7fff95d1b8a5b824b714d34d"
+    }
+  ],
+  "zulip-msg-829129": [
+    {
+      "trecho": "That sounds right to me.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "366a46155d38605ae31fd1dd"
+    }
+  ],
+  "zulip-msg-829137": [
+    {
+      "trecho": "uhhh, no I did not try it, I was just thinking",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "cfca14512744bb7fffd8f360"
+    }
+  ],
+  "zulip-msg-829139": [
+    {
+      "trecho": "I will go test",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "funcao": "combinar ou assumir uma próxima ação",
+      "assinatura": "7ade0e920ba8b3830d78cd9e"
+    }
+  ],
+  "zulip-msg-829143": [
+    {
+      "trecho": "I do not understand the question here, are you asking where I got the idea of using `alert` from?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "c20934582921ddebf597c315"
+    }
+  ],
+  "zulip-msg-829167": [
+    {
+      "trecho": "I definitely remember finding it useful sometimes in the past.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "funcao": "avaliar uma proposta ou sugerir mudanças",
+      "assinatura": "5a88cd89d342f3ec069a8556"
+    }
+  ],
+  "zulip-msg-829180": [
+    {
+      "trecho": "sweet! thanks!",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "148b79dae11f9a6fa3c24da8"
+    }
+  ],
+  "zulip-msg-197371": [
+    {
+      "trecho": "Open an issue and tag Umair?",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "funcao": "combinar ou assumir uma próxima ação",
+      "assinatura": "8b92e2479a7d08c8835d6adc"
+    }
+  ],
+  "zulip-msg-197479": [
+    {
+      "trecho": "Looking at this.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "funcao": "comunicar uma situação do trabalho cotidiano",
+      "assinatura": "c5e5f38af65519550633879d"
+    }
+  ],
+  "zulip-msg-223710": [
+    {
+      "trecho": "Why do we `rebase upstream/master` after fetching and checking out to the PR's branch?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "d88eae488531f090a1e48fc9"
+    }
+  ],
+  "zulip-msg-223930": [
+    {
+      "trecho": "Perfectly makes sense :)",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "335afd53eae88e0b2bd95a9d"
+    }
+  ],
+  "zulip-msg-23475": [
+    {
+      "trecho": "yep all done :)",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "f76b9ad876b33403e50851b5"
+    }
+  ],
+  "zulip-msg-23477": [
+    {
+      "trecho": "let me take a look at the flake8 output",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "funcao": "combinar ou assumir uma próxima ação",
+      "assinatura": "c4bd3cf0af6dfdb2c8f80c71"
+    }
+  ],
+  "zulip-msg-23486": [
+    {
+      "trecho": "do you have any thoughts on making the tools test runner stuff better?",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "funcao": "solicitar ajuda em uma tarefa",
+      "assinatura": "1e68dd0302fe69fc1d65f684"
+    }
+  ],
+  "zulip-msg-23487": [
+    {
+      "trecho": "better how?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "95e2b96d26c97904f17a0124"
+    }
+  ],
+  "zulip-msg-23491": [
+    {
+      "trecho": "I'd have to think about that",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "85b35a3ed1bdae6ffcf8dd5e"
+    }
+  ],
+  "zulip-msg-23498": [
+    {
+      "trecho": "I do think we should try to avoid differing from PEP-8 except where there's a good reason",
+      "usos": [
+        "dar-feedback"
+      ],
+      "funcao": "avaliar uma proposta ou sugerir mudanças",
+      "assinatura": "70d96244a52efbad06d76ec4"
+    }
+  ],
+  "zulip-msg-23502": [
+    {
+      "trecho": "that's why I brought it up in the first place",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "07f4c173427cde080a5fb5ee"
+    }
+  ],
+  "zulip-msg-23517": [
+    {
+      "trecho": "I'd like to reiterate one big-picture thing.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "4674e05403d961fde982908b"
+    }
+  ],
+  "zulip-msg-1628759": [
+    {
+      "trecho": "Great, I can proceed from here to get this integrated then.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "funcao": "combinar ou assumir uma próxima ação",
+      "assinatura": "f7d922bf4ec799b20201be22"
+    }
+  ],
+  "zulip-msg-1284692": [
+    {
+      "trecho": "Please correct me if I'm wrong",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "9b0ae24662ad5ebab823a931"
+    }
+  ],
+  "zulip-msg-1284711": [
+    {
+      "trecho": "I guess I've just been wrong for a while.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "6e777e36733b36b703a1eb27"
+    }
+  ],
+  "zulip-msg-307834": [
+    {
+      "trecho": "what's the error?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "045d0f613036d838386f93db"
+    }
+  ],
+  "zulip-msg-1306682": [
+    {
+      "trecho": "I kinda disagree.",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "efe05ddab72c58370cc2e9fa"
+    }
+  ],
+  "zulip-msg-1306697": [
+    {
+      "trecho": "What are you proposing?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "12587d0aaa2214986fef758b"
+    }
+  ],
+  "zulip-msg-1306699": [
+    {
+      "trecho": "I’m listening.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "6d5bb43cbdb910e26fde99d7"
+    }
+  ],
+  "zulip-msg-1306704": [
+    {
+      "trecho": "Is it intrinsically buggy and expensive, or is it just a bad implementation?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "c122430125696297bd27f566"
+    }
+  ],
+  "zulip-msg-1306753": [
+    {
+      "trecho": "I didn’t intend to imply that they were mocked.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "db88bc2397ea096ed072fc29"
+    }
+  ],
+  "zulip-msg-1306754": [
+    {
+      "trecho": "Maybe I misunderstood your wording then.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "d30ef077476d5bf9f621fd86"
+    }
+  ],
+  "zulip-msg-1306771": [
+    {
+      "trecho": "Exactly.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "2d62aff2ecfc5c16cd1c5cde"
+    }
+  ],
+  "zulip-msg-1306778": [
+    {
+      "trecho": "I think we have the same overall goals.",
+      "usos": [
+        "conversacao"
+      ],
+      "funcao": "responder ao interlocutor no contexto da conversa",
+      "assinatura": "e6b8388bb39bfad044c5beb6"
+    }
+  ],
+  "zulip-msg-1306779": [
+    {
+      "trecho": "I know you have plenty on your plate",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "56332c5febbd1f1dca060acd"
+    }
+  ],
+  "zulip-msg-1306791": [
+    {
+      "trecho": "Maybe I don't understand your experiment.",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "21f5213d2d3ba6322c13f487"
+    }
+  ],
+  "zulip-msg-1306795": [
+    {
+      "trecho": "What are the wall times?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "873b14cdcd354359c50e8d11"
+    }
+  ],
+  "zulip-msg-1306799": [
+    {
+      "trecho": "Any outliers among the tests?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "1e3a46f9e708af8194ccf50a"
+    }
+  ],
+  "zulip-msg-1306825": [
+    {
+      "trecho": "That seems like the low hanging fruit to me for research/demonstration purposes.",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "funcao": "empregar uma expressão informal na conversa",
+      "assinatura": "a872663bbe16e7ed1bc63864"
+    }
+  ],
+  "zulip-msg-1306832": [
+    {
+      "trecho": "What exactly are you arguing here?",
+      "usos": [
+        "esclarecer"
+      ],
+      "funcao": "pedir esclarecimento sobre o assunto do tópico",
+      "assinatura": "d7c96cf8d4629e0d9f246a29"
+    }
+  ],
+  "zulip-msg-1560569": [
+    {
+      "trecho": "targeting a final release around the middle of this month.",
+      "funcao": "Situar aproximadamente a versão final no calendário ao anunciar uma beta.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "14e702a72edc7e78f2d71f9a"
+    }
+  ],
+  "zulip-msg-1631722": [
+    {
+      "trecho": "We recommend all deployments upgrade to 7.3, for both of these reasons.",
+      "funcao": "Recomendar uma atualização retomando as duas razões já expostas.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "76b00fdf4351cfe62d2cbe07"
+    }
+  ],
+  "zulip-msg-2155161": [
+    {
+      "trecho": "We recommend upgrading immediately if you have an affected configuration",
+      "funcao": "Recomendar uma ação imediata aos responsáveis pelas instalações afetadas.",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "assinatura": "0a173ce1471fd06582c957ed"
+    }
+  ],
+  "zulip-msg-2223735": [
+    {
+      "trecho": "expect beta2 next week and a final release a week after that.",
+      "funcao": "Anunciar a sequência esperada de duas entregas nas semanas seguintes.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "f54d9c7e25634b0904ede7bc"
+    }
+  ],
+  "zulip-msg-2232992": [
+    {
+      "trecho": "We expect the final Zulip 11.0 release in about a week.",
+      "funcao": "Informar aproximadamente quanto tempo falta para lançar uma versão.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "a4c28b8e2d2b39b051f68fad"
+    }
+  ],
+  "zulip-msg-2243688": [
+    {
+      "trecho": "thanks so much to everyone who contributed to it!",
+      "funcao": "Agradecer coletivamente às pessoas que contribuíram para o lançamento.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "6439eb70665e356940c71bce"
+    }
+  ],
+  "zulip-msg-2283482": [
+    {
+      "trecho": "Hot on the heels of Zulip Server 11.3, we've now released Zulip Server 11.4",
+      "funcao": "Descrever dois lançamentos consecutivos com a expressão “hot on the heels of”.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "5182a8c14a5f01e566b2c8d7"
+    }
+  ],
+  "zulip-msg-2407944": [
+    {
+      "trecho": "expect beta2 in 7-10 days and a final release a week after that.",
+      "funcao": "Indicar a sequência esperada de duas entregas depois da beta inicial.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "c62e0074cf4cd3274b86ff9f"
+    }
+  ],
+  "zulip-msg-2444026": [
+    {
+      "trecho": "We ended up with a slower schedule than originally planned, but the 12.0 release is expected in the next 1-2 days.",
+      "funcao": "Reconhecer atraso em relação ao planejamento e informar uma nova previsão.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "deb0954583895475fa0b0839"
+    }
+  ],
+  "zulip-msg-2445439": [
+    {
+      "trecho": "Huge thanks to everyone who contributed to this release!",
+      "funcao": "Agradecer às pessoas que contribuíram para o lançamento.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "a5194bbebc0ef8b8f7f3d925"
+    }
+  ],
+  "zulip-msg-2527143": [
+    {
+      "trecho": "We recommend upgrading immediately if you have an affected configuration",
+      "funcao": "Orientar quem usa uma configuração afetada a atualizar o sistema prontamente.",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "assinatura": "26a8dfde42cf0a14d3811bab"
+    }
+  ],
+  "zulip-msg-2548141": [
+    {
+      "trecho": "We’ll ship a final 13.0 release after we receive beta feedback!",
+      "funcao": "Comprometer a publicação da versão final após o retorno da equipe de testes.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "85b40e412df94af03b8c3bd1"
+    }
+  ],
+  "zulip-msg-2553108": [
+    {
+      "trecho": "I could not be prouder of this team's ability to adapt and keep driving project forward.",
+      "funcao": "Reconhecer publicamente a capacidade da equipe de se adaptar a mudanças.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "9ffa64d3a25e3198b822382b"
+    }
+  ],
+  "zulip-msg-855493": [
+    {
+      "trecho": "I'm pleased to announce that I've just released version 0.5.0 of Zulip Terminal",
+      "funcao": "Introduzir formalmente um anúncio de lançamento que acaba de ocorrer.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "235a469d5c27e7dc26468025"
+    }
+  ],
+  "zulip-msg-876797": [
+    {
+      "trecho": "Thanks to all those who have made this release happen!",
+      "funcao": "Agradecer por um esforço coletivo que permitiu o lançamento.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "fae4be4f72c62fc883299bdb"
+    }
+  ],
+  "zulip-msg-885227": [
+    {
+      "trecho": "I am taking the liberty of announcing a topic for \"self hosters\" here",
+      "funcao": "Introduzir com deferência um assunto em um canal de anúncios.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "655196cc6171969da983dcf4"
+    }
+  ],
+  "zulip-msg-968100": [
+    {
+      "trecho": "thanks to them and everyone else for continuing to be involved and excited about this project!",
+      "funcao": "Agradecer aos colaboradores pela continuidade da participação no projeto.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "81b8fb109162ecb46d52692e"
+    }
+  ],
+  "zulip-msg-1110783": [
+    {
+      "trecho": "thanks to everyone for raising the standard of the project once more",
+      "funcao": "Reconhecer que o trabalho dos colaboradores elevou a qualidade do projeto.",
+      "usos": [
+        "dar-feedback"
+      ],
+      "assinatura": "7840b15843d6cdb92c33c695"
+    }
+  ],
+  "zulip-msg-1124434": [
+    {
+      "trecho": "We're switching to this stream to make them more visible.",
+      "funcao": "Explicar por que os anúncios passaram para outro canal.",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "8a098c365a9b5bc71c348d8f"
+    }
+  ],
+  "zulip-msg-1124438": [
+    {
+      "trecho": "Then please send feedback on #**mobile**! Especially so if you run into a bug that you don't remember seeing on previous versions.",
+      "funcao": "Solicitar o relato de regressões durante o teste de uma versão móvel.",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "e3ba9b7e395f019182b6e14b"
+    }
+  ],
+  "zulip-msg-1128011": [
+    {
+      "trecho": "Hopefully that won't take long, and then I'll roll it out on the Play Store too.",
+      "funcao": "Explicar que a distribuição na segunda loja dependerá do fim da revisão.",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "0735b04b87ad10fbb5dfdb70"
+    }
+  ],
+  "zulip-msg-1147601": [
+    {
+      "trecho": "If you're on Android, upgrading is highly recommended.",
+      "funcao": "Recomendar fortemente uma atualização a um grupo específico de usuários.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "24c293b74ed34dd11686661a"
+    }
+  ],
+  "zulip-msg-1153936": [
+    {
+      "trecho": "This one went out on Friday to all Android users and beta iOS users, and I just hit the button to send it to all iOS users.",
+      "funcao": "Distinguir quem já tinha recebido a atualização e quem acabou de recebê-la.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "72b6bcdef396e0e8ab01fe18"
+    }
+  ],
+  "zulip-msg-1167597": [
+    {
+      "trecho": "within an hour or two, and on iOS within less than a day.",
+      "funcao": "Estimar em quanto tempo um trabalho chegará a cada plataforma.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "176ae10aa044da5f548a45af"
+    }
+  ],
+  "zulip-msg-1212130": [
+    {
+      "trecho": "iOS is pending a build issue.",
+      "funcao": "Informar a disponibilidade numa plataforma e o impedimento que resta em outra.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "761e25e237ca2cc0a4e3a844"
+    }
+  ],
+  "zulip-msg-1246343": [
+    {
+      "trecho": "but I neglected to announce it here until now, oops.",
+      "funcao": "Reconhecer que se esqueceu de fazer um anúncio na data devida.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "d18156432d50a4518b4ed8fa"
+    }
+  ],
+  "zulip-msg-1272653": [
+    {
+      "trecho": "We've tested it ourselves, but, as always, if you find any bugs, please report them.",
+      "funcao": "Reconhecer o teste já feito e pedir relatos dos problemas restantes.",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "883a17ff3a4ea83e39342a79"
+    }
+  ],
+  "zulip-msg-1298635": [
+    {
+      "trecho": "We've tested it ourselves, but, as always, if you find any bugs, please report them.",
+      "funcao": "Reconhecer o teste já feito e pedir relatos dos problemas restantes.",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "975e267675abe4b8d5898c7c"
+    }
+  ],
+  "zulip-msg-1301126": [
+    {
+      "trecho": "are twin bug-fix releases, both fixing the same three issues",
+      "funcao": "Explicar que duas atualizações corrigem os mesmos problemas.",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "68d5fa6075266aab5d034a06"
+    }
+  ],
+  "zulip-msg-1351929": [
+    {
+      "trecho": "Now available (since yesterday, in fact) to all users on both iOS and Android.",
+      "funcao": "Precisar desde quando as duas plataformas receberam a atualização.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "4e8aab5d77c146966d5681fe"
+    }
+  ],
+  "zulip-msg-1468991": [
+    {
+      "trecho": "so this announcement is a few days late, oops.",
+      "funcao": "Reconhecer em tom informal que o anúncio chegou depois do lançamento.",
+      "usos": [
+        "linguagem-informal"
+      ],
+      "assinatura": "8d8e68e05f3c0139233516a9"
+    }
+  ],
+  "zulip-msg-1524606": [
+    {
+      "trecho": "nothing changes: v27.203 behaves the same as v27.201.",
+      "funcao": "Delimitar quais usuários não observarão mudanças após uma atualização.",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "f9df9190aa95f085cfb4677a"
+    }
+  ],
+  "zulip-msg-1559090": [
+    {
+      "trecho": "Many thanks to our kind volunteer translators!",
+      "funcao": "Reconhecer o trabalho voluntário de tradução.",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "3ba599278f0df4bc75afd4a7"
+    }
+  ],
+  "zulip-msg-1214202": [
+    {
+      "trecho": "Also now out in beta on iOS.",
+      "funcao": "Atualizar o grupo sobre quando a beta ficou disponível na plataforma que faltava.",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "assinatura": "ce60e46455697f95a7aa1774"
+    }
+  ],
+  "zulip-msg-327306": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "(We still need to update all the absolute links in code comments; that'll be the next pass, but is less urgent)",
+      "assinatura": "562f98749d9ddeed10849336"
+    }
+  ],
+  "zulip-msg-1059158": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "@**Aman Agrawal** can we make changes in the documentation section?",
+      "assinatura": "49ffc332013c53cffea85046"
+    }
+  ],
+  "zulip-msg-1059159": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Please use appropriate topic names and streams for discussions .",
+      "assinatura": "fda9c5d389991cdf025af1a6"
+    }
+  ],
+  "zulip-msg-1059160": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Ofcourse.",
+      "assinatura": "dafc2970dcda2622cc0641a7"
+    }
+  ],
+  "zulip-msg-793606": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I've been making contributions to the developer docs and relevant tooling.",
+      "assinatura": "1f0bbc3f5eb209378da67f13"
+    }
+  ],
+  "zulip-msg-793607": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**David Rosa** See above would be a good start",
+      "assinatura": "9c58ad2693edb01c2bae4ab0"
+    }
+  ],
+  "zulip-msg-793608": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "This would be be beneficial to add. https://github.com/zulip/zulip-desktop/blob/master/docs/Enterprise.md",
+      "assinatura": "4790fdf09de2a2fc23dc60fe"
+    }
+  ],
+  "zulip-msg-793609": [
+    {
+      "funcao": "assumir um próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "trecho": "I'll make a note of it.",
+      "assinatura": "1545eafe0a22c7fa2b807821"
+    }
+  ],
+  "zulip-msg-1271792": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Borrowing an idea from another community, should we make some linkifiers for our documentation pages?",
+      "assinatura": "ecc3405e5196b1f5b7660686"
+    }
+  ],
+  "zulip-msg-1271827": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I like the idea of `/api/send-message` linkifying.",
+      "assinatura": "106cd178b746ebc4f65d11a9"
+    }
+  ],
+  "zulip-msg-1272357": [
+    {
+      "funcao": "oferecer ajuda",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I guess I can try doing the API one so we can play with it.",
+      "assinatura": "555fc4aa161afc59b69a9264"
+    }
+  ],
+  "zulip-msg-1272360": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Seems to work!",
+      "assinatura": "a30a29f857599e74e0edffc3"
+    }
+  ],
+  "zulip-msg-1272399": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I personally google for  https://zulip.readthedocs.io/en/latest/contributing all the time, and would find it convenient not to type it out.",
+      "assinatura": "1144131be05a2320b4ab9da9"
+    }
+  ],
+  "zulip-msg-1272427": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "You want just the index page?",
+      "assinatura": "97e776d87b525b89db4cdf72"
+    }
+  ],
+  "zulip-msg-1272428": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I think a URL syntax like `RTD/subsystems/markdown.html` would be something I would type out.",
+      "assinatura": "17e11746c6ae5d6d8ba30db4"
+    }
+  ],
+  "zulip-msg-1272505": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "I'm not sure what you mean.",
+      "assinatura": "ea755572a7b16f1da8ca4620"
+    }
+  ],
+  "zulip-msg-1272506": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "OK I put something of that form is as an experiment; we can play with it and see if we want to adjust the syntax.",
+      "assinatura": "fef4e52066a5d755c27fc30e"
+    }
+  ],
+  "zulip-msg-1272508": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Hmm needs fixing :)",
+      "assinatura": "caa9fbf214d9ecc4e421daf5"
+    }
+  ],
+  "zulip-msg-1272509": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "OK now does it work?",
+      "assinatura": "ab2f8588f22f181b1c082f5f"
+    }
+  ],
+  "zulip-msg-1272926": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Good idea!",
+      "assinatura": "2efa5441b77de12ac97ec9bb"
+    }
+  ],
+  "zulip-msg-1272928": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "For the RTD pages, I'd ideally want to leave out typing the \".html\".",
+      "assinatura": "9bbc359d443c2a1b16ccedb1"
+    }
+  ],
+  "zulip-msg-1272929": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "(Really that'd ideally be something in our RTD site itself -- that a URL like https://zulip.readthedocs.io/en/latest/subsystems/markdown would work.",
+      "assinatura": "b292fb4b468dd4357f3d5cab"
+    }
+  ],
+  "zulip-msg-1272934": [
+    {
+      "funcao": "alertar para um risco",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "trecho": "The problem with making the `.html` implicit in the linkifier is that it'll make Alya's example of RTD/contributing not work for getting one of the index pages.",
+      "assinatura": "21f232e47ffb96ed18768a50"
+    }
+  ],
+  "zulip-msg-1272936": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I'm sure it's possible to make all the options work if we create multiple linkifiers that try to detect the form based on the number of slashes.",
+      "assinatura": "3de6f31a6df78208ebb57e8b"
+    }
+  ],
+  "zulip-msg-1272947": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I see, hmm, that's annoying.",
+      "assinatura": "fec56f4629be82284d7bbbb4"
+    }
+  ],
+  "zulip-msg-1272952": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, I guess counting the slashes would work -- we have a quite consistent two-level-deep tree.",
+      "assinatura": "77b6bfc522189619950a6c86"
+    }
+  ],
+  "zulip-msg-1272984": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, that's right.",
+      "assinatura": "6956ffc9b1f997378588ab62"
+    }
+  ],
+  "zulip-msg-1278749": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I adjusted the regexes here to not link e.g.",
+      "assinatura": "713da670233d3ef336b9eb06"
+    }
+  ],
+  "zulip-msg-1278752": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "not nearly as readable anymore:",
+      "assinatura": "88b556d47e801902323d626d"
+    }
+  ],
+  "zulip-msg-1279211": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Cool, that seems fine.",
+      "assinatura": "07414df00af27e4482f721cb"
+    }
+  ],
+  "zulip-msg-1279212": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Have folks been finding these useful?",
+      "assinatura": "a842ec5f4982c8c077a4b629"
+    }
+  ],
+  "zulip-msg-1279213": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "If so we might want to document them in /help/development-community, and maybe add a /help/ pattern as well.",
+      "assinatura": "dc012b630324941a22f090a0"
+    }
+  ],
+  "zulip-msg-1279221": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I've used the `RTD/` pattern.",
+      "assinatura": "147cdadfeba07f4afa72a39c"
+    }
+  ],
+  "zulip-msg-1279350": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I think I've used the /api/get-linkifiers style pattern at least once.",
+      "assinatura": "75713348e1c3ab860775cb98"
+    }
+  ],
+  "zulip-msg-1279351": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "OK, so we should probably add a /help/ one and then document them?",
+      "assinatura": "5e39d5a9828b8dc62fcf8347"
+    }
+  ],
+  "zulip-msg-150405": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "BTW I did some work on writing a document explaining this chat server's conventions: https://github.com/zulip/zulip/pull/3656",
+      "assinatura": "440449eda296a14e0edbdf35"
+    }
+  ],
+  "zulip-msg-150408": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Looks good!",
+      "assinatura": "3b372b82b47ed10e5ec968e1"
+    }
+  ],
+  "zulip-msg-150409": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "We could consider changing #**frontend** to \"web app\" or something :)",
+      "assinatura": "635ba266c1c2bf0307cfe419"
+    }
+  ],
+  "zulip-msg-150436": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "OK I published this at: http://zulip.readthedocs.io/en/latest/chat-zulip-org.html",
+      "assinatura": "3ef72a13428ce86165cc5c0e"
+    }
+  ],
+  "zulip-msg-150617": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "How would folks feel about updating our code of conduct to something more similar to Django's CoC (https://www.djangoproject.com/conduct/), or the citizen CoC if we want something more legalistic (https://www.djangoproject.com/conduct/)?",
+      "assinatura": "7cc0b8b0e4c0359298b836a8"
+    }
+  ],
+  "zulip-msg-150619": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "yeah I'd be on board for that, it's just work",
+      "assinatura": "16e6dd61a0720c9306a9b843"
+    }
+  ],
+  "zulip-msg-150620": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Could be a good thing to work on while Sumana is visiting on Thursday",
+      "assinatura": "8b9eda64f37580bbd80575b2"
+    }
+  ],
+  "zulip-msg-150847": [
+    {
+      "funcao": "oferecer ajuda",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Happy to discuss this & look at it & improve it on Thursday!",
+      "assinatura": "0412c1f801f152bfc530bc5d"
+    }
+  ],
+  "zulip-msg-152941": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Reading https://zulip.readthedocs.io/en/latest/code-of-conduct.html ,  http://citizencodeofconduct.org/ and https://www.djangoproject.com/conduct/ afresh now :)",
+      "assinatura": "c371096710312a1c5c05520b"
+    }
+  ],
+  "zulip-msg-153008": [
+    {
+      "funcao": "definir objetivo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Rishi Gupta** and I chatted and realized that we'd like a few things: to improve on the axes he mentioned, and to provide a sense that it's fine for contributors to reach out to us with more diffuse \"I'm having a problem/misunderstanding and need some advice\" requests for facilitation.",
+      "assinatura": "c8aefea0e288132c583f6bc3"
+    }
+  ],
+  "zulip-msg-176654": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I looked at [several CoCs](http://geekfeminism.wikia.com/wiki/Code_of_conduct_evaluations) (including some not linked there) and did not find anything we can just copy and paste, but here's some interesting prior art:",
+      "assinatura": "6e45ebfce69f88db1019b7ae"
+    }
+  ],
+  "zulip-msg-187848": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Thanks Sumana!",
+      "assinatura": "4e0ea5bd01d6f95dc835f72e"
+    }
+  ],
+  "zulip-msg-188946": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I like your revision.",
+      "assinatura": "048be7ffcb6ab70ec2fdfc81"
+    }
+  ],
+  "zulip-msg-1147278": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Having got some comments on several commits, I force pushed and those commits were overwritten.",
+      "assinatura": "279cc71c2e40f5b6eafab3b5"
+    }
+  ],
+  "zulip-msg-1147327": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "The comments should still be visible, they're just collapsed if the code they were commenting on no longer exists.",
+      "assinatura": "32725234e0189e1dddf05e7e"
+    }
+  ],
+  "zulip-msg-1147347": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Thank you!",
+      "assinatura": "97653a099aefb71c2f654e98"
+    }
+  ],
+  "zulip-msg-1147349": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Go to the main **Conversation** tab of the PR, and if necessary, click “Show resolved” to expand the old comments.",
+      "assinatura": "bdaa01a32d264873b8233087"
+    }
+  ],
+  "zulip-msg-1528194": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I'm currently testing zulip as a slack alternative for our company.",
+      "assinatura": "0ac3590b3d823bf47bdaeb6e"
+    }
+  ],
+  "zulip-msg-1528432": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "The words are stemmed for search purposes: in general you should receive results for any word that stems to \"create\" when searching \"created\", including \"creating\".",
+      "assinatura": "aa41b646b6b7cb1deff4cbc9"
+    }
+  ],
+  "zulip-msg-1529083": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "That's cool, but I feel like not having a \"standard\" search makes zulip basically almost useless for us.",
+      "assinatura": "20cb6a34fcf6f9f4c857288f"
+    }
+  ],
+  "zulip-msg-1529332": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "In case you're not familiar with the feature, for the case of ids you may find it useful to use linkifiers (https://zulip.com/help/add-a-custom-linkifier),",
+      "assinatura": "74af6a25898317c41f0fbac1"
+    }
+  ],
+  "zulip-msg-1529662": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Dario Oddenino** yeah, I had the same thought that setting up linkifiers is would mean that for key things like an issue ID spelled `ABC-12345` might make the search scenario you describe not come up often in practice.",
+      "assinatura": "689eff7d3ede84a4642c7acc"
+    }
+  ],
+  "zulip-msg-1530222": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Thanks!",
+      "assinatura": "a72fe0f20607a19ce25d239a"
+    }
+  ],
+  "zulip-msg-1531943": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "When searching for a person, you might find the search filters useful (https://zulip.com/help/search-for-messages#search-by-sender, https://zulip.com/help/search-for-messages#search-by-location).",
+      "assinatura": "a1854dc84e8320aa03947358"
+    }
+  ],
+  "zulip-msg-1264591": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Does zulip use Django REST Framework or only that Django web framework???",
+      "assinatura": "2eab9fc996cad78c1fbd5967"
+    }
+  ],
+  "zulip-msg-1264600": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Uzair Ali** Zulip only uses Django, not Django REST Framework.",
+      "assinatura": "3601daa1a38fabe6a4061d3f"
+    }
+  ],
+  "zulip-msg-1264607": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Okay, if Zulp does not user REST Framework then how do u peeps develop REST APIs??",
+      "assinatura": "de3f3744ebdd29412bca7a11"
+    }
+  ],
+  "zulip-msg-1265582": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Uzair Ali** https://zulip.readthedocs.io/en/latest/tutorials/writing-views.html answers that.",
+      "assinatura": "3c112986d13ee4d0283c67a7"
+    }
+  ],
+  "zulip-msg-876878": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Have you guys considered some form of donation page? ie. https://github.com/sponsors or Patreon?",
+      "assinatura": "53db27126f9fcfd4c241686d"
+    }
+  ],
+  "zulip-msg-876943": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Mason Protter** we have!",
+      "assinatura": "d5bb14f2ad090631b4d6fde7"
+    }
+  ],
+  "zulip-msg-876949": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I guess I lied, there is https://opencollective.com/zulip",
+      "assinatura": "17ad92a582659217658e4d99"
+    }
+  ],
+  "zulip-msg-1489218": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Is it possible to add some logic when the notification bot writes to some topic, it shouldn't move message to the top stream",
+      "assinatura": "613a78d030fe26f36bd4e01d"
+    }
+  ],
+  "zulip-msg-1489532": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I think we're more likely to implement something that's specific to resolved topics, rather than tied to the Notification bot.",
+      "assinatura": "d313770f2b76f9a1d7b2dce0"
+    }
+  ],
+  "zulip-msg-1490492": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Yep, it is a good idea",
+      "assinatura": "8ba639d0770c961585ec2986"
+    }
+  ],
+  "zulip-msg-1490496": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "ah, I know why it now go to send_message_moved_breadcrumbs, cuz I return None inside maybe_send_resolve_topic_notifications, should return True and all okay",
+      "assinatura": "ccdbf033323df95387b747d4"
+    }
+  ],
+  "zulip-msg-591068": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Before proposing it as an idea, I am wondering if there is an integration with a Doodle like app?",
+      "assinatura": "1e6d4fc675b6522f158add49"
+    }
+  ],
+  "zulip-msg-591071": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "There might be something vaguely Doodle-like in this list, but if you are interested in an actual Doodle integration, there's no harm in asking.",
+      "assinatura": "5f2d033434a1c13b2121b5a4"
+    }
+  ],
+  "zulip-msg-591072": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "You might want to ask on the #**integrations** stream, although here is fine too.",
+      "assinatura": "cd604c98c38054089c180c65"
+    }
+  ],
+  "zulip-msg-591095": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Thanks I will do that.",
+      "assinatura": "bc6238cd80de883407657d2d"
+    }
+  ],
+  "zulip-msg-828078": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I've seen this twice recently, both in the webapp and mobile:",
+      "assinatura": "e76020885c5fede789862a59"
+    }
+  ],
+  "zulip-msg-828182": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "This is a bug that we've had for years and nobody can figure out what causes it.",
+      "assinatura": "ad2173745b2d982981786967"
+    }
+  ],
+  "zulip-msg-828183": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "It's interesting that you saw it on mobile as well; that makes me think it might be a backend-side issue (except reading the code, I don't see how?)",
+      "assinatura": "674fe48c2c791bceffbb4d18"
+    }
+  ],
+  "zulip-msg-828184": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Maybe it comes from someone double-toggling themself and the events being applied incorrectly.",
+      "assinatura": "64d25aa855ca8e5b8d18981a"
+    }
+  ],
+  "zulip-msg-828198": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I think it's pretty rare though, cause in the past year I think I've seen this only a couple of times...",
+      "assinatura": "112e3a0bd5db0ed1d64f966c"
+    }
+  ],
+  "zulip-msg-828212": [
+    {
+      "funcao": "definir objetivo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "It definitely is, but I'd love to fix it since it's been reported in chat.zulip.org at least 5 times, so people do notice it even if it's only 1/3 months.",
+      "assinatura": "453ed46c3466707d3a4d3d70"
+    }
+  ],
+  "zulip-msg-828442": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Ugh, I think the webapp is probably broken due to a race.",
+      "assinatura": "7377ea9a5b57b1e63e6e95aa"
+    }
+  ],
+  "zulip-msg-828445": [
+    {
+      "funcao": "usar expressão no contexto profissional",
+      "usos": [
+        "vocabulario"
+      ],
+      "trecho": "today I learned the word \"munge\" :)",
+      "assinatura": "7035dd3476b214226e7cbce0"
+    }
+  ],
+  "zulip-msg-828455": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Good grief, the code just creates an even more denormalized representation of the reactions.",
+      "assinatura": "35f15165c48360f1513f5f2d"
+    }
+  ],
+  "zulip-msg-828497": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I am in the process of fixing this.",
+      "assinatura": "5098b6663106f57d8ddedd42"
+    }
+  ],
+  "zulip-msg-828935": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I added https://github.com/zulip/zulip/pull/14155 to try to address the double reactions emoji.",
+      "assinatura": "7151bc64efd44e71a798db6a"
+    }
+  ],
+  "zulip-msg-8067": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I think there might be a regression or new bug in provision.py or the collection of pip requirements files.",
+      "assinatura": "722d6030e1d59d6eeec83861"
+    }
+  ],
+  "zulip-msg-8068": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Looks like both py2_common.txt and and dex.txt include ipython.txt",
+      "assinatura": "90738fd2153af66f178f6044"
+    }
+  ],
+  "zulip-msg-8069": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "rather, py2_common and dev both include common.txt, which includes ipython.txt",
+      "assinatura": "08e3077ffb79e37a3508fbbc"
+    }
+  ],
+  "zulip-msg-8072": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "right, but common.txt is included more than once",
+      "assinatura": "d68a15e16d9f7f886c8c8846"
+    }
+  ],
+  "zulip-msg-8074": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Eklavya Sharma** which duplicate do you think we should remove?",
+      "assinatura": "ba4f6fa4454ed677c0579fcf"
+    }
+  ],
+  "zulip-msg-8075": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "What version of `pip` do you have?",
+      "assinatura": "7fbdd27b7de1f8f444e2a7b2"
+    }
+  ],
+  "zulip-msg-8076": [
+    {
+      "funcao": "assumir um próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "trecho": "whatever is on the lxc, let me check",
+      "assinatura": "1ed22f18effd2a54fbd8a0ad"
+    }
+  ],
+  "zulip-msg-8078": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I ran into this doing a fresh dev setup to test new vagrant version.",
+      "assinatura": "b34883f1fd3912dc8b69c34b"
+    }
+  ],
+  "zulip-msg-8080": [
+    {
+      "funcao": "assumir um próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "trecho": "I'll file this in a moment.",
+      "assinatura": "b83a4d6a3cb1421079764937"
+    }
+  ],
+  "zulip-msg-8088": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Tim Abbott** You're right about pip.",
+      "assinatura": "e8c2939034f764875f4f00de"
+    }
+  ],
+  "zulip-msg-8089": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Definitely not going to be a virtualization problem",
+      "assinatura": "1d197deeb1ef4a16d3cd96f2"
+    }
+  ],
+  "zulip-msg-8090": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "You should be able to check in the provision logs",
+      "assinatura": "46c1b544cb585251aa27fc28"
+    }
+  ],
+  "zulip-msg-8091": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "`/var/log/zulip_provision.log` should have the log for what happened when it tried to `pip install pip` while setting up the venv.",
+      "assinatura": "1e0c93620f6caefd7273068f"
+    }
+  ],
+  "zulip-msg-8092": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "It might be that we don't correctly handle/check for errors there, and so the script merrily continued past a failure there",
+      "assinatura": "f5ccb81500947258f0f06f60"
+    }
+  ],
+  "zulip-msg-108661": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "can anyone tell why there are red marks on right corner of message?",
+      "assinatura": "a33f2f992aa0c0f86f8839a7"
+    }
+  ],
+  "zulip-msg-108672": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**sinwar** that means a message was not successfully sent",
+      "assinatura": "e9f2d749e1af7915ffa544ee"
+    }
+  ],
+  "zulip-msg-108674": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I guess our recent design change to just explain what's up when you mouse over was not successful :/",
+      "assinatura": "e85f898fec5498736825c24f"
+    }
+  ],
+  "zulip-msg-2404572": [
+    {
+      "funcao": "combinar horário",
+      "usos": [
+        "dia-a-dia",
+        "conversacao"
+      ],
+      "trecho": "How do you manage to find common time with maintainer(from San Francisco) to work and chat in front when they are live so that you can have more interactive conversation rather than conversation that are separated by 2-3hours gap because of either of the person being offline(Due to difference in time zone)?",
+      "assinatura": "7fceca19f0df276f37bde494"
+    }
+  ],
+  "zulip-msg-2404575": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I don't think folks have a lot of time here for just chatting.",
+      "assinatura": "b5439462f30d68c6b48a8ac9"
+    }
+  ],
+  "zulip-msg-2413746": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "is it too late to start preparing for GSoC now (it’s already March 19)?",
+      "assinatura": "4c78c610fed5c106e4d87405"
+    }
+  ],
+  "zulip-msg-2413994": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "It's too late for this project; you can try next year.",
+      "assinatura": "36d9f31bd7008093bd1a2783"
+    }
+  ],
+  "zulip-msg-1723138": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "I had a general doubt regarding GSoC if someone could answer that do we get mentors assigned after proposal and if someone can review our proposal before we send it so that ideas can be discussed before?",
+      "assinatura": "ecec67f6f30df87aded05a37"
+    }
+  ],
+  "zulip-msg-1723239": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "same doubt anyone pls reply",
+      "assinatura": "8be2417475e5631ad47e7f8d"
+    }
+  ],
+  "zulip-msg-1723250": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Priyanshu Tandon** Please be mindful not to accidentally move other people's messages, and fix it if you do.",
+      "assinatura": "3a7c2f3e5ba0ccadfff9cec6"
+    }
+  ],
+  "zulip-msg-1723251": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Have you read https://zulip.readthedocs.io/en/latest/outreach/apply.html?",
+      "assinatura": "5a7c22e1ec55f658bfbfe4be"
+    }
+  ],
+  "zulip-msg-1116423": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "hey can anyone tell me what does the line in click handlers",
+      "assinatura": "f5f7e854b11367ac49a12558"
+    }
+  ],
+  "zulip-msg-1116425": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "It reads the selector from the `data-make-editable` attribute, and then it finds that selector within the parent of the thing you're clicking on.",
+      "assinatura": "e82b8c3a5c3b2c827ce186fb"
+    }
+  ],
+  "zulip-msg-528611": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "i seem to accidentally create drafts pretty often, by forgetting to escape input box,",
+      "assinatura": "741a5f712500f6c29a2fd451"
+    }
+  ],
+  "zulip-msg-528634": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**tshirtman** You can use the backspace/delete to delete the selected draft.",
+      "assinatura": "5a9ef3dabe5609f5d2d90375"
+    }
+  ],
+  "zulip-msg-528636": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Joshua Pan** backspace is working but delete doesn't seem to work on my laptop.",
+      "assinatura": "a9b3567854f1c47fe088e0d3"
+    }
+  ],
+  "zulip-msg-528639": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**sinwar** some keyboards say delete (like OSX) and some say backspace (like PC)",
+      "assinatura": "46ffb979cf442cfe485c9f62"
+    }
+  ],
+  "zulip-msg-528640": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Ahh!",
+      "assinatura": "648a25c1a427b3d8ba2fa073"
+    }
+  ],
+  "zulip-msg-528649": [
+    {
+      "funcao": "acolher contribuição",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Shubham Dhama** awesome.",
+      "assinatura": "57ac71df3ab0a2cb27e285b8"
+    }
+  ],
+  "zulip-msg-528821": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "For me also backspace works but delete doesn't; my keyboard has both a backspace and a delete (and probably we should make both of them work)?",
+      "assinatura": "d0aec622ed848763b2495c38"
+    }
+  ],
+  "zulip-msg-528910": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yea, I meant backspace.",
+      "assinatura": "7328d758bf82c6b55b9efc96"
+    }
+  ],
+  "zulip-msg-529119": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "how hard would it be to make delete work?",
+      "assinatura": "a36dd6dfecaf3084d60b5646"
+    }
+  ],
+  "zulip-msg-529125": [
+    {
+      "funcao": "assumir um próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "trecho": "@**Rishi Gupta** I'll add \"Delete\" for deleting also with my above PR.",
+      "assinatura": "12c37ededfcc4b1e3167878b"
+    }
+  ],
+  "zulip-msg-241624": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "The order of messages in drafts should be \"Newest first\" rather than \"Oldest first\".",
+      "assinatura": "454e19a1cc51e317f95cda93"
+    }
+  ],
+  "zulip-msg-241647": [
+    {
+      "funcao": "alertar para um risco",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "trecho": "We could change it, but one inconsistency that would introduce is that the current model matches the sort order we have in the main message feed of the most recent things being at the bottom.",
+      "assinatura": "38368913e968a5f1c555326c"
+    }
+  ],
+  "zulip-msg-241655": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I agree with @**Akash Nimare**.",
+      "assinatura": "94a71776caee7709ffc2e67f"
+    }
+  ],
+  "zulip-msg-241657": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think it could benefit from being less tall -- both the top and bottom are kinda at the edges of the screen.",
+      "assinatura": "3255688eaede19e0c0e8e1b8"
+    }
+  ],
+  "zulip-msg-241662": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yep, makes sense.",
+      "assinatura": "e3668ccb15af9becd219778f"
+    }
+  ],
+  "zulip-msg-241671": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Yeah, more emphasis would be really good there.",
+      "assinatura": "25c943f16313c60e68d84953"
+    }
+  ],
+  "zulip-msg-891529": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "It would be great if there was a way to adjust the age limit for drafts.",
+      "assinatura": "cb93fd1c8bca95fe97b84d62"
+    }
+  ],
+  "zulip-msg-891823": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, I think the intent has always been to migrate them to being stored server-side rather than in browser local storage.",
+      "assinatura": "d4ef3fcfb0996b961b5684cd"
+    }
+  ],
+  "zulip-msg-891824": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I don't think anyone expected it to take as long for that migration to happen as it has.",
+      "assinatura": "de5f61697eb3c594945899e9"
+    }
+  ],
+  "zulip-msg-892127": [
+    {
+      "funcao": "acolher contribuição",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "That's a good reminder that we'll want to implement the feature in the mobile app as well using the same backend.",
+      "assinatura": "c30a896928d20fb58722dc56"
+    }
+  ],
+  "zulip-msg-892129": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Alluri** I posted some notes on that issue for how I think we should design the data model.",
+      "assinatura": "a06f1a2da3fc9fabd8927392"
+    }
+  ],
+  "zulip-msg-900354": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "@**Tim Abbott**  can you please explain why we're indexing on `last_edit_time`?",
+      "assinatura": "8e03b1c26d415cfeef6533ff"
+    }
+  ],
+  "zulip-msg-900356": [
+    {
+      "funcao": "definir objetivo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Just want to make sure that I'm 100% clear here.",
+      "assinatura": "92212f69c215e54d0d24dae6"
+    }
+  ],
+  "zulip-msg-900396": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I guess whenever we fetch drafts we get only the recent N items.",
+      "assinatura": "925f2cd9bf96770819c8415b"
+    }
+  ],
+  "zulip-msg-900456": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Alluri** yeah, I think you're right that the index isn't particularly important.",
+      "assinatura": "21651b4c980c122c94224ac0"
+    }
+  ],
+  "zulip-msg-900457": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Which I'm not at all confident we're going to do.",
+      "assinatura": "caf14a2daf9438043d507328"
+    }
+  ],
+  "zulip-msg-900464": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Hmm, then should I leave the index in or remove it?",
+      "assinatura": "ae09322c88bc663d42250b2c"
+    }
+  ],
+  "zulip-msg-900466": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I'd leave the index; indexes are cheap on non-giant tables.",
+      "assinatura": "fa8a902010aa84ec3c3261b9"
+    }
+  ],
+  "zulip-msg-900468": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Ok, cool!",
+      "assinatura": "57cab0b98ff1b4bf825aacf4"
+    }
+  ],
+  "zulip-msg-900471": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I think that index won't help much with Vishnu's use case; we'd need a joint index on sender/last_edit_time for that.",
+      "assinatura": "51365d07b79c27717fbeaceb"
+    }
+  ],
+  "zulip-msg-900473": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "One other model question; do we want `sender` as the name of the user column here, in analogy with messages, or just `user_profile`?",
+      "assinatura": "6b2ef7163b5a3da501d5f6a6"
+    }
+  ],
+  "zulip-msg-900587": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Oh right, the user/sender part of the draft (from the DB perspective) slipped my mind for a second.",
+      "assinatura": "03412365daacca155d403232"
+    }
+  ],
+  "zulip-msg-900590": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think `user_profile` would actually be better.",
+      "assinatura": "6ce18ccac7dff918d745f528"
+    }
+  ],
+  "zulip-msg-900592": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I know I originally said `sender`, but I'm feeling `user_profile` would be better.",
+      "assinatura": "1bf53d33c7e0f21e9d4fa406"
+    }
+  ],
+  "zulip-msg-900594": [
+    {
+      "funcao": "usar expressão no contexto profissional",
+      "usos": [
+        "vocabulario"
+      ],
+      "trecho": "We haven't opened the can of worms for that giant migration effort...",
+      "assinatura": "8545f0e096815a016d9889a6"
+    }
+  ],
+  "zulip-msg-900595": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "We've kept `user_profile` out of the API, so that part isn't bad, but it'll be a giant effort to adjust migrate the database structure and then a giant find/replace effort to rename all the local variables.",
+      "assinatura": "f8bd55b106ac5b1ea7349bcd"
+    }
+  ],
+  "zulip-msg-900853": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I like `user` over `sender`, because a draft is something that hasn't been sent.",
+      "assinatura": "e4b4d1fdf4e11dcd2ef82c54"
+    }
+  ],
+  "zulip-msg-900859": [
+    {
+      "funcao": "assumir um próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "trecho": "OK, let's go with `user`",
+      "assinatura": "14fff158b4321087dbb30279"
+    }
+  ],
+  "zulip-msg-901127": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Sounds good.",
+      "assinatura": "49429fc4778403ced08c4071"
+    }
+  ],
+  "zulip-msg-901218": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I've done a little bit more thinking about this and I believe that it would be better to store the \"recipient\" as a string and then store \"message type\" as well.",
+      "assinatura": "f6206ed918566664f67122f8"
+    }
+  ],
+  "zulip-msg-901220": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I know this sounds a little clumsy, but my inclination would be to store both of these values (and make both nullable):",
+      "assinatura": "801185d36d77b7d2af88ee4a"
+    }
+  ],
+  "zulip-msg-901221": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "And then when restoring drafts, if `stream_id` is not null, we'd automatically use the current stream name.",
+      "assinatura": "80218365ed3a2dceed67e053"
+    }
+  ],
+  "zulip-msg-901223": [
+    {
+      "funcao": "definir objetivo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "To add a bit more context to why I want \"recipient\" to remain a string, I want to allow for this change to fit in as harmoniously with the current drafts implementation as possible.",
+      "assinatura": "9d62ec28add6f37c0c7778db"
+    }
+  ],
+  "zulip-msg-901227": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "IMHO, I think that keeping the stream name would be better.",
+      "assinatura": "3ba623ba48301b6db5a794fa"
+    }
+  ],
+  "zulip-msg-901229": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "For the client side of things (and I'm just speaking to the webapp piece, not mobile), I believe we've had discussions about adding `stream_id` to the local storage implementation there, as well.",
+      "assinatura": "f6e6c9a40a877edfc909de8c"
+    }
+  ],
+  "zulip-msg-901230": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "The current implementation is considered to be an accident of implementation, though, by some people.",
+      "assinatura": "726dd85ee20920117dc06286"
+    }
+  ],
+  "zulip-msg-901231": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Ah, I see",
+      "assinatura": "035a573810301526f5601a2a"
+    }
+  ],
+  "zulip-msg-901232": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "But what if the user intended for the tentative stream name?",
+      "assinatura": "3a3d5ac7d2c4cc1583ca6ad2"
+    }
+  ],
+  "zulip-msg-901233": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I know for a fact that when we originally implemented this, we weren't super rigorous about preferring `stream_id` to `stream_name`, and our opinions have evolved since then.",
+      "assinatura": "a5bc8558e1eca26c2b030434"
+    }
+  ],
+  "zulip-msg-901234": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "This is where things get a bit subjective, but my guess 90% of the time, if a user has a valid stream in the compose box at the time the draft is saved, then the user intends for the message to eventually go to that stream, even if we end up doing some rename of a stream like \"Customer support\" to \"support\".",
+      "assinatura": "e6ca9fa3aa4b71e624c2353b"
+    }
+  ],
+  "zulip-msg-901235": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "And even if we occasionally guess wrong here, I don't think it's the end of the world.",
+      "assinatura": "dd2a545c76501bc952135642"
+    }
+  ],
+  "zulip-msg-901236": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Our most recent data point on what customers expect comes from @**Cyphase**: https://github.com/zulip/zulip/issues/15155#issue-627847348",
+      "assinatura": "33bb96cf34a981d59abc503d"
+    }
+  ],
+  "zulip-msg-901237": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Hmm, so how about when saving a draft, we check to see if the stream exists, if so then save the stream id in one field otherwise store the tentative stream name in a different field?",
+      "assinatura": "39ed0021d5a7b778e8b4973c"
+    }
+  ],
+  "zulip-msg-901238": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Also, how would this same issue affect huddles?",
+      "assinatura": "5f5418bdd3963934762ee0fa"
+    }
+  ],
+  "zulip-msg-901239": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "That's the gist of what I'm proposing here.",
+      "assinatura": "ec5c4316ebf2b27f81e4a7af"
+    }
+  ],
+  "zulip-msg-901241": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "As in we wouldn't want to create the huddle yet during the draft phase.",
+      "assinatura": "8996634c51c0f73ac15bd28e"
+    }
+  ],
+  "zulip-msg-901242": [
+    {
+      "funcao": "assumir um próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "trecho": "Sounds great then, I'll modify the model and then get some more feedback on it from the you and the rest of the community before I write the view code surrounding it.",
+      "assinatura": "705c888d904cb1778da5b841"
+    }
+  ],
+  "zulip-msg-901243": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I haven't thought through the huddles case in depth, but I think basically the same principles apply.",
+      "assinatura": "a16d9d6fe518a3e298cd7119"
+    }
+  ],
+  "zulip-msg-901244": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "This makes sense when we're dealing with Python's data structures, but it would get pretty messy from a DB perspective right?",
+      "assinatura": "b0fd5b60cdfc5321cad35da9"
+    }
+  ],
+  "zulip-msg-901246": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Also yeah, dealing with the case where the person doesn't exist yet gets kinda subjective again",
+      "assinatura": "c90dff8157aadc4b58bfb0f3"
+    }
+  ],
+  "zulip-msg-901250": [
+    {
+      "funcao": "definir objetivo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "One thing we can definitely say is that we don't want to use an actual `Recipient` ForeignKey reference, right?",
+      "assinatura": "93ee3f4f2dbb8eb5552792da"
+    }
+  ],
+  "zulip-msg-901260": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, I think that's correct, if only for pragmatic reasons (we don't really expose the `recipient` concept the clients).",
+      "assinatura": "bd1fea09eb957896d27647c6"
+    }
+  ],
+  "zulip-msg-901262": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yup, plus we wouldn't really use the results of determining the recipient (which also BTW might not exist at the time) since we'd do all of that again at the time of actually sending the message (when it makes more sense to do this stuff).",
+      "assinatura": "8950a9b2eca3b585ffc7e693"
+    }
+  ],
+  "zulip-msg-901263": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "DB's have the concept of nullable fields, so I don't think it's necessarily hard to represent in the DB.",
+      "assinatura": "7e3599e1ef1f220f854761f1"
+    }
+  ],
+  "zulip-msg-901266": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Oh, no, I was talking about this:",
+      "assinatura": "fcec69eb120ee87487d07075"
+    }
+  ],
+  "zulip-msg-901270": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Ah, there are sort of two things going on here:",
+      "assinatura": "b92ac334d1ea2c5cadc117d4"
+    }
+  ],
+  "zulip-msg-901274": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "So for huddles and PMs, maybe we can do what the current frontend already does - store the emails of all of the valid recipients in a comma separated string.",
+      "assinatura": "bbd47b49cdcdf127fd9706d4"
+    }
+  ],
+  "zulip-msg-901285": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think it's important that we get away from emails here, when possible.",
+      "assinatura": "f7b3c24093d36759f2b06d2a"
+    }
+  ],
+  "zulip-msg-901288": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "How would we simply represent this in a table?",
+      "assinatura": "7abd7b81ef5d047ed429ceb0"
+    }
+  ],
+  "zulip-msg-901289": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "And asking these are quite helpful because they force me to make my thoughts more concrete :slight_smile:",
+      "assinatura": "6b9f6182217f509f75541e8e"
+    }
+  ],
+  "zulip-msg-901671": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Both Python and JS do have union types pretty nicely.",
+      "assinatura": "e89bde3856dd41db5a6d057a"
+    }
+  ],
+  "zulip-msg-901674": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "(I'm not sure that's something you actually want here -- just replying on the point of what the languages offer, and using the example mentioned in the thread)",
+      "assinatura": "18afd043617dcd6c5379ac61"
+    }
+  ],
+  "zulip-msg-901714": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I guess with mypy the only thing that's lacking is a more native way to name the subtypes.",
+      "assinatura": "c186086465a5d81ddbd78376"
+    }
+  ],
+  "zulip-msg-901845": [
+    {
+      "funcao": "usar expressão no contexto profissional",
+      "usos": [
+        "vocabulario"
+      ],
+      "trecho": "That's a \"disjoint union\" or a \"discriminated union\".",
+      "assinatura": "6e803138e826d1ea63de9d7a"
+    }
+  ],
+  "zulip-msg-901889": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Ah for the huddle case I was sort of assuming you would just fall back to emails for everyone if you didn’t have a valid huddle but the way Greg expressed the type might make more sense here.",
+      "assinatura": "eaa29ede6c57fbfef26b1f11"
+    }
+  ],
+  "zulip-msg-902049": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I haven't read this thread fully, but I'm definitely of the opinion we don't want to use emails or stream names at all in this API.",
+      "assinatura": "274797b710f964e955e965df"
+    }
+  ],
+  "zulip-msg-902062": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "How do we handle so-called stream names that are just partially entered text?",
+      "assinatura": "8fd15be070d262af78de8f5a"
+    }
+  ],
+  "zulip-msg-902070": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "One option would be `stream_id=null`, and then have a separate column for incomplete input data.",
+      "assinatura": "b23ae6515b9039c91c31ad8e"
+    }
+  ],
+  "zulip-msg-902074": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Another would be to just discard the stream input if it's not a valid stream, and just have it return as `null` (`''`).",
+      "assinatura": "a353875b2f0db01a078efc9d"
+    }
+  ],
+  "zulip-msg-902075": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "That is what we were discussing",
+      "assinatura": "4fe87d2bbc924ee5dfadc667"
+    }
+  ],
+  "zulip-msg-902076": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think I prefer that latter approach; it doesn't seem useful to me to save that you entered the text `gen` in the stream field when that doesn't complete to a valid anything.",
+      "assinatura": "cf65cc313090b051702c3611"
+    }
+  ],
+  "zulip-msg-902077": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "And not doing so lets us have a clean data model.",
+      "assinatura": "437464d55554d4b28e6744d7"
+    }
+  ],
+  "zulip-msg-902078": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "We were using “stream name” in some places as shorthand for what you call “incomplete input data”.",
+      "assinatura": "a87fab1f47255f110687e9d2"
+    }
+  ],
+  "zulip-msg-902082": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "yeah, but I think the only potential data of that form is stream name or PM inputs; and I'd be happy to start with a model where we just don't support that.",
+      "assinatura": "52e8f9505b3f5fc28d78c366"
+    }
+  ],
+  "zulip-msg-902086": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Well that would certainly be easier if we don’t have that requirement.",
+      "assinatura": "3c5856c09e29c945d7a30dc3"
+    }
+  ],
+  "zulip-msg-902099": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I think the only thing that's lost that way is the ability to set a non-existent stream name.",
+      "assinatura": "aea3cf121efd4a89b2c5b34c"
+    }
+  ],
+  "zulip-msg-902109": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, we'd just store them under `\"\"` as the stream name.",
+      "assinatura": "0dc340d3dee4b012fe27a49c"
+    }
+  ],
+  "zulip-msg-902114": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "I don’t understand what you mean by “under” here.",
+      "assinatura": "b522a364e3970a8e94636b30"
+    }
+  ],
+  "zulip-msg-902123": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I just mean discard the partial stream name, and store the draft as one with `null` as the stream_id field.",
+      "assinatura": "f4b7e664cfa625ddcfff0937"
+    }
+  ],
+  "zulip-msg-902184": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Perhaps in such a case, the draft content could be edited to include at the top something like \"This was linked to a non-existent stream named 'big event 2021`\".",
+      "assinatura": "f99d3c6fb734dbd5cfbb0de0"
+    }
+  ],
+  "zulip-msg-902204": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Ooh, the number-of-drafts commit is live.",
+      "assinatura": "7c112b72e2d72e41de13e7a6"
+    }
+  ],
+  "zulip-msg-902236": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think that this approach might be better because then we could support the case I was talking about [here](https://chat.zulip.org/#narrow/stream/2-general/topic/drafts/near/901218).",
+      "assinatura": "28f2fa3226a93b5e04d1c7cf"
+    }
+  ],
+  "zulip-msg-902245": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Would it make sense to just do a nullable `Recipient` rather than a stream or list of user IDs?",
+      "assinatura": "fce98f2f0c3c932901057388"
+    }
+  ],
+  "zulip-msg-902270": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "The `Recipient` model is great for when we have concrete messages with concrete recipients, but not for drafts where everything is potentially tentative.",
+      "assinatura": "49cef75737f5463704f683bd"
+    }
+  ],
+  "zulip-msg-902271": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "That's roughly my reasoning for why it would be better to avoid the Recipient model altogether here.",
+      "assinatura": "7fbb8e25dacb672eeb02d070"
+    }
+  ],
+  "zulip-msg-902273": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Don't we use `Recipient` for typing notifications?",
+      "assinatura": "c057a3aa186a9e6caac1e696"
+    }
+  ],
+  "zulip-msg-902274": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I'm not sure really.",
+      "assinatura": "dde0d234270345a9ae0ddbbb"
+    }
+  ],
+  "zulip-msg-902276": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I think we create a huddle if it didn't before in that code path.",
+      "assinatura": "2f7b4ca7ff14e33aa60b48a0"
+    }
+  ],
+  "zulip-msg-902277": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "But don't quote me on that without checking :)",
+      "assinatura": "2ae0fe7dd382ca2aff26c772"
+    }
+  ],
+  "zulip-msg-902281": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "I'll have to check, but does that mean that we still want to introduce the complexity that `Recipient` brings when it's not needed here?",
+      "assinatura": "8b441eb624be2222b28ed937"
+    }
+  ],
+  "zulip-msg-902357": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I wouldn't call `Recipient` complexity in this context; it's our standard way of recording the audience of a message.",
+      "assinatura": "331780395c51dd2256ac00eb"
+    }
+  ],
+  "zulip-msg-902487": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "For typing indicators I would argue that `Recipient` did lead to a little complexity, based on this commit: 504ec9d4894df2bb88870118543f5db3242b92c9",
+      "assinatura": "a50d005334c310fc7606d99c"
+    }
+  ],
+  "zulip-msg-902512": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "(I don't claim the above commit completely applies to the drafts case, since there are some subtle things about typing indicators that are a bit different than drafts.",
+      "assinatura": "b0c2ff38b18b1b8557bb4cdb"
+    }
+  ],
+  "zulip-msg-902526": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Thanks a lot for that reference point @**Steve Howell**!",
+      "assinatura": "7ffc2e2814383f85ffebc581"
+    }
+  ],
+  "zulip-msg-903062": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "In particular having a list of user IDs serialized out into a comma-separated list and sticking that in a field means there isn't a reasonable way to write a query that gets all the corresponding user records.",
+      "assinatura": "089ebabe8dd42557683e3d79"
+    }
+  ],
+  "zulip-msg-903064": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Typing notifications, by contrast, don't go into the database (because they're inherently ephemeral), so they never got that benefit from using `Huddle` or `Recipient`.",
+      "assinatura": "fe2062d078c89c46a8efa780"
+    }
+  ],
+  "zulip-msg-903080": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I actually consider my drafts to be pretty ephemeral.",
+      "assinatura": "575e38017e21a557cd26cbc1"
+    }
+  ],
+  "zulip-msg-903210": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I guess on the flipside, as someone who composes a lot of long messages and often gets interrupted while doing so, I do definitely want to have a way to access a draft on multiple devices and it is important to avoid a draft being lost if I forget about it for a couple days.",
+      "assinatura": "ef8fff34720e142d60f03335"
+    }
+  ],
+  "zulip-msg-903211": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "right now I have a draft from 3 days ago with a list of release TODOs that I was hoping to serialize to issues and haven't fully gotten around to processing into something I want to send.",
+      "assinatura": "f67d6209cddd900a8c3cd3cd"
+    }
+  ],
+  "zulip-msg-903593": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Here's a random drafts idea that needs some thought to figure out how (or if) it could reasonably work; I'm just leaving it here now in case it triggers something for someone else, until I can flesh it out a bit more myself.",
+      "assinatura": "67b357f66a15d8caac7c57b0"
+    }
+  ],
+  "zulip-msg-903606": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "The reason this doesn't affect me too often is that I've already conditioned myself to draft long messages outside of Zulip.",
+      "assinatura": "ad72cb5862104765ed2d97f2"
+    }
+  ],
+  "zulip-msg-903608": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "No pun intended, but there are times when I actually want to send a message but mark it as \"DRAFT\" to the audience.",
+      "assinatura": "778fdb63f27f39f696f27322"
+    }
+  ],
+  "zulip-msg-912794": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "The only thing that makes me not use multiple zulip tabs is that zulip tabs take some perceptible time to load.",
+      "assinatura": "cd795b12c7641b86ca83759e"
+    }
+  ],
+  "zulip-msg-912834": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Local storage is browsers is pretty limited in how much space you have.",
+      "assinatura": "7b3249f04a3165dbba8d9e27"
+    }
+  ],
+  "zulip-msg-931732": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I'm going to yield on the idea of implementing a more \"NoSQL\" kind of model and just stick to using `Recipient` simply because that's the more canonical approach.",
+      "assinatura": "0977ee9c2a7617ca6e54a8d7"
+    }
+  ],
+  "zulip-msg-931750": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "That’s not an either-or choice.",
+      "assinatura": "d364e4530cce50ea6e15ea60"
+    }
+  ],
+  "zulip-msg-931751": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "My perspective on drafts is that I don’t want my drafts saved to the backend.",
+      "assinatura": "6ac2a72e32be48d5af06de20"
+    }
+  ],
+  "zulip-msg-931752": [
+    {
+      "funcao": "alertar para um risco",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "trecho": "We shouldn’t build this feature until we have the conversation about privacy concerns and actual use cases.",
+      "assinatura": "066d73db630f5f5f6b106949"
+    }
+  ],
+  "zulip-msg-931829": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Well, I get that.",
+      "assinatura": "653a6f50b074b7f536c217bd"
+    }
+  ],
+  "zulip-msg-931830": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Steve Howell**thanks for the perspective here!",
+      "assinatura": "bf6a4729ce0cd2c4222f0fb5"
+    }
+  ],
+  "zulip-msg-931894": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I am curious to hear what other folks think.",
+      "assinatura": "ea838f9ebe1ae6b32748650a"
+    }
+  ],
+  "zulip-msg-932005": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I am not convinced we need draft synchronization.",
+      "assinatura": "9c6872c5127150f9abd0d26f"
+    }
+  ],
+  "zulip-msg-932070": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "There were definitely times where I really wished that we could sync drafts across clients.",
+      "assinatura": "e266d6ac796db68565f0274a"
+    }
+  ],
+  "zulip-msg-932078": [
+    {
+      "funcao": "definir objetivo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Going back to thinking about the implementation, I want to let the API support allowing it's user to set the `last_edited_time` (so the right timestamp can be provided when batching drafts).",
+      "assinatura": "e0ed50fde6885ab536c912b8"
+    }
+  ],
+  "zulip-msg-932234": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Coming from a point where I spend 50% of my time on web-app and the rest 50% on ZT, I certainly think draft synchronization is useful.",
+      "assinatura": "f733c903b025ac7056a1f60f"
+    }
+  ],
+  "zulip-msg-934136": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "My experience as a longtime Gmail user is that it's not often that I need drafts synchronizing between devices...",
+      "assinatura": "802fb8fcde9212de22b87c55"
+    }
+  ],
+  "zulip-msg-934151": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, that's my experience as well.",
+      "assinatura": "2d8a71ccadd29d9922d33c80"
+    }
+  ],
+  "zulip-msg-934817": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Is there anyway to \"reverse\" a `Huddle`?",
+      "assinatura": "a45f1202ef580416ae795c1f"
+    }
+  ],
+  "zulip-msg-934875": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I am not sure what is your use case here.",
+      "assinatura": "0ba327c2caf8109a92587770"
+    }
+  ],
+  "zulip-msg-934880": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Corret.",
+      "assinatura": "d950f5e5512b7b98d9663ad9"
+    }
+  ],
+  "zulip-msg-934881": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Thanks for pointing me in the right direction!",
+      "assinatura": "eec002ff1649e25d41351d3d"
+    }
+  ],
+  "zulip-msg-941194": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Just a quick checkin on this project, a few things came up related to closing the last semester so I'm handling those now.",
+      "assinatura": "9b707aadf3042c443bb83bb5"
+    }
+  ],
+  "zulip-msg-948338": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Finally got back around to working on this.",
+      "assinatura": "5ae0e88d8ab1302eeaccc954"
+    }
+  ],
+  "zulip-msg-955323": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "The [PR](https://github.com/zulip/zulip/pull/15880) is now pretty much complete but it needs a few serious rounds of review.",
+      "assinatura": "acad4230fa071de4258f8c4f"
+    }
+  ],
+  "zulip-msg-957991": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Exciting!",
+      "assinatura": "bde06230eecb6f5be6cc9bc3"
+    }
+  ],
+  "zulip-msg-966158": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "So now that the core (CRUD) parts of the backend for this feature are more or less complete.",
+      "assinatura": "3952c762b236749f77e05525"
+    }
+  ],
+  "zulip-msg-966182": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think options 2 and 3 are unnecessarily complicated.",
+      "assinatura": "5c2a13990e9e37998131523d"
+    }
+  ],
+  "zulip-msg-966196": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "That said, I never felt the need for syncing the drafts across all the devices in the first place.",
+      "assinatura": "8c353328c4d0ef6b6ff32869"
+    }
+  ],
+  "zulip-msg-966198": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Agreed!",
+      "assinatura": "1ec9ce41a505f486dc273733"
+    }
+  ],
+  "zulip-msg-967085": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Alluri** Thanks for asking.",
+      "assinatura": "9927994ebfe615addc8b1ef9"
+    }
+  ],
+  "zulip-msg-967221": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Yeah we should definitely keep it simple.",
+      "assinatura": "9f91f48727c95ffff2d35188"
+    }
+  ],
+  "zulip-msg-967227": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Disabling synchronization should probably delete all drafts the server has for the user.",
+      "assinatura": "ebe7b0a7a5efe1843e070d3a"
+    }
+  ],
+  "zulip-msg-967609": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, agreed.",
+      "assinatura": "8b5a8ab3d11cae1421ecaabc"
+    }
+  ],
+  "zulip-msg-969938": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "@**Sahil Batra** can you please provide an example how you would get user_ids from zerver_huddle table?",
+      "assinatura": "be229c8388c873e79a57cc73"
+    }
+  ],
+  "zulip-msg-970392": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Tej Gill** You can do it in a similar way as done [here](https://github.com/zulip/zulip/blob/519b1e9b4d4dab0bca5266e0a92e74de20720951/zerver/models.py#L1927), except that here the recipient object of draft is used, you can use the `Recipient` object of the huddle in `get_display_recipient` to get the user_ids in a similar way.",
+      "assinatura": "db8adc2b6a082b958a16a2df"
+    }
+  ],
+  "zulip-msg-970394": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Didn't notice that the question was posted here too.",
+      "assinatura": "01b0275df002f8921e0686cf"
+    }
+  ],
+  "zulip-msg-971711": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Thank you @**Sahil Batra** and @**Hemanth V.",
+      "assinatura": "bbc9f2fa4fb8ba20e4d8dea6"
+    }
+  ],
+  "zulip-msg-971872": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Would the following be a good set of events for drafts?",
+      "assinatura": "3a097bf922ea0a77748ba004"
+    }
+  ],
+  "zulip-msg-971985": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think the `op` values should be `add/remove/update` to match the style in existing events.",
+      "assinatura": "c0af45c79f438b4a31af9c74"
+    }
+  ],
+  "zulip-msg-971986": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "And the sync ones event should I think be a settings event, not a `drafts` type event.",
+      "assinatura": "a62749dd833db5d0c4159c33"
+    }
+  ],
+  "zulip-msg-971987": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I'm also not sure whether the second one needs the `draft_id` element at the top level.",
+      "assinatura": "17435948e5535689c2c176f7"
+    }
+  ],
+  "zulip-msg-973524": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Hmm, I'd be curious for more opinions on how that should work.",
+      "assinatura": "60d1e4e5ee9ee2774f5dc306"
+    }
+  ],
+  "zulip-msg-973632": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Well, the first three are practically the same:",
+      "assinatura": "5ffd769362f4d5dc9ecf3dbe"
+    }
+  ],
+  "zulip-msg-973633": [
+    {
+      "funcao": "pedir avaliação",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I'd like suggestions for the other two.",
+      "assinatura": "016f9ada59ea2c57ed6801da"
+    }
+  ],
+  "zulip-msg-973662": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "For adding drafts, I would just send a list of drafts, not a dict, assuming the `created_draft_objects` already have an id in them.",
+      "assinatura": "fdab6a2df64447d80f82b06e"
+    }
+  ],
+  "zulip-msg-973691": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Should I just add the ID to the drafts then?",
+      "assinatura": "f573baa72063880576f09f7c"
+    }
+  ],
+  "zulip-msg-973696": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Yeah, I think that's simpler--just add id to the individual dicts.",
+      "assinatura": "f1eefa22df1a807662e3ac9c"
+    }
+  ],
+  "zulip-msg-975731": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "These good?",
+      "assinatura": "ac6423c937b8d517ee66401d"
+    }
+  ],
+  "zulip-msg-975757": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Should we keep the events for changing sync settings as:",
+      "assinatura": "286c4f965527905ee0a05cf5"
+    }
+  ],
+  "zulip-msg-975816": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Look at `update_global_notifications` and `display_settings` for similar events.",
+      "assinatura": "7864551344e4b5bd2459f4cb"
+    }
+  ],
+  "zulip-msg-975822": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I think we might want to do a restructuring to make `enter_sends` live alongside this drafts object within a `compose_settings` object (or maybe think about making a `user_settings` object and moving these things all into there; not sure)",
+      "assinatura": "5114f8a53c6afdb95fcf228a"
+    }
+  ],
+  "zulip-msg-1145531": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Regarding this drafts syncing work, I had some converstations with @**Hemanth V.",
+      "assinatura": "c6aead8abda520677f889d4c"
+    }
+  ],
+  "zulip-msg-1145532": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "And there are various question, we he cleared.",
+      "assinatura": "f8c5c891b51cd5db5601d6e2"
+    }
+  ],
+  "zulip-msg-1145606": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "A quick summary of our conversation would be: all of the discussion and work done so far have been solely focused on the server-side implementation and now we're ready to discuss the details of the client-side implementation(s).",
+      "assinatura": "2f24f914cd858d246e7500dc"
+    }
+  ],
+  "zulip-msg-1145962": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Is the plan to run the drafts backend on czo?",
+      "assinatura": "681bbcbf381c649eb35907b9"
+    }
+  ],
+  "zulip-msg-1146160": [
+    {
+      "funcao": "definir objetivo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I think fundamentally the drafts feature needs to support storing drafts client-side, to handle cases where the server is down.",
+      "assinatura": "d23af5db60c2308427bcd9bf"
+    }
+  ],
+  "zulip-msg-811734": [
+    {
+      "funcao": "pedir atualização",
+      "usos": [
+        "pedir-atualizacao"
+      ],
+      "trecho": "Is there any kind of consensus (in Zulip or otherwise) to drop Python 3.5 support any time soon?",
+      "assinatura": "345ca29cb5e1edb0414887ad"
+    }
+  ],
+  "zulip-msg-811735": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I'm guessing it will probably be Sep 2020 when security fixes stop being released, but haven't found an authoritative answer.",
+      "assinatura": "c80fedd9c415106e76612ebb"
+    }
+  ],
+  "zulip-msg-811815": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Probably not until the end of support of Ubuntu 16.04 (https://wiki.ubuntu.com/Releases), April 2021?",
+      "assinatura": "52c5ac04e3cf3d85b08557e4"
+    }
+  ],
+  "zulip-msg-811918": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Cyphase** that's what WP links to :)",
+      "assinatura": "1f4d4c2eed36384b4125870e"
+    }
+  ],
+  "zulip-msg-811920": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Re Ubuntu, not sure; I'm happy to keep support for longer, as long as too many dependencies don't drop support.",
+      "assinatura": "153ac6df85a8920f38703d93"
+    }
+  ],
+  "zulip-msg-811925": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I think we should plan to support `python-zulip-api` and the Zulip server as long as we're supporting an underlying OS that uses that as the Python version.",
+      "assinatura": "4bf60b302b0eb89d3849f0c4"
+    }
+  ],
+  "zulip-msg-811927": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "It would likely make our life easier in a number of ways to drop support for Stretch and Ubuntu 16.04 (our two Python 3.5 based releases), and now that we have a reasonable upgrade path to Bionic.",
+      "assinatura": "4714e3a1d8059718a55fbcc3"
+    }
+  ],
+  "zulip-msg-812110": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Would it be a good idea to try to get us on Django 2.2 LTS for that release?",
+      "assinatura": "0b4a6484184a9a955aa7537c"
+    }
+  ],
+  "zulip-msg-812122": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Yes, we definitely want to move to Django 2.2 in the near future as well; it's a similar form of transition.",
+      "assinatura": "1f7b11b6454628e39bb2c526"
+    }
+  ],
+  "zulip-msg-330710": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Do I need to sign this for every repo or only once?",
+      "assinatura": "940324025fe3aeda6fcb6ea8"
+    }
+  ],
+  "zulip-msg-330711": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Sumit Roy** You have to sign it only once.",
+      "assinatura": "4dc0496984d2bc623a84da87"
+    }
+  ],
+  "zulip-msg-330788": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Okay.",
+      "assinatura": "f659ae7f339a2b0a68b8940f"
+    }
+  ],
+  "zulip-msg-939158": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Why do we have entirely separate logic for dropbox link previews instead of some generic link previews?",
+      "assinatura": "b80097e33ef215d6b1f46809"
+    }
+  ],
+  "zulip-msg-939159": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "We should clean it up.",
+      "assinatura": "1d2861837d2d8759989bf04d"
+    }
+  ],
+  "zulip-msg-254008": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Hi, is it necessary to Sign the Dropbox Contributor License Agreement before pull request?",
+      "assinatura": "7da705c1678052125c17b39b"
+    }
+  ],
+  "zulip-msg-254009": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "A bot will bug you until you sign it",
+      "assinatura": "3a3d55d3de69aa8c63bc2651"
+    }
+  ],
+  "zulip-msg-254010": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "It is necessary to get the code merged.",
+      "assinatura": "20ac64c9f7f8e36d898a4e6d"
+    }
+  ],
+  "zulip-msg-254011": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Mailing Address ?",
+      "assinatura": "18a5d5d07c600c28336e8979"
+    }
+  ],
+  "zulip-msg-254012": [
+    {
+      "funcao": "usar expressão no contexto profissional",
+      "usos": [
+        "vocabulario"
+      ],
+      "trecho": "Mailing address in form refers to the address of your residence.",
+      "assinatura": "064b171b1efb077824067cb4"
+    }
+  ],
+  "zulip-msg-283116": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I had to login to DO to delete my unused droplet and found some droplets that were created a couple of months ago.",
+      "assinatura": "1919476d8bab76f913b40777"
+    }
+  ],
+  "zulip-msg-283122": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "Actually, let us know if they _are_ being used!",
+      "assinatura": "e0cb6b2767c5ca1c84e33e0a"
+    }
+  ],
+  "zulip-msg-283177": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Let's keep James', even if he doesn't reply.",
+      "assinatura": "d27a15f1d17a24656b1adfd1"
+    }
+  ],
+  "zulip-msg-283761": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I am using it for running the tunnels/mirrors/bridges !",
+      "assinatura": "92fe93774977058ef79596e0"
+    }
+  ],
+  "zulip-msg-284753": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I will be using it in the near future hopefully.",
+      "assinatura": "bbd2090cd7f32b35587674aa"
+    }
+  ],
+  "zulip-msg-858264": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "What do folks think about the error message here?",
+      "assinatura": "ce7b85b82d77ed56dac485d0"
+    }
+  ],
+  "zulip-msg-858274": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "My intention for not being explicit was it’d be easier to drop some other browser support.",
+      "assinatura": "b0d00efa0a4ff3a9cf5e5f14"
+    }
+  ],
+  "zulip-msg-858290": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "It seems reasonable for us to be explicit about why we think the browser is out of date--I can imagine possible inaccuracies here, but they are probably mostly harmless (cause folks are gonna need to upgrade anyway).",
+      "assinatura": "aa8b876254f93bea236fd999"
+    }
+  ],
+  "zulip-msg-858293": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Yeah, exactly, and I think if we make `old_browser_name` an argument into the template, it'd still not require change to the template in order to reuse this error page for future browsers.",
+      "assinatura": "57de63a5b01317c4e77df978"
+    }
+  ],
+  "zulip-msg-858299": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "That makes sense from my perspective.",
+      "assinatura": "56897eaeb187f6046019997e"
+    }
+  ],
+  "zulip-msg-858312": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I guess there are a lot more features that are blocked due to poor adaptibility of IE11.",
+      "assinatura": "0cd2ab1cbe68c423b7f991c1"
+    }
+  ],
+  "zulip-msg-858315": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "And then in the find out more page a simple explanation of sorts for this step.",
+      "assinatura": "c0699b52537685ed1d225523"
+    }
+  ],
+  "zulip-msg-858326": [
+    {
+      "funcao": "assumir um próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "trecho": "will do that.",
+      "assinatura": "84cc79133cf9dbe7957966ff"
+    }
+  ],
+  "zulip-msg-858335": [
+    {
+      "funcao": "pedir opinião",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Should we say \"The version of Internet Explorer you're is no longer supported\", or just \"Internet Explorer is no longer supported\".",
+      "assinatura": "6711f252a3ba7d514a1bc7ff"
+    }
+  ],
+  "zulip-msg-858363": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I'm not sure we need to go into the technical details; just providing a clear solution for the user is good enough.",
+      "assinatura": "00c73e6435dccce021cd9712"
+    }
+  ],
+  "zulip-msg-858364": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I would just say \"Internet Explorer is not supported\".",
+      "assinatura": "fac160705b6936a2d2dd08c1"
+    }
+  ],
+  "zulip-msg-858377": [
+    {
+      "funcao": "pedir avaliação",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Can it be written better?",
+      "assinatura": "c93f9a76fbf91a86d720b0c5"
+    }
+  ],
+  "zulip-msg-858675": [
+    {
+      "funcao": "oferecer ajuda",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I can tweak the text a bit before merging, but overall that looks good.",
+      "assinatura": "3bf8e6161f37b43a7b3cf68e"
+    }
+  ],
+  "zulip-msg-858917": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Also, does this mean we can tweak our webpack config to have less backwards compatibility?",
+      "assinatura": "0fc260631ed719123247aa6b"
+    }
+  ],
+  "zulip-msg-858929": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Well not necessarily...",
+      "assinatura": "3caeaee6b93e857bb8be38af"
+    }
+  ],
+  "zulip-msg-859385": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "updated PR  https://github.com/zulip/zulip/pull/14662",
+      "assinatura": "6467e06fbfc377e74cf3a9d9"
+    }
+  ],
+  "zulip-msg-649462": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "So we've got one user who's signed up accidently with two different email addresses.",
+      "assinatura": "56f32256341d40e8eb2f4d57"
+    }
+  ],
+  "zulip-msg-649556": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Grahame Grieve** deactivating one of the accounts should solve the problem.",
+      "assinatura": "baaaa9a4f76cce40b0200d97"
+    }
+  ],
+  "zulip-msg-649595": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "thx",
+      "assinatura": "3c9ab7ecad0f1b086b6f4eb8"
+    }
+  ],
+  "zulip-msg-556876": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Currently there are 4 hardcoded filters on the left sidebar: `*`, `is:private`, `is:starred`, `is:mentioned`.",
+      "assinatura": "726488a589a35b5d1415efea"
+    }
+  ],
+  "zulip-msg-557065": [
+    {
+      "funcao": "alertar para um risco",
+      "usos": [
+        "comunicar-risco"
+      ],
+      "trecho": "Performance would not be an issue here likely but screen real estate and usability is where you will likely get pushback.",
+      "assinatura": "0b68d4d5616ec7208e926836"
+    }
+  ],
+  "zulip-msg-557193": [
+    {
+      "funcao": "propor alternativa",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Maybe a collapsible \"Custom Filter\" that can be expanded into a list of filters would do for the screen real estate.",
+      "assinatura": "94443548534242183bf460c2"
+    }
+  ],
+  "zulip-msg-774389": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Are the communication between 1:1 message encrypted?",
+      "assinatura": "2998a4d81f670f2c1c0568b0"
+    }
+  ],
+  "zulip-msg-774391": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "You can find some excellent general information about Zulip's security model here too: https://zulip.readthedocs.io/en/latest/production/security-model.html",
+      "assinatura": "2c812e817f75994b8b64f623"
+    }
+  ],
+  "zulip-msg-774393": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "thanks",
+      "assinatura": "3cc2f43674119fddc5e4338e"
+    }
+  ],
+  "zulip-msg-2401866": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Apologies if this isn't the best place for this question, I saw this morning that the general E2EE issue [#6954](https://github.com/zulip/zulip/issues/6954) was closed.",
+      "assinatura": "c85947e8d495dff51b396884"
+    }
+  ],
+  "zulip-msg-2401868": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Might have answered my own question.",
+      "assinatura": "dbe648433d9a4b74e07d418f"
+    }
+  ],
+  "zulip-msg-2402002": [
+    {
+      "funcao": "indicar grau de certeza",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "I expect Android support to be merged in the next week, iOS support maybe a week later.",
+      "assinatura": "948b348e4039327f7eb4f40c"
+    }
+  ],
+  "zulip-msg-1207729": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "So, currently what happens is the messages are sent, and say if it fails.",
+      "assinatura": "e7a9e059ac4f2f216f9fc001"
+    }
+  ],
+  "zulip-msg-1207730": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "So, I discussed with @**Tim Abbott** that we will make the route of sending the message through drafts.",
+      "assinatura": "87310b18027df6772a6e36a1"
+    }
+  ],
+  "zulip-msg-1207733": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "(**I have a question here** - What are scheduled messages, should we also store them in drafts while sending, if we send them, how are we going to delete them in future?)",
+      "assinatura": "e19a4bb378e9dbb77290c3b8"
+    }
+  ],
+  "zulip-msg-1207755": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "I think we don't need step 3 here as simply storing what draft to delete can be stored with the local id itself.",
+      "assinatura": "7b3707dc34fd8e6f9b6c13c4"
+    }
+  ],
+  "zulip-msg-1207756": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "It will be better as this will also not create  much problem to get the message data from the server, just the local message id will be needed.",
+      "assinatura": "61455d5ea0fe2ecf60a7f0c0"
+    }
+  ],
+  "zulip-msg-1207757": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "So, combining step 3 and 4 here.",
+      "assinatura": "b3e4f420cee928f36eb0866d"
+    }
+  ],
+  "zulip-msg-1208401": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Hello, there is also another question that needs to be answered.",
+      "assinatura": "7adb5c64bc2f075351a03c99"
+    }
+  ],
+  "zulip-msg-1208405": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Also there is a question, should I save a draft for every message or only the ones that are getting locally echoed.",
+      "assinatura": "c2d988083fc48b1364373ca6"
+    }
+  ],
+  "zulip-msg-1239638": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "@**Tim Abbott** do check this PR for making the route through drafts.",
+      "assinatura": "cce65e390b6a206fd8958d1b"
+    }
+  ],
+  "zulip-msg-1245167": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "@**Priyam Seth (Signior-X)** can you fix the fact that it fails CI?",
+      "assinatura": "b993cf13bc4a1d2854e2e3e2"
+    }
+  ],
+  "zulip-msg-1245189": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I have updated just now, let's see.",
+      "assinatura": "57479021421284816192e2a8"
+    }
+  ],
+  "zulip-msg-1245191": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "This in general requires a good amount of testing.",
+      "assinatura": "4dc0418069d6c6302c6469d7"
+    }
+  ],
+  "zulip-msg-1245193": [
+    {
+      "funcao": "propor um próximo passo",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I think we need to change the puppeteer tests also.",
+      "assinatura": "10fb984bca5bfceaedec75a3"
+    }
+  ],
+  "zulip-msg-1245194": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "As according to it, the draft should not have been created.",
+      "assinatura": "5da18dbdb87e87ddcf07cb51"
+    }
+  ],
+  "zulip-msg-1245348": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Now the CI is passing.",
+      "assinatura": "997b4b9ffd1233b9d18a71e5"
+    }
+  ],
+  "zulip-msg-1245350": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Have made few changes in the puppeteer tests.",
+      "assinatura": "ad9a1274a7e9be0cbd59f563"
+    }
+  ],
+  "zulip-msg-1245644": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Tim Abbott** updated the PR.",
+      "assinatura": "4dac6bd866484a01db3f8258"
+    }
+  ],
+  "zulip-msg-1245646": [
+    {
+      "funcao": "informar andamento",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "Removed logging statements and also added node tests.",
+      "assinatura": "bd21698ea1a3fd630ac425ce"
+    }
+  ],
+  "zulip-msg-1253367": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "@**Tim Abbott** can you look this PR now?",
+      "assinatura": "4bb7cfa990547f557ff922df"
+    }
+  ],
+  "zulip-msg-1253371": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "Also do let me know if rebase is required though there are no conflicts right now.",
+      "assinatura": "b0277e978fe13897fc597ca0"
+    }
+  ],
+  "zulip-msg-1253404": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Priyam Seth (Signior-X)** thanks for the ping; I've finally had the time to reread this carefully and merge it :)",
+      "assinatura": "9356a9477fd87d5be4cdf711"
+    }
+  ],
+  "zulip-msg-1253405": [
+    {
+      "funcao": "reconhecer a resposta",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "Hurrah!",
+      "assinatura": "198e87306249f9b968275664"
+    }
+  ],
+  "zulip-msg-492917": [
+    {
+      "funcao": "avaliar proposta",
+      "usos": [
+        "dar-feedback"
+      ],
+      "trecho": "Hmm, that's an interesting idea!",
+      "assinatura": "abbd6d0305b33a86e8ccb09d"
+    }
+  ],
+  "zulip-msg-1497311": [
+    {
+      "funcao": "solicitar esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "trecho": "Is it possible to edit the type of an existing bot, either via the WebUI, API, or `manage.py` command?",
+      "assinatura": "785c45c840e46e19f7c7d563"
+    }
+  ],
+  "zulip-msg-1497459": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Andrew Martin** not in the UI -- you can certainly do that via the command-line `manage.py shell`.",
+      "assinatura": "05201de1fcc5c73b476efc72"
+    }
+  ],
+  "zulip-msg-1497461": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "do you have an example of how to do that?",
+      "assinatura": "ce958b0b445115bfec87cdda"
+    }
+  ],
+  "zulip-msg-1497526": [
+    {
+      "funcao": "explicar uma restrição",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "I'm a bit swamped today but hopefully someone else can provide the 3 line script needed to get a user, change it's `bot_type`, and save it.",
+      "assinatura": "49dc7b25d29fe2fda0b9fb43"
+    }
+  ],
+  "zulip-msg-1498141": [
+    {
+      "funcao": "solicitar ajuda",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "trecho": "I need help with this issue too - I've created a script that calls my admin user's API, queries for the bot's current type and sends the command:",
+      "assinatura": "8c277542257e5687f679a114"
+    }
+  ],
+  "zulip-msg-1498233": [
+    {
+      "funcao": "explicar o contexto",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Adam Fulton** Tim's response indicates that this is not possible via the API, even if you are an Admin, and instead would need to use a `manage.py` command on the server itself.",
+      "assinatura": "9d0354cafb702a32eedae453"
+    }
+  ],
+  "zulip-msg-1498272": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Andrew Martin**: You want to, as the `zulip` user on your server:",
+      "assinatura": "bc808445cd3deb2aac910527"
+    }
+  ],
+  "zulip-msg-1498274": [
+    {
+      "funcao": "orientar uso de recurso",
+      "usos": [
+        "dia-a-dia"
+      ],
+      "trecho": "@**Adam Fulton**: See above, as well.",
+      "assinatura": "a9a152c304e0c3f39ad7b81c"
+    }
+  ],
+  "zulip-msg-1499019": [
+    {
+      "funcao": "agradecer",
+      "usos": [
+        "conversacao"
+      ],
+      "trecho": "@**Alex Vandiver** thank you!",
+      "assinatura": "f008ecccbfb6842537b0f96b"
+    }
+  ],
+  "zulip-msg-2035047": [
+    {
+      "trecho": "Well the problem here isn't how we verified the expected values at the end, so I'm not sure what `deepEqual` would improve.",
+      "funcao": "explicitar uma incerteza",
+      "usos": [
+        "conversacao",
+        "gramatica"
+      ],
+      "assinatura": "53bfc9334fa54804bde09108"
+    }
+  ],
+  "zulip-msg-2213954": [
+    {
+      "trecho": "It's not a huge deal, but I don't understand why you would diverge from the HTML paradigm (three decades old) of modeling this as `OrderedList` and `UnorderedList`?",
+      "funcao": "pedir esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "aab65adf966351379430c642"
+    }
+  ],
+  "zulip-msg-2403709": [
+    {
+      "trecho": "I don't understand why you perceive this change as risky relative to what's on main.",
+      "funcao": "pedir esclarecimento",
+      "usos": [
+        "esclarecer"
+      ],
+      "assinatura": "70525af544d7d20ad503b8b9"
+    }
+  ],
+  "zulip-msg-243698": [
+    {
+      "trecho": "I'll be able to provide some codes when we talk about the following steps.",
+      "funcao": "combinar o próximo passo",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "1efc1fd31c163a92e54d4dd5"
+    }
+  ],
+  "zulip-msg-629813": [
+    {
+      "trecho": "Speaking of strange things, I don't understand why the commit on #10292 is getting mypy errors.",
+      "funcao": "explicitar uma incerteza",
+      "usos": [
+        "conversacao",
+        "gramatica"
+      ],
+      "assinatura": "60379d4ee3bafcd4752dc3ef"
+    }
+  ],
+  "zulip-msg-636746": [
+    {
+      "trecho": "Unless you're just saying it's timing.",
+      "funcao": "propor uma interpretação da fala anterior",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "e98d38cd888ff9e967bddffd"
+    }
+  ],
+  "zulip-msg-841841": [
+    {
+      "trecho": "I'm not sure why this would matter, but the 00 test and 01 test are the only tests that don't call `common.start_and_log_in()`, which make sense, since they're hitting non-logged in URLs.",
+      "funcao": "explicitar uma incerteza",
+      "usos": [
+        "conversacao",
+        "gramatica"
+      ],
+      "assinatura": "579c9983134dcf3b895952a1"
+    }
+  ],
+  "zulip-msg-1480705": [
+    {
+      "trecho": "where you have accounts on multiple servers and can group them (or not) how you wish, which would be an extension of the Desktop/Mobile app ability.",
+      "funcao": "usar “extension of” para apresentar uma ampliação de uma ideia",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "9df9d3cdab9d5ec52cd6fcb7"
+    }
+  ],
+  "zulip-msg-1524299": [
+    {
+      "trecho": "It looks like a natural extension of the topics for streams, and it could be really useful for when you have very regular interactions with somebody (obviously one could create a private stream with that person, but it looks like a hack)",
+      "funcao": "usar “extension of” para apresentar uma ampliação de uma ideia",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "5e0e7772b255b8806e550010"
+    }
+  ],
+  "zulip-msg-1742610": [
+    {
+      "trecho": "Assuming we want to keep those in the raw message popup, we could work around that, but as per the review, more generally an extension of a solution to #T1002 may be the way to go to keep things visually tidy - and help with other popups too.",
+      "funcao": "usar “extension of” para apresentar uma ampliação de uma ideia",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "7d47f8c933d9de02a919c6a4"
+    }
+  ],
+  "zulip-msg-1797179": [
+    {
+      "trecho": "I think it doesn't necessarily need to be thought of as a reverse linkifier; another way to think about it would be an extension of linkifiers that lets you transform tokens, which could include link syntax, into other named link tokens.",
+      "funcao": "usar “extension of” para apresentar uma ampliação de uma ideia",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "0927260ffb1c4db04ceeee86"
+    }
+  ],
+  "zulip-msg-1813209": [
+    {
+      "trecho": "I think something similar to but separate from drafts, like a \"saved response templates\" type thing could work, but I'd not feel great about it as a cheap extension of drafts.",
+      "funcao": "usar “extension of” para apresentar uma ampliação de uma ideia",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "1894ee91a20cee86f766113c"
+    }
+  ],
+  "zulip-msg-1527933": [
+    {
+      "trecho": "thank you I proceeded with that, it would be really nice if you can also share the deliverables of this project so that we can have a tentative deadline for each of them while we draft our proposals.",
+      "funcao": "pedir as entregas esperadas para poder estimar um prazo para cada uma",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "068049a271cfb912a13a6667"
+    }
+  ],
+  "zulip-msg-1634173": [
+    {
+      "trecho": "I'll fill out the form to get an extension on Google Play's deadline for the new targetSdkVersion.",
+      "funcao": "assumir a ação de solicitar formalmente uma prorrogação",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "f1132279e59ba6453ae21ddb"
+    }
+  ],
+  "zulip-msg-1643948": [
+    {
+      "trecho": "I'll spend a bit more time trying to find a way to cause an update, but if that doesn't work then I'll just post an alpha without Sentry and ask coworkers who can reproduce the issue to see if that indeed fixes it.",
+      "funcao": "combinar qual providência será tomada e em que momento",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "012a9809c978c6c3d37ce200"
+    }
+  ],
+  "zulip-msg-1913802": [
+    {
+      "trecho": "I'll edit the proposal, before the deadline for editing.",
+      "funcao": "combinar qual providência será tomada e em que momento",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "019a49f525568c93c213e8c0"
+    }
+  ],
+  "zulip-msg-2323200": [
+    {
+      "trecho": "We can leave a `TODO(design)` comment to help record that these particular icons would benefit from a design review whenever we have more time from a designer.",
+      "funcao": "combinar qual providência será tomada e em que momento",
+      "usos": [
+        "confirmar-proximos-passos"
+      ],
+      "assinatura": "f7d4e9f501bc8f0fc1386853"
+    }
+  ],
+  "zulip-msg-1644224": [
+    {
+      "trecho": "I made the same request a couple of weeks ago and it was granted then. We've been planning for the new Oct 31 deadline, and didn't expect the requirement to reappear before then.",
+      "funcao": "justificar a renovação de uma prorrogação retomando o prazo já concedido",
+      "usos": [
+        "negociar-prazo"
+      ],
+      "assinatura": "1831ca1082d0eedc11c9e5a7"
+    }
+  ],
+  "zulip-msg-1713014": [
+    {
+      "trecho": "I expect to have more time to catch up on things more now, but please do give feedback on others' PRs, issues & discussion.",
+      "funcao": "avisar sobre a disponibilidade e pedir que os colegas também contribuam",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "1de8034af2572957b1f774df"
+    }
+  ],
+  "zulip-msg-1770307": [
+    {
+      "trecho": "After the Google deadline for proposals passes, organizations such as Zulip have a window of time to apply Google's processes to select matching candidates from those who have applied - until another hard Google deadline, this time now for Zulip.",
+      "funcao": "explicar o que ainda será possível fazer depois do prazo",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "f28c9f7a7f3ae84cf68d7985"
+    }
+  ],
+  "zulip-msg-1771826": [
+    {
+      "trecho": "You can submit a proposal before the deadline and work on demonstrating you'd be able to do it after, yeah.",
+      "funcao": "explicar o que ainda será possível fazer depois do prazo",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "8885225a0dde561223085537"
+    }
+  ],
+  "zulip-msg-2146987": [
+    {
+      "trecho": "However, you can continue to make contributions after the application deadline, and using specific links in your application will allow them to update automatically to show your current PRs until the time that decisions are made.",
+      "funcao": "explicar o que ainda será possível fazer depois do prazo",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "9933a87b38a33ac3a92bf05c"
+    }
+  ],
+  "zulip-msg-2146989": [
+    {
+      "trecho": "It's also fine to have open PRs at this point, and keep working on them after the application deadline, as another example - so you don't need to hold off on working on issues/areas before each deadline in the GSoC process.",
+      "funcao": "explicar o que ainda será possível fazer depois do prazo",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "c8f469a8d03ed66735fec5b6"
+    }
+  ],
+  "zulip-msg-1771660": [
+    {
+      "trecho": "Although it's late to apply as the deadline is tomorrow, is it still worthwhile to submit proposal?",
+      "funcao": "pedir orientação para decidir se ainda vale a pena enviar uma proposta",
+      "usos": [
+        "pedir-ajuda"
+      ],
+      "assinatura": "85a46ad1e35fb38f930494cb"
+    }
+  ],
+  "zulip-msg-1800324": [
+    {
+      "trecho": "E.g., it helps me decide whether to look at it now, or save it for when I have more time.",
+      "funcao": "explicar o efeito do tempo disponível sobre a escolha de tarefas",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "9c562dc7a5227342fcd594e6"
+    }
+  ],
+  "zulip-msg-2146610": [
+    {
+      "trecho": "Also, since GSoC 2025 application deadline is so close, I wanted to work on something small, so working on templates was a good option for me",
+      "funcao": "explicar o efeito do tempo disponível sobre a escolha de tarefas",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "8915ee0d171157c375bc8a73"
+    }
+  ],
+  "zulip-msg-1971054": [
+    {
+      "trecho": "I trim out the extension for the URL ie `.png` then check if the network URL contains the `trimmedUrl`.",
+      "funcao": "usar “extension” no sentido de extensão técnica",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "c8fbb398e5adeff73a6c2971"
+    }
+  ],
+  "zulip-msg-1986584": [
+    {
+      "trecho": "(So in a world with that API change, maybe we can write an extension on `FontWeight` that aliases `w600` as `semiBold`, etc.)",
+      "funcao": "usar “extension” no sentido de extensão técnica",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "ef23b602648dbe9f32d59224"
+    }
+  ],
+  "zulip-msg-2444978": [
+    {
+      "trecho": "Alternative fix would be to set `UNMutableNotificationContent.sound` in NotificationService extension on client.",
+      "funcao": "usar “extension” no sentido de extensão técnica",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "c22b9612fdfbd0e55efbdd46"
+    }
+  ],
+  "zulip-msg-2475906": [
+    {
+      "trecho": "I carry codespell's path exclusions through its native --skip plus .codespellignore, so the codespell-specific excludes stay out of the shared zulint config and I don't need the interface extension for this case.",
+      "funcao": "usar “extension” no sentido de extensão técnica",
+      "usos": [
+        "vocabulario"
+      ],
+      "assinatura": "b5645c583c86f211523cf35b"
+    }
+  ],
+  "zulip-msg-2202438": [
+    {
+      "trecho": "I understand, but that doesn't help me push back against transitioning to Slack.",
+      "funcao": "usar “push back” para manifestar discordância",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "556f723b1fce77d35eaa0c38"
+    }
+  ],
+  "zulip-msg-2210828": [
+    {
+      "trecho": "I would like to slightly push back against the idea that \"quote\" is communicating the right intention to end users.",
+      "funcao": "usar “push back” para manifestar discordância",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "edf875e17d026ae4bcf07afa"
+    }
+  ],
+  "zulip-msg-2253345": [
+    {
+      "trecho": "I'll push back a little here.",
+      "funcao": "usar “push back” para manifestar discordância",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "a84d62858ef884e104bcdb85"
+    }
+  ],
+  "zulip-msg-2257705": [
+    {
+      "trecho": "I'll push back strongly against the work hours feature.",
+      "funcao": "usar “push back” para manifestar discordância",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "33d44b014808a9e197012516"
+    }
+  ],
+  "zulip-msg-2334369": [
+    {
+      "trecho": "I'll push back a little on the premise that users already know how **when** to start a conversations.",
+      "funcao": "usar “push back” para manifestar discordância",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "61f6796defd8766ddf8852c1"
+    }
+  ],
+  "zulip-msg-2465796": [
+    {
+      "trecho": "I'd push back on this.",
+      "funcao": "usar “push back” para manifestar discordância",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "40ff53da1e527a7b4adcb1f0"
+    }
+  ],
+  "zulip-msg-2472007": [
+    {
+      "trecho": "Since web's changes didn't land as recommendations in that doc, I'd gently push back on the claim that we should have noticed them and made corresponding changes.",
+      "funcao": "usar “push back” para manifestar discordância",
+      "usos": [
+        "phrasal-verbs"
+      ],
+      "assinatura": "ff6082ebd6b32149b185b0a0"
+    }
+  ],
+  "zulip-msg-2499730": [
+    {
+      "trecho": "You mentioned notifying about maintenance downtime, and I could see this being useful for alerts related to people's work, too: Deadline reminders, office closures, HR announcements...",
+      "funcao": "dar exemplos do tipo de aviso que poderia ser incluído",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "e2febdbd16ac97f6a6bc9830"
+    }
+  ],
+  "zulip-msg-1634180": [
+    {
+      "trecho": "Done, so we now have until end of October.",
+      "funcao": "confirmar o prazo obtido após uma prorrogação",
+      "usos": [
+        "conversacao"
+      ],
+      "assinatura": "8464df95cfdfc9d6d16a074d"
     }
   ]
 }
