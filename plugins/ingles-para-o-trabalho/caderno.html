@@ -118,7 +118,7 @@
 <script>
   const get = id => document.getElementById(id);
   const pending = new Map();
-  const state = {entries: [], sources: [], coverage: null};
+  const state = {entries: [], sources: [], coverage: null, wiki: false};
   const kindNames = {lesson: "Aula", practice: "Prática", review: "Revisão", note: "Nota"};
   const scopeNames = {sample: "Amostra", pilot: "Piloto", full: "Coleta ampliada"};
   const searchableControls = ["refresh", "download", "search-submit"];
@@ -442,7 +442,7 @@
     let response;
     try {
       response = reference?.tool === "read_wiki_item"
-        ? await call("read_wiki_item", {item_id: id})
+        ? await call("read_wiki_item", {item_id: id, offset: reference.offset_texto || 0})
         : await call("read_source", {source_id: id});
     } catch (error) {
       if (request !== latestSourceRequest) return;
@@ -514,6 +514,15 @@
   }
 
   function renderSources() {
+    const soWiki = state.wiki && !state.sources.some(source => source.available);
+    get("download").hidden = soWiki;
+    get("intent").parentElement.hidden = soWiki;
+    if (soWiki) {
+      const row = element("li");
+      row.append(referenceButton({id: "wiki/index.md", title: "Índice da wiki", tool: "read_wiki_item"}));
+      get("sources").replaceChildren(row);
+      return;
+    }
     const intent = get("intent").value;
     const matching = state.sources.filter(source => intent === "all" || categories(source).includes(intent));
     const rows = matching.map(source => {
@@ -540,6 +549,11 @@
   }
 
   function renderCoverage(coverage) {
+    get("query").labels[0].textContent = state.wiki ? "Buscar em toda a wiki" : "Buscar nas mensagens do Zulip";
+    if (state.wiki) {
+      get("coverage").textContent = "Wiki completa disponível para consulta local.";
+      return;
+    }
     if (!coverage) return;
     const parts = [];
     const doist = coverage.doist;
@@ -559,6 +573,7 @@
     state.entries = data.entries ?? state.entries;
     state.sources = data.sources ?? state.sources;
     state.coverage = data.coverage ?? state.coverage;
+    state.wiki = data.wiki_disponivel ?? state.wiki;
     renderEntries();
     renderSources();
     renderCoverage(state.coverage);
@@ -573,11 +588,12 @@
     const normalizedQuery = query.toLowerCase();
     const rows = matches.map(match => {
       const row = element("li");
-      const button = sourceButton(match.topic || "Abrir mensagem", match.id);
-      button.lang = "en";
-      row.append(button, " ", element("small", [match.channel, scopeNames[match.scope]].filter(Boolean).join(" · ")));
-      if (match.excerpt) {
-        const excerpt = match.excerpt.replace(/\s+/g, " ").trim();
+      const reference = match.citar_id ? {tool: "read_wiki_item", offset_texto: match.offset_texto} : undefined;
+      const button = sourceButton(match.titulo || match.topic || "Abrir mensagem", match.citar_id || match.id, reference);
+      const detalhes = match.citar_id ? [match.fonte, match.tipo] : [match.channel, scopeNames[match.scope]];
+      row.append(button, " ", element("small", detalhes.filter(Boolean).join(" · ")));
+      if (match.trecho || match.excerpt) {
+        const excerpt = (match.trecho || match.excerpt).replace(/\s+/g, " ").trim();
         const position = excerpt.toLowerCase().indexOf(normalizedQuery);
         const start = Math.max(0, position - 70);
         const end = Math.min(excerpt.length, start + Math.max(200, query.length + 85));
@@ -612,18 +628,20 @@
       get("search-info").textContent = "Buscando no acervo local…";
       get("matches").replaceChildren();
       try {
-        const {structuredContent: data} = await call("search_zulip", {query});
+        const {structuredContent: data} = state.wiki
+          ? await call("search_wiki", {text: query}, 185000)
+          : await call("search_zulip", {query});
         const coverage = data.coverage ?? state.coverage;
         const scopes = scopesFor(coverage);
-        if (coverage?.zulip?.searchable === false) {
+        if (!state.wiki && coverage?.zulip?.searchable === false) {
           get("search-info").textContent = "Baixe a amostra inicial para buscar mensagens do Zulip.";
           return;
         }
         renderMatches(data.matches, query);
         const count = data.matches.length;
-        const location = scopes.length ? " (" + scopes.join(", ") + ")" : "";
+        const location = !state.wiki && scopes.length ? " (" + scopes.join(", ") + ")" : "";
         get("search-info").textContent = count ? "Resultados encontrados: " + count + location
-          : "Nenhuma mensagem encontrada para “" + query + "”" + location + ".";
+          : "Nenhum resultado para “" + query + "”" + location + ".";
       } catch (error) {
         get("search-info").textContent = "A busca não terminou. Tente novamente.";
         throw error;
@@ -649,7 +667,7 @@
       return;
     }
     await rpc("ui/initialize", {
-      appInfo: {name: "Inglês para o Trabalho", version: "0.3.0"},
+      appInfo: {name: "Inglês para o Trabalho", version: "0.5.0"},
       appCapabilities: {}, protocolVersion: "2026-01-26"
     });
     initialized = true;

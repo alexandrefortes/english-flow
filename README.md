@@ -2,34 +2,41 @@
 
 Use o plugin **Inglês para o Trabalho** para estudar gramática, simular conversas e revisar o que você salvou no caderno. Os exemplos vêm de conversas escritas da Doist e do Zulip.
 
-## Instalar o plugin no Codex
+## Instalar a versão com a wiki completa
+
+Use o Codex CLI com suporte a plugins, Git e Python 3.11 ou superior disponível como `python`. Para instalar a edição publicada por tag, execute:
+
+```sh
+codex plugin marketplace add alexandrefortes/workplace-english-practice --ref v0.5.0
+codex plugin add ingles-para-o-trabalho@workplace-english-local
+```
+
+Selecione **Inglês para o Trabalho** no Codex. A tag de distribuição reúne o plugin e o catálogo de instalação. A primeira consulta prepara a wiki no cache pessoal a partir dos arquivos incluídos no plugin. As consultas seguintes usam o índice local. [Instalação e uso](plugins/ingles-para-o-trabalho/README.md)
+
+## Instalar a partir do repositório
 
 Use Python 3.11 ou superior. Execute os comandos na raiz do repositório.
 
-1. Instale a dependência do plugin no Python que o Codex usa.
-
-   ```sh
-   python -m pip install -r plugins/ingles-para-o-trabalho/requirements.txt
-   ```
-
-2. Registre o catálogo local de plugins no Codex.
+1. Registre o catálogo local de plugins no Codex.
 
    ```sh
    codex plugin marketplace add .
    ```
 
-3. Instale o plugin.
+2. Instale o plugin.
 
    ```sh
    codex plugin add ingles-para-o-trabalho@workplace-english-local
    ```
+
+Para distribuir alterações nas páginas, nos catálogos e na curadoria de `wiki/`, execute `python -B nuvem/empacotar_projeto.py` e versione os dois arquivos `projeto.*` atualizados em `plugins/ingles-para-o-trabalho/acervo/`.
 
 ## Abrir o caderno
 
 1. Abra uma conversa local no Codex.
 2. Selecione **Inglês para o Trabalho**.
 3. Peça “Abra meu caderno de estudos”. O painel mostra as aulas, as práticas e as revisões salvas.
-4. Se quiser começar com cinco exemplos, selecione **Baixar amostra**. O download precisa de internet.
+4. Na edição completa, use **Buscar em toda a wiki**. Na instalação sem wiki, **Baixar amostra** oferece cinco exemplos e requer internet.
 
 Por padrão, o caderno fica em `Inglês para o Trabalho/caderno de estudos` na sua pasta pessoal. Se já tem um caderno em outra pasta, defina `INGLEST_NOTEBOOK_DIR` com o caminho completo dessa pasta antes de iniciar o Codex.
 
@@ -61,7 +68,9 @@ O plugin salva cada aula nova em inglês, em um arquivo Markdown com cabeçalho 
 
 Para estudar offline em outro computador, copie a pasta `wiki/` inteira após a restauração. A wiki segue a ideia de manter o material de estudo em páginas ligadas às fontes. [LLM Wiki, de Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 
-### Buscar exemplos da wiki pelo plugin
+### Consultar uma wiki de desenvolvimento
+
+Para consultar as edições que você faz no checkout, indique a pasta do projeto ao plugin. A instalação pela tag já inclui a edição publicada.
 
 1. Na raiz do repositório, defina `INGLEST_PROJECT_DIR` com o comando do seu ambiente.
 

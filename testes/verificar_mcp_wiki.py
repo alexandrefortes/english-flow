@@ -1,4 +1,5 @@
-"""Valida offline o MCP por stdio contra a wiki preparada. Execute este arquivo na raiz."""
+"""Valida offline o MCP do checkout ou de uma instalação com a wiki incluída."""
+import argparse
 import json
 import os
 from pathlib import Path
@@ -12,9 +13,13 @@ SERVER = ROOT / "plugins/ingles-para-o-trabalho/server.py"
 
 
 class Sessao:
-    def __init__(self, caderno, projeto=ROOT):
-        env = {**os.environ, "INGLEST_PROJECT_DIR": str(projeto), "INGLEST_NOTEBOOK_DIR": str(caderno)}
-        self.proc = subprocess.Popen([sys.executable, "-B", "-u", SERVER], env=env, stdin=subprocess.PIPE,
+    def __init__(self, caderno, projeto=ROOT, servidor=SERVER):
+        env = {**os.environ, "INGLEST_NOTEBOOK_DIR": str(caderno)}
+        if projeto is None:
+            env.pop("INGLEST_PROJECT_DIR", None)
+        else:
+            env["INGLEST_PROJECT_DIR"] = str(projeto)
+        self.proc = subprocess.Popen([sys.executable, "-B", "-u", servidor], env=env, cwd=servidor.parent, stdin=subprocess.PIPE,
                                      stdout=subprocess.PIPE, text=True, encoding="utf-8")
         self.seq = 0
         self.rpc("initialize", {"protocolVersion": "2025-11-25", "capabilities": {},
@@ -46,11 +51,14 @@ class Sessao:
 
 
 class WikiOffline(unittest.TestCase):
+    projeto = ROOT
+    servidor = SERVER
+
     @classmethod
     def setUpClass(cls):
         cls.caderno = TemporaryDirectory()
         cls.addClassCleanup(cls.caderno.cleanup)
-        cls.mcp = Sessao(cls.caderno.name)
+        cls.mcp = Sessao(cls.caderno.name, cls.projeto, cls.servidor)
         cls.addClassCleanup(cls.mcp.fechar)
 
     def buscar(self, **filtros):
@@ -75,6 +83,8 @@ class WikiOffline(unittest.TestCase):
                 item = self.abrir(chave)
                 self.assertIn(texto, " ".join(item["texto"].split()))
                 self.assertEqual(geral[0]["pagina_local"], item["pagina_local"])
+                if self.projeto is None:
+                    self.assertTrue(Path(item["pagina_local"]).is_file())
                 if item["tipo"] == "anexo":
                     self.assertEqual(item["qualidade_transcricao"], "parcial")
                     self.assertEqual(self.buscar(text="fixing CSS specificity problems", curation="conferido"), [])
@@ -153,4 +163,10 @@ class WikiOffline(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("--plugin", type=Path, help="validar a pasta instalada sem configurar o caminho da wiki")
+    opcoes, outros = parser.parse_known_args()
+    if opcoes.plugin:
+        WikiOffline.servidor = opcoes.plugin.resolve() / "server.py"
+        WikiOffline.projeto = None
+    unittest.main(argv=[sys.argv[0], *outros])

@@ -1,19 +1,55 @@
 import json
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import sqlite3
 import sys
+import tarfile
 from tempfile import TemporaryDirectory
 import unittest
 
 import preparar_nuvem
+from edicao import destino_incluido, hash_arquivo, preparar_incluida
 from construir_grafo import ESQUEMA
 from ingerir_acervo import Edicao
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "nuvem"))
-from empacotar import empacotar, limpar
+from empacotar import adicionar, empacotar, limpar
 
 
 class PacoteNuvem(unittest.TestCase):
+    def test_edicao_incluida_publica_fontes_e_curadoria_juntas(self):
+        with TemporaryDirectory() as tmp:
+            raiz = Path(tmp)
+            local, pacote, destino = (raiz / nome for nome in ("origem", "pacote", "cache/wiki"))
+            edicao = Edicao(local)
+            edicao.escrever("index.md", "# Conversas\n")
+            banco = raiz / "grafo.sqlite3"
+            with sqlite3.connect(banco) as db:
+                db.executescript(ESQUEMA)
+            db.close()
+            edicao.copiar(banco.name, banco)
+            edicao.finalizar({"imagens": 0})
+            empacotar(local, pacote)
+
+            projeto = pacote / "projeto.tar.gz"
+            with tarfile.open(projeto, "w:gz") as tar:
+                adicionar(tar, "situacoes.md", b"# Situacoes\n")
+            selo = pacote / "projeto.sha256"
+            selo.write_text("0" * 64)
+            antigo = destino_incluido(pacote)
+            with self.assertRaisesRegex(ValueError, "curadoria divergente"):
+                preparar_incluida(pacote, destino)
+            self.assertFalse(destino.exists())
+            selo.write_text(hash_arquivo(projeto))
+            self.assertNotEqual(antigo, destino_incluido(pacote))
+            with ThreadPoolExecutor(max_workers=2) as executor:
+                a = executor.submit(preparar_incluida, pacote, destino)
+                b = executor.submit(preparar_incluida, pacote, destino)
+                a.result()
+                b.result()
+            self.assertEqual((destino / "situacoes.md").read_bytes(), b"# Situacoes\n")
+            self.assertEqual((destino / "local/index.md").read_text(), "# Conversas\n")
+
     def test_edicao_textual_integridade_e_preservacao_do_original(self):
         with TemporaryDirectory() as tmp:
             raiz = Path(tmp)

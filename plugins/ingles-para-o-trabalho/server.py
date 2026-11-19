@@ -12,27 +12,41 @@ import sys
 from tempfile import NamedTemporaryFile
 from threading import Lock
 
+PLUGIN = Path(__file__).resolve().parent
+sys.path.insert(0, str(PLUGIN / "lib/pyyaml.zip"))
 import yaml
 
 import acervo_local as acervo
 import consulta_grafo as grafo
 import busca_wiki
+from edicao import PACOTE, destino_incluido, preparar_incluida
 from indice_wiki import TIPOS, ESTADOS, conectar
 from acervo_original import MAX_DOWNLOAD, baixar, baixar_mensagens, verified_image_extension
 
 
-PLUGIN = Path(__file__).resolve().parent
-ROOT = Path(os.environ.get("INGLEST_PROJECT_DIR") or Path.home() / "Inglês para o Trabalho").expanduser().resolve()
+PROJETO = os.environ.get("INGLEST_PROJECT_DIR")
+ROOT = Path(PROJETO or Path.home() / "Inglês para o Trabalho").expanduser().resolve()
 NOTEBOOK = Path(os.environ.get("INGLEST_NOTEBOOK_DIR") or ROOT / "caderno de estudos").expanduser().resolve()
 DATA = ROOT / "dados"
-WIKI = ROOT / "wiki"
+WIKI_INCLUIDA = destino_incluido(PACOTE) if not PROJETO and (PACOTE / "acervo.json").is_file() else None
+WIKI = WIKI_INCLUIDA or ROOT / "wiki"
 UI_URI = "ui://ingles-trabalho/caderno.html"
 UI_TYPE = "text/html;profile=mcp-app"
 KINDS = ("lesson", "practice", "review", "note")
 
 
+def wiki_disponivel():
+    return WIKI == WIKI_INCLUIDA or (WIKI / "local/manifesto.json").is_file()
+
+
+def pasta_wiki():
+    if WIKI == WIKI_INCLUIDA:
+        preparar_incluida(PACOTE, WIKI)
+    return WIKI
+
+
 def list_sources():
-    return acervo.list_sources(DATA)
+    return {**acervo.list_sources(DATA), "wiki_disponivel": wiki_disponivel()}
 
 
 def atomic_write(path, data, *, replace=False):
@@ -106,11 +120,11 @@ def search_zulip(query):
 
 
 def abrir_grafo():
-    path = WIKI / "local" / "grafo.sqlite3"
+    path = pasta_wiki() / "local" / "grafo.sqlite3"
     if not path.is_file():
         raise ValueError("Grafo ausente. Coloque a wiki completa em INGLEST_PROJECT_DIR/wiki, incluindo local/grafo.sqlite3.")
     indice = path.with_name("consulta.sqlite3")
-    if indice.is_file():
+    if indice.is_file() or wiki_disponivel():
         conectar(WIKI).close()
     return grafo.abrir_leitura(path, indice)
 
@@ -137,15 +151,15 @@ def read_graph_node(node_id):
 
 
 def search_wiki(**filtros):
-    return busca_wiki.consultar(WIKI, busca_wiki.buscar, **filtros)
+    return busca_wiki.consultar(pasta_wiki(), busca_wiki.buscar, **filtros)
 
 
 def read_wiki_item(item_id, offset=0, limit=9000):
-    return busca_wiki.consultar(WIKI, busca_wiki.abrir, chave=item_id, offset=offset, limit=limit)
+    return busca_wiki.consultar(pasta_wiki(), busca_wiki.abrir, chave=item_id, offset=offset, limit=limit)
 
 
 def source_ref(key):
-    if (WIKI / "local/consulta.sqlite3").is_file():
+    if wiki_disponivel() or (WIKI / "local/consulta.sqlite3").is_file():
         try:
             item = read_wiki_item(key, limit=1)
         except ValueError:
@@ -388,7 +402,7 @@ def dispatch(method, params):
         requested = params.get("protocolVersion")
         return {"protocolVersion": requested if requested in versions else versions[-1],
                 "capabilities": {"tools": {}, "resources": {}},
-                "serverInfo": {"name": "ingles-para-o-trabalho", "version": "0.4.0"}}
+                "serverInfo": {"name": "ingles-para-o-trabalho", "version": "0.5.0"}}
     if method == "ping":
         return {}
     if method == "tools/list":

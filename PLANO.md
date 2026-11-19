@@ -6,7 +6,7 @@ O aluno pede um exemplo em português ou em inglês. O agente segue as instruç�
 
 O plugin 0.3.0 usa `search_graph` para buscar mensagens do Zulip e capturas da Doist. No grafo, 31 fontes têm pelo menos uma ligação `curado`. Outras 26.674 têm apenas ligações `candidato`. Uma ligação `curado` indica que o trecho foi conferido para aquele uso didático.
 
-O pacote em `nuvem/` contém as transcrições das 46 capturas da Doist, as conversas do Zulip, 28.455 páginas de anexos, os índices e o grafo. A wiki também tem 16 páginas didáticas. A edição inclui 1.816 transcrições já revisadas. A revisão visual em massa está pausada. Para a curadoria na nuvem, basta o texto disponível no repositório.
+O pacote em `plugins/ingles-para-o-trabalho/acervo/` contém as transcrições das 46 capturas da Doist, as conversas do Zulip, 28.455 páginas de anexos, os índices e o grafo. A wiki também tem 16 páginas didáticas. A edição inclui 1.816 transcrições já revisadas. A revisão visual em massa está pausada. Para a curadoria na nuvem, basta o texto disponível no repositório.
 
 ## 1. Preparar o trabalho na nuvem
 

@@ -1,6 +1,6 @@
 {
   "name": "ingles-para-o-trabalho",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Aulas e prática de inglês para o trabalho com acervo público e caderno local.",
   "skills": "./skills",
   "mcpServers": "./.mcp.json",

@@ -9,10 +9,14 @@ from pathlib import Path
 import re
 import shutil
 import sqlite3
+import sys
 from tempfile import NamedTemporaryFile
 from urllib.parse import quote, urlsplit
 
 from construir_grafo import PROJETO, SITUACOES, TEMAS, WIKI, abrir_leitura
+
+sys.path.insert(0, str(PROJETO / "plugins/ingles-para-o-trabalho"))
+from edicao import hash_arquivo, verificar
 
 
 DOIST_HOSTS = {"async.twist.com", "twist.com", "www.todoist.com"}
@@ -95,11 +99,6 @@ def resumo_extrativo(fontes, ligacoes):
             exemplos.append(f"{literal} ([{fonte}](#{fonte}))" if fonte else literal)
         linhas.append(f"- **{RESUMO[slug]}** · " + " · ".join(exemplos))
     return "\n".join(linhas) + "\n\n"
-
-
-def hash_arquivo(caminho):
-    with caminho.open("rb") as arquivo:
-        return hashlib.file_digest(arquivo, "sha256").hexdigest()
 
 
 class Edicao:
@@ -383,17 +382,6 @@ def ingerir(dados, grafo, saida):
     totais["imagens"] = capturas
     edicao.finalizar(totais)
     return {**totais, "arquivos_escritos": edicao.escritos}
-
-
-def verificar(pasta):
-    manifesto = json.loads((pasta / "manifesto.json").read_text(encoding="utf-8"))
-    if manifesto.get("schema_version") != 1:
-        raise ValueError("Versão desconhecida do manifesto da edição.")
-    for nome, resumo in manifesto["arquivos"].items():
-        arquivo = (pasta / nome).resolve()
-        if not arquivo.is_relative_to(pasta) or hash_arquivo(arquivo) != resumo:
-            raise ValueError(f"Arquivo da edição divergente: {nome}.")
-    return {**manifesto["totais"], "arquivos_verificados": len(manifesto["arquivos"])}
 
 
 def main():
