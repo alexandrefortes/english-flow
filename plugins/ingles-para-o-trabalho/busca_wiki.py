@@ -100,14 +100,21 @@ UPLOAD = re.compile(r"!?\[[^\]\n]*\]\((?:https?://[^/ )]+)?/user_uploads/[^)\n]+
                     r"|(?:https?://[^/\s]+)?/user_uploads/[^\s)]+", re.I)
 
 
-CITACAO = re.compile(r"\[said\]\(https://chat\.zulip\.org/[^)\s]*/near/(\d+)\):\s*"
-                     r"^(`{3,})quote\n(.*?)^\2[ \t]*$", re.S | re.M)
+# O Zulip traduz o texto do link de citação. O ID vem do endereço.
+CITACAO = re.compile(r"\[[^\]\n]+\]\(https://chat\.zulip\.org/[^)\s]*/near/(\d+)\)[:：]?[ \t]*\n"
+                     r"(?:[ \t]*\n)*(`{3,}|~{3,})quote[ \t]*\n")
 REFERENCIA = re.compile(r"(?:#|/)((?:zulip-msg-\d+|doist-[\w-]+))(?=\)|\.md\))")
 
 
 def origem_citada(tipo, texto, termo):
-    if tipo == "mensagem" and "[said](" in texto:
-        partes = [(m.start(3), m.end(3), "zulip-msg-" + m[1]) for m in CITACAO.finditer(texto)]
+    if tipo == "mensagem" and "/near/" in texto:
+        partes = []
+        for abertura in CITACAO.finditer(texto):
+            fim = re.compile(r"^" + re.escape(abertura[2]) + r"[ \t]*$", re.M).search(texto, abertura.end())
+            if fim:
+                partes.append((abertura.end(), fim.start(), "zulip-msg-" + abertura[1]))
+        # A origem mais interna identifica o autor quando a resposta cita outra citação.
+        partes.sort(key=lambda parte: parte[1] - parte[0])
     elif tipo == "didatica":
         partes = []
         for linha in re.finditer(r"[^\n]+", texto):
@@ -139,10 +146,13 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
     args.update(termo=termo, tipo_busca=kind, padrao="%" + termo.casefold().replace("!", "!!").replace("%", "!%").replace("_", "!_") + "%",
                 limite=limit+1, pular=offset)
     def contem(campo):
+        if " " in termo:
+            campo = f"normalizar_espacos({campo})"
         if not termo.isascii():
             campo = f"minusculas({campo})"
         return f"{campo} LIKE :padrao ESCAPE '!'"
 
+    db.create_function("normalizar_espacos", 1, lambda s: " ".join((s or "").split()), deterministic=True)
     db.create_function("minusculas", 1, lambda campo: (campo or "").casefold(), deterministic=True)
     db.create_function("sem_links", 1, lambda campo: re.sub(r"!?\[[^\]\n]*\]\([^)\n]+\)", "", campo),
                        deterministic=True)

@@ -13,6 +13,7 @@ from busca_wiki import abrir, buscar, consultar
 from indice_wiki import conectar
 sys.path.insert(0, str(PLUGIN.parents[1] / "wiki"))
 from avaliar_acervo import registrar
+from ingerir_acervo import texto_original
 
 
 class BuscaWiki(unittest.TestCase):
@@ -28,7 +29,7 @@ class BuscaWiki(unittest.TestCase):
     def escrever(self, *turnos):
         texto = "# Review\n\n[Discussão no Zulip](<https://chat.zulip.org/#narrow/channel/2/topic/Review>)\n\n"
         for n, turno in enumerate(turnos, 1):
-            texto += f"## zulip-msg-{n}\n\nSam\n\n````text\n{turno}\n````\n\n"
+            texto += f"## zulip-msg-{n}\n\nSam\n\n" + texto_original(turno)
         self.topico.write_text(texto, encoding="utf-8")
 
     def buscar(self, **kw):
@@ -46,6 +47,22 @@ class BuscaWiki(unittest.TestCase):
                          [("zulip-msg-1", "zulip-msg-1"), ("zulip-msg-3", "zulip-msg-3")])
         pagina, = self.buscar(text=self.pedido, kind="didatica")
         self.assertEqual((pagina["id"], pagina["citar_id"]), ("wiki/revisao.md", "zulip-msg-1"))
+
+    def test_respostas_com_citacoes_traduzidas_e_aninhadas(self):
+        interna = self.resposta.replace("[said]", "[发言道]").replace("):", ")：")
+        replica = ("Jo [disse](https://chat.zulip.org/#narrow/channel/2/topic/Review/near/2):\n"
+                   "````quote\n" + interna + "\n````\n\nThanks.")
+        self.escrever(self.pedido, interna, replica)
+        original, = self.buscar(text=self.pedido)
+        self.assertEqual(original["id"], "zulip-msg-1")
+        resposta, = self.buscar(text="Friday works.")
+        self.assertEqual(resposta["id"], "zulip-msg-2")
+
+    def test_busca_preserva_o_trecho_original_em_linhas_diferentes(self):
+        texto = "Could we  move\n\nthe deadline?"
+        self.escrever(texto)
+        item, = self.buscar(text=self.pedido)
+        self.assertEqual((item["id"], item["trecho"]), ("zulip-msg-1", texto))
 
     def test_edicao_remocao_e_mudanca_de_contexto(self):
         chave = "zulip-msg-1"
