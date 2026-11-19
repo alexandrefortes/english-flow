@@ -17,7 +17,7 @@ import yaml
 import acervo_local as acervo
 import consulta_grafo as grafo
 import busca_wiki
-from indice_wiki import TIPOS, ESTADOS
+from indice_wiki import TIPOS, ESTADOS, conectar
 from acervo_original import MAX_DOWNLOAD, baixar, baixar_mensagens, verified_image_extension
 
 
@@ -109,7 +109,10 @@ def abrir_grafo():
     path = WIKI / "local" / "grafo.sqlite3"
     if not path.is_file():
         raise ValueError("Grafo ausente. Coloque a wiki completa em INGLEST_PROJECT_DIR/wiki, incluindo local/grafo.sqlite3.")
-    return grafo.abrir_leitura(path, path.with_name('consulta.sqlite3'))
+    indice = path.with_name("consulta.sqlite3")
+    if indice.is_file():
+        conectar(WIKI).close()
+    return grafo.abrir_leitura(path, indice)
 
 
 def search_graph(topic=None, situation=None, source=None, text=None, curated_only=False, limit=10, offset=0):

@@ -77,6 +77,14 @@ class PluginAcervoTests(unittest.TestCase):
         saved = call("save_entry", kind="lesson", title="Deadline", content="By Thursday.", sources=[item["id"]])
         self.assertEqual(call("read_entry", entry_id=saved["id"])["source_refs"][0]["url"], item["url"])
 
+        # Once the wiki index is available, legacy tools also follow the edited Markdown.
+        self.assertEqual(call("read_wiki_item", item_id=topic)["titulo"], "Decisions")
+        page.write_text("# After review\n\n## zulip-msg-11\n\nSam\n\n```text\nBy Friday.\n```\n", encoding="utf-8")
+        edited, = call("search_graph", text="By Friday.")["matches"]
+        self.assertEqual((edited["id"], edited["titulo"]), ("zulip-msg-11", "After review"))
+        page.unlink()
+        self.assertEqual(call("search_graph", text="By Friday.")["matches"], [])
+
     def test_graph_errors_and_portable_reader(self):
         tools = {tool["name"]: tool for tool in server.dispatch("tools/list", {})["tools"]}
         for name in ("search_graph", "read_graph_node"):

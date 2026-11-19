@@ -34,7 +34,9 @@ def abrir_leitura(path, indice=None):
                 SELECT * FROM main.nos WHERE tipo IN ('tema','situacao')
                 UNION ALL
                 SELECT i.id, CASE i.tipo WHEN 'topico' THEN 'conversa' ELSE i.tipo END,
-                       coalesce(n.titulo,i.titulo),i.fonte,n.origem,i.url,i.pagina,i.texto,i.qualidade,i.ordem
+                       CASE WHEN i.tipo IN ('topico','mensagem') AND instr(n.titulo,' · ') > 0
+                            THEN substr(n.titulo,1,instr(n.titulo,' · ')+2) || i.titulo
+                            ELSE i.titulo END,i.fonte,n.origem,i.url,i.pagina,i.texto,i.qualidade,i.ordem
                 FROM wiki.itens i LEFT JOIN main.nos n ON n.id=i.id;
                 CREATE TEMP VIEW ligacoes AS
                 SELECT l.* FROM main.ligacoes l JOIN wiki.itens i ON i.id=l.origem
