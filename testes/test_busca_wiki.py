@@ -64,6 +64,15 @@ class BuscaWiki(unittest.TestCase):
         item, = self.buscar(text=self.pedido)
         self.assertEqual((item["id"], item["trecho"]), ("zulip-msg-1", texto))
 
+    def test_paginacao_de_catalogo_em_caracteres(self):
+        texto = json.dumps(["ação " * 14000, "último"], ensure_ascii=False)
+        (self.wiki / "catalogo.json").write_text(texto, encoding="utf-8-sig")
+        for offset in (0, 65535, 65536, len(texto) - 3, len(texto), len(texto) + 10):
+            with self.subTest(offset=offset):
+                item = consultar(self.wiki, abrir, chave="wiki/catalogo.json", offset=offset, limit=3)
+                self.assertEqual(item["texto"], texto[offset:offset + 3])
+                self.assertEqual(item["next_offset"], offset + 3 if offset + 3 < len(texto) else None)
+
     def test_edicao_remocao_e_mudanca_de_contexto(self):
         chave = "zulip-msg-1"
         item = self.abrir(chave)

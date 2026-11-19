@@ -55,11 +55,18 @@ def abrir(db, wiki, chave, offset=0, limit=9000):
     dados = resumo(db, wiki, item)
     tipo = item["tipo"]
     if tipo in ("catalogo", "indice", "guia", "topico", "didatica"):
-        texto = (wiki / item["pagina"]).read_text(encoding="utf-8-sig")
+        with (wiki / item["pagina"]).open(encoding="utf-8-sig") as pagina:
+            restantes = offset
+            while restantes:
+                bloco = pagina.read(min(restantes, 65536))
+                if not bloco:
+                    break
+                restantes -= len(bloco)
+            trecho = pagina.read(limit + 1)
     else:
-        texto = item["texto"]
-    dados.update(assinatura=item["assinatura"], texto=texto[offset:offset+limit], offset=offset,
-                 next_offset=offset+limit if len(texto) > offset+limit else None,
+        trecho = item["texto"][offset:offset + limit + 1]
+    dados.update(assinatura=item["assinatura"], texto=trecho[:limit], offset=offset,
+                 next_offset=offset+limit if len(trecho) > limit else None,
                  evidencias=evidencias(db, chave) if item["estado"] == "conferido" else [])
     if tipo == "mensagem":
         dados["contexto"] = []
