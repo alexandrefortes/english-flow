@@ -92,6 +92,15 @@ class WikiOffline(unittest.TestCase):
                 reaberto = self.mcp.chamar(ref["tool"], item_id=ref["id"])
                 self.assertEqual((reaberto["id"], reaberto["pagina_local"]), (chave, item["pagina_local"]))
 
+    def test_feedback_de_quem_revisou(self):
+        filtros = dict(source="Doist", curation="conferido", situation="dar-feedback")
+        oferecido = self.buscar(**filtros, text="A small intro on Twist")
+        self.assertEqual([r["citar_id"] for r in oferecido], ["doist-dar-feedback"])
+        item = self.abrir(oferecido[0]["citar_id"])
+        self.assertIn("would be helpful!", item["texto"])
+        pedido = self.buscar(**filtros, text="Could you check out this Twist intro?")
+        self.assertNotIn(item["id"], [r["citar_id"] for r in pedido])
+
     def test_pedidos_de_prazo(self):
         for pedido in ("Como peço mais tempo para entregar um relatório?",
                        "How can I ask for more time to finish a report?"):
