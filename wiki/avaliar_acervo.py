@@ -2,6 +2,7 @@
 import argparse
 from collections import Counter
 from contextlib import closing
+from filecmp import cmp
 import gzip
 import json
 from pathlib import Path
@@ -43,10 +44,17 @@ def salvar_registros(db, wiki, exemplos):
             for linha in db.execute("SELECT id,tipo,assinatura,estado,motivo FROM inventario "
                                     "WHERE estado!='pendente' ORDER BY id"):
                 out.write(("\t".join(linha) + "\n").encode())
-        trechos.write_text(json.dumps(exemplos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        if trechos.read_bytes() != (wiki / "curadoria.json").read_bytes():
-            trechos.replace(wiki / "curadoria.json")
-        decisoes.replace(wiki / DECISOES)
+        with trechos.open("w", encoding="utf-8", newline="\n") as arquivo:
+            arquivo.write("{")
+            for n, chave in enumerate(sorted(exemplos)):
+                arquivo.write(",\n" if n else "\n")
+                arquivo.write("  " + json.dumps(chave, ensure_ascii=False) + ": ")
+                json.dump(exemplos[chave], arquivo, ensure_ascii=False)
+            arquivo.write("\n}\n")
+        for temporario, destino in [(trechos, wiki / "curadoria.json"), (decisoes, wiki / DECISOES)]:
+            if not destino.exists() or not cmp(temporario, destino, shallow=False):
+                temporario.chmod(0o644)
+                temporario.replace(destino)
     finally:
         trechos.unlink(missing_ok=True)
         decisoes.unlink(missing_ok=True)
