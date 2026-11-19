@@ -131,7 +131,8 @@ class BuscaWiki(unittest.TestCase):
         nome = "proposta.png"
         texto = "Could we extend the deadline by a week?"
         (pasta / "extracao.json").write_text(json.dumps({chave: {"name": nome, "transcription": "parcial"}}))
-        (pasta / (chave + ".md")).write_text(f"# {nome}\n\n## Content\n\n```text\n{texto}\n```\n")
+        (pasta / (chave + ".md")).write_text(
+            f"---\nlearning_uses: [dar-feedback]\n---\n# {nome}\n\n## Content\n\n```text\n{texto}\n```\n")
         assinatura = self.abrir(chave)["assinatura"]
         exemplo = {"trecho": texto, "funcao": "pedido", "usos": ["negociar-prazo"], "assinatura": assinatura}
         (self.wiki / "curadoria.json").write_text(json.dumps({chave: [exemplo]}))
@@ -140,6 +141,10 @@ class BuscaWiki(unittest.TestCase):
         for curation in (None, "conferido"):
             resultado, = self.buscar(kind="anexo", situation="negociar-prazo", curation=curation)
             self.assertEqual((resultado["id"], resultado["citar_id"], resultado["trecho"]), (chave, chave, texto))
+            rotulo, = self.buscar(kind="anexo", text="pedido", curation=curation)
+            self.assertEqual((rotulo["correspondencia"], rotulo["trecho"]), ("rotulo", texto))
+        self.assertEqual(self.buscar(kind="anexo", text="dar-feedback", curation="conferido"), [])
+        self.assertEqual(self.buscar(kind="anexo", text="dar-feedback")[0]["correspondencia"], "rotulo")
 
     def test_sem_transcricao_e_varias_origens(self):
         pasta = self.wiki / "local/anexos"

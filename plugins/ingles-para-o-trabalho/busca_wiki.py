@@ -166,6 +166,14 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
     db.create_function("remover_uploads", 1, lambda texto: UPLOAD.sub(" ", texto), deterministic=True)
     corpo = texto_pesquisavel("i")
     if termo:
+        rotulo_automatico = contem("i.rotulos") if curation != "conferido" and not function else "0"
+        rotulo_conferido = [f"({contem('e.funcao')} OR {contem('e.usos')})"]
+        if curation == "conferido" or function:
+            for campo in ("tema", "situacao"):
+                if campo in args:
+                    rotulo_conferido.append(f"instr(' '||e.usos||' ', ' '||:{campo}||' ')")
+            if function:
+                rotulo_conferido.append("e.funcao=:funcao")
         classe = f"""CASE
             WHEN i.tipo NOT IN ('indice','catalogo','topico') AND {contem(corpo)} THEN 'texto'
             WHEN i.tipo IN ('indice','catalogo') AND {contem("sem_links(i.texto)")} THEN 'texto'
@@ -173,8 +181,8 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
             WHEN (i.tipo!='mensagem' OR :tipo_busca='mensagem') AND
               ({contem('i.titulo')} OR (i.tipo!='mensagem' AND {contem('i.pagina')})) THEN 'contexto'
             WHEN i.tipo IN ('indice','catalogo','guia') AND {contem('i.motivo')} THEN 'contexto'
-            WHEN {contem('i.rotulos')} OR (i.estado='conferido' AND EXISTS
-              (SELECT 1 FROM evidencias e WHERE e.id=i.id AND ({contem('e.funcao')} OR {contem('e.usos')}))) THEN 'rotulo'
+            WHEN {rotulo_automatico} OR (i.estado='conferido' AND EXISTS
+              (SELECT 1 FROM evidencias e WHERE e.id=i.id AND {" AND ".join(rotulo_conferido)})) THEN 'rotulo'
             END"""
     else:
         classe = "'rotulo'" if any((topic, situation, function)) else "'contexto'"
@@ -239,10 +247,12 @@ def buscar(db, wiki, *, kind=None, source=None, topic=None, situation=None, text
         via = row["via"]
         ev = evidencias(db, item["id"]) if item["estado"] == "conferido" else []
         escolhido = next((e for e in ev if all(s in e["usos"] for s in (topic, situation) if s)
-                          and (not function or e["funcao"] == function)), None)
+                          and (not function or e["funcao"] == function)
+                          and (not termo or (via == "rotulo" and any(termo.casefold() in valor.casefold()
+                               for valor in (e["funcao"], " ".join(e["usos"])))))), None)
         if via == "arquivo":
             trecho, pos = item["titulo"], 0
-        elif escolhido and not termo and citar["id"] == item["id"]:
+        elif escolhido and citar["id"] == item["id"]:
             trecho, pos = escolhido["trecho"], item["texto"].find(escolhido["trecho"])
         elif via == "rotulo" and citar["id"] != item["id"]:
             trecho, pos = recortar(citar["texto"], "")
