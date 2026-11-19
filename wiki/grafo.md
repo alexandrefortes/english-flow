@@ -35,13 +35,13 @@ A busca `search_wiki` consulta o texto das páginas e os vínculos do grafo. Use
 
 | Situação | Exemplos por função |
 | --- | --- |
-| Pedir atualização | [Perguntar pelo andamento](local/zulip/canal-137/zulip-topico-8d11987ce5198a1a3dcbe657.md#zulip-msg-1021504) · [combinar quando confirmar](local/doist/doist-pedir-atualizacao.md) |
+| Pedir atualização | [Perguntar pelo andamento](local/zulip/canal-137/zulip-topico-8d11987ce5198a1a3dcbe657.md#zulip-msg-1021504) · [pedir notícias de uma tarefa](local/doist/doist-pedir-atualizacao.md) |
 | Negociar prazo | [Pedir mais tempo](local/zulip/canal-127/zulip-topico-617d08ae9ea45953393575c8.md#zulip-msg-413776) · [propor outra data](local/doist/doist-combinar-prazo.md) · [recusar o prazo](local/zulip/canal-9/zulip-topico-525ecba640cdf78698db13bf.md#zulip-msg-1236079) · [confirmar a extensão](local/zulip/canal-127/zulip-topico-617d08ae9ea45953393575c8.md#zulip-msg-413787) |
-| Dar feedback | [Pedir uma avaliação](local/doist/doist-dar-feedback.md) · [responder ao comentário](local/zulip/canal-101/zulip-topico-2cf5ae22c069154ba365fc47.md#zulip-msg-1518710) |
+| Dar feedback | [Sugerir uma introdução para o leitor](local/doist/doist-dar-feedback.md) · [recomendar um exemplo mais específico](local/zulip/canal-92/zulip-topico-33be18bcf012f09cdb77b444.md#zulip-msg-168107) |
 | Confirmar próximos passos | [Assumir uma tarefa](local/zulip/canal-378/zulip-topico-c71e9f563b5a009382da8b3e.md#zulip-msg-2499678) · [prometer retorno](local/zulip/canal-137/zulip-topico-32aa081248d947f4eb291f7a.md#zulip-msg-1950081) |
 | Apresentar-se | [Apresentar o papel](local/doist/doist-learning-ally-recepcao-voluntarios.md) · [descrever a experiência](local/zulip/canal-2/zulip-topico-2ada5702e199cf63c9129129.md#zulip-msg-2552913) |
 | Pedir ajuda | [Pedir orientação](local/anexos/zulip-anexo-0d1d5afcd4c82604931d79ec8832512a.md) · [solicitar um teste](local/zulip/canal-43/zulip-topico-d8db24549f1af78a3ebd3b4a.md#zulip-msg-535380) |
-| Esclarecer | [Conferir a interpretação](local/zulip/canal-101/zulip-topico-593360455d5a9540bc2c1502.md#zulip-msg-2535843) · [agradecer o esclarecimento](local/zulip/canal-2/zulip-topico-f012a84d6c18ca4c9dd73ea2.md#zulip-msg-1067549) |
+| Esclarecer | [Conferir a interpretação](local/zulip/canal-101/zulip-topico-593360455d5a9540bc2c1502.md#zulip-msg-2535843) · [confirmar o sentido de uma palavra](local/zulip/canal-92/zulip-topico-33be18bcf012f09cdb77b444.md#zulip-msg-168127) |
 | Comunicar risco | [Explicar a condição de risco](local/zulip/canal-3/zulip-topico-3bddea53f8ad3a38257c0a0a.md#zulip-msg-1327548) · [alertar sobre o impacto](local/zulip/canal-101/zulip-topico-61ded17f89c1d3e75bf5160c.md#zulip-msg-2531120) |
 
 O [registro de decisões](decisoes.tsv.gz) usa uma linha por item com ID, tipo, assinatura do material, estado e motivo ou função. Os trechos conferidos e seus usos estão em [curadoria.json](curadoria.json). O preparo restaura a edição e incorpora os registros ao grafo de consulta em `local/consulta.sqlite3`. O leitor do grafo combina essa base com `local/grafo.sqlite3`. As páginas originais guardam as transcrições.
