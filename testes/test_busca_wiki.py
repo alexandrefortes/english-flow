@@ -1,3 +1,4 @@
+from contextlib import closing
 import gzip
 import json
 from pathlib import Path
@@ -9,6 +10,9 @@ import unittest
 PLUGIN = Path(__file__).resolve().parents[1] / "plugins/ingles-para-o-trabalho"
 sys.path.insert(0, str(PLUGIN))
 from busca_wiki import abrir, buscar, consultar
+from indice_wiki import conectar
+sys.path.insert(0, str(PLUGIN.parents[1] / "wiki"))
+from avaliar_acervo import registrar
 
 
 class BuscaWiki(unittest.TestCase):
@@ -65,6 +69,34 @@ class BuscaWiki(unittest.TestCase):
         self.assertFalse(self.buscar(text="talk tomorrow"))
         with self.assertRaises(ValueError):
             self.abrir(chave)
+
+    def test_lote_de_revisao_preserva_pendencias_e_rejeita_trecho_divergente(self):
+        chave = "zulip-msg-1"
+        json_curadoria = self.wiki / "curadoria.json"
+        json_curadoria.write_text("{}")
+        lote = self.wiki.parent / (self.wiki.name + "-revisoes.jsonl")
+        self.addCleanup(lote.unlink, missing_ok=True)
+        item = self.abrir(chave)
+        evidencia = {"trecho": self.pedido, "funcao": "pedido", "usos": ["negociar-prazo"]}
+        decisao = dict(id=chave, assinatura=item["assinatura"], tipo="mensagem",
+                       estado="conferido", motivo="pedido de alteração", evidencias=[evidencia])
+        outra = dict(decisao, id="zulip-msg-2", assinatura=self.abrir("zulip-msg-2")["assinatura"],
+                     evidencias=[dict(evidencia, trecho="not present")])
+        lote.write_text(json.dumps(decisao) + "\n" + json.dumps(outra))
+        with closing(conectar(self.wiki)) as db:
+            with self.assertRaises(ValueError):
+                registrar(db, self.wiki, [lote])
+            self.assertEqual(json_curadoria.read_text(), "{}")
+            self.assertFalse((self.wiki / "decisoes.tsv.gz").exists())
+            registrar(db, self.wiki, [])
+            self.assertEqual(self.abrir(chave)["estado"], "pendente")
+            lote.write_text(json.dumps(decisao))
+            registrar(db, self.wiki, [lote])
+        self.assertEqual(self.abrir(chave)["estado"], "conferido")
+        self.assertEqual(self.abrir("zulip-msg-2")["estado"], "pendente")
+        self.escrever(self.pedido, "We are quoting an old discussion here.")
+        with closing(conectar(self.wiki)) as db, self.assertRaises(ValueError):
+            registrar(db, self.wiki, [lote])
 
     def test_sem_transcricao_e_varias_origens(self):
         pasta = self.wiki / "local/anexos"

@@ -48,9 +48,11 @@ O [registro de decisões](decisoes.tsv.gz) usa uma linha por item com ID, tipo, 
 
 A busca atualiza as páginas que mudaram e exclui as removidas. Uma mudança no texto ou no contexto relevante deixa a decisão pendente de avaliação. A qualidade da transcrição aparece em um campo próprio.
 
-Na raiz do projeto, use `python -B wiki/avaliar_acervo.py` para comparar os IDs com o grafo, os catálogos e as páginas. O relatório conta cada ID uma vez por situação. Para revisar, consulte `search_wiki` com `curation: pendente`, abra a página, confira os usos e atualize o trecho e sua assinatura em `curadoria.json`. Use `python -B wiki/avaliar_acervo.py --registrar --lote 2000` para registrar as decisões por ID. A execução retoma os IDs pendentes e conserva os lotes já gravados.
+Na raiz do projeto, execute `python -B wiki/avaliar_acervo.py` para comparar os IDs com o grafo, os catálogos e as páginas. Consulte `search_wiki` com `curation: pendente` para retomar a leitura. Cada situação conta o mesmo ID uma vez.
 
-Nos itens de apoio, a avaliação em lote usa o texto e sua função na página. Para as mensagens, considera também os turnos vizinhos. Nos anexos, verifica a transcrição e o vínculo com a mensagem. O motivo de apoio ou de ausência de uso é registrado separadamente dos exemplos selecionados. Para repetir os testes no MCP com um caderno temporário, execute `python -B testes/verificar_mcp_wiki.py`.
+Abra o ID e confira o texto e o contexto da página. Registre a decisão em um lote JSONL, uma linha por item com `id`, `tipo`, `assinatura`, `estado` e `motivo`. Use `apoio` com a função do material, ou `sem-uso` com o motivo. Para `conferido`, inclua `evidencias` com o trecho literal, a função em `funcao` e a lista de `usos` de cada exemplo. A assinatura vem de `read_wiki_item`.
+
+Execute `python -B wiki/avaliar_acervo.py --registrar --revisoes lote.jsonl` para incorporar o lote aos registros da wiki. A importação verifica o ID, a assinatura e os trechos antes de gravar. Os IDs que ainda precisam de leitura continuam pendentes. O preparo de um clone restaura os registros publicados. Execute `python -B testes/verificar_mcp_wiki.py` para repetir os testes no MCP com um caderno temporário.
 
 ## Anexos do Zulip
 

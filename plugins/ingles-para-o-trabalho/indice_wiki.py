@@ -192,6 +192,7 @@ def sincronizar(db, wiki):
     topicos = [p for p in removidas | alteradas if "/zulip-topico-" in p]
     if topicos:
         db.execute("CREATE TEMP TABLE IF NOT EXISTS topicos_alterados (pagina TEXT PRIMARY KEY)")
+        db.execute("DELETE FROM topicos_alterados")
         db.executemany("INSERT OR IGNORE INTO topicos_alterados VALUES (?)", ((p,) for p in topicos))
         alteradas.update(r[0] for r in db.execute("""
             SELECT DISTINCT a.pagina FROM topicos_alterados t JOIN itens m ON m.pagina=t.pagina
@@ -199,6 +200,7 @@ def sincronizar(db, wiki):
         """) if r[0] in atuais)
         if anteriores:
             db.execute("CREATE TEMP TABLE IF NOT EXISTS mensagens_alteradas (id TEXT PRIMARY KEY)")
+            db.execute("DELETE FROM mensagens_alteradas")
             for p in topicos:
                 if p in alteradas:
                     corpo = (wiki / p).read_text(encoding="utf-8-sig")
