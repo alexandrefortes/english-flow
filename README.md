@@ -143,4 +143,4 @@ Se a coleta terminar com o código `3`, consulte `issues` em `dados/zulip/coleta
    python -B -m unittest discover -s testes -v
    ```
 
-Para continuar a curadoria na nuvem, siga o [plano de trabalho](PLANO.md). Para incorporar uma fonte à wiki, siga as [instruções de curadoria](wiki/AGENTS.md).
+Para revisar o acervo ou incorporar uma fonte à wiki, siga as [instruções de curadoria](wiki/AGENTS.md).
