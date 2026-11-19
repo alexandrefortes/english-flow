@@ -6,13 +6,14 @@ from filecmp import cmp
 import gzip
 import json
 from pathlib import Path
+import re
 import sys
 from tempfile import NamedTemporaryFile
 
 WIKI = Path(__file__).resolve().parent
 sys.path.insert(0, str(WIKI.parent / "plugins/ingles-para-o-trabalho"))
 from indice_wiki import DECISOES, TIPOS, conectar, pagina_id, sincronizar
-from consulta_grafo import SITUACOES, TEMAS, abrir_leitura
+from consulta_grafo import SITUACOES, TEMAS
 
 
 def validar_revisao(db, revisao):
@@ -91,17 +92,30 @@ def registrar(db, wiki, arquivos):
         salvar_registros(db, wiki, exemplos)
 
 
-def conferir(db, wiki):
-    with abrir_leitura(wiki / "local/grafo.sqlite3") as grafo:
-        esperado = {i: "topico" if t == "conversa" else t for i, t in grafo.execute(
-            "SELECT id,tipo FROM nos WHERE tipo IN ('conversa','mensagem','captura')")}
-    esperado.update(dict.fromkeys(json.loads((wiki / "local/anexos/extracao.json").read_bytes()), "anexo"))
-    fontes = set(esperado)
+def inventariar_paginas(wiki):
+    esperado = {}
+    marcadores = re.compile(r"^(?:## (zulip-msg-\d+)$|(`{3,})([^\n]*))", re.M)
     for pagina in wiki.rglob("*.md"):
-        if pagina.stem in fontes:
-            continue
         rel = pagina.relative_to(wiki).as_posix()
-        if rel == "fontes.md":
+        chave = pagina_id(rel)
+        if rel.startswith("local/zulip/") and pagina.stem.startswith("zulip-topico-"):
+            chave, tipo = pagina.stem, "topico"
+            cerca = ""
+            for m in marcadores.finditer(pagina.read_text(encoding="utf-8-sig")):
+                if cerca:
+                    if m[2] and len(m[2]) >= len(cerca) and not m[3].strip():
+                        cerca = ""
+                elif m[2]:
+                    cerca = m[2]
+                elif m[1] in esperado:
+                    raise ValueError(f"Mensagem repetida na wiki: {m[1]} em {rel}")
+                else:
+                    esperado[m[1]] = "mensagem"
+        elif rel.startswith("local/anexos/zulip-anexo-"):
+            chave, tipo = pagina.stem, "anexo"
+        elif rel.startswith("local/doist/doist-"):
+            chave, tipo = pagina.stem, "captura"
+        elif rel == "fontes.md":
             tipo = "catalogo"
         elif rel in {"grafo.md", "AGENTS.md"}:
             tipo = "guia"
@@ -109,8 +123,13 @@ def conferir(db, wiki):
             tipo = "indice"
         else:
             tipo = "didatica"
-        esperado[pagina_id(rel)] = tipo
+        esperado[chave] = tipo
     esperado.update({pagina_id(p.relative_to(wiki).as_posix()): "catalogo" for p in wiki.rglob("*.json")})
+    return esperado
+
+
+def conferir(db, wiki):
+    esperado = inventariar_paginas(wiki)
     atual = {r[0]: r[1] for r in db.execute("SELECT id,tipo FROM itens")}
     divergentes = esperado.items() ^ atual.items()
     if divergentes:
