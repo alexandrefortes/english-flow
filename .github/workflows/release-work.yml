@@ -2,8 +2,13 @@ name: Publish the Work ZIP
 
 on:
   push:
+    branches:
+      - main
+    paths:
+      - 'downloads/english-flow-work-*.zip'
     tags:
       - 'v*'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,24 +23,43 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Build the upload package
+      - name: Select the release tag
+        id: release
         run: |
           version=$(python -c 'import json; print(json.load(open("plugins/english-flow/plugin.json"))["version"])')
-          test "$GITHUB_REF_NAME" = "v$version"
-          python -B -m tools.packaging.pack_work "dist/english-flow-work-$version.zip" --repository "$GITHUB_REPOSITORY"
-          python -m zipfile -t "dist/english-flow-work-$version.zip"
+          tag="v$version"
+          if [ "$GITHUB_REF_TYPE" = tag ]; then
+            test "$GITHUB_REF_NAME" = "$tag"
+          elif ! git show-ref --verify --quiet "refs/tags/$tag"; then
+            echo "The version tag is pending."
+            exit 0
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "ZIP_NAME=english-flow-work-$version.zip" >> "$GITHUB_ENV"
+      - name: Build the upload package
+        if: steps.release.outputs.tag != ''
+        env:
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          git switch --detach "refs/tags/$RELEASE_TAG"
+          python -B -m tools.packaging.pack_work "dist/$ZIP_NAME" --repository "$GITHUB_REPOSITORY"
+          python -m zipfile -t "dist/$ZIP_NAME"
+          if git cat-file -e "$GITHUB_SHA:downloads/$ZIP_NAME" 2>/dev/null; then
+            git show "$GITHUB_SHA:downloads/$ZIP_NAME" | cmp "dist/$ZIP_NAME" -
+          fi
       - name: Attach the ZIP to the release
+        if: steps.release.outputs.tag != ''
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
         run: |
-          asset="english-flow-work-${GITHUB_REF_NAME#v}.zip"
-          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            if gh release view "$GITHUB_REF_NAME" --json assets --jq '.assets[].name' | grep -Fxq "$asset"; then
-              gh release download "$GITHUB_REF_NAME" --pattern "$asset" --dir "$RUNNER_TEMP"
-              cmp "dist/$asset" "$RUNNER_TEMP/$asset"
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            if gh release view "$RELEASE_TAG" --json assets --jq '.assets[].name' | grep -Fxq "$ZIP_NAME"; then
+              gh release download "$RELEASE_TAG" --pattern "$ZIP_NAME" --dir "$RUNNER_TEMP"
+              cmp "dist/$ZIP_NAME" "$RUNNER_TEMP/$ZIP_NAME"
             else
-              gh release upload "$GITHUB_REF_NAME" "dist/$asset"
+              gh release upload "$RELEASE_TAG" "dist/$ZIP_NAME"
             fi
           else
-            gh release create "$GITHUB_REF_NAME" "dist/$asset" --verify-tag --title "English Flow $GITHUB_REF_NAME" --notes "For ChatGPT Work, download $asset and upload it in New plugin. For local Codex, follow the commands in the README."
+            gh release create "$RELEASE_TAG" "dist/$ZIP_NAME" --verify-tag --title "English Flow $RELEASE_TAG" --notes "For ChatGPT Work, download $ZIP_NAME and upload it in New plugin. For local Codex, follow the commands in the README."
           fi

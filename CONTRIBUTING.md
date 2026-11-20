@@ -11,6 +11,7 @@ Use Python 3.11 or later. Run the commands at the repository root. A checkout co
 | `tools/curation/` | Check the graph, review examples, and build editions. |
 | `tools/collection/` | Tools the maintainer uses on the collection computer. |
 | `tests/` | Unit tests and offline MCP checks. |
+| `downloads/` | Versioned Work ZIP for browser installation. |
 
 ## Restore the text edition
 
@@ -67,4 +68,4 @@ python -B -m tools.packaging.pack_work dist/english-flow-work-0.7.0.zip
 
 The ZIP includes the study skills, the wiki reader, the Drive app reference, and the checksums for the public corpus. Work fetches the text archive from the GitHub commit recorded in the ZIP. For a fork with a different corpus, first publish that corpus in your fork. Pass `--repository OWNER/REPOSITORY --ref COMMIT` when you build.
 
-To publish a release, push a tag that matches the plugin version, such as `v0.7.0`. GitHub Actions builds the Work ZIP and attaches it to the release. Learners use this file in the ChatGPT upload dialog. The Codex CLI installs from the same tag. [Installation instructions](README.md)
+Build the Work ZIP for the release and put it in `downloads/`. Commit the file and its README download link. Push a tag that matches the plugin version, such as `v0.7.0`. GitHub Actions builds the ZIP from that tag and attaches it to the release. To run the job again, open **Actions → Publish the Work ZIP → Run workflow**. The README link also serves the file directly from GitHub. The Codex CLI installs from the tag. [Installation instructions](README.md)
