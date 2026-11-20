@@ -70,6 +70,11 @@ class OfflineWikiTests(unittest.TestCase):
 
     def test_plugin_name_language_and_panel(self):
         self.assertEqual(self.mcp.initialization["serverInfo"]["name"], "english-flow")
+        probe, = (tool for tool in self.mcp.rpc("tools/list", {})["tools"] if tool["name"] == "study_environment")
+        self.assertTrue(probe["annotations"]["readOnlyHint"])
+        self.assertFalse(probe["annotations"]["openWorldHint"])
+        self.assertEqual(self.mcp.chamar("study_environment"),
+                         {"plugin": "english-flow", "execution": "local", "notebook": "filesystem"})
         instructions = self.mcp.initialization["instructions"]
         self.assertIn("Start each new learner conversation in English", instructions)
         self.assertIn("When the learner asks to switch", instructions)

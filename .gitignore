@@ -1,6 +1,7 @@
 /dados/
 /wiki/local/
 /notebook/
+/dist/
 __pycache__/
 *.py[cod]
 .pytest_cache/

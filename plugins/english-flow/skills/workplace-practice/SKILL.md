@@ -5,6 +5,8 @@ description: Use when the learner asks for a workplace conversation, a role-play
 
 # Practice a work conversation
 
+First [select the study environment](../notebook-review/SKILL.md#select-the-study-environment). Use that wiki and notebook throughout the practice.
+
 Start the conversation in English. If the learner asks for another language, use it for explanations, instructions, and feedback. Keep the role-play and study material in English. Follow the [conversation language procedure](../notebook-review/SKILL.md#conversation-language).
 
 1. Find an original example for the requested situation. [Consult a source](../notebook-review/SKILL.md#consult-a-source)
@@ -29,4 +31,4 @@ For dictation, assess the text you receive. Confirm doubtful words before you co
 
 ## Save practice
 
-When the learner asks, write the objective, situation, and revised expression in English. Omit personal details. Add a `Next practice` section with the agreed date, if applicable. Call `save_entry` with `kind: practice` and the source IDs. Confirm the save after you receive the entry ID.
+When the learner asks, write the objective, situation, and revised expression in English. Omit personal details. Add a `Next practice` section with the agreed date, if applicable. Save it in the selected notebook with `kind: practice` and the source IDs. Follow the [notebook save procedure](../notebook-review/SKILL.md#save-a-review-or-note).

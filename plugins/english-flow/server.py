@@ -1,7 +1,6 @@
 import base64
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, datetime, timezone
-import hashlib
+from datetime import date, datetime
 from http.client import HTTPException
 import json
 import os
@@ -20,7 +19,9 @@ import local_sources as acervo
 import graph_reader as grafo
 import wiki_search
 from edition import BUNDLE, bundled_cache_path, prepare_bundled_wiki
-from wiki_index import KINDS_OF_MATERIAL, STATES, connect
+from notebook_format import KINDS, entry_data, markdown_bytes
+from tool_inputs import READ_WIKI_ITEM_FIELDS, SAVE_ENTRY_FIELDS, SEARCH_WIKI_FIELDS, STRING, validate
+from wiki_index import connect
 from source_download import MAX_DOWNLOAD, download, download_messages, verified_image_extension
 
 
@@ -33,7 +34,10 @@ BUNDLED_WIKI = bundled_cache_path(BUNDLE) if not PROJECT and (BUNDLE / "manifest
 WIKI = BUNDLED_WIKI or ROOT / "wiki"
 UI_URI = "ui://english-flow/notebook.html"
 UI_TYPE = "text/html;profile=mcp-app"
-KINDS = ("lesson", "practice", "review", "note")
+
+
+def study_environment():
+    return {"plugin": "english-flow", "execution": "local", "notebook": "filesystem"}
 
 
 def wiki_available():
@@ -275,28 +279,16 @@ def read_entry(entry_id):
 
 
 def save_entry(kind, title, content, sources=None):
-    content = content.replace("\r\n", "\n").replace("\r", "\n")
-    if kind not in KINDS or not title.strip() or not content.strip():
-        raise ValueError("Supply a valid entry type, title, and content.")
-    if len(title) > 160 or len(content.encode()) > 50000:
-        raise ValueError("Title or content exceeds the size limit.")
-    sources = sorted(set(sources or []))
-    refs = [source_ref(source) for source in sources]
+    entry_id, entry = entry_data(kind, title, content, sources)
+    refs = [source_ref(source) for source in entry["sources"]]
     if any(ref is None for ref in refs):
         raise ValueError("Use source IDs from search_wiki, list_sources, search_zulip, or search_graph.")
-    entry = {"schema_version": 1, "kind": kind, "language": "en", "title": title.strip(),
-             "content": content.strip(), "sources": sources}
-    key = hashlib.sha256(json.dumps(entry, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:24]
-    path = NOTEBOOK / f"{kind}-{key}.md"
-    body = entry.pop("content")
-    entry["created_at"] = datetime.now(timezone.utc).isoformat()
-    entry["source_refs"] = refs
+    path = NOTEBOOK / entry_id
     try:
-        header = yaml.safe_dump(entry, allow_unicode=True, sort_keys=False)
-        atomic_write(path, f"---\n{header}---\n\n{body}\n".encode())
+        atomic_write(path, markdown_bytes(entry, refs))
     except FileExistsError:
         saved = load_entry(path)
-        if saved["content"] != body or any(saved[field] != entry[field] for field in ("title", "kind", "sources")):
+        if saved["content"] != entry["content"] or any(saved[field] != entry[field] for field in ("title", "kind", "sources")):
             raise ValueError("The existing file has different content.")
     return {"id": path.name, "path": str(path)}
 
@@ -311,34 +303,18 @@ def tool(name, description, properties=None, required=(), *, ui=False, writes=Fa
     return definition
 
 
-STRING = {"type": "string"}
 TOOLS = [
+    tool("study_environment", "Identify the local English Flow runtime without opening files or using the network."),
     tool("open_notebook", "Open the panel and list notebook entries and sources.", ui=True),
     tool("read_entry", "Read a notebook entry by ID.", {"entry_id": STRING}, ("entry_id",)),
-    tool("save_entry", "Save a lesson, practice session, review, or note in Markdown with YAML metadata.", {
-        "kind": {"type": "string", "enum": list(KINDS)}, "title": STRING, "content": STRING,
-        "sources": {"type": "array", "items": STRING},
-    }, ("kind", "title", "content"), writes=True),
+    tool("save_entry", "Save a lesson, practice session, review, or note in Markdown with YAML metadata.", SAVE_ENTRY_FIELDS, ("kind", "title", "content"), writes=True),
     tool("list_sources", "List public sources and show which are available locally."),
     tool("read_source", "Read a passage or image from the local collection.", {"source_id": STRING}, ("source_id",)),
     tool("search_zulip", "Search the local Zulip messages.", {"query": STRING}, ("query",)),
     tool("search_wiki", "Search the wiki offline. Use a literal phrase for text. Filters use Portuguese IDs. "
-         "A verified item ('conferido') requires evidence. Read citar_id before quoting. 'arquivo' is a filename match.", {
-             "kind": {"type": "string", "enum": list(KINDS_OF_MATERIAL)},
-             "source": {"type": "string", "enum": ["Doist", "Zulip", "Projeto"]},
-             "situation": {"type": "string", "enum": list(grafo.SITUATIONS)},
-             "topic": {"type": "string", "enum": [*grafo.TOPICS, "leitura-contextual"]},
-             "function": STRING,
-             "text": {"type": "string", "minLength": 1, "maxLength": 200},
-             "curation": {"type": "string", "enum": list(STATES)},
-             "limit": {"type": "integer", "minimum": 1, "maximum": 50},
-             "offset": {"type": "integer", "minimum": 0, "maximum": 2147483647},
-         }),
+         "A verified item ('conferido') requires evidence. Read citar_id before quoting. 'arquivo' is a filename match.", SEARCH_WIKI_FIELDS),
     tool("read_wiki_item", "Open an ID on its current page. Read its evidence, sources, and nearby messages. "
-         "Use next_offset to continue reading a long item.", {
-             "item_id": STRING, "offset": {"type": "integer", "minimum": 0, "maximum": 2147483647},
-             "limit": {"type": "integer", "minimum": 1, "maximum": 20000},
-         }, ("item_id",)),
+         "Use next_offset to continue reading a long item.", READ_WIKI_ITEM_FIELDS, ("item_id",)),
     tool("search_graph", "Search Doist and Zulip by topic, situation, source, and text. "
          "Use curated_only for verified uses in each selected study filter. "
          "The result includes a node ID, preview, local page, and source reference.", {
@@ -370,26 +346,8 @@ def call_tool(params):
         return result({"error": "Unknown tool."}, error=True)
     arguments = params.get("arguments", {})
     schema = definition["inputSchema"]
-    fields = schema["properties"]
     try:
-        if not isinstance(arguments, dict) or arguments.keys() - fields.keys() or set(schema["required"]) - arguments.keys():
-            raise ValueError("Invalid arguments.")
-        for key, value in arguments.items():
-            if fields[key]["type"] == "string" and not isinstance(value, str):
-                raise ValueError(f'{key} must be text.')
-            field = fields[key]
-            if "enum" in field and value not in field["enum"]:
-                raise ValueError(f'Invalid value for {key}.')
-            if "minLength" in field and (len(value.strip()) < field["minLength"] or len(value) > field["maxLength"]):
-                raise ValueError(f'Invalid length for {key}.')
-            if field["type"] == "boolean" and type(value) is not bool:
-                raise ValueError(f'{key} must be true or false.')
-            if field["type"] == "integer" and (
-                type(value) is not int or not field["minimum"] <= value <= field["maximum"]
-            ):
-                raise ValueError(f"Use an integer between {field['minimum']} and {field['maximum']} for {key}.")
-            if fields[key]["type"] == "array" and (not isinstance(value, list) or not all(isinstance(item, str) for item in value)):
-                raise ValueError(f'{key} must be a list of strings.')
+        validate(arguments, schema["properties"], schema["required"])
         data = FUNCTIONS[name](**arguments)
         return data if name == "read_source" else result(data)
     except (OSError, ValueError, sqlite3.Error, yaml.YAMLError) as exc:
@@ -403,11 +361,12 @@ def dispatch(method, params):
         requested = params.get("protocolVersion")
         return {"protocolVersion": requested if requested in versions else versions[-1],
                 "capabilities": {"tools": {}, "resources": {}},
-                "instructions": ("Start each new learner conversation in English. A request written in another language "
+                "instructions": ("In a local chat, call study_environment to select the local wiki and notebook. "
+                                 "Start each new learner conversation in English. A request written in another language "
                                  "does not change the reply language. When the learner asks to switch, use that language "
                                  "for instructions, explanations, and feedback until asked to switch again. Keep English "
                                  "examples, exercises, and role-play in English. Use natural workplace language."),
-                "serverInfo": {"name": "english-flow", "version": "0.6.0"}}
+                "serverInfo": {"name": "english-flow", "version": "0.7.0"}}
     if method == "ping":
         return {}
     if method == "tools/list":

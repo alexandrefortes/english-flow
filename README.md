@@ -1,8 +1,8 @@
 # English Flow
 
-Study English with conversations from Doist and Zulip. Use the Codex plugin for grammar lessons, work conversations, and notebook review. The plugin includes the full text wiki. A fork also includes the tools that maintain the wiki and build the plugin.
+Study English with conversations from Doist and Zulip. Use English Flow in local Codex or in ChatGPT Work. Both editions use the same wiki, sources, and notebook format. A fork includes the tools that maintain the wiki and build the plugin.
 
-## Install English Flow
+## Install in local Codex
 
 Use Git, a Codex CLI with plugin support, and Python 3.11 or later. Use the checkout or fork that contains this edition. Run both commands at its root.
 
@@ -19,6 +19,12 @@ codex plugin add english-flow@english-flow-local
 ~~~
 
 Type `@english-flow` and select **English Flow** in a local Codex chat. The first search restores the wiki and builds its index. Allow about 2 GB of disk space. Later searches use that index. [Plugin guide](plugins/english-flow/README.md)
+
+## Install in ChatGPT Work
+
+Upload the English Flow Work plugin ZIP through your workspace plugin settings. Use the Work ZIP built with the command below. The GitHub source ZIP contains the development repository. Enable the official Google Drive app in ChatGPT. Connect the Google account that holds your notebook. The account and workspace must permit file uploads to save entries. [Google Drive app setup](https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt)
+
+Select `@english-flow` in a Work cloud chat from a browser or the Android app. Work runs the wiki search on its cloud computer. The first search in a new cache downloads about 205 MB from the published GitHub revision. Allow about 2 GB on the task computer. The phone needs an internet connection. The notebook uses `My Drive/English Flow/notebook` or the Drive folder you specify.
 
 ## Work on a fork
 
@@ -45,7 +51,7 @@ English Flow starts the conversation in English. Ask for another language to cha
 
 Ask the agent to show the source before you save an example. Ask “Save this reference in my notebook” to keep its ID. The agent saves each new lesson in English. To open saved material, ask “Open my notebook.”
 
-The default notebook is `English Flow/notebook` in your home folder. Set `ENGLISH_FLOW_NOTEBOOK_DIR` before you start Codex to select another folder.
+In local Codex the default notebook is `English Flow/notebook` in your home folder. Local searches and notebook operations work offline. To use one notebook on your PC and in Work, sync the same Drive folder to your PC with Google Drive for desktop. Make the folder available offline. Set `ENGLISH_FLOW_NOTEBOOK_DIR` to its local path before you start Codex. Drive syncs the Markdown files when you reconnect. Existing entries in a different folder stay there until you copy them.
 
 For voice practice, use the ChatGPT voice control. Use dictation to send a transcript in the plugin chat. A transcript supports feedback about wording. Pronunciation feedback requires audio. [ChatGPT voice guide](https://help.openai.com/en/articles/20001274-chatgpt-voice)
 
@@ -99,6 +105,14 @@ After you edit study pages or decisions, add the source files to Git. Build the 
 python -B -m tools.packaging.pack_wiki
 python -B -X utf8 tests/check_wiki_mcp.py --plugin plugins/english-flow
 ```
+
+Build the ZIP for ChatGPT Work from your checkout. The ZIP includes the skills and wiki reader. The package records the public corpus revision and file checksums.
+
+```sh
+python -B -m tools.packaging.pack_work dist/english-flow-work.zip
+```
+
+For a fork with a different edition, first publish the matching corpus. Set `--repository OWNER/REPOSITORY --ref COMMIT` when you build the Work ZIP.
 
 Commit the editorial archive and its checksum with the source changes. To check a committed edition, run `python -B -m tools.packaging.pack_wiki --ref HEAD --check`. To rebuild the source archive, use `python -B -m tools.packaging.pack_sources wiki/local OUTPUT_DIRECTORY`. Use an empty output directory. Verify the new parts and manifest before you replace the files in the plugin archive.
 
