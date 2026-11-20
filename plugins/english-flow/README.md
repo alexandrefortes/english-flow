@@ -4,7 +4,7 @@ Study grammar, practice a workplace conversation, or review your notebook. Both 
 
 ## Install in ChatGPT Work in a browser
 
-1. Get `english-flow-work-0.7.0.zip` from the release assets or the person who supplied this edition. Keep it as a ZIP. GitHub's **Source code (zip)** is a copy of the repository. [English Flow releases](https://github.com/alexandrefortes/workplace-english-practice/releases)
+1. Download `english-flow-work-0.7.0.zip` and keep it intact. GitHub's **Source code (zip)** is a copy of the repository. [Download the Work ZIP](https://github.com/alexandrefortes/workplace-english-practice/releases/download/v0.7.0/english-flow-work-0.7.0.zip)
 2. Open **Plugins** in ChatGPT on the web. Open **New plugin**. In a managed workspace, an administrator with upload permission can select **Plugins → Add → Upload plugin** in the Admin console. [ChatGPT plugin installation](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt)
 3. Drop the Work ZIP into the dialog or click the upload link to select it. Select **Add plugin**. Select **Install plugin** if prompted. For an existing manual upload, use **Upload new version** in the plugin details when available.
 4. Connect the official **Google Drive** app if you want to use a notebook. Select the account that owns the folder. Saving requires permission to upload files. [Google Drive setup](https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt)

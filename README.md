@@ -4,7 +4,7 @@ Study workplace English with real conversations from Doist and Zulip. Install En
 
 ## Install in ChatGPT Work in a browser
 
-1. Get `english-flow-work-0.7.0.zip`. For a published release, open **Assets** and select the file with that name. GitHub's **Source code (zip)** contains the development repository. Keep the Work ZIP intact for upload. [GitHub releases](https://github.com/alexandrefortes/workplace-english-practice/releases) · [Build the Work ZIP from a checkout](CONTRIBUTING.md#build-the-work-zip)
+1. Download `english-flow-work-0.7.0.zip` and keep it intact for upload. GitHub's **Source code (zip)** contains the development repository. [Download the Work ZIP](https://github.com/alexandrefortes/workplace-english-practice/releases/download/v0.7.0/english-flow-work-0.7.0.zip)
 2. Open **Plugins** in ChatGPT on the web. Open **New plugin**. If you manage plugins in the Admin console, select your workspace and open **Plugins → Add → Upload plugin**. The upload option requires permission in your account or workspace. [ChatGPT plugin installation](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt)
 3. Drop the ZIP into the upload area or click the upload link to choose it. Select **Add plugin**. If ChatGPT shows **Install plugin**, select it. To update a plugin you uploaded before, open its details and select **Upload new version** when available.
 4. To use your notebook, connect the official **Google Drive** app in ChatGPT. Choose the account that holds your notes. Saving requires permission to upload files to the notebook folder. [Google Drive setup](https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt)
@@ -14,10 +14,10 @@ The first source search in a new cache downloads about 206 MB of published wiki 
 
 ## Install in local Codex
 
-Use a Codex CLI with plugin support, Git, and Python 3.11 or later. To install from GitHub, replace `TAG` with a published English Flow tag.
+Use a Codex CLI with plugin support, Git, and Python 3.11 or later. To install this release from GitHub, run both commands.
 
 ```sh
-codex plugin marketplace add alexandrefortes/workplace-english-practice --ref TAG
+codex plugin marketplace add alexandrefortes/workplace-english-practice --ref v0.7.0
 codex plugin add english-flow@english-flow-local
 ```
 
