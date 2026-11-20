@@ -67,4 +67,4 @@ python -B -m tools.packaging.pack_work dist/english-flow-work-0.7.0.zip
 
 The ZIP includes the study skills, the wiki reader, the Drive app reference, and the checksums for the public corpus. Work fetches the text archive from the GitHub commit recorded in the ZIP. For a fork with a different corpus, first publish that corpus in your fork. Pass `--repository OWNER/REPOSITORY --ref COMMIT` when you build.
 
-Attach the Work ZIP to the GitHub release for the matching version. Learners use this file in the ChatGPT upload dialog. The Codex CLI installs from the repository tag. [Installation instructions](README.md)
+To publish a release, push a tag that matches the plugin version, such as `v0.7.0`. GitHub Actions builds the Work ZIP and attaches it to the release. Learners use this file in the ChatGPT upload dialog. The Codex CLI installs from the same tag. [Installation instructions](README.md)

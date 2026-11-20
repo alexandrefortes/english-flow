@@ -1,0 +1,41 @@
+name: Publish the Work ZIP
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Build the upload package
+        run: |
+          version=$(python -c 'import json; print(json.load(open("plugins/english-flow/plugin.json"))["version"])')
+          test "$GITHUB_REF_NAME" = "v$version"
+          python -B -m tools.packaging.pack_work "dist/english-flow-work-$version.zip" --repository "$GITHUB_REPOSITORY"
+          python -m zipfile -t "dist/english-flow-work-$version.zip"
+      - name: Attach the ZIP to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          asset="english-flow-work-${GITHUB_REF_NAME#v}.zip"
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            if gh release view "$GITHUB_REF_NAME" --json assets --jq '.assets[].name' | grep -Fxq "$asset"; then
+              gh release download "$GITHUB_REF_NAME" --pattern "$asset" --dir "$RUNNER_TEMP"
+              cmp "dist/$asset" "$RUNNER_TEMP/$asset"
+            else
+              gh release upload "$GITHUB_REF_NAME" "dist/$asset"
+            fi
+          else
+            gh release create "$GITHUB_REF_NAME" "dist/$asset" --verify-tag --title "English Flow $GITHUB_REF_NAME" --notes "For ChatGPT Work, download $asset and upload it in New plugin. For local Codex, follow the commands in the README."
+          fi
