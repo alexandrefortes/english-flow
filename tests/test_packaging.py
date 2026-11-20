@@ -23,7 +23,7 @@ class PackagingTests(unittest.TestCase):
             raiz = Path(tmp)
             local, pacote, destino = (raiz / nome for nome in ("origem", "pacote", "cache/wiki"))
             edicao = WikiEdition(local)
-            edicao.write_page("index.md", "# Conversas\n")
+            edicao.write_page("index.md", "# Conversas\n\nConsulte a imagem ao usar o OCR da Doist.\n")
             banco = raiz / "grafo.sqlite3"
             with sqlite3.connect(banco) as db:
                 db.executescript(SCHEMA)
@@ -52,7 +52,8 @@ class PackagingTests(unittest.TestCase):
                 a.result()
                 b.result()
             self.assertEqual((destino / "situacoes.md").read_bytes(), b"# Situacoes\n")
-            self.assertEqual((destino / "local/index.md").read_text(), "# Conversas\n")
+            self.assertIn("Leia a transcrição da Doist.", (destino / "local/index.md").read_text(encoding="utf-8"))
+            self.assertIn("Consulte a imagem", (local / "index.md").read_text(encoding="utf-8"))
 
     def test_text_edition_integrity_and_original_files(self):
         with TemporaryDirectory() as tmp:

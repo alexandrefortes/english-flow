@@ -329,7 +329,7 @@ TOOLS = [
     tool("read_graph_node", "Read the text and relations of a graph node by ID. "
          "You can also open topic and situation IDs from its links.",
          {"node_id": {"type": "string", "minLength": 1, "maxLength": 200}}, ("node_id",)),
-    tool("download_sources", "Download missing public Doist and Zulip samples on request.", writes=True),
+    tool("download_sources", "Download missing public samples on the maintainer's collection computer.", writes=True),
 ]
 FUNCTIONS = {item["name"]: globals()[item["name"]] for item in TOOLS}
 

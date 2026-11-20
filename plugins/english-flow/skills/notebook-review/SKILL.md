@@ -40,7 +40,7 @@ Use the local MCP for these operations in a local chat. Use the packaged Work sc
 4. For attachments, check `correspondencia`, the transcript, and `origens`. A filename or label can locate an item. If the words occur in the source message, open and cite `citar_id` or the message in `origens`. Quote only legible words from a partial transcript.
 5. Give the literal passage, stable ID, wiki page, and available source link. Identify study pages written by the project. Label British English adaptations. Include the stable ID in `sources` when saving. To reopen a reference, read the notebook entry and pass the source ID to `read_wiki_item`.
 
-In local mode, you can also use `search_graph` and `read_graph_node` or `list_sources` and `read_source` for a sample. Keep the required filters. Use `download_sources` only when requested. In cloud mode, report a failed source lookup before quoting an example.
+In local mode, you can also use `search_graph` and `read_graph_node`. Keep the required filters. Use the published transcripts for study in both modes. Keep source collection on the maintainer's collection computer. When a transcript is missing, check the linked message or report the gap.
 
 ## Save a review or note
 

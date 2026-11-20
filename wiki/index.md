@@ -1,6 +1,6 @@
 # Wiki de inglês para o trabalho
 
-Abra as [conversas para estudar](conversas/index.md). Cada caso traz o contexto, as frases relevantes e o que a troca resolveu ou deixou em aberto. As explicações estão em português e as adaptações usam inglês britânico. A [edição local do acervo](local/index.md) guarda as conversas completas em texto, além das capturas com OCR.
+Abra as [conversas para estudar](conversas/index.md). Cada caso traz o contexto, as frases relevantes e o que a troca resolveu ou deixou em aberto. As explicações estão em português e as adaptações usam inglês britânico. A [edição em texto do acervo](local/index.md) reúne mensagens do Zulip, transcrições das capturas da Doist e registros dos anexos. No plugin, abra a fonte pelo ID. Em um clone, execute `python -B -m tools.packaging.restore_wiki` na raiz para abrir os links sob `local/`.
 
 ## Escolher uma situação
 

@@ -17,4 +17,4 @@ python -B -X utf8 -m unittest discover -s tests
 python -B -X utf8 tests/check_wiki_mcp.py
 ```
 
-Mass image review and OCR are on hold. Use the published transcripts. See the [README](README.md) for installation, collection, and packaging.
+The original screenshots, attachment files, and collection exports stay in `dados/` on the maintainer's collection computer. Keep them out of Git and the plugin packages. Use the published text edition to study, review, build, and test from a clone. Mass image review and OCR are on hold. [Installation](README.md) · [Build and review instructions](CONTRIBUTING.md)

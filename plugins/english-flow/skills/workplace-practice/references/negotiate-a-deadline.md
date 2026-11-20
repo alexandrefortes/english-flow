@@ -2,7 +2,7 @@
 
 The Doist conversation is about an illustration. A colleague proposes Thursday instead of Monday. The other colleague suggests the end of Wednesday to allow time for changes. [Original Doist publication](https://www.todoist.com/inspiration/remote-team-communication-tools#todoist)
 
-Open `doist-combinar-prazo` or its sample alias `prazo-imagem-todoist` before quoting the source. The dialogue below is a **British English adaptation**.
+Open the wiki transcript `doist-combinar-prazo` before quoting the source. The dialogue below is a **British English adaptation**.
 
 ## First attempt
 

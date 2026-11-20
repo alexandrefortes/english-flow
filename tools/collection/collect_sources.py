@@ -141,7 +141,7 @@ def run(script):
 
 
 def main(argv=None):
-    cli = argparse.ArgumentParser(description='Download public conversations from Doist and Zulip.')
+    cli = argparse.ArgumentParser(description='Download original sources on the maintainer\'s collection computer.')
     cli.add_argument("--sample", action="store_true", help="Download the five original sample items only.")
     args = cli.parse_args(argv)
     if args.sample:
@@ -161,7 +161,7 @@ def main(argv=None):
     if zulip == 3:
         return 3
 
-    print(f"See {DIRECTORY / 'README.md'} for the files and reader.", flush=True)
+    print(f"Original files are on this collection computer in {DIRECTORY / 'dados'}.", flush=True)
     return 0
 
 

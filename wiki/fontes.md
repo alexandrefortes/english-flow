@@ -1,6 +1,6 @@
 # Fontes das conversas
 
-Para estudar, abra a [edição local](local/index.md). Ela guarda as interações em texto e as imagens da Doist. IDs que começam com `zulip-msg-` identificam mensagens individuais. As referências externas registram a procedência. Para estudar fala, consulte [pronúncia](pronuncia.md).
+Para estudar, abra a [edição em texto](local/index.md). Ela contém as mensagens do Zulip e as transcrições das capturas da Doist. IDs que começam com `zulip-msg-` identificam mensagens individuais. As referências externas levam às publicações de origem. Os arquivos de imagem da coleta ficam na máquina coletora. Para estudar fala, consulte [pronúncia](pronuncia.md).
 
 ## doist-pedir-atualizacao
 

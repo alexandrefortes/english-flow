@@ -1,6 +1,6 @@
 # Explorar o grafo da coleta
 
-O [índice](index.md) reúne as páginas de estudo. Na [edição local](local/index.md), uma mensagem pode estar ligada ao tópico do Zulip, a uma situação como negociação de prazo e a um tema como gramática. A edição de curadoria do repositório inclui as transcrições da Doist e as referências de origem. Na máquina da coleta também há imagens para conferência visual.
+O [índice](index.md) reúne as páginas de estudo. Na [edição local](local/index.md), uma mensagem pode estar ligada ao tópico do Zulip, a uma situação como negociação de prazo e a um tema como gramática. A edição de curadoria do repositório inclui as transcrições da Doist e as referências de origem. Os arquivos originais de imagem, de anexo e de exportação ficam na máquina coletora do mantenedor.
 
 ```mermaid
 graph LR
@@ -14,18 +14,19 @@ graph LR
 
 ## Usar a edição pronta
 
-Abra o [índice](index.md) na pasta `wiki/` do projeto. Para consultar o grafo SQLite pelo terminal, execute os comandos abaixo nessa pasta.
+No plugin, peça um exemplo e abra o ID retornado. Em um clone, execute os comandos na raiz do repositório. O primeiro restaura as páginas de texto e o grafo da edição publicada.
 
-```powershell
-python -B -X utf8 construir_grafo.py resumo
-python -B -X utf8 construir_grafo.py buscar --situacao se-apresentar --curados --formato markdown
-python -B -X utf8 construir_grafo.py buscar --situacao negociar-prazo --fonte Doist --limite 10
-python -B -X utf8 construir_grafo.py buscar --tema phrasal-verbs --texto "get back"
-python -B -X utf8 construir_grafo.py mostrar zulip-msg-2552913
-python -B -X utf8 ingerir_acervo.py --verificar
+```sh
+python -B -m tools.packaging.restore_wiki
+python -B -m tools.curation.build_graph summary
+python -B -m tools.curation.build_graph search --situation se-apresentar --verified-only --format markdown
+python -B -m tools.curation.build_graph search --situation negociar-prazo --source Doist --limit 10
+python -B -m tools.curation.build_graph search --topic phrasal-verbs --text "get back"
+python -B -m tools.curation.build_graph show zulip-msg-2552913
+python -B -m tools.curation.build_wiki --verify
 ```
 
-Os resultados trazem o ID, a página dentro da wiki e a URL de procedência. Use `mostrar` para ver o texto e as ligações de um item, ou `--pular 10` para navegar à página seguinte de uma busca com dez resultados.
+Os resultados trazem o ID, a página dentro da wiki e a URL de procedência. Use `show` para ver o texto e as ligações de um item. Para a próxima página de uma busca com dez resultados, use `--offset 10`.
 
 O índice usa três relações. `pertence` leva a mensagem ao tópico. `candidato` registra a expressão que acionou uma regra de classificação. `curado` liga às situações e aos temas um exemplo conferido nas páginas. O YAML usa `learning_uses` para indicar usos pedagógicos da interação. Em tópicos do Zulip, `learning_by_message` acrescenta os usos de mensagens específicas e `message_learning_default` indica `leitura-contextual` para as demais. Em [pronúncia](pronuncia.md), a transcrição e os exercícios estão na página. Os links para áudio são opcionais.
 
@@ -48,39 +49,22 @@ O [registro de decisões](decisoes.tsv.gz) usa uma linha por item com ID, tipo, 
 
 A busca atualiza as páginas que mudaram e exclui as removidas. Uma mudança no texto ou no contexto relevante deixa a decisão pendente de avaliação. A qualidade da transcrição aparece em um campo próprio.
 
-Na raiz do projeto, execute `python -B wiki/avaliar_acervo.py` para comparar os IDs com o grafo, os catálogos e as páginas. Consulte `search_wiki` com `curation: pendente` para retomar a leitura. Para listar um lote por ID, execute `python -B wiki/avaliar_acervo.py --pendentes mensagem --limite 50`. A próxima página aceita `--apos ID` com o último ID exibido. Cada situação conta o mesmo ID uma vez.
+Na raiz do projeto, execute `python -B -m tools.curation.review_items` para comparar os IDs com o grafo, os catálogos e as páginas. Consulte `search_wiki` com `curation: pendente` para retomar a leitura. Para listar um lote por ID, execute `python -B -m tools.curation.review_items --pending mensagem --limit 50`. A próxima página aceita `--after ID` com o último ID exibido. Cada situação conta o mesmo ID uma vez.
 
 Abra o ID e confira o texto e o contexto da página. Registre a decisão em um lote JSONL, uma linha por item com `id`, `tipo`, `assinatura`, `estado` e `motivo`. Use `apoio` com a função do material, ou `sem-uso` com o motivo. Para `conferido`, inclua `evidencias` com o trecho literal, a função em `funcao` e a lista de `usos` de cada exemplo. A assinatura vem de `read_wiki_item`.
 
-Execute `python -B wiki/avaliar_acervo.py --registrar --revisoes lote.jsonl` para incorporar o lote aos registros da wiki. A importação verifica o ID, a assinatura e os trechos antes de gravar. Os IDs que ainda precisam de leitura continuam pendentes. O preparo de um clone restaura os registros publicados. Execute `python -B testes/verificar_mcp_wiki.py` para repetir os testes no MCP com um caderno temporário.
+Execute `python -B -m tools.curation.review_items --record --reviews lote.jsonl` para incorporar o lote aos registros da wiki. A importação verifica o ID, a assinatura e os trechos antes de gravar. Os IDs que ainda precisam de leitura continuam pendentes. O preparo de um clone restaura os registros publicados. Execute `python -B -X utf8 tests/check_wiki_mcp.py` para repetir os testes no MCP com um caderno temporário.
 
 ## Anexos do Zulip
 
 O [índice de anexos](local/anexos/index.md) abre o texto extraído dos arquivos. Cada página liga às mensagens que citaram o anexo, e essas mensagens ligam de volta à página. No YAML, `learning_from_text` indica sinais no texto extraído e `learning_from_context` indica sinais nas mensagens. O texto fica na própria wiki, pronto para leitura offline.
 
-Na raiz do projeto da máquina da coleta, rode `python -B -X utf8 wiki/processar_anexos.py` para incorporar anexos novos. Rode o mesmo comando para retomar. Use `--resumo` para ver a contagem sem rede ou `--so-transcrever` para concluir a transcrição e depois incorporá-la com `python -B -X utf8 wiki/ingerir_anexos.py`. Os arquivos baixados ficam na pasta da coleta.
-
-O OCR usa Tesseract com o modelo `eng`. Para PDFs, instale PyMuPDF ou Poppler. Para vídeo e áudio, disponibilize FFmpeg e FFprobe. Passe `--modelo CAMINHO` com um modelo Whisper local para transcrever fala, e acrescente `--dispositivo cuda` se o ambiente tiver suporte. Em vídeo, o OCR usa quadros amostrados.
-
-Cada anexo com texto tem uma seção `Content`. A página indica quando a transcrição é parcial. Para conferir o método, o estado ou as notas de revisão, procure o ID do anexo no [registro de extração](local/anexos/extracao.json). Uma revisão manual tem `manual_review: true` nesse registro. A reconstrução reaplica as revisões de `dados/zulip/anexos/revisoes-manuais.json` quando o ID e o SHA-256 correspondem ao arquivo coletado.
+O registro guarda o nome do arquivo, os vínculos com as mensagens e o texto disponível. A seção `Content` contém o trecho transcrito. Quando a frase está apenas na mensagem de origem, abra a mensagem e cite o ID dela. Consulte o [registro de extração](local/anexos/extracao.json) para ver o método, a qualidade e as notas de revisão. O campo `manual_review: true` indica uma revisão manual.
 
 ### Revisão visual do OCR
 
-A revisão visual em massa está pausada. Para a curadoria na nuvem, use a transcrição publicada. As instruções desta seção servem para uma eventual retomada na máquina da coleta.
-
-A revisão com Terra médio usa as imagens originais da Doist e do Zulip. Em vídeos e animações, os lotes usam os quadros selecionados para OCR. PDFs e arquivos ZIP podem ter várias imagens por arquivo. Cada transcrição conferida fica em `dados/revisao-ocr/terra/`, identificada pelo ID e pelo SHA-256 do original. A página preserva o idioma, a grafia e a pontuação da imagem. A indicação de transcrição parcial cobre, por exemplo, uma linha cortada ou encoberta.
-
-Na raiz do projeto, use `python -B -X utf8 wiki/revisar_ocr.py resumo` para ver quantos arquivos já têm revisão e quantos já chegaram à wiki. Para retomar uma fila interrompida, rode `wiki/revisar_ocr.py revisar --executavel CAMINHO` com Python e o executável do Codex Desktop que oferece Terra. Uma execução retoma pelos recibos existentes e publica os próximos lotes. A gravação mantém o OCR bruto para comparação.
+A revisão visual em massa e o OCR estão pausados. Na curadoria, cite apenas palavras legíveis na transcrição publicada. Use a qualidade registrada para explicar uma lacuna de leitura. A consulta aos arquivos originais ocorre na máquina coletora.
 
 ## Reconstruir a edição quando a coleta mudar
 
-Na raiz do projeto de coleta, use o Tesseract com o modelo de inglês `eng`. A coleta pode retomar de onde parou. Pule a coleta e o OCR se já tiver os arquivos locais.
-
-```powershell
-python -B baixar_conversas.py
-python -B wiki/ocr_doist.py
-python -B -X utf8 wiki/construir_grafo.py construir
-python -B -X utf8 wiki/ingerir_acervo.py
-```
-
-O construtor combina a coleta maior, o piloto e a amostra por ID. O materializador cria Markdown por tópico, preserva as mensagens completas, copia as imagens e inclui o grafo em `wiki/local/`. Para incorporar só novos exemplos conferidos, atualize a [curadoria](curadoria.json), rode `construir_grafo.py atualizar-curadoria` no projeto e gere a edição de novo. Os rótulos baseados no OCR e no catálogo da Doist estão em [sinais-doist.json](sinais-doist.json). [Manutenção da wiki](AGENTS.md)
+O mantenedor prepara a edição em texto na máquina coletora. A distribuição inclui as mensagens, as transcrições, os registros de anexos e o grafo. Os links das publicações preservam a procedência. Para rever um exemplo em um clone, restaure a edição publicada e siga o procedimento por ID acima. Os rótulos do catálogo da Doist estão em [sinais-doist.json](sinais-doist.json). [Manutenção da wiki](AGENTS.md)

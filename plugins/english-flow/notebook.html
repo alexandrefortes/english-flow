@@ -83,7 +83,7 @@
   </section>
 
   <section class="card" aria-labelledby="sources-title">
-    <div class="heading"><h2 id="sources-title">Public sources</h2><button id="download" type="button" disabled>Download sample</button></div>
+    <h2 id="sources-title">Study sources</h2>
     <p id="coverage" class="hint"></p>
     <div class="field filters">
       <label for="intent">Work situation</label>
@@ -121,7 +121,7 @@
   const state = {entries: [], sources: [], coverage: null, wiki: false};
   const kindNames = {lesson: "Lesson", practice: "Practice", review: "Review", note: "Note"};
   const scopeNames = {sample: "Sample", pilot: "Pilot", full: "Full collection"};
-  const searchableControls = ["refresh", "download", "search-submit"];
+  const searchableControls = ["refresh", "search-submit"];
   let nextId = 0;
   let initialized = false;
   let manualTrigger;
@@ -421,7 +421,7 @@
     if (reference.description) panel.append(element("p", reference.description, "hint"));
     const url = httpsUrl(reference.url);
     if (url) panel.append(externalLink("Open original publication", url));
-    status("The local source is unavailable. Download the sample or open the original publication.");
+    status("The local source is unavailable. Check the published wiki for a transcript.");
   }
 
   async function showSource(id, trigger, reference) {
@@ -508,7 +508,6 @@
 
   function renderSources() {
     const soWiki = state.wiki && !state.sources.some(source => source.available);
-    get("download").hidden = soWiki;
     get("intent").parentElement.hidden = soWiki;
     if (soWiki) {
       const row = element("li");
@@ -522,7 +521,7 @@
       const row = element("li");
       const button = sourceButton(titleFor(source), source.id);
       const scope = scopeNames[source.scope];
-      const available = source.available ? "Available" : "Download required";
+      const available = source.available ? "Available" : "Publication reference";
       const details = [source.company, scope, available].filter(Boolean).join(" · ");
       row.append(button, " ", element("small", details));
       if (source.description) row.append(element("p", source.description, "hint"));
@@ -556,7 +555,7 @@
     if (coverage.zulip && !scopes.length) parts.push("Zulip: no local messages yet");
     get("coverage").textContent = parts.join(" · ");
     if (!scopes.length && coverage.zulip) {
-      get("search-info").textContent = "Download the sample to search Zulip messages.";
+      get("search-info").textContent = "Restore the published wiki to search its Zulip messages.";
     } else if (scopes.length && !get("matches").childElementCount) {
       get("search-info").textContent = "Search covers " + scopes.join(", ") + " in the local collection.";
     }
@@ -627,7 +626,7 @@
         const coverage = data.coverage ?? state.coverage;
         const scopes = scopesFor(coverage);
         if (!state.wiki && coverage?.zulip?.searchable === false) {
-          get("search-info").textContent = "Download the sample to search Zulip messages.";
+          get("search-info").textContent = "Restore the published wiki to search its Zulip messages.";
           return;
         }
         renderMatches(data.matches, query);
@@ -641,15 +640,6 @@
       }
     });
   });
-  get("download").addEventListener("click", event => run(event.currentTarget, async () => {
-    status("Downloading the sample…");
-    const {structuredContent: data} = await call("download_sources", {}, 185000);
-    render(data);
-    const count = data.downloaded?.length || 0;
-    const missing = data.failures?.length || 0;
-    if (missing) status(count + " sources downloaded. Still missing: " + missing + ". Select the button to try again.");
-    else status(count ? count + " sample sources downloaded." : "The sample is already available.");
-  }));
   for (const button of document.querySelectorAll("[data-prompt]")) {
     button.addEventListener("click", () => run(button, () => sendPrompt(button.dataset.prompt, button)));
   }

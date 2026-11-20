@@ -1,6 +1,6 @@
 # Study in ChatGPT Work
 
-Use a Work task with a cloud computer for source searches. Use the official Google Drive app for the learner's notebook. The chat can run in a browser or on a phone.
+Use a Work task with a cloud computer for source searches. The wiki contains published transcripts and source references. The original collection stays on the maintainer's collection computer. Use the official Google Drive app for the learner's notebook. The chat can run in a browser or on a phone.
 
 ## Open the wiki
 

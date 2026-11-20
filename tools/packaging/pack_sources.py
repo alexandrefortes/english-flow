@@ -77,6 +77,15 @@ def sha(path):
         return hashlib.file_digest(arquivo, "sha256").hexdigest()
 
 
+def published_index(text):
+    return (text.replace("O conteúdo, as imagens e a navegação estão dentro da wiki.",
+                         "Esta edição de curadoria reúne o texto e a navegação offline.")
+            .replace("Consulte a imagem ao usar o OCR da Doist.",
+                     "Leia a transcrição da Doist. O link da publicação identifica a origem da captura.")
+            .replace(" capturas com OCR.", " transcrições de capturas da Doist.")
+            .replace(" capturas da Doist](doist/index.md)", " transcrições da Doist](doist/index.md)"))
+
+
 def pack(local, saida):
     local = local.resolve()
     saida.mkdir(parents=True, exist_ok=True)
@@ -119,8 +128,7 @@ def pack(local, saida):
                         if nome.startswith("doist/") and path.suffix == ".md":
                             texto = re.sub(r"(?m)^!\[Captura Doist\]\(imagens/[^)\n]+\)\r?\n(?:\r?\n)?", "", texto, count=1)
                         if nome == "index.md":
-                            texto = texto.replace("O conteúdo, as imagens e a navegação estão dentro da wiki.",
-                                                  "Esta edição de curadoria reúne o texto e a navegação offline.")
+                            texto = published_index(texto)
                         if nome == "anexos/extracao.json":
                             catalogo = json.loads(texto)
                             raiz_origem = str(local.parent.parent)

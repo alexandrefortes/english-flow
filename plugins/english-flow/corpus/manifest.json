@@ -1,24 +1,9 @@
 {
-  "versao": 1,
-  "manifesto_sha256": "15d4a0749b89719044677471340aaba6d499640f63c899f1a6d32046ef4d9fb5",
   "arquivos_verificados": 57383,
-  "totais": {
-    "anexos": 28455,
-    "anexos_aguardam_transcricao": 0,
-    "anexos_com_texto": 27634,
-    "anexos_referencias": 29732,
-    "anexos_referencias_pendentes": 0,
-    "anexos_revisados_manualmente": 1788,
-    "canais": 26,
-    "capturas": 46,
-    "imagens": 0,
-    "markdown": 57380,
-    "mensagens": 493370,
-    "topicos": 28239
-  },
+  "manifesto_sha256": "6418d549b6dd7e2a659fc55c4848473e36f0e35a5d573be40893f0f33560d95b",
   "mascaramento": {
-    "campos_do_grafo": 142,
-    "arquivos_de_texto": 221
+    "arquivos_de_texto": 221,
+    "campos_do_grafo": 142
   },
   "partes": [
     {
@@ -39,12 +24,27 @@
     {
       "arquivo": "wiki-004.bin",
       "bytes": 33554432,
-      "sha256": "fbf7e2b2a7776806b048a0dbfdd2d130df2d25dd71829b85ae498853f832ed90"
+      "sha256": "de81da56a1b3b9e5d7d800c84e6760072c0420f610a35efb9bc7ac1f2063c45b"
     },
     {
       "arquivo": "wiki-005.bin",
-      "bytes": 21714554,
-      "sha256": "ef79faab255fa5820458751be0766f38e332b6971886a707336f0a6f01a313ee"
+      "bytes": 21714576,
+      "sha256": "b3f501513cf06b394bf11adcd47714e76992f9721f696203be9a1986f53a39d5"
     }
-  ]
+  ],
+  "totais": {
+    "anexos": 28455,
+    "anexos_aguardam_transcricao": 0,
+    "anexos_com_texto": 27634,
+    "anexos_referencias": 29732,
+    "anexos_referencias_pendentes": 0,
+    "anexos_revisados_manualmente": 1788,
+    "canais": 26,
+    "capturas": 46,
+    "imagens": 0,
+    "markdown": 57380,
+    "mensagens": 493370,
+    "topicos": 28239
+  },
+  "versao": 1
 }
