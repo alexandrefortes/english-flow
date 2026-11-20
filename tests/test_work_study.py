@@ -36,7 +36,7 @@ class WorkStudyTests(unittest.TestCase):
             self.assertEqual((manifest["name"], manifest["version"]), (local["name"], local["version"]))
             extension = manifest["extensions"]["com.openai"]
             apps = json.loads(archive.read(extension["apps"].removeprefix("./")))["apps"]
-            self.assertEqual(apps, {"google-drive": {"id": pack_work.DRIVE_APP, "required": False}})
+            self.assertEqual(apps, {"google-drive": {"id": pack_work.DRIVE_APP}})
             self.assertNotIn("apps", local["extensions"]["com.openai"])
             self.assertTrue((PLUGIN / ".mcp.json").is_file())
             self.assertFalse({"mcp.json", ".mcp.json", ".codex-plugin/plugin.json", "server.py"} & set(files))

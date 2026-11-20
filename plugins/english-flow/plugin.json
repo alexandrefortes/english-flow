@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "english-flow",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Practice workplace English with real sources and a personal notebook.",
   "extensions": {
     "com.openai": {

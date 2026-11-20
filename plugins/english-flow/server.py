@@ -366,7 +366,7 @@ def dispatch(method, params):
                                  "does not change the reply language. When the learner asks to switch, use that language "
                                  "for instructions, explanations, and feedback until asked to switch again. Keep English "
                                  "examples, exercises, and role-play in English. Use natural workplace language."),
-                "serverInfo": {"name": "english-flow", "version": "0.7.0"}}
+                "serverInfo": {"name": "english-flow", "version": "0.7.1"}}
     if method == "ping":
         return {}
     if method == "tools/list":

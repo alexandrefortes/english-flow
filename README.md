@@ -4,10 +4,10 @@ Study workplace English with real conversations from Doist and Zulip. Install En
 
 ## Install in ChatGPT Work in a browser
 
-1. Download `english-flow-work-0.7.0.zip` and keep it intact for upload. GitHub's **Source code (zip)** contains the development repository. [Download the Work ZIP](https://github.com/alexandrefortes/workplace-english-practice/raw/refs/heads/main/downloads/english-flow-work-0.7.0.zip)
+1. Download `english-flow-work-0.7.1.zip` and keep it intact for upload. GitHub's **Source code (zip)** contains the development repository. [Download the Work ZIP](https://github.com/alexandrefortes/workplace-english-practice/raw/refs/heads/main/downloads/english-flow-work-0.7.1.zip)
 2. Open **Plugins** in ChatGPT on the web. Open **New plugin**. If you manage plugins in the Admin console, select your workspace and open **Plugins → Add → Upload plugin**. The upload option requires permission in your account or workspace. [ChatGPT plugin installation](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt)
 3. Drop the ZIP into the upload area or click the upload link to choose it. Select **Add plugin**. If ChatGPT shows **Install plugin**, select it. To update a plugin you uploaded before, open its details and select **Upload new version** when available.
-4. To use your notebook, connect the official **Google Drive** app in ChatGPT. Choose the account that holds your notes. Saving requires permission to upload files to the notebook folder. [Google Drive setup](https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt)
+4. The Work plugin uses the official **Google Drive** app for the notebook. If ChatGPT asks you to connect Drive, choose the account that holds your notes. Saving requires permission to upload files to the notebook folder. [Google Drive setup](https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt)
 5. Start a **Work** cloud chat on the web or Android. Type `@english-flow`, select **English Flow**, and ask “How can I ask for more time to finish a report?”
 
 The first source search in a new cache downloads about 206 MB of published wiki text and indexes from GitHub to the Work computer. Allow about 2 GB there for the restored wiki and search index. Later searches reuse that cache while it is available. A new chat can receive a new cache. Saved notes stay in Drive.
@@ -17,7 +17,7 @@ The first source search in a new cache downloads about 206 MB of published wiki 
 Use a Codex CLI with plugin support, Git, and Python 3.11 or later. To install this release from GitHub, run both commands.
 
 ```sh
-codex plugin marketplace add alexandrefortes/workplace-english-practice --ref v0.7.0
+codex plugin marketplace add alexandrefortes/workplace-english-practice --ref v0.7.1
 codex plugin add english-flow@english-flow-local
 ```
 

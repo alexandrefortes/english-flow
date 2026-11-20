@@ -42,6 +42,7 @@ jobs:
           RELEASE_TAG: ${{ steps.release.outputs.tag }}
         run: |
           git switch --detach "refs/tags/$RELEASE_TAG"
+          python -B -m unittest discover -s tests -p test_work_study.py
           python -B -m tools.packaging.pack_work "dist/$ZIP_NAME" --repository "$GITHUB_REPOSITORY"
           python -m zipfile -t "dist/$ZIP_NAME"
           if git cat-file -e "$GITHUB_SHA:downloads/$ZIP_NAME" 2>/dev/null; then
