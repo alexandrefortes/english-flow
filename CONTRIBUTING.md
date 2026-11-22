@@ -63,9 +63,9 @@ Commit `project.tar.gz` and `project.sha256` with the wiki changes. To check the
 ## Build the Work ZIP
 
 ```sh
-python -B -m tools.packaging.pack_work dist/english-flow-work-0.7.1.zip
+python -B -m tools.packaging.pack_work dist/english-flow-work-0.7.3.zip
 ```
 
 The ZIP includes the study skills, the wiki reader, the Drive app reference, and the checksums for the public corpus. Work fetches the text archive from the GitHub commit recorded in the ZIP. For a fork with a different corpus, first publish that corpus in your fork. Pass `--repository OWNER/REPOSITORY --ref COMMIT` when you build.
 
-Build the Work ZIP for the release and put it in `downloads/`. Commit the file and its README download link. Push a tag that matches the plugin version, such as `v0.7.1`. GitHub Actions tests the Work package, builds the ZIP from that tag, and attaches it to the release. To run the job again, open **Actions → Publish the Work ZIP → Run workflow**. The README link also serves the file directly from GitHub. The Codex CLI installs from the tag. [Installation instructions](README.md)
+Build the Work ZIP for the release and put it in `downloads/`. Commit the file and its README download link. Push a tag that matches the plugin version, such as `v0.7.3`. GitHub Actions tests the Work package, builds the ZIP from that tag, and attaches it to the release. To run the job again, open **Actions → Publish the Work ZIP → Run workflow**. The README link also serves the file directly from GitHub. The Codex CLI installs from the tag. [Installation instructions](README.md)

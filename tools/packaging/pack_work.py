@@ -43,8 +43,10 @@ def corpus_release(repository, ref):
 def pack(output, repository=SOURCE_REPOSITORY, ref=CORPUS_REVISION):
     manifest = json.loads((PLUGIN / "plugin.json").read_bytes())
     manifest["extensions"]["com.openai"]["apps"] = "./.app.json"
+    icon = "assets/english-flow-icon.png"
     files = {"plugin.json": json_bytes(manifest),
              ".app.json": json_bytes({"apps": {"google-drive": {"id": DRIVE_APP}}}),
+             icon: (PLUGIN / icon).read_bytes(),
              "LICENSE": (ROOT / "LICENSE").read_bytes(), "NOTICE": (ROOT / "NOTICE").read_bytes(),
              "README.md": (PLUGIN / "README.md").read_bytes()}
     for path in (PLUGIN / "skills").rglob("*"):

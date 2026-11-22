@@ -22,6 +22,24 @@ class WorkStudyTests(unittest.TestCase):
         self.release = self.root / "corpus.json"
         self.output = self.root / "drafts"
 
+    def test_work_and_codex_use_the_release_icon(self):
+        package = self.root / "work.zip"
+        pack_work.pack(package)
+        icon = "assets/english-flow-icon.png"
+        portable = json.loads((PLUGIN / "plugin.json").read_bytes())
+        codex = json.loads((PLUGIN / ".codex-plugin/plugin.json").read_bytes())
+        with ZipFile(package) as archive:
+            work = json.loads(archive.read("plugin.json"))
+            for interface in (portable["extensions"]["com.openai"]["interface"],
+                              codex["interface"], work["extensions"]["com.openai"]["interface"]):
+                self.assertEqual(interface["logo"], "./" + icon)
+                self.assertEqual(interface["composerIcon"], "./" + icon)
+            self.assertEqual(archive.namelist().count(icon), 1)
+            png = archive.read(icon)
+        self.assertEqual(png, (PLUGIN / icon).read_bytes())
+        self.assertEqual(hashlib.sha256(png).hexdigest(),
+                         "dd39bc2e6f2715dbfcd004af312149b42fc0159be61f730d423cc154181fcde7")
+
     def test_build_and_run_the_work_package_without_a_local_plugin(self):
         package = self.root / "work.zip"
         pack_work.pack(package)
