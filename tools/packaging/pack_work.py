@@ -10,7 +10,7 @@ from tools import PLUGIN, ROOT
 
 
 DRIVE_APP = "connector_5f3c8c41a1e54ad7a76272c89e2554fa"
-SOURCE_REPOSITORY = "alexandrefortes/workplace-english-practice"
+SOURCE_REPOSITORY = "alexandrefortes/english-flow"
 CORPUS_REVISION = "55d520cf4b616a970bef813f68ac3564ddb5c1bb"
 WORK_MODULES = ("work_study.py", "edition.py", "graph_reader.py", "wiki_index.py",
                 "wiki_search.py", "notebook_format.py", "tool_inputs.py")

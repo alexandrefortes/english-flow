@@ -68,7 +68,8 @@ class WorkStudyTests(unittest.TestCase):
             self.assertIn(review + "references/work.md", files)
             scripts = review + "scripts/"
             lock = json.loads(archive.read(scripts + "corpus.json"))
-            self.assertIn("/" + pack_work.CORPUS_REVISION + "/", lock["base_url"])
+            self.assertEqual(lock["base_url"], "https://raw.githubusercontent.com/alexandrefortes/english-flow/"
+                             f"{pack_work.CORPUS_REVISION}/plugins/english-flow/corpus/")
             self.assertEqual(lock["manifest"], json.loads((PLUGIN / "corpus/manifest.json").read_bytes()))
             self.assertEqual(lock["project_bytes"], (PLUGIN / "corpus/project.tar.gz").stat().st_size)
             archive.extractall(self.root / "install")
